@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+/* @layer components {
+  .primary-btn {
+    @apply inline bg-primary text-white sm:text-[md] md:text-[lg] lg:text-[xl] py-2 px-6;
+  }
+} */
+
+@layer utilities {
+  .drop-shadow {
+    filter: drop-shadow(6px 8px 10px rgba(0, 0, 0, 0.5));
+  }
+}
+
+/* @keyframes moveLeftToRight {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+} */
+
+/* Typography */
+@media screen and (min-width: 1536px) {
+  body {
+    font-size: 16px;
+    letter-spacing: 0.02px;
+  }
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.02px;
+  }
+  h2 {
+    font-size: 1.75rem;
+    letter-spacing: 0.02px;
+  }
+  h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.02px;
+  }
+  h4 {
+    font-size: 1rem;
+    letter-spacing: 0.02px;
+  }
+  h5 {
+    font-size: 0.83rem;
+  }
+  h6 {
+    font-size: 0.67rem;
+  }
+  p {
+    font-size: 1.25rem;
+    letter-spacing: 0.02px;
+  }
+}
+
+.para {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 1280px) AND( max-width: 1535px) {
+  body {
+    font-size: 16px;
+    letter-spacing: 0.02px;
+  }
+  h1 {
+    font-size: 2.125rem;
+    letter-spacing: 0.02px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.02px;
+  }
+  h3 {
+    font-size: 1.125rem;
+    letter-spacing: 0.02px;
+  }
+  p {
+    font-size: 1.125rem;
+    letter-spacing: 0.02px;
+  }
+}
+
+@media screen and (min-width: 1024px) AND( max-width: 1279px) {
+  body {
+    font-size: 16px;
+    letter-spacing: 0.02px;
+  }
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.02px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.02px;
+  }
+  h3 {
+    font-size: 1rem;
+    letter-spacing: 0.02px;
+  }
+  p {
+    font-size: 1rem;
+    letter-spacing: 0.02px;
+  }
+}
+@media screen and (min-width: 786px) AND( max-width: 1023px) {
+  body {
+    font-size: 16px;
+    letter-spacing: 0.02px;
+  }
+  h1 {
+    font-size: 1.75rem;
+    letter-spacing: 0.02px;
+  }
+  h2 {
+    font-size: 1.125rem;
+    letter-spacing: 0.02px;
+  }
+  h3 {
+    font-size: 0.9rem;
+    letter-spacing: 0.02px;
+  }
+  p {
+    font-size: 0.8rem;
+    letter-spacing: 0.02px;
+  }
+}
+
+@media screen and (min-width: 360px) AND( max-width: 785px) {
+  body {
+    font-size: 16px;
+    letter-spacing: 0.02px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.02px;
+  }
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 0.02px;
+  }
+  h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.02px;
+  }
+  p {
+    font-size: 0.5rem;
+    letter-spacing: 0.02px;
+  }
+}
