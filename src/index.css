@@ -65,7 +65,7 @@
   font-size: 1.25rem;
 }
 
-@media screen and (min-width: 1280px) AND( max-width: 1535px) {
+@media screen and (min-width: 1280px) and (max-width: 1535px) {
   body {
     font-size: 16px;
     letter-spacing: 0.02px;
@@ -88,7 +88,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) AND( max-width: 1279px) {
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
   body {
     font-size: 16px;
     letter-spacing: 0.02px;
@@ -110,7 +110,7 @@
     letter-spacing: 0.02px;
   }
 }
-@media screen and (min-width: 786px) AND( max-width: 1023px) {
+@media screen and (min-width: 786px) and (max-width: 1023px) {
   body {
     font-size: 16px;
     letter-spacing: 0.02px;
@@ -133,7 +133,7 @@
   }
 }
 
-@media screen and (min-width: 360px) AND( max-width: 785px) {
+@media screen and (min-width: 360px) and (max-width: 785px) {
   body {
     font-size: 16px;
     letter-spacing: 0.02px;

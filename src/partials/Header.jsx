@@ -73,12 +73,12 @@ const Header = () => {
       toggleScrollLock(false); // Ensure scroll is enabled when component unmounts
     };
   }, [isMobileMenuOpen]); // Add isMobileMenuOpen to the dependency array
-  const toggleScrollLock = lock => {
+  const toggleScrollLock = (lock) => {
     document.body.style.overflow = lock ? "hidden" : "";
     document.body.style.height = lock ? "100%" : "";
   };
   useEffect(() => {
-    const handleClickOutside = event => {
+    const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsSolutionOpen(false);
       }
@@ -96,7 +96,7 @@ const Header = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="h-[52px] 3xl:mx-[80px] 3xl:mt-10  relative z-50">
+        className="h-[52px] lg:mx-[60px] xl:mx-[80px] lg:mt-10  relative z-50">
         <div className=" bg-transparent h-full flex justify-between items-center">
           {/* Logo section */}
           <a
@@ -112,7 +112,7 @@ const Header = () => {
           <div className="hidden lg:block">
             <div className="flex items-center gap-16">
               <ul className="flex items-center gap-6">
-                {NavbarMenu.map(menu => (
+                {NavbarMenu.map((menu) => (
                   <li key={menu.id} className="">
                     <Link
                       to={menu.path}
@@ -157,7 +157,7 @@ const Header = () => {
               z-50 overflow-y-auto">
               <div className="container py-4">
                 <ul className="space-y-4">
-                  {NavbarMenu.map(menu => (
+                  {NavbarMenu.map((menu) => (
                     <li key={menu.id}>
                       <div className="flex justify-between items-center font-Inter font-semibold py-2 px-3 hover:text-primary cursor-pointer">
                         <Link to={menu.path}>{menu.title}</Link>
@@ -281,7 +281,7 @@ const Header = () => {
                 </h3>
                 <ul>
                   {NavbarMenu.find(
-                    item => item.title === "Industries"
+                    (item) => item.title === "Industries"
                   ).dropdown.businessSolutions.map((item, index) => (
                     <li key={index} className="flex items-start mb-4">
                       <div className="mr-2 mt-1 flex justify-center items-center">
@@ -312,7 +312,7 @@ const Header = () => {
                 </h3>
                 <ul>
                   {NavbarMenu.find(
-                    item => item.title === "Industries"
+                    (item) => item.title === "Industries"
                   ).dropdown.industrySolutions.map((item, index) => (
                     <li key={index} className="flex items-start mb-4">
                       <div className="mr-2 mt-1 flex justify-center items-center">
@@ -341,7 +341,7 @@ const Header = () => {
                 </h3>
                 <ul>
                   {NavbarMenu.find(
-                    item => item.title === "Industries"
+                    (item) => item.title === "Industries"
                   ).dropdown.insight.map((item, index) => (
                     <li key={index} className="flex items-center mb-2">
                       {/* <i className={`${item.icon} mr-2`}></i> */}
@@ -377,7 +377,7 @@ const Header = () => {
                 <div className="mt-4">
                   <TextComponent
                     text={
-                      NavbarMenu.find(item => item.title === "Industries")
+                      NavbarMenu.find((item) => item.title === "Industries")
                         .dropdown.insightDescription
                     }
                   />
