@@ -25,7 +25,7 @@ const ThemeToggle = () => {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, [theme]);
 
-  const applyTheme = newTheme => {
+  const applyTheme = (newTheme) => {
     if (newTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else if (newTheme === "light") {
@@ -40,7 +40,7 @@ const ThemeToggle = () => {
     }
   };
 
-  const handleThemeChange = newTheme => {
+  const handleThemeChange = (newTheme) => {
     setTheme(newTheme);
     applyTheme(newTheme);
     localStorage.setItem("theme", newTheme);
@@ -62,7 +62,7 @@ const ThemeToggle = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center !w-[102px] h-[46px] py-[17.5px] px-6    bg-primary   dark:bg-transparent text-center  rounded-lg "
+        className="flex items-center !w-[102px] h-[46px] py-[17.5px] px-6    bg-primary   text-center  rounded-lg "
         aria-haspopup="listbox"
         aria-expanded={isOpen}>
         {getIcon()}
@@ -74,7 +74,7 @@ const ThemeToggle = () => {
       </button>
       {isOpen && (
         <ul className="absolute mt-1 w-full bg-white dark:text-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg">
-          {["system", "light", "dark"].map(option => (
+          {["system", "light", "dark"].map((option) => (
             <li key={option}>
               <button
                 className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
