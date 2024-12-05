@@ -20,7 +20,7 @@ const Home = () => {
       <BeautifulBranding />
       <AcceptWristbands />
       {/* <SmartTransaction /> */}
-      {/* <IndustriesSection /> */}
+      <IndustriesSection />
       {/* <CTASection /> */}
     </Fragment>
   );
