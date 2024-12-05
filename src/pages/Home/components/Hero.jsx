@@ -32,14 +32,14 @@ const HeroSection = () => {
   );
 
   return (
-    <div className="cp-hero relative bg-gradient-to-br from-[#6E3BFB] to-[#2D79FF] dark:from-[#2E1969] dark:to-[#000] overflow-x-hidden">
+    <div className="cp-hero relative bg-gradient-to-br from-[#6E3BFB] to-[#2D79FF] dark:from-[#2E1969] dark:to-[#000] overflow-x-hidden ">
       {/* Main white glow effect */}
       <div className="absolute -top-48 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl"></div>
 
       {/* Secondary smaller glow for intensity */}
       <div className="absolute -top-5 -left-5 w-32 h-32 bg-white/30 rounded-full blur-3xl"></div>
 
-      <div className="relative h-full aspect-video">
+      <div className="relative h-full aspect-video container ">
         <AdvancedVideo
           className="absolute top-0 left-0 w-full h-full object-contain "
           autoPlay
@@ -50,7 +50,7 @@ const HeroSection = () => {
         />
 
         {/* Text overlay */}
-        <div className="ml-5 lg:ml-20  relative z-10 h-full flex items-center">
+        <div className="ml-5 lg:ml-20  relative z-10 h-full flex items-center ">
           <div className="max-w-[300px] lg:max-w-[430px]">
             <h1 className=" text-white font-semibold tracking-tighter">
               Lighting Fast Mobile Enterprise Payments Anywhere

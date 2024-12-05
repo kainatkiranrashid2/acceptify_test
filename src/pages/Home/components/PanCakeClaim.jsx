@@ -112,66 +112,68 @@ const VideoScrollComponent = () => {
   };
   return (
     <>
-      <div className="block lg:hidden mt-[60px] mx-10">
-        {videoData.map((item, index) => (
-          <div
-            className="flex flex-col justify-between items-center mb-4"
-            key={index}>
-            <div className="w-full">
-              <h2 className="w-full font-bold">
-                {highlightText(item.title, item.highlightedWords)}
-              </h2>
-              <p className="text-lg">{item.subtitle}</p>{" "}
+      <div className="container">
+        <div className="block lg:hidden mt-[60px] mx-10 ">
+          {videoData.map((item, index) => (
+            <div
+              className="flex flex-col justify-between items-center mb-4"
+              key={index}>
+              <div className="w-full">
+                <h2 className="w-full font-bold">
+                  {highlightText(item.title, item.highlightedWords)}
+                </h2>
+                <p className="text-lg">{item.subtitle}</p>{" "}
+              </div>
+              <div className="w-full">
+                <video
+                  // ref={videoRef}
+                  src={item.url}
+                  className="w-full h-auto max-h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              </div>
             </div>
-            <div className="w-full">
+          ))}
+        </div>
+        <div ref={containerRef} className=" hidden lg:flex gap-36 mx-10">
+          {" "}
+          <div className="w-1/3">
+            {" "}
+            {videoData.map((item, index) => (
+              <div
+                key={index}
+                className="content-section w-[90%] min-h-screen flex items-center justify-center">
+                {" "}
+                <div className="text-left max-w-xl mx-auto ">
+                  {" "}
+                  <h2 className="font-bold">
+                    {" "}
+                    {highlightText(item.title, item.highlightedWords)}
+                  </h2>{" "}
+                  <p className="">{item.subtitle}</p>{" "}
+                </div>{" "}
+              </div>
+            ))}{" "}
+          </div>{" "}
+          <div className="w-2/3 relative">
+            {" "}
+            <div className="video-container sticky top-0 h-screen flex items-center justify-center">
+              {" "}
               <video
-                // ref={videoRef}
-                src={item.url}
-                className="w-full h-auto max-h-full object-cover"
+                ref={videoRef}
+                src={videoData[currentVideoIndex].url}
+                className="w-full h-auto max-h-full object-contain"
                 autoPlay
                 loop
                 muted
                 playsInline
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-      <div ref={containerRef} className=" hidden lg:flex gap-36 mx-10">
-        {" "}
-        <div className="w-1/3">
-          {" "}
-          {videoData.map((item, index) => (
-            <div
-              key={index}
-              className="content-section w-[90%] min-h-screen flex items-center justify-center">
-              {" "}
-              <div className="text-left max-w-xl mx-auto ">
-                {" "}
-                <h2 className="font-bold">
-                  {" "}
-                  {highlightText(item.title, item.highlightedWords)}
-                </h2>{" "}
-                <p className="">{item.subtitle}</p>{" "}
-              </div>{" "}
-            </div>
-          ))}{" "}
-        </div>{" "}
-        <div className="w-2/3 relative">
-          {" "}
-          <div className="video-container sticky top-0 h-screen flex items-center justify-center">
-            {" "}
-            <video
-              ref={videoRef}
-              src={videoData[currentVideoIndex].url}
-              className="w-full h-auto max-h-full object-contain"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />{" "}
+              />{" "}
+            </div>{" "}
           </div>{" "}
-        </div>{" "}
+        </div>
       </div>
     </>
   );

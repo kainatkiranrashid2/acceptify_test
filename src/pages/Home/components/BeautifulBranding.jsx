@@ -1,12 +1,12 @@
 const BeautifulBranding = () => {
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat py-20" // Added useful background classes
+      className="bg-cover bg-center bg-no-repeat py-20 container" // Added useful background classes
       style={{
         backgroundImage: `url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733314604/components/represent_your_brand.svg)`,
       }}>
       <div className=" flex flex-col items-center justify-between ">
-        <div className="xl:w-3/5 xl:max-w-3/5 flex  flex-col items-center justify-between">
+        <div className="lg:w-3/5 lg:max-w-3/5 flex  flex-col items-center justify-between">
           <h1 className=" font-semibold mb-4">Represent Your Brand</h1>
           <p className="w-full ">
             Custom-branded payment devices and cases are a powerful way to
