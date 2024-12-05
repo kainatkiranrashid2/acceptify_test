@@ -1,7 +1,7 @@
 const BeautifulBranding = () => {
   return (
     <section
-      className="bg-cover bg-center bg-no-repeat pt-20 pb-10" // Added useful background classes
+      className="bg-cover bg-center bg-no-repeat pt-20 " // Added useful background classes
       style={{
         backgroundImage: `url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733314604/components/represent_your_brand.svg)`,
       }}>
