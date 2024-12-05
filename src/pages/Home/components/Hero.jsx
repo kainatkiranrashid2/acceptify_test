@@ -50,12 +50,12 @@ const HeroSection = () => {
         />
 
         {/* Text overlay */}
-        <div className="ml-5 lg:ml-20  relative z-10 h-full flex items-center ">
+        <div className="ml-5 md:ml-10 lg:ml-20  relative z-10 h-full flex items-center ">
           <div className="max-w-[300px] lg:max-w-[430px]">
             <h1 className=" text-white font-semibold tracking-tighter">
               Lighting Fast Mobile Enterprise Payments Anywhere
             </h1>
-            <p className="text-white  font-normal my-[12px]">
+            <p className="text-white  font-normal my-[12px] ">
               Acceptify enables your applications to accept worldwide, secure,
               certified, online/offline payments while removing all of your
               security concerns.

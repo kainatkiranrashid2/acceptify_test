@@ -35,14 +35,21 @@
   }
   h1 {
     font-size: 2.5rem;
+    font-weight: bold;
+
+    line-height: 120%;
+
     letter-spacing: 0.02px;
   }
   h2 {
     font-size: 1.75rem;
+    line-height: 150%;
+    font-weight: bold;
     letter-spacing: 0.02px;
   }
   h3 {
     font-size: 1.5rem;
+    font-weight: bold;
     letter-spacing: 0.02px;
   }
   h4 {
@@ -58,6 +65,7 @@
   p {
     font-size: 1.25rem;
     letter-spacing: 0.02px;
+    line-height: 175%;
   }
 }
 
@@ -116,19 +124,19 @@
     letter-spacing: 0.02px;
   }
   h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     letter-spacing: 0.02px;
   }
   h2 {
-    font-size: 1.125rem;
+    font-size: 1.124rem;
     letter-spacing: 0.02px;
   }
   h3 {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     letter-spacing: 0.02px;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0.02px;
   }
 }
@@ -143,15 +151,15 @@
     letter-spacing: 0.02px;
   }
   h2 {
-    font-size: 1rem;
+    font-size: 1.125rem;
     letter-spacing: 0.02px;
   }
   h3 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0.02px;
   }
   p {
-    font-size: 0.5rem;
+    font-size: 1rem;
     letter-spacing: 0.02px;
   }
 }

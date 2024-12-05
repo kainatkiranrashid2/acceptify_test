@@ -1,20 +1,18 @@
 const BeautifulBranding = () => {
   return (
-    <div
+    <section
       className="bg-cover bg-center bg-no-repeat py-20 " // Added useful background classes
       style={{
         backgroundImage: `url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733314604/components/represent_your_brand.svg)`,
       }}>
       <div className="container">
-        <div className=" flex flex-col items-center justify-between  ">
-          <div className="lg:w-3/5 lg:max-w-3/5 flex  flex-col items-center justify-between">
+        <div className=" flex flex-col items-center justify-center  ">
+          <div className=" flex flex-col items-center justify-center">
             <h1 className=" font-semibold mb-4">Represent Your Brand</h1>
-            <p className="w-full ">
-              Custom-branded payment devices and cases are a powerful way to
-              represent your business. Incorporating your brand’s colors, logo
-              and design elements, the payment device reinforces brand
-              recognition and transforms each transaction into a brand
-              touchpoint.
+            <p className=" md:w-[30rem] md:max-w-[30rem] lg:w-[37rem] lg:max-w-[37rem]  ">
+              Acceptify uniquely provides a signature checkout experience by
+              personalizing payment devices with your brand&apos;s logos and
+              colors.
             </p>
           </div>
           <div className="w-full">
@@ -28,7 +26,7 @@ const BeautifulBranding = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

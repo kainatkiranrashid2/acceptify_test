@@ -2,17 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "../partials/ThemeToggle";
 
-// import { IoIosArrowUp, IoMdMenu } from "react-icons/io";
-// import { BsArrowRepeat } from "react-icons/bs";
-// import { MdOutlineDashboardCustomize } from "react-icons/md";
-// import { PiArrowsOutBold } from "react-icons/pi";
-// import { HiOutlineInboxIn } from "react-icons/hi";
-// import { IoIosArrowDown } from "react-icons/io";
-
 import TextComponent from "../components/TextComponent";
 import { motion, AnimatePresence } from "framer-motion";
 // import { FaE } from "react-icons/fa6";
 import { FaEquals } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const NavbarMenu = [
   {
@@ -97,7 +91,7 @@ const Header = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="h-[52px] lg:mx-[60px] xl:mx-[80px] lg:mt-10  relative z-50 ">
+          className="h-[52px] m-10 lg:mx-[60px] xl:mx-20 lg:mt-10  relative z-50 ">
           <div className=" bg-transparent h-full flex justify-between items-center">
             {/* Logo section */}
             <a
@@ -141,8 +135,8 @@ const Header = () => {
 
             {/* Mobile Hamburger menu section */}
             <div className="lg:hidden">
-              <FaEquals
-                className="text-4xl text-white"
+              <RxHamburgerMenu
+                className="size-5 text-white"
                 onClick={() => {
                   setIsMobileMenuOpen(!isMobileMenuOpen);
                   setMobileSubmenu(null);

@@ -105,26 +105,32 @@ const VideoScrollComponent = () => {
     highlightedWords.forEach(word => {
       const regex = new RegExp(`(${word})`, "gi");
 
-      result = result.replace(regex, '<span class="text-primary">$1</span>');
+      result = result.replace(
+        regex,
+        '<span class="text-primary font-semibold">$1</span>'
+      );
     });
 
-    return <span dangerouslySetInnerHTML={{ __html: result }} />;
+    return (
+      <span
+        className="font-medium"
+        dangerouslySetInnerHTML={{ __html: result }}
+      />
+    );
   };
   return (
-    <>
+    <section>
       <div className="container">
-        <div className="block lg:hidden mt-[60px] mx-10 ">
+        <div className="block lg:hidden mt-[60px] mx-10">
           {videoData.map((item, index) => (
-            <div
-              className="flex flex-col justify-between items-center mb-4"
-              key={index}>
-              <div className="w-full">
-                <h2 className="w-full font-bold">
+            <div className="flex flex-col justify-center  mb-28" key={index}>
+              <div className="">
+                <h2 className="w-full mb-3">
                   {highlightText(item.title, item.highlightedWords)}
                 </h2>
-                <p className="text-lg">{item.subtitle}</p>{" "}
+                <p className="">{item.subtitle}</p>{" "}
               </div>
-              <div className="w-full">
+              <div className="w-2/3 mx-auto mt-[5.5rem]">
                 <video
                   // ref={videoRef}
                   src={item.url}
@@ -138,18 +144,18 @@ const VideoScrollComponent = () => {
             </div>
           ))}
         </div>
-        <div ref={containerRef} className=" hidden lg:flex gap-36 mx-10">
+        <div ref={containerRef} className=" hidden lg:flex lg:gap-32 mx-10">
           {" "}
           <div className="w-1/3">
             {" "}
             {videoData.map((item, index) => (
               <div
                 key={index}
-                className="content-section w-[90%] min-h-screen flex items-center justify-center">
+                className="content-section w-full min-h-screen flex items-center justify-center">
                 {" "}
-                <div className="text-left max-w-xl mx-auto ">
+                <div className="max-w-xl mx-auto ">
                   {" "}
-                  <h2 className="font-bold">
+                  <h2 className="mb-4">
                     {" "}
                     {highlightText(item.title, item.highlightedWords)}
                   </h2>{" "}
@@ -175,7 +181,7 @@ const VideoScrollComponent = () => {
           </div>{" "}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 export default VideoScrollComponent;

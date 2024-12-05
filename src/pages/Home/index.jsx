@@ -8,6 +8,7 @@ import CTASection from "./components/CTASection";
 
 import "./index.css";
 import BeautifulBranding from "./components/BeautifulBranding";
+import AcceptWristbands from "./components/AcceptWristbands";
 
 const Home = () => {
   document.body.className = "home";
@@ -17,6 +18,7 @@ const Home = () => {
       <Hero />
       <PanCakeClaim />
       <BeautifulBranding />
+      <AcceptWristbands />
       {/* <SmartTransaction /> */}
       <IndustriesSection />
       <CTASection />
