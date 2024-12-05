@@ -18,7 +18,7 @@ const BeautifulBranding = () => {
           <div className="w-full">
             <video className="w-full h-full object-contain" autoPlay loop muted>
               <source
-                src="https://res.cloudinary.com/dq5guzzge/video/upload/c_fill,w_1920,h_800/v1733314709/components/represent_your_brand.webm"
+                src="https://res.cloudinary.com/dq5guzzge/video/upload/c_fill,w_1000,h_600/v1733314709/components/represent_your_brand.webm"
                 type="video/webm"
               />
               Your browser does not support the video tag.
