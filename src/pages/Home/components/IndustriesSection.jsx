@@ -11,10 +11,10 @@ const IndustriesSection = () => {
         }}></div>
 
       {/* Content Layer */}
-      <div className="relative flex justify-between items-center px-20 pt-20 z-10">
-        <div className="w-1/2">
+      <div className="relative flex justify-between items-center px-20 pt-20 z-10 h-full">
+        <div className="w-1/2 h-full">
           <h1 className=" mb-6 font-bold text-white">Industries</h1>
-          <p className="text-[18px]/[27px] mb-6 text-white ">
+          <p className="mb-6 text-white ">
             We mean it! Enterprise Mobile Payments Anywhere, Anytime, even
             Offline. Acceptify processes worldwide transactions for the most
             complex industries. Here are just a few industries we work with.
@@ -23,10 +23,10 @@ const IndustriesSection = () => {
             Explore Industries
           </button>
         </div>
-        <div className="w-1/2">
-          <video className="w-full h-full object-cover" autoPlay loop muted>
+        <div className="w-1/2 h-full">
+          <video className="w-full h-full object-contain" autoPlay loop muted>
             <source
-              src="/assets/industries/industries_v2.webm"
+              src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm"
               type="video/webm"
             />
             Your browser does not support the video tag.
