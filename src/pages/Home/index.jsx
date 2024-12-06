@@ -9,6 +9,7 @@ import CTASection from "./components/CTASection";
 import "./index.css";
 import BeautifulBranding from "./components/BeautifulBranding";
 import AcceptWristbands from "./components/AcceptWristbands";
+import BYOP from "./components/BYOP";
 
 const Home = () => {
   document.body.className = "home";
@@ -19,6 +20,7 @@ const Home = () => {
       <PanCakeClaim />
       <BeautifulBranding />
       <AcceptWristbands />
+      <BYOP />
       {/* <SmartTransaction /> */}
       <IndustriesSection />
       {/* <CTASection /> */}

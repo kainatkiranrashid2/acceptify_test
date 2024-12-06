@@ -26,7 +26,7 @@ const IndustriesSection = () => {
         <div className="w-1/2">
           <video className="w-full h-full object-cover" autoPlay loop muted>
             <source
-              src="/assets/industries/industries_v2.webm"
+              src="https://res.cloudinary.com/dq5guzzge/video/upload/c_fill,w_1000,h_600/v1733459520/components/industries.webm"
               type="video/webm"
             />
             Your browser does not support the video tag.
