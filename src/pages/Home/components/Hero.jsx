@@ -24,7 +24,7 @@ const HeroSection = () => {
 
   heroVideo.resize(
     fill()
-      .width(1536)
+      .width(1920)
       .height(1080)
       .gravity(
         Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
