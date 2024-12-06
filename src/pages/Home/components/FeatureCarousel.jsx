@@ -32,9 +32,7 @@ const FeatureCard = ({ icon, title, description, style, className }) => (
       <div className="w-[328px] h-[328px] mx-auto aspect-square mb-4">
         {icon}
       </div>
-      <h3 className="text-[32px]/[40px] font-bold text-white mb-2">
-        {title}
-      </h3>
+      <h3 className="text-[32px]/[40px] font-bold text-white mb-2">{title}</h3>
       <p className="text-white text-lg">{description}</p>
     </div>
   </div>
@@ -52,50 +50,36 @@ const FeatureCarousel = () => {
           alt="Accept Wristbands"
         />
       ),
-      title: "Accept Wristbands",
+      title: "Smart Transaction",
       description:
-        "Whether you have iOS, Android, or Windows devices (Mobile or Tablet),",
+        "Acceptify allows you to ‘tag’ transactions with fully customizable meta-data relevant to your business. This enables more efficient categorization and searchability for greater insight and reporting.",
     },
     {
-      icon: (
-        <img src="/assets/morefeatures/accept_cards.png" alt="Accept Cards" />
-      ),
-      title: "Accept Cards/Wallets",
+      src: "/assets/morefeatures/accept_cards.png",
+      title: "Recapture Engine",
       description:
-        "Whether you have iOS, Android, or Windows devices (Mobile or Tablet),",
+        "We help you increase lost revenue from declined offline transactions. Our powerful recapture engine resubmits declined transactions until they are approved or expire.",
     },
     {
-      icon: (
-        <img
-          src="/assets/morefeatures/configurable_data.png"
-          alt="Configurable Data"
-        />
-      ),
+      src:"/assets/morefeatures/configurable_data.png"
       title: "Configurable Data",
       description:
-        "Whether you have iOS, Android, or Windows devices (Mobile or Tablet),",
+        "Add relevant, searchable data to each transaction. An order number, parking lot ID, flight number, event name - whatever is important to you and your customer.",
     },
     {
-      icon: (
-        <img
-          src="/assets/morefeatures/global_payments.png"
-          alt="Global Payments"
-        />
-      ),
-      title: "Global Payments",
+      src:"/assets/morefeatures/global_payments.png"
+      ,
+      title: "Enterprise Payments Anywhere",
       description:
-        "We are a true enterprise payment solution. We enable you to take local...",
+        "We are a true enterprise payment solution. We enable you to take local payments in nearly all worldwide currencies. Bring you own processors or we can help you select one.",
     },
     {
-      icon: (
-        <img
-          src="/assets/morefeatures/beautiful_branding.png"
-          alt="Beautiful Branding"
-        />
-      ),
-      title: "Beautiful Branding",
+      
+      src:"/assets/morefeatures/beautiful_branding.png",
+      
+      title: "Accept Cards/Wallets",
       description:
-        "Represent your brand anywhere you take transactions. Brandable cases.",
+        "Swipe, tap or insert. Acceptify safely accepts electronics payments whether your customers choose credit cards or e-wallets to run transactions.",
     },
     {
       icon: (
@@ -104,9 +88,9 @@ const FeatureCarousel = () => {
           alt="Recapture Engine"
         />
       ),
-      title: "Recapture Engine",
+      title: "Increase Revenue",
       description:
-        "Whether you have iOS, Android, or Windows devices (Mobile or Tablet),",
+        "Boost your revenue by using your own processor and customized rates. Maximize earnings by processing transactions anytime, anywhere—even without service.",
     },
   ];
 

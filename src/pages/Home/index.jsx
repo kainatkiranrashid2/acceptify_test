@@ -10,6 +10,7 @@ import "./index.css";
 import BeautifulBranding from "./components/BeautifulBranding";
 import AcceptWristbands from "./components/AcceptWristbands";
 import BYOP from "./components/BYOP";
+import MoreFeatures from "./components/MoreFeatures";
 
 const Home = () => {
   document.body.className = "home";
@@ -21,6 +22,7 @@ const Home = () => {
       <BeautifulBranding />
       <AcceptWristbands />
       <BYOP />
+      <MoreFeatures />
       {/* <SmartTransaction /> */}
       <IndustriesSection />
       {/* <CTASection /> */}
