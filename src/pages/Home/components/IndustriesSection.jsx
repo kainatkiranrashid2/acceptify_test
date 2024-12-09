@@ -8,7 +8,7 @@ const IndustriesSection = () => {
       {/* Content Layer */}
       <div className="container">
         <div className="flex justify-between items-center px-20 pt-20 z-10 ">
-          <div className="w-1/2 h-full">
+          <div className="w-1/2 h-full ">
             <h1 className=" mb-6 font-bold">Industries</h1>
             <p className="mb-6 ">
               We mean it! Enterprise Mobile Payments Anywhere, Anytime.
