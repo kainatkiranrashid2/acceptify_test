@@ -34,10 +34,10 @@ const HeroSection = () => {
   return (
     <div className="cp-hero relative bg-gradient-to-br from-[#6E3BFB] to-[#2D79FF] dark:from-[#282478] dark:to-[#150731] overflow-x-hidden ">
       {/* Main white glow effect */}
-      <div className="absolute -top-48 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl"></div>
+      <div className="absolute dark:hidden -top-48 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl"></div>
 
       {/* Secondary smaller glow for intensity */}
-      <div className="absolute -top-5 -left-5 w-32 h-32 bg-white/30 rounded-full blur-3xl"></div>
+      <div className="absolute dark:hidden -top-5 -left-5 w-32 h-32 bg-white/30 rounded-full blur-3xl"></div>
 
       <div className="relative h-full  aspect-auto md:aspect-video container ">
         <AdvancedVideo
