@@ -2,9 +2,7 @@ const BYOP = () => {
   return (
     <section
       className="bg-cover bg-center bg-no-repeat py-20 " // Added useful background classes
-      style={{
-        backgroundImage: `url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733314604/components/represent_your_brand.svg)`,
-      }}>
+    >
       <div className="container">
         <div className=" flex flex-col items-center justify-center  ">
           <div className=" flex flex-col items-center justify-center">
