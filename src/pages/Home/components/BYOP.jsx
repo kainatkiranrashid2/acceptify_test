@@ -15,7 +15,7 @@ const BYOP = () => {
               move between processors without changing a line of code.
             </p>
           </div>
-          <div className="w-2/3">
+          <div className="w-[600px]">
             <video className="w-full h-full object-contain" autoPlay loop muted>
               <source
                 src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm"
