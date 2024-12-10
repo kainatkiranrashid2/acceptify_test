@@ -79,14 +79,14 @@ const ThemeToggle = () => {
                 className="w-full text-left px-4 py-2 text-[#1B1B1B] hover:text-[#3873FD] dark:hover:text-[#3873FD] dark:text-white"
                 onClick={() => handleThemeChange(option)}>
                 <div className="flex w-full items-center">
-                  {option === "system" && (
-                    <MdMonitor size={24} className="mr-2" />
-                  )}
                   {option === "light" && (
                     <MdLightMode size={20} className="mr-2" />
                   )}
                   {option === "dark" && (
                     <MdDarkMode size={20} className="mr-2" />
+                  )}
+                  {option === "system" && (
+                    <MdMonitor size={24} className="mr-2" />
                   )}
                   <span className="capitalize">{option}</span>
                 </div>
