@@ -91,8 +91,8 @@ const Header = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="h-[52px]  lg:mx-6 lg:my-[19px] xl:mt-[14px]  relative z-50 ">
-          <div className=" bg-transparent h-full flex  items-center gap-[60px]">
+          className="h-[52px] mx-4 lg:mx-6 lg:my-[19px] xl:mt-[14px]  relative z-50 ">
+          <div className=" bg-transparent h-full flex justify-between items-center gap-[60px]">
             {/* Logo section */}
             <a
               href="/"
@@ -147,7 +147,7 @@ const Header = () => {
             </div>
 
             {/* Mobile Hamburger menu section */}
-            <div className="lg:hidden">
+            <div className="lg:hidden ">
               <RxHamburgerMenu
                 className="size-5 text-white"
                 onClick={() => {

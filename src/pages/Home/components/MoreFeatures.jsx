@@ -41,7 +41,7 @@ const MoreFeatures = () => {
   return (
     <section className="bg-gradient-to-b from-[#9EC1FF] to-[25%] to-white  bg-[182deg] dark:from-[#2E1969]">
       <div className="container ">
-        <div className="xl:mx-20 py-20">
+        <div className="md:mx-10 lg:mx-[60px] xl:mx-20 py-20">
           <h1 className="text-center mb-6 ">Loaded with More Features</h1>
 
           <div className="grid grid-cols-3 gap-5 max-w-full">
