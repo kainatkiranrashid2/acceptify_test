@@ -18,7 +18,7 @@ const BYOP = () => {
           <div className="w-full">
             <video className="w-full h-full object-contain" autoPlay loop muted>
               <source
-                src="https://res.cloudinary.com/dq5guzzge/video/upload/c_fill,w_1000,h_600/v1733459454/components/bring_your_own.webm"
+                src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm"
                 type="video/webm"
               />
               Your browser does not support the video tag.
