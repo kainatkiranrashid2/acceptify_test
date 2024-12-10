@@ -67,12 +67,12 @@ const Header = () => {
       toggleScrollLock(false); // Ensure scroll is enabled when component unmounts
     };
   }, [isMobileMenuOpen]); // Add isMobileMenuOpen to the dependency array
-  const toggleScrollLock = lock => {
+  const toggleScrollLock = (lock) => {
     document.body.style.overflow = lock ? "hidden" : "";
     document.body.style.height = lock ? "100%" : "";
   };
   useEffect(() => {
-    const handleClickOutside = event => {
+    const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsSolutionOpen(false);
       }
@@ -86,28 +86,40 @@ const Header = () => {
 
   return (
     <header>
-      <div className="container">
+      <div className="">
         <motion.nav
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="h-[52px] m-10 lg:mx-[60px] xl:mx-20 lg:mt-10  relative z-50 ">
+          className="h-[52px]  lg:mx-6 lg:my-[19px] xl:mt-[14px]  relative z-50 ">
           <div className=" bg-transparent h-full flex justify-between items-center">
             {/* Logo section */}
             <a
               href="/"
-              className="h-[52px] md:w-[152px] xl:w-[188px] flex items-center">
+              className="h-[52px] md:w-[152px] xl:w-[188px] flex dark:hidden items-center">
               <img
-                src="./images/acceptify_logo.png"
+                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
                 className="bg-transparent h-full w-auto object-contain"
                 alt="acceptify_logo"
               />
             </a>
+
+            <a
+              href="/"
+              className="h-[52px] md:w-[152px] xl:w-[188px] dark:flex hidden items-center">
+              <img
+                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
+                className="bg-transparent h-full w-auto object-contain"
+                alt="acceptify_logo"
+              />
+            </a>
+
+            {/* https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png */}
             {/* Menu Section */}
             <div className="hidden lg:block">
               <div className="flex items-center gap-16">
                 <ul className="flex items-center gap-6">
-                  {NavbarMenu.map(menu => (
+                  {NavbarMenu.map((menu) => (
                     <li key={menu.id} className="">
                       <Link
                         to={menu.path}
@@ -118,7 +130,6 @@ const Header = () => {
                   ))}
                 </ul>
                 <div className="hidden lg:flex gap-4 items-center">
-                  <ThemeToggle />
                   <motion.button
                     className=" bg-primary flex items-center text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px] !h-[46px] py-[17.5px] px-6 rounded-lg font-PP_Mori"
                     whileHover={{
@@ -129,6 +140,8 @@ const Header = () => {
                     whileTap={{ scale: 0.95 }}>
                     Get Started
                   </motion.button>
+                  <span className="">|</span>
+                  <ThemeToggle />
                 </div>
               </div>
             </div>
@@ -152,7 +165,7 @@ const Header = () => {
               z-50 overflow-y-auto">
                 <div className="container py-4">
                   <ul className="space-y-4">
-                    {NavbarMenu.map(menu => (
+                    {NavbarMenu.map((menu) => (
                       <li key={menu.id}>
                         <div className="flex justify-between items-center font-Inter font-semibold py-2 px-3 hover:text-primary cursor-pointer">
                           <Link to={menu.path}>{menu.title}</Link>
@@ -278,7 +291,7 @@ const Header = () => {
                   </h3>
                   <ul>
                     {NavbarMenu.find(
-                      item => item.title === "Industries"
+                      (item) => item.title === "Industries"
                     ).dropdown.businessSolutions.map((item, index) => (
                       <li key={index} className="flex items-start mb-4">
                         <div className="mr-2 mt-1 flex justify-center items-center">
@@ -309,7 +322,7 @@ const Header = () => {
                   </h3>
                   <ul>
                     {NavbarMenu.find(
-                      item => item.title === "Industries"
+                      (item) => item.title === "Industries"
                     ).dropdown.industrySolutions.map((item, index) => (
                       <li key={index} className="flex items-start mb-4">
                         <div className="mr-2 mt-1 flex justify-center items-center">
@@ -338,7 +351,7 @@ const Header = () => {
                   </h3>
                   <ul>
                     {NavbarMenu.find(
-                      item => item.title === "Industries"
+                      (item) => item.title === "Industries"
                     ).dropdown.insight.map((item, index) => (
                       <li key={index} className="flex items-center mb-2">
                         {/* <i className={`${item.icon} mr-2`}></i> */}
@@ -374,7 +387,7 @@ const Header = () => {
                   <div className="mt-4">
                     <TextComponent
                       text={
-                        NavbarMenu.find(item => item.title === "Industries")
+                        NavbarMenu.find((item) => item.title === "Industries")
                           .dropdown.insightDescription
                       }
                     />

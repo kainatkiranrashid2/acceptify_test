@@ -39,23 +39,33 @@ const MoreFeatures = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-[#FFFFFF] to-[#9EC1FF] dark:from-[#2E1969]">
+    <section className="bg-gradient-to-b from-[#9EC1FF] to-[25%] to-white  bg-[182deg] dark:from-[#2E1969]">
       <div className="container ">
         <div className="xl:mx-20 py-20">
           <h1 className="text-center mb-6 ">Loaded with More Features</h1>
 
-          <div className="grid grid-cols-3 gap-5 overflow-hidden max-w-full">
+          <div className="grid grid-cols-3 gap-5 max-w-full">
             {features.map((item, index) => (
               <div
-                className="text-center p-6  rounded-[20px] border border-spacing-1 border-[#9EC1FF] w-full"
+                className="text-center p-6 bg-white relative rounded-[20px] border border-spacing-1 border-[#9EC1FF] w-full overflow-hidden"
                 key={index}>
-                <h3>{item.title}</h3>
-                <img
-                  className="mt-4 mx-auto mb-[6px] xl:h-[9.5rem] xl:w-[10rem] max-w-full"
-                  src={item.src}
-                  alt={item.title}
-                />
-                <p className="text-center">{item.description}</p>
+                {index !== 0 && index !== 3 && (
+                  <div className="absolute -top-40 -left-32 box-border w-[280px] h-[220px] flex-shrink-0 rounded-full bg-[#9EC1FF] shadow-[#9EC1FF]  z-0 opacity-20 shadow-[20px_20px_20px_20px_rgba(0,0,0,0.25)]"></div>
+                )}
+
+                <div className="relative z-10">
+                  <h3 className="relative z-10">{item.title}</h3>
+                  <img
+                    className="mt-4 mx-auto mb-[6px] xl:h-[9.5rem] xl:w-[10rem] max-w-full relative z-10"
+                    src={item.src}
+                    alt={item.title}
+                  />
+                  <p className="text-center relative z-10">
+                    {item.description}
+                  </p>
+                </div>
+
+                <div className="absolute box-border -bottom-36 -right-28 w-[280.582px] h-[221.794px] flex-shrink-0 rounded-full bg-[#9EC1FF] z-0 opacity-25 shadow-[0_0_20px_10px_rgba(0,0,0,0.25),inset_0_0_50px_20px_#9EC1FF]"></div>
               </div>
             ))}
           </div>

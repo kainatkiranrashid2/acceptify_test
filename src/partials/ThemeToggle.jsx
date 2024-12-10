@@ -62,24 +62,23 @@ const ThemeToggle = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center !w-[102px] h-[46px] py-[17.5px] px-6    bg-primary   text-center  rounded-lg "
+        className="flex items-center text-center rounded-lg "
         aria-haspopup="listbox"
         aria-expanded={isOpen}>
-        {getIcon()}
-        <span className="font-semibold 3xl:text-[16px]/[16px] text-white dark:text-white    ">
-          Theme
+        <span className="font-semibold  text-white dark:text-white    ">
+          {getIcon()}
         </span>
         {/* {theme} */}
         {/* <MdArrowDropDown size={20} /> */}
       </button>
       {isOpen && (
-        <ul className="absolute mt-1 w-full bg-white dark:text-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg">
+        <ul className="absolute mt-1 w-32 bg-white dark:text-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg  right-4">
           {["system", "light", "dark"].map((option) => (
             <li key={option}>
               <button
                 className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                 onClick={() => handleThemeChange(option)}>
-                <div className="flex items-center">
+                <div className="flex w-full items-center">
                   {option === "system" && (
                     <MdMonitor size={20} className="mr-2" />
                   )}

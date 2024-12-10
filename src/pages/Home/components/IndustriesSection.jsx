@@ -2,7 +2,7 @@ import React from "react";
 
 const IndustriesSection = () => {
   return (
-    <div className="py-20 bg-gradient-to-b from-white to-[#3B6FFD] relative overflow-hidden">
+    <div className="py-20 bg-gradient-to-b from-white from-[16.97%] to-[#3B6FFD] to-[100%] relative overflow-hidden">
       {/* Background Image Layer */}
 
       {/* Content Layer */}

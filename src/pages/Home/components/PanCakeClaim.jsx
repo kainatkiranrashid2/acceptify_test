@@ -94,7 +94,7 @@ const VideoScrollComponent = () => {
       });
     });
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
   const highlightText = (text, highlightedWords) => {
@@ -102,7 +102,7 @@ const VideoScrollComponent = () => {
 
     let result = text;
 
-    highlightedWords.forEach(word => {
+    highlightedWords.forEach((word) => {
       const regex = new RegExp(`(${word})`, "gi");
 
       result = result.replace(
@@ -113,22 +113,22 @@ const VideoScrollComponent = () => {
 
     return (
       <span
-        className="font-medium"
+        className="font-medium dark:text-white"
         dangerouslySetInnerHTML={{ __html: result }}
       />
     );
   };
   return (
-    <section>
+    <section className="dark:bg-[#06142F]">
       <div className="container">
-        <div className="block lg:hidden mt-[60px] mx-10">
+        <div className="block lg:hidden  mt-[60px] mx-10">
           {videoData.map((item, index) => (
             <div className="flex flex-col justify-center  mb-28" key={index}>
               <div className="">
                 <h2 className="w-full mb-3">
                   {highlightText(item.title, item.highlightedWords)}
                 </h2>
-                <p className="">{item.subtitle}</p>{" "}
+                <p className="dark:text-white">{item.subtitle}</p>{" "}
               </div>
               <div className="w-2/3 mx-auto mt-[5.5rem]">
                 <video
@@ -159,7 +159,7 @@ const VideoScrollComponent = () => {
                     {" "}
                     {highlightText(item.title, item.highlightedWords)}
                   </h2>{" "}
-                  <p className="">{item.subtitle}</p>{" "}
+                  <p className="dark:text-white">{item.subtitle}</p>{" "}
                 </div>{" "}
               </div>
             ))}{" "}
