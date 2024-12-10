@@ -4,21 +4,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const videoData = [
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733214865/components/pancake_one.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817486/components/still_pancake_01.webm",
     title: "Protect your Customers and your Reputation with Acceptify",
     subtitle:
       "Acceptify is designed to meet the stringent security standards of the Payment Card Industry's Data Security Standard (PCI-DSS). Customer's data is always strongly encrypted.",
     highlightedWords: ["Protect your", "Customers"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733214909/components/pancake_two.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817549/components/still_pancake_02.webm",
     title: "Protect your Operation and Reputation",
     subtitle:
       "Acceptify protects against harmful security breaches that negatively impact your brand, disrupts your operations, increases your liabilities and decreases your revenue.",
     highlightedWords: ["Operation", "and", "Reputation"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733214956/components/pancake_three.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817596/components/still_pancake_03.webm",
     title:
       "Acceptify is PCI-P2PE Certified ensuring Compliance to the industry's highest standard.",
     subtitle:
@@ -26,7 +26,7 @@ const videoData = [
     highlightedWords: ["PCI-P2PE Certified"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733214991/components/pancake_four.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817659/components/still_pancake_04.webm",
     title: "Acceptify Simplifying PCI Security Compliance",
     subtitle:
       "Acceptify's encryption of cardholder data removes it from scope for many PCI DSS requirements, as a result your PCI audit effort is greatly reduced.",
@@ -38,6 +38,15 @@ const videoData = [
     subtitle:
       "We've done all the heavy lifting for you. Use the Acceptify's APIs to connect to a payment device.",
     highlightedWords: ["Ultra-Secure Payments"],
+    backgroundImage:
+      "url('https://res.cloudinary.com/dq5guzzge/image/upload/v1733818098/components/ellipse.svg')", // Replace with your actual image URL
+    backgroundStyle: {
+      backgroundSize: "cover",
+      backgroundPosition: "right bottom", // Positioned to right bottom
+      backgroundRepeat: "no-repeat",
+      // backgroundColor: "rgba(0,0,0,0.7)", // Optional: add a dark overlay
+      backgroundBlendMode: "overlay",
+    },
   },
   {
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1732531637/components/lightning_fast.webm",
@@ -151,7 +160,7 @@ const VideoScrollComponent = () => {
             {videoData.map((item, index) => (
               <div
                 key={index}
-                className="content-section w-full min-h-screen flex items-center justify-center">
+                className="content-section w-full min-h-screen flex items-center justify-center ">
                 {" "}
                 <div className="max-w-xl mx-auto ">
                   {" "}
@@ -164,14 +173,20 @@ const VideoScrollComponent = () => {
               </div>
             ))}{" "}
           </div>{" "}
-          <div className="w-2/3 relative">
+          <div className="w-2/3 relative ">
             {" "}
-            <div className="video-container sticky top-0 h-screen flex items-center justify-center">
-              {" "}
+            <div className="video-container  sticky top-0 h-screen flex items-center justify-center">
+              {/* <div className="absolute top-10 left-10 testDive bg-black"></div> */}
+              {/* <div className="absolute -bottom-10 -right-32 overflow-hidden w-full h-full  z-0  transform rotate-[155deg]">
+                <img
+                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733818098/components/ellipse.svg"
+                  className="w-full h-full"
+                />
+              </div> */}
               <video
                 ref={videoRef}
                 src={videoData[currentVideoIndex].url}
-                className="w-full h-auto max-h-full object-contain"
+                className="w-full h-auto max-h-full object-contain z-10"
                 autoPlay
                 loop
                 muted

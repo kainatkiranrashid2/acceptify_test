@@ -50,11 +50,11 @@ const ThemeToggle = () => {
   const getIcon = () => {
     switch (theme) {
       case "light":
-        return <MdLightMode size={20} />;
+        return <MdLightMode size={28} />;
       case "dark":
-        return <MdDarkMode size={20} />;
+        return <MdDarkMode size={28} />;
       default:
-        return <MdMonitor size={20} />;
+        return <MdMonitor size={28} />;
     }
   };
 
@@ -72,15 +72,15 @@ const ThemeToggle = () => {
         {/* <MdArrowDropDown size={20} /> */}
       </button>
       {isOpen && (
-        <ul className="absolute mt-1 w-32 bg-white dark:text-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg  right-4">
+        <ul className="absolute mt-8 w-32 bg-white dark:text-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg  right-2">
           {["system", "light", "dark"].map((option) => (
             <li key={option}>
               <button
-                className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="w-full text-left px-4 py-2 text-[#1B1B1B] hover:text-[#3873FD] dark:hover:text-[#3873FD] dark:text-white"
                 onClick={() => handleThemeChange(option)}>
                 <div className="flex w-full items-center">
                   {option === "system" && (
-                    <MdMonitor size={20} className="mr-2" />
+                    <MdMonitor size={24} className="mr-2" />
                   )}
                   {option === "light" && (
                     <MdLightMode size={20} className="mr-2" />

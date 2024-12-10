@@ -92,7 +92,7 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="h-[52px]  lg:mx-6 lg:my-[19px] xl:mt-[14px]  relative z-50 ">
-          <div className=" bg-transparent h-full flex justify-between items-center">
+          <div className=" bg-transparent h-full flex  items-center gap-[60px]">
             {/* Logo section */}
             <a
               href="/"
@@ -116,8 +116,8 @@ const Header = () => {
 
             {/* https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png */}
             {/* Menu Section */}
-            <div className="hidden lg:block">
-              <div className="flex items-center gap-16">
+            <div className="hidden lg:flex  justify-between w-full">
+              <div className="flex flex-row items-center justify-between ">
                 <ul className="flex items-center gap-6">
                   {NavbarMenu.map((menu) => (
                     <li key={menu.id} className="">
@@ -129,20 +129,20 @@ const Header = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="hidden lg:flex gap-4 items-center">
-                  <motion.button
-                    className=" bg-primary flex items-center text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px] !h-[46px] py-[17.5px] px-6 rounded-lg font-PP_Mori"
-                    whileHover={{
-                      scale: 1.2,
-                      boxShadow: "0px 0px 8px rgb(255,255,255)",
-                      transition: { duration: 0.2 },
-                    }}
-                    whileTap={{ scale: 0.95 }}>
-                    Get Started
-                  </motion.button>
-                  <span className="">|</span>
-                  <ThemeToggle />
-                </div>
+              </div>
+              <div className="hidden lg:flex gap-4 items-center">
+                <motion.button
+                  className=" bg-primary flex items-center text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px]  !h-[46px] py-[17.5px] px-6 rounded-lg "
+                  whileHover={{
+                    scale: 1.2,
+                    boxShadow: "0px 0px 8px rgb(255,255,255)",
+                    transition: { duration: 0.2 },
+                  }}
+                  whileTap={{ scale: 0.95 }}>
+                  Get Started
+                </motion.button>
+                <span className="mx-10 text-white">|</span>
+                <ThemeToggle />
               </div>
             </div>
 

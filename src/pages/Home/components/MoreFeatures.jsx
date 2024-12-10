@@ -50,7 +50,7 @@ const MoreFeatures = () => {
                 className="text-center p-6 bg-white relative rounded-[20px] border border-spacing-1 border-[#9EC1FF] w-full overflow-hidden"
                 key={index}>
                 {index !== 0 && index !== 3 && (
-                  <div className="absolute -top-40 -left-32 box-border w-[280px] h-[220px] flex-shrink-0 rounded-full bg-[#9EC1FF] shadow-[#9EC1FF]  z-0 opacity-20 shadow-[20px_20px_20px_20px_rgba(0,0,0,0.25)]"></div>
+                  <div className="absolute -top-44 -left-20 testDive"></div>
                 )}
 
                 <div className="relative z-10">
@@ -65,7 +65,7 @@ const MoreFeatures = () => {
                   </p>
                 </div>
 
-                <div className="absolute box-border -bottom-36 -right-28 w-[280.582px] h-[221.794px] flex-shrink-0 rounded-full bg-[#9EC1FF] z-0 opacity-25 shadow-[0_0_20px_10px_rgba(0,0,0,0.25),inset_0_0_50px_20px_#9EC1FF]"></div>
+                <div className="absolute -bottom-36 -right-20 testDive"></div>
               </div>
             ))}
           </div>
