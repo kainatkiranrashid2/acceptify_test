@@ -39,18 +39,16 @@ const OurCustomers = () => {
     <section>
       <div className="container">
         <div className="2xl:mx-[160px] xl:mx-8 md:mx-10 py-20 relative">
-          <div className="absolute oval-shape -left-20 -top-4  "></div>
-          <div className="absolute oval-shape left-96 -top-4  "></div>
+          {/* <div className="absolute oval-shape -left-20 -top-4  "></div> */}
+          {/* <div className="absolute oval-shape left-96 -top-4  "></div> */}
 
           <div className="grid grid-cols-6 items-center justify-center gap-8">
             {logos.map((logo, index) => (
               <div
                 key={index}
-                className={`2xl:w-[182px]  2xl:!h-[100px] py-6 px-5 rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] 
+                className={`xl:w-[182px]  xl:!h-[100px] py-6 px-5 rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] 
 
-                ${
-                  index >= logos.length - 5 ? "justify-center" : "justify-start"
-                }
+                md:w-[120px] md:h-[66px]
 
                 bg-white`}>
                 <img
