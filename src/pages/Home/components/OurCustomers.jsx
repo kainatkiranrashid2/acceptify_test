@@ -10,7 +10,6 @@ const OurCustomers = () => {
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733946541/components/our_customers/discover_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733946069/components/our_customers/jcb_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733947207/components/our_customers/americanexpress_logo.png",
-
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733946023/components/our_customers/unionpay_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733946505/components/our_customers/mastercard_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733945983/components/our_customers/evo_logo.png",
@@ -22,7 +21,6 @@ const OurCustomers = () => {
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733945388/components/our_customers/globalpayments_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733945338/components/our_customers/ace_parking_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733945285/components/our_customers/garuda_logo.png",
-
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733945213/components/our_customers/kaiser_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733945167/components/our_customers/alaska_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733945121/components/our_customers/fiji_logo.png",
@@ -30,27 +28,35 @@ const OurCustomers = () => {
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733945002/components/our_customers/scripps_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733944952/components/our_customers/ticketmaster_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733946740/components/our_customers/nfl_logo.png",
-
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733944879/components/our_customers/omni_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733944836/components/our_customers/mai_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733944784/components/our_customers/air_tanzania.png",
   ];
+
   return (
     <section>
       <div className="container">
         <div className="2xl:mx-[160px] xl:mx-8 md:mx-10 py-20 relative">
-          {/* <div className="absolute oval-shape -left-20 -top-4  "></div> */}
-          {/* <div className="absolute oval-shape left-96 -top-4  "></div> */}
-
-          <div className="grid grid-cols-6 items-center justify-center gap-8">
-            {logos.map((logo, index) => (
+          <div className="grid grid-cols-6 items-center justify-center gap-6">
+            {logos.slice(0, 24).map((logo, index) => (
               <div
                 key={index}
-                className={`xl:w-[182px]  xl:!h-[100px] py-6 px-5 rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] 
+                className={`xl:w-[182px] xl:!h-[100px] py-6 px-5 rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] md:w-[120px] md:h-[66px] bg-white`}>
+                <img
+                  src={logo}
+                  alt={`Customer logo ${index + 1}`}
+                  className="h-10 object-contain"
+                />
+              </div>
+            ))}
+          </div>
 
-                md:w-[120px] md:h-[66px]
-
-                bg-white`}>
+          {/* Last row centered */}
+          <div className="flex justify-center items-center mx-auto justify-items-center gap-6 mt-8">
+            {logos.slice(24).map((logo, index) => (
+              <div
+                key={index}
+                className={`xl:w-[182px] xl:!h-[100px] py-6 px-5 rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] md:w-[120px] md:h-[66px] bg-white`}>
                 <img
                   src={logo}
                   alt={`Customer logo ${index + 1}`}
