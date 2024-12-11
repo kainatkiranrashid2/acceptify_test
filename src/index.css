@@ -219,3 +219,23 @@
     letter-spacing: 0.02px;
   }
 }
+
+.testDive {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #9ec1ff 0%, rgba(255, 255, 255, 0.9) 70%);
+
+  margin-left: 0;
+  opacity: 50%;
+  margin-right: auto;
+}
+.bottomGradient {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #6436e4 0%, rgba(255, 255, 255, 0.9) 70%);
+
+  margin-left: 0;
+  opacity: 25%;
+  margin-right: auto;
+}
+

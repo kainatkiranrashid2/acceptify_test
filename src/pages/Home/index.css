@@ -5,3 +5,140 @@
     width: 100%;
   }
 }
+.byop {
+  background: linear-gradient(0deg, #fff 65.13%, #9ec1ff 192.35%);
+}
+@media screen and (min-width: 1536px) {
+  .byop__card-description {
+    font-size: 18px;
+    line-height: 28.8px;
+  }
+  .byop__card-img0 {
+    width: 151px;
+    height: 155.47px;
+  }
+  .byop__card-img1 {
+    width: 217px;
+    height: 146px;
+  }
+  .byop__card-img2 {
+    width: 192px;
+    height: 162px;
+  }
+  .byop__card-img3 {
+    width: 127px;
+    height: 131px;
+  }
+  .byop__card-img4 {
+    width: 130px;
+    height: 148px;
+  }
+  .byop__card-img5 {
+    width: 192px;
+    height: 151.65px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1535px) {
+  .byop__card-description {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+  .byop__card-img0 {
+    object-fit: cover;
+    width: 107.36px;
+    height: 110.53px;
+  }
+  .byop__card-img1 {
+    object-fit: cover;
+    width: 168.88px;
+    height: 92px;
+  }
+  .byop__card-img2 {
+    object-fit: cover;
+    width: 139px;
+    height: 102px;
+  }
+  .byop__card-img3 {
+    object-fit: cover;
+    width: 106.79px;
+    height: 110.15px;
+  }
+  .byop__card-img4 {
+    object-fit: cover;
+    width: 121.46px;
+    height: 137.93px;
+  }
+  .byop__card-img5 {
+    object-fit: cover;
+
+    width: 147px;
+    height: 116.1px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .byop__card-description {
+    font-size: 12px;
+    line-height: 19.2px;
+  }
+  .byop__card-img0 {
+    width: 109px;
+    height: 112.22px;
+  }
+  .byop__card-img1 {
+    width: 161.53px;
+    height: 88px;
+  }
+  .byop__card-img2 {
+    width: 138px;
+    height: 101.27px;
+  }
+  .byop__card-img3 {
+    width: 106.79px;
+    height: 110.15px;
+  }
+  .byop__card-img4 {
+    width: 104px;
+    height: 118.1px;
+  }
+  .byop__card-img5 {
+    object-fit: contain;
+    width: 147px;
+    height: 116.1px;
+  }
+}
+
+@media screen and (min-width: 786px) and (max-width: 1023px) {
+  .byop__card-description {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .byop__card-img0 {
+    width: 63.13px;
+    height: 65px;
+  }
+  .byop__card-img1 {
+    width: 127.64px;
+    height: 73.33px;
+  }
+  .byop__card-img2 {
+    width: 98px;
+    height: 82.69px;
+  }
+  .byop__card-img3 {
+    width: 62px;
+    height: 62px;
+  }
+  .byop__card-img4 {
+    width: 64px;
+    height: 72.68px;
+  }
+  .byop__card-img5 {
+    object-fit: contain;
+    width: 104px;
+    height: 82.14px;
+    gap: 0px;
+    opacity: 0px;
+  }
+}

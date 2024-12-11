@@ -12,9 +12,11 @@ export default {
       "2xl": "1536px",
       "3xl": "1920px", // Added this line
     },
+
     extend: {
       backgroundImage: {
-        "starry-night": "url('/assets/starry_night.jpg')",
+        "represent-brand-gradient":
+          "linear-gradient(0deg, #FFF 65.13%, #9EC1FF 192.35%)",
       },
       fontSize: {
         sm: ["14px", "20px"],

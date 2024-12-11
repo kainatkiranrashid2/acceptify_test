@@ -11,27 +11,27 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const NavbarMenu = [
   {
     id: 1,
-    title: "Devices",
+    title: "Payment Devices",
     path: "/",
   },
   {
     id: 2,
-    title: "Payments",
+    title: "Industries",
     path: "#",
   },
   {
     id: 3,
-    title: "POS Solutions",
+    title: "Solutions",
     path: "#",
   },
   {
     id: 4,
-    title: "Industries",
+    title: "Developers",
     path: "/industries",
   },
   {
     id: 5,
-    title: "Developer",
+    title: "Processors",
     path: "#",
   },
 ];
@@ -118,12 +118,12 @@ const Header = () => {
             {/* Menu Section */}
             <div className="hidden lg:flex  justify-between w-full">
               <div className="flex flex-row items-center justify-between ">
-                <ul className="flex items-center gap-6">
+                <ul className="flex items-center lg:gap-[2px] xl:gap-4 2xl:gap-6">
                   {NavbarMenu.map((menu) => (
                     <li key={menu.id} className="">
                       <Link
                         to={menu.path}
-                        className="flex text-white dark:text-white  justify-center items-center font-Inter font-medium py-2 px-3 text-[16px]  3xl:text-[24px]/[24px] relative group">
+                        className="flex text-white dark:text-white  justify-center items-center font-Inter font-medium py-2 px-3 lg:text-[14px]/[24px] xl:text-[16px]/[24px]  relative group">
                         {menu.title}
                       </Link>
                     </li>
