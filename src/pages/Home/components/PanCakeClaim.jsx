@@ -131,7 +131,7 @@ const VideoScrollComponent = () => {
   return (
     <section className="dark:bg-[#06142F]">
       <div className="container">
-        <div className="block lg:hidden  mt-[60px] mx-10">
+        <div className="block lg:hidden mt-[60px] mx-10">
           {videoData.map((item, index) => (
             <div className="flex flex-col justify-center  mb-28" key={index}>
               <div className="">
@@ -156,7 +156,7 @@ const VideoScrollComponent = () => {
         </div>
         <div
           ref={containerRef}
-          className=" hidden lg:flex justify-center lg:gap-[182px]">
+          className=" hidden lg:flex justify-center lg:gap-[182px] lg:mx-10 xl:mx-20">
           {" "}
           <div className="lg:w-[384px] xl:w-[430px] 2xl-w-[506px] ">
             {" "}
