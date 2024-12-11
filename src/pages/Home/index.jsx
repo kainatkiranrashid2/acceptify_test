@@ -11,6 +11,7 @@ import BeautifulBranding from "./components/BeautifulBranding";
 import AcceptWristbands from "./components/AcceptWristbands";
 import BYOP from "./components/BYOP";
 import MoreFeatures from "./components/MoreFeatures";
+import OurCustomers from "./components/OurCustomers";
 
 const Home = () => {
   document.body.className = "home";
@@ -25,6 +26,7 @@ const Home = () => {
       <MoreFeatures />
       {/* <SmartTransaction /> */}
       <IndustriesSection />
+      <OurCustomers />
       {/* <CTASection /> */}
     </Fragment>
   );
