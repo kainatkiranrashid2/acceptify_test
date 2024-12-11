@@ -20,16 +20,17 @@ const videoData = [
   {
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817596/components/still_pancake_03.webm",
     title:
-      "Acceptify is PCI-P2PE Certified ensuring Compliance to the industry's highest standard.",
+      "Acceptify is PCI-P2PE Certified Ensuring Compliance to the Industry Highest Standard",
     subtitle:
-      "Acceptify's PCI P2PE (Point-to-Point Encryption) certification ensures compliance to PCI-DSC's (Payment Card Industry Security Standards Council) highest security standards.",
+      "Acceptify's PCI P2PE (Point-to-Point encryption) certification ensures compliance to PCI-SSC's (Payment Card Industry Security Standards Council) highest security standards. Certified Tamperproof Hardware encrypts data from the point of capture which is then processed by Acceptify’s PCI-DSS compliant platform. Audited annually by an external qualified security assessor (QSA) to ensure compliance to latest standards.",
     highlightedWords: ["PCI-P2PE Certified"],
   },
   {
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817659/components/still_pancake_04.webm",
-    title: "Acceptify Simplifying PCI Security Compliance",
+    title:
+      "Acceptify Simplifying PCI Security Compliance for Online and Offline Payments",
     subtitle:
-      "Acceptify's encryption of cardholder data removes it from scope for many PCI DSS requirements, as a result your PCI audit effort is greatly reduced.",
+      "Acceptify’s encryption of cardholder data removes it from scope for many PCI DSS requirements, as a result your PCI audit effort is greatly reduced making compliance audits simpler and less costly.",
     highlightedWords: ["Simplifying", "PCI Security Compliance"],
   },
   {
@@ -52,7 +53,7 @@ const videoData = [
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1732531637/components/lightning_fast.webm",
     title: "Lightning Fast Payments",
     subtitle:
-      "Enterprises that need speedy payments choose Acceptify. Our payment technologies are designed around “No More Spinners.” Spinners are painful when customers are waiting. Acceptify helps you succeed in high throughput payment workflows where speed matters.",
+      "Enterprises that need speedy payments choose Acceptify.  Our payment technologies are designed around “No More Spinners.” Spinners are painful when customers are waiting. Acceptify helps you succeed in high throughput payment workflows where speed matters.",
     highlightedWords: ["Lightning Fast Payments"],
   },
 ];
