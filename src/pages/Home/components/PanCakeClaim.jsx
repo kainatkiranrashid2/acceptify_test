@@ -52,7 +52,7 @@ const videoData = [
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1732531637/components/lightning_fast.webm",
     title: "Lightning Fast Payments",
     subtitle:
-      "Enterprises that need speedy payments choose Acceptify. Our payment technologies are designed around 'No More Spinners.'",
+      "Enterprises that need speedy payments choose Acceptify. Our payment technologies are designed around “No More Spinners.” Spinners are painful when customers are waiting. Acceptify helps you succeed in high throughput payment workflows where speed matters.",
     highlightedWords: ["Lightning Fast Payments"],
   },
 ];
