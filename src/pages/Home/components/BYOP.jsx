@@ -1,12 +1,12 @@
 const BYOP = () => {
   return (
     <section
-      className="bg-white " // Added useful background classes
+      className="" // Added useful background classes
     >
       <div className="container  ">
         <div className="py-20">
           <div className=" relative flex flex-col items-center justify-center overflow-hidden ">
-            <div className="absolute oval-shape   right-0  "></div>
+            <div className="absolute oval-shape right-0  "></div>
             <div className=" flex flex-col items-center justify-center">
               <h1 className=" font-semibold mb-4">
                 BYOP - Bring Your Own Processor
