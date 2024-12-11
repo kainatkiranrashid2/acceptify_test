@@ -11,7 +11,7 @@ const BYOP = () => {
               <h1 className=" font-semibold mb-4">
                 BYOP - Bring Your Own Processor
               </h1>
-              <p className=" text-center md:w-[526px] lg:w-[708px] xl:w-[796px] 2xl:w-[900px]  ">
+              <p className=" text-center md:w-[526px] lg:w-[708px] xl:w-[735px] 2xl:w-[900px]  ">
                 Acceptify empowers merchants with complete processor
                 flexibility. Seamlessly integrate your preferred payment
                 processing partner and move between processors without changing
