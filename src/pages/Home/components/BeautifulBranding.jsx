@@ -9,7 +9,7 @@ const BeautifulBranding = () => {
         <div className=" flex flex-col items-center justify-center relative  ">
           <div className=" flex flex-col items-center justify-center">
             <h1 className=" font-semibold mb-4">Represent Your Brand</h1>
-            <p className=" md:w-[30rem] md:max-w-[30rem] lg:w-[37rem] lg:max-w-[37rem]  ">
+            <p className=" md:w-[30rem] text-center md:max-w-[30rem] lg:w-[37rem] lg:max-w-[37rem]  ">
               Acceptify uniquely provides a signature checkout experience by
               personalizing payment devices with your brand&apos;s logos and
               colors.
