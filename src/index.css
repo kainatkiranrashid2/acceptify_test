@@ -49,7 +49,8 @@
   }
   h3 {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 600;
+
     letter-spacing: 0.02px;
   }
   h4 {
@@ -93,7 +94,7 @@
   }
   h3 {
     font-size: 1.125rem;
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing: 0.02px;
   }
   p {
@@ -125,7 +126,8 @@
   }
   h3 {
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
+
     letter-spacing: 0.02px;
   }
   p {
@@ -152,7 +154,8 @@
   }
   h3 {
     font-size: 0.75rem;
-    font-weight: bold;
+    font-weight: 600;
+
     letter-spacing: 0.02px;
   }
   p {
@@ -181,7 +184,8 @@
   }
   h3 {
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
+
     letter-spacing: 0.02px;
   }
   p {
@@ -209,7 +213,8 @@
   }
   h3 {
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
+
     letter-spacing: 0.02px;
   }
   p {
@@ -238,4 +243,3 @@
   opacity: 25%;
   margin-right: auto;
 }
-
