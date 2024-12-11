@@ -47,7 +47,7 @@ const MoreFeatures = () => {
           <div className="grid grid-cols-3  gap-5 max-w-full">
             {features.map((item, index) => (
               <div
-                className="byop__card xl:p-4 2xl:p-6 bg-white relative rounded-[20px] border border-spacing-1 border-[#9EC1FF] 2xl:w-[444px] 2xl:h-[406px] xl:w-[316px] xl:h-[344px] lg:w-[269px] lg:h-[293px] overflow-hidden"
+                className="byop__card lg:px-2 lg:py-4 xl:p-4 2xl:p-6 bg-white relative rounded-[20px] border border-spacing-1 border-[#9EC1FF] 2xl:w-[444px] 2xl:h-[406px] xl:w-[316px] xl:h-[344px] lg:w-[269px] lg:h-[293px] overflow-hidden"
                 key={index}>
                 <div className="absolute -top-48 -left-28 testDive"></div>
 
