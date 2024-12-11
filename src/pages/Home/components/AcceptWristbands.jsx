@@ -2,7 +2,15 @@ import React from "react";
 
 const AcceptWristbands = () => {
   return (
-    <section className="bg-gradient-to-br from-[#3479FD] to-[#6E23FB] dark: py-20">
+    <section className="bg-gradient-to-br relative from-[#3479FD] to-[#6E23FB] dark: py-20">
+      <div
+        className="absolute inset-0 bg-repeat "
+        style={{
+          backgroundImage: `url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733922601/components/dots_grid.png)`,
+          backgroundSize: "100% 100%", // Adjust size as needed
+        }}
+      />
+
       <div className="container ">
         <div className="mx-20 flex justify-between items-center md:gap-12 xl:gap-32 ">
           <div className="w-1/2">

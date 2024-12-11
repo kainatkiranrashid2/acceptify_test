@@ -3,12 +3,10 @@ const BeautifulBranding = () => {
     <section
       className="bg-cover bg-center bg-no-repeat py-20 dark:bg-[#010C22]" // Added useful background classes
       style={{
-        backgroundImage: `url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733314604/components/represent_your_brand.svg)`,
+        backgroundImage: `url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733922457/components/ryb_light.svg)`,
       }}>
       <div className="container">
         <div className=" flex flex-col items-center justify-center relative  ">
-          <div className="absolute top-0 left-0 testDive"></div>
-
           <div className=" flex flex-col items-center justify-center">
             <h1 className=" font-semibold mb-4">Represent Your Brand</h1>
             <p className=" md:w-[30rem] md:max-w-[30rem] lg:w-[37rem] lg:max-w-[37rem]  ">
