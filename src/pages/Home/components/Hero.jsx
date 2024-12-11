@@ -32,7 +32,7 @@ const HeroSection = () => {
   );
 
   return (
-    <div className="cp-hero relative bg-gradient-to-br from-[#6E3BFB] to-[#2D79FF] dark:from-[#282478] dark:to-[#150731] overflow-x-hidden ">
+    <div className="cp-hero relative bg-gradient-to-br from-[#6E3BFB] to-[#2D79FF] dark:from-[#282478] dark:to-[#150731] overflow-x-hidden">
       {/* Main white glow effect */}
       <div className="absolute dark:hidden -top-48 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl"></div>
 

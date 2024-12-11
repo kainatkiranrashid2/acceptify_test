@@ -33,10 +33,10 @@ const videoData = [
     highlightedWords: ["Simplifying", "PCI Security Compliance"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1732532264/components/code_snippet.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733898703/components/code_snippet.webm",
     title: "Implement Ultra-Secure Payments with a few Lines of Code",
     subtitle:
-      "We've done all the heavy lifting for you. Use the Acceptify's APIs to connect to a payment device.",
+      "We’ve done all the heavy lifting for you. Use the Acceptify’s APIs to connect to a payment device, take a payment, submit the transaction to your processor and receive the approval or declined decision – with just a few lines of code.",
     highlightedWords: ["Ultra-Secure Payments"],
     backgroundImage:
       "url('https://res.cloudinary.com/dq5guzzge/image/upload/v1733818098/components/ellipse.svg')", // Replace with your actual image URL
@@ -153,9 +153,11 @@ const VideoScrollComponent = () => {
             </div>
           ))}
         </div>
-        <div ref={containerRef} className=" hidden lg:flex lg:gap-32 mx-10">
+        <div
+          ref={containerRef}
+          className=" hidden lg:flex  lg:gap-[182px] mx-10">
           {" "}
-          <div className="w-1/3">
+          <div className="lg:w-[384px] xl:w-[430px] 2xl-w-[506px]">
             {" "}
             {videoData.map((item, index) => (
               <div
@@ -173,9 +175,9 @@ const VideoScrollComponent = () => {
               </div>
             ))}{" "}
           </div>{" "}
-          <div className="w-2/3 relative ">
+          <div className="lg:w-[500px] xl:w-[546px] 2xl:w-[688px]  relative ">
             {" "}
-            <div className="video-container  sticky top-0 h-screen flex items-center justify-center">
+            <div className="video-container   sticky top-0 lg:h-[546px] 2xl:h-[790px] flex items-center justify-center">
               {/* <div className="absolute top-10 left-10 testDive bg-black"></div> */}
               {/* <div className="absolute -bottom-10 -right-32 overflow-hidden w-full h-full  z-0  transform rotate-[155deg]">
                 <img

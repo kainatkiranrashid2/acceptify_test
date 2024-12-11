@@ -39,6 +39,8 @@ export default {
       container: {
         screens: {
           "2xl": "1536px", // This ensures max-width of 1536px at 2xl breakpoint
+          xl: "1280px",
+          lg: "1024px",
         },
         center: true,
         width: "100%",
