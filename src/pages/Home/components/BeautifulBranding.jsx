@@ -15,7 +15,7 @@ const BeautifulBranding = () => {
               colors.
             </p>
           </div>
-          <div className="w-[800px]">
+          <div className="2xl:w-[748px] 2xl:h-[453px] xl:w-[645px] xl:h-[391px] lg:w-[495.82px] lg:h-[295.26px] md:w-[371.7px] md:h-[219px] ">
             <video className="w-full h-full object-contain" autoPlay loop muted>
               <source
                 src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733836589/components/represent_your_brand_video.webm"
