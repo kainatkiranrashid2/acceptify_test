@@ -4,14 +4,14 @@ const AcceptWristbands = () => {
   return (
     <section className="bg-gradient-to-br relative from-[#3479FD] to-[#6E23FB] dark: py-20">
       <div
-        className="absolute inset-0 bg-repeat "
+        className="absolute inset-0 bg-repeat z-0"
         style={{
           backgroundImage: `url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733922601/components/dots_grid.png)`,
           backgroundSize: "100% 100%", // Adjust size as needed
         }}
       />
 
-      <div className="container ">
+      <div className="container relative z-10">
         <div className="mx-20 flex justify-between items-center md:gap-12 xl:gap-32 ">
           <div className="w-1/2">
             <h2 className="text-white ">Accept Wristbands</h2>
