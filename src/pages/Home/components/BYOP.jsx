@@ -1,17 +1,17 @@
 const BYOP = () => {
   return (
     <section
-      className="" // Added useful background classes
+      className="dark:bg-[#06142F]" // Added useful background classes
     >
       <div className="container  ">
         <div className="py-20">
           <div className=" relative flex flex-col items-center justify-center overflow-hidden ">
             {/* <div className="absolute oval-shape right-0  "></div> */}
             <div className=" flex flex-col items-center justify-center">
-              <h1 className=" font-semibold mb-4">
+              <h1 className=" font-semibold mb-4 dark:text-white">
                 BYOP - Bring Your Own Processor
               </h1>
-              <p className=" text-center md:w-[526px] lg:w-[708px] xl:w-[735px] 2xl:w-[900px]  ">
+              <p className=" text-center dark:text-white md:w-[526px] lg:w-[708px] xl:w-[735px] 2xl:w-[900px]  ">
                 Acceptify empowers merchants with complete processor
                 flexibility. Seamlessly integrate your preferred payment
                 processing partner and move between processors without changing

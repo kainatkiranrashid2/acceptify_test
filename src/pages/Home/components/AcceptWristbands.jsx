@@ -2,7 +2,7 @@ import React from "react";
 
 const AcceptWristbands = () => {
   return (
-    <section className="bg-gradient-to-br relative from-[#3479FD] to-[#6E23FB] dark: py-20">
+    <section className="bg-gradient-to-r relative from-[#3479FD] to-[#6E23FB] dark:from-[#150731] dark:to-[#1646A7] py-20">
       <div
         className="absolute inset-0 bg-repeat z-0"
         style={{

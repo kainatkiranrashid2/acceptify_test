@@ -27,7 +27,6 @@ const Home = () => {
       {/* <SmartTransaction /> */}
       <IndustriesSection />
       <OurCustomers />
-      <CTASection />
     </Fragment>
   );
 };
