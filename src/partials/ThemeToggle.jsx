@@ -9,6 +9,7 @@ import {
 const ThemeToggle = () => {
   const [theme, setTheme] = useState("system");
   const [isOpen, setIsOpen] = useState(false);
+  const [initialIcon, setInitialIcon] = useState(<MdLightMode size={28} />);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "system";
@@ -45,17 +46,21 @@ const ThemeToggle = () => {
     applyTheme(newTheme);
     localStorage.setItem("theme", newTheme);
     setIsOpen(false);
+    switch (newTheme) {
+      case "light":
+        setInitialIcon(<MdLightMode size={28} />);
+        break;
+      case "dark":
+        setInitialIcon(<MdDarkMode size={28} />);
+        break;
+      default:
+        setInitialIcon(<MdMonitor size={28} />);
+        break;
+    }
   };
 
   const getIcon = () => {
-    switch (theme) {
-      case "light":
-        return <MdLightMode size={28} />;
-      case "dark":
-        return <MdDarkMode size={28} />;
-      default:
-        return <MdMonitor size={28} />;
-    }
+    return initialIcon;
   };
 
   return (
