@@ -20,7 +20,7 @@ const HeroSection = () => {
     },
   });
 
-  const heroVideo = cld.video("acceptify/assets/herosection/header_v12");
+  const heroVideo = cld.video("components/hero_section_update");
 
   heroVideo.resize(
     fill()
