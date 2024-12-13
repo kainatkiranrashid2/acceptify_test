@@ -91,7 +91,7 @@ const VideoScrollComponent = () => {
                 rotation: 283,
                 transformOrigin: "center center",
                 duration: 0.2,
-                ease: "expo.in",
+                ease: "power1",
               });
             } else {
               // Scrolling down: normal orientation (tip down)
@@ -99,7 +99,7 @@ const VideoScrollComponent = () => {
                 rotation: 103,
                 transformOrigin: "center center",
                 duration: 0.3,
-                ease: "expo.in",
+                ease: "power1",
               });
             }
           },
