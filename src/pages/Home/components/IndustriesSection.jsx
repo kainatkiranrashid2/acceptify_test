@@ -20,7 +20,7 @@ const IndustriesSection = () => {
               Acceptify processes worldwide transactions for the most complex
               industries. Here are just a few industries we work with.
             </p>
-            <button className="bg-primary text-white px-[26px] rounded-md py-[14px] text-[16px]/[27px]">
+            <button className="bg-primary text-white px-[14px] hover:bg-[#51A805] rounded-md py-[10px] text-[16px]/[27px]">
               Explore Industries
             </button>
           </div>
