@@ -111,13 +111,13 @@ const VideoScrollComponent = () => {
 
     // add a media query. When it matches, the associated function will run
     mm.add("(min-width: 1024px)", () => {
-      ScrollTrigger.create({
-        trigger: container,
-        start: "top top",
-        end: "bottom bottom",
-        pin: swishLogo,
-        pinSpacing: false,
-      });
+      // ScrollTrigger.create({
+      //   trigger: container,
+      //   start: "top top",
+      //   end: "bottom bottom",
+      //   pin: swishLogo,
+      //   pinSpacing: false,
+      // });
 
       sections.forEach((section, index) => {
         ScrollTrigger.create({
