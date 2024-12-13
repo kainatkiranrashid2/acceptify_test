@@ -180,7 +180,7 @@ const VideoScrollComponent = () => {
 
           opacity: 0.5, // Optional: adjust opacity if needed
         }}></div>
-
+      {/* 
       <img
         ref={svgRef}
         className="absolute top-20 transform rotate-[103deg] right-[50%] z-0 w-32 h-32 "
@@ -190,7 +190,7 @@ const VideoScrollComponent = () => {
           willChange: "transform", // Hint to browser for smoother animations
           transition: "transform 0.3s ease-out", // Smooth transition
         }}
-      />
+      /> */}
 
       <div className="container">
         <div className="block lg:hidden mt-[60px] mx-10">
