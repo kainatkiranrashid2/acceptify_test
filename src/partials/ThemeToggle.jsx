@@ -78,7 +78,7 @@ const ThemeToggle = () => {
         {/* <MdArrowDropDown size={20} /> */}
       </button>
       {isOpen && (
-        <ul className="absolute mt-8 w-32 bg-white dark:text-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg  right-2">
+        <ul className="absolute mt-8 w-32 bg-white dark:text-white dark:bg-[#06142F] border border-gray-300 dark:border-gray-700 rounded-md shadow-lg  right-2">
           {["system", "light", "dark"].map((option) => (
             <li key={option}>
               <button
@@ -86,11 +86,16 @@ const ThemeToggle = () => {
                 onClick={() => handleThemeChange(option)}>
                 <div className="flex w-full items-center">
                   {option === "light" && (
-                    <MdLightMode size={20} className="mr-2" />
+                    <MdLightMode
+                      size={20}
+                      className="mr-2 dark:text-[#868686]"
+                    />
                   )}
-                  {option === "dark" && <FiMoon size={20} className="mr-2" />}
+                  {option === "dark" && (
+                    <FiMoon size={20} className="mr-2 dark:text-[#868686]" />
+                  )}
                   {option === "system" && (
-                    <MdMonitor size={24} className="mr-2" />
+                    <MdMonitor size={24} className="mr-2 dark:text-[#868686]" />
                   )}
                   <span className="capitalize">{option}</span>
                 </div>
