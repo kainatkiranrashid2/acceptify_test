@@ -4,10 +4,11 @@ const IndustriesSection = () => {
   return (
     <div className="py-20 bg-gradient-to-b from-white from-[16.97%] to-[#3B6FFD] to-[100%] relative overflow-hidden dark:bg-gradient-to-b dark:from-[#0C0221] dark:to-[#0C0221] dark:relative">
       {/* Background Image Layer */}
-      <div className="hidden dark:block dark:absolute  -left-72 -top-72 transform -rotate-45 z-0">
+      <div className="block absolute  opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
         <img
           src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734065022/components/our_customers_dark_mode/industries_bg.png"
           alt=""
+          className="w-1/2"
         />
       </div>
       {/* Content Layer */}
