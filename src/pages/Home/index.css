@@ -9,10 +9,8 @@
   background: linear-gradient(0deg, #fff 65.13%, #9ec1ff 192.35%);
 }
 
-@media (prefers-color-scheme: dark) {
-  .morefeatures {
-    background: linear-gradient(0, #0c0221 28.23%, #1b2a7c 135.82%);
-  }
+.dark .morefeatures {
+  background: linear-gradient(0, #0c0221 28.23%, #1b2a7c 135.82%);
 }
 
 @media screen and (min-width: 1536px) {

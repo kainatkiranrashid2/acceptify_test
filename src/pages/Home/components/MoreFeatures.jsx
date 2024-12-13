@@ -49,7 +49,7 @@ const MoreFeatures = () => {
           <div className="grid grid-cols-3  gap-5 max-w-full">
             {features.map((item, index) => (
               <div
-                className="morefeatures__card parent-container lg:px-2 lg:py-4 xl:p-4 2xl:p-6 bg-white dark:bg-[#05122C] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF] 2xl:w-[444px] 2xl:h-[406px] xl:w-[316px] xl:h-[344px] lg:w-[269px] lg:h-[293px] overflow-hidden"
+                className="morefeatures__card parent-container lg:px-2 lg:py-4 xl:p-4 2xl:p-6 bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF] 2xl:w-[444px] 2xl:h-[406px] xl:w-[316px] xl:h-[344px] lg:w-[269px] lg:h-[293px] overflow-hidden"
                 key={index}>
                 <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
