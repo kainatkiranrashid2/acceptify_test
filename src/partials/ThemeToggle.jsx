@@ -82,9 +82,9 @@ const ThemeToggle = () => {
           {["system", "light", "dark"].map((option) => (
             <li key={option}>
               <button
-                className="w-full text-left px-4 py-2 text-[#1B1B1B] hover:text-[#3873FD] dark:hover:text-[#3873FD] dark:text-white"
+                className="w-full text-left px-4 py-2 text-[#1B1B1B] hover:text-[#3873FD] dark:hover:bg-[#092254] dark:hover:text-white dark:text-white"
                 onClick={() => handleThemeChange(option)}>
-                <div className="flex w-full items-center">
+                <div className="flex w-full items-center ">
                   {option === "light" && (
                     <MdLightMode
                       size={20}
@@ -97,7 +97,7 @@ const ThemeToggle = () => {
                   {option === "system" && (
                     <MdMonitor size={24} className="mr-2 dark:text-[#868686]" />
                   )}
-                  <span className="capitalize">{option}</span>
+                  <span className="capitalize ">{option}</span>
                 </div>
               </button>
             </li>
