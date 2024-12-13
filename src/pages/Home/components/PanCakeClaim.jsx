@@ -74,7 +74,7 @@ const VideoScrollComponent = () => {
     mm.add("(min-width: 1024px)", () => {
       // Control the rocket position over the scroll, same as before
       gsap.to(svgElement, {
-        y: 3500,
+        y: 3200,
         ease: "none",
         scrollTrigger: {
           trigger: container,
