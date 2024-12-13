@@ -129,7 +129,8 @@ const VideoScrollComponent = () => {
     );
   };
   return (
-    <section className="dark:bg-[#06142F]">
+    <section className="dark:bg-[#06142F] lg:relative">
+      <div className="hidden lg:block absolute top-12 left-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734072874/components/parallex_bg_element.png)]"></div>
       <div className="container">
         <div className="block lg:hidden mt-[60px] mx-10">
           {videoData.map((item, index) => (
@@ -156,8 +157,7 @@ const VideoScrollComponent = () => {
         </div>
         <div
           ref={containerRef}
-          className=" hidden lg:flex justify-center lg:gap-[182px] lg:mx-10 xl:mx-20">
-          {" "}
+          className=" hidden lg:flex lg:relative justify-center lg:gap-[182px] lg:mx-10 xl:mx-20">
           <div className="lg:w-[384px] xl:w-[430px] 2xl-w-[506px] ">
             {" "}
             {videoData.map((item, index) => (
