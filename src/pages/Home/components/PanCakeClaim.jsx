@@ -131,7 +131,7 @@ const VideoScrollComponent = () => {
   return (
     <section className="dark:bg-[#06142F] relative overflow-hidden">
       <div
-        className="absolute opacity-50 -top-[1000px]  -left-[200px] transform  rotate-[235deg] z-0 w-[1200px] h-[1581px] bg-cover bg-no-repeat"
+        className="absolute opacity-100 -top-[1000px]  -left-[200px] transform  rotate-[235deg] z-0 w-[1200px] h-[1581px] bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url('https://res.cloudinary.com/dq5guzzge/image/upload/v1734076580/components/swish_logo.png')`,
           backgroundSize: "100%",
