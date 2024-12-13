@@ -40,7 +40,7 @@ const HeroSection = () => {
       {/* Secondary smaller glow for intensity */}
       <div className="absolute dark:hidden -top-5 -left-5 w-32 h-32 bg-white/30 rounded-full blur-3xl"></div>
 
-      <div className="relative h-full  aspect-auto md:aspect-video container ">
+      <div className="hidden md:block relative  h-full  aspect-auto md:aspect-video container ">
         <AdvancedVideo
           className="absolute top-0 left-0 w-full h-full object-contain "
           autoPlay
