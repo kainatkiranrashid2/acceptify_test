@@ -186,10 +186,10 @@ const VideoScrollComponent = () => {
         className="absolute top-20 transform rotate-[103deg] right-[50%] z-0 w-32 h-32 "
         src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
         alt=""
-        // style={{
-        //   willChange: "transform", // Hint to browser for smoother animations
-        //   transition: "transform 0.3s ease-out", // Smooth transition
-        // }}
+        style={{
+          willChange: "transform", // Hint to browser for smoother animations
+          transition: "transform 0.3s ease-out", // Smooth transition
+        }}
       />
 
       <div className="container">
