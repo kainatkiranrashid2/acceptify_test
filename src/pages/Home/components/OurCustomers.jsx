@@ -47,7 +47,7 @@ const OurCustomers = () => {
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065016/components/our_customers_dark_mode/fiserv_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065019/components/our_customers_dark_mode/elavon_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065018/components/our_customers_dark_mode/freedompay_logo.svg",
-    "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065017/components/our_customers_dark_mode/globalpayments_logo.svg",
+    "https://res.cloudinary.com/dq5guzzge/image/upload/v1734071592/components/our_customers_dark_mode/gpay_logo.png",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733989402/components/our_customers_logo/ace_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734071104/components/our_customers_dark_mode/kaiser_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734069883/components/our_customers_dark_mode/alaska_logo.svg",
@@ -86,7 +86,9 @@ const OurCustomers = () => {
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
-                    className="h-10 object-contain"
+                    className={`h-10 object-contain ${
+                      index === 16 ? "h-24" : ""
+                    }`}
                   />
                 </div>
               ))}
