@@ -66,7 +66,7 @@ const OurCustomers = () => {
   ];
 
   return (
-    <section>
+    <section className="dark:bg-[#06142F]">
       <div className="container">
         <div className="py-20">
           <div className="2xl:mx-[160px] xl:mx-8 md:mx-10 mb-[200px] relative dark:hidden">
