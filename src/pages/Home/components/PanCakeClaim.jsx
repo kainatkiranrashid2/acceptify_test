@@ -5,10 +5,10 @@ gsap.registerPlugin(ScrollTrigger);
 const videoData = [
   {
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817486/components/still_pancake_01.webm",
-    title: "Protect your Customers and your Reputation with Acceptify",
+    title: "Secure, Certified, Lightning Fast Enterprise Payments Anywhere",
     subtitle:
       "Acceptify is designed to meet the stringent security standards of the Payment Card Industry's Data Security Standard (PCI-DSS). Customer's data is always strongly encrypted.",
-    highlightedWords: ["Protect your", "Customers"],
+    highlightedWords: ["Secure", "Certified", "Lightning Fast"],
   },
   {
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817549/components/still_pancake_02.webm",
