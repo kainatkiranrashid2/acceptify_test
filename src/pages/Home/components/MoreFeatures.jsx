@@ -67,8 +67,8 @@ const MoreFeatures = () => {
                   </p>
                 </div>
 
-                <div className="absolute -bottom-52 -right-36 dark:hidden morefeatures__bottomGradient"></div>
-                <div className="absolute -bottom-48 -right-56">
+                <div className="absolute -bottom-52 -right-36 block dark:hidden morefeatures__bottomGradient"></div>
+                <div className="hidden dark:block absolute -bottom-48 -right-56">
                   <div className="gradient-container">
                     <div className="circle"></div>
                     <div className="oval-1"></div>
