@@ -61,7 +61,7 @@ const HeroSection = () => {
               security concerns.
             </p>
 
-            <button className=" mt-4 bg-primary text-[16px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-[10px] rounded-lg  ">
+            <button className=" mt-4 bg-primary hover:bg-[#51A805] text-[16px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-[10px] rounded-lg  ">
               Start Now{" "}
               <img
                 src="./images/arrow.svg"
