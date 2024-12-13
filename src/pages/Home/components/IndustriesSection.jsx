@@ -2,15 +2,20 @@ import React from "react";
 
 const IndustriesSection = () => {
   return (
-    <div className="py-20 bg-gradient-to-b from-white from-[16.97%] to-[#3B6FFD] to-[100%] relative overflow-hidden dark:bg-[#0C0221]">
+    <div className="py-20 bg-gradient-to-b from-white from-[16.97%] to-[#3B6FFD] to-[100%] relative overflow-hidden dark:bg-gradient-to-b dark:from-[#0C0221] dark:to-[#0C0221] dark:relative">
       {/* Background Image Layer */}
-
+      <div className="hidden dark:block dark:absolute  -left-72 -top-72 transform -rotate-45 z-0">
+        <img
+          src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734065022/components/our_customers_dark_mode/industries_bg.png"
+          alt=""
+        />
+      </div>
       {/* Content Layer */}
-      <div className="container">
+      <div className="container relative z-10">
         <div className="flex justify-between items-center px-20 pt-20 z-10 ">
           <div className="w-1/2 h-full ">
-            <h1 className=" mb-6 font-semibold">Industries</h1>
-            <p className="mb-6 ">
+            <h1 className=" mb-6 font-semibold dark:text-white">Industries</h1>
+            <p className="mb-6 dark:text-white ">
               We mean it! Enterprise Mobile Payments Anywhere, Anytime.
               Acceptify processes worldwide transactions for the most complex
               industries. Here are just a few industries we work with.
