@@ -5,6 +5,7 @@ import {
   MdMonitor,
   MdArrowDropDown,
 } from "react-icons/md";
+import { FiMoon } from "react-icons/fi";
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState("system");
@@ -51,7 +52,7 @@ const ThemeToggle = () => {
         setInitialIcon(<MdLightMode size={28} />);
         break;
       case "dark":
-        setInitialIcon(<MdDarkMode size={28} />);
+        setInitialIcon(<FiMoon size={28} />);
         break;
       default:
         setInitialIcon(<MdMonitor size={28} />);
@@ -87,9 +88,7 @@ const ThemeToggle = () => {
                   {option === "light" && (
                     <MdLightMode size={20} className="mr-2" />
                   )}
-                  {option === "dark" && (
-                    <MdDarkMode size={20} className="mr-2" />
-                  )}
+                  {option === "dark" && <FiMoon size={20} className="mr-2" />}
                   {option === "system" && (
                     <MdMonitor size={24} className="mr-2" />
                   )}
