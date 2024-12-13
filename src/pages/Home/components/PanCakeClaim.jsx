@@ -129,8 +129,17 @@ const VideoScrollComponent = () => {
     );
   };
   return (
-    <section className="dark:bg-[#06142F] lg:relative">
-      <div className="hidden lg:block absolute top-12 left-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734072874/components/parallex_bg_element.png)]"></div>
+    <section className="dark:bg-[#06142F] relative overflow-hidden">
+      <div
+        className="absolute -top-[500px]  -left-[1000px] transform  rotate-[175deg] z-0 w-[2022px] h-[1316px] bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://res.cloudinary.com/dq5guzzge/image/upload/v1734072874/components/parallex_bg_element.png')`,
+          backgroundSize: "60%",
+          transform: "rotate(180deg)", // This rotates the background image itself
+
+          opacity: 1, // Optional: adjust opacity if needed
+        }}></div>
+
       <div className="container">
         <div className="block lg:hidden mt-[60px] mx-10">
           {videoData.map((item, index) => (
