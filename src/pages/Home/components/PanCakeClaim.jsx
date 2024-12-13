@@ -61,12 +61,14 @@ const VideoScrollComponent = () => {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
   const svgRef = useRef(null); // Ref for the SVG
+  const swishLogoRef = useRef(null); // Ref for the Swish logo
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   useEffect(() => {
     const container = containerRef.current;
     const video = videoRef.current;
     const svgElement = svgRef.current; // Access the SVG element
+    const swishLogo = swishLogoRef.current; // Access the Swish logo element
 
     const sections = gsap.utils.toArray(".content-section");
     let mm = gsap.matchMedia();
@@ -109,6 +111,14 @@ const VideoScrollComponent = () => {
 
     // add a media query. When it matches, the associated function will run
     mm.add("(min-width: 1024px)", () => {
+      ScrollTrigger.create({
+        trigger: container,
+        start: "top top",
+        end: "bottom bottom",
+        pin: swishLogo,
+        pinSpacing: false,
+      });
+
       sections.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section,
@@ -173,6 +183,7 @@ const VideoScrollComponent = () => {
     <section className="dark:bg-[#06142F] relative overflow-hidden">
       <div
         className="absolute opacity-100 -top-[1000px]  -left-[200px] transform  rotate-[235deg] z-0 w-[1200px] h-[1581px] bg-cover bg-no-repeat"
+        ref={swishLogoRef} // Add ref to the Swish logo div
         style={{
           backgroundImage: `url('https://res.cloudinary.com/dq5guzzge/image/upload/v1734076580/components/swish_logo.png')`,
           backgroundSize: "100%",
