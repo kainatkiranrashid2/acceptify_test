@@ -9,11 +9,12 @@ const CTASection = () => {
                 Ready to get Started?
               </h2>
               <p className="text-[18px]/[27px] mt-3 text-white">
-                Experience the ease of automation, the power of analytics, and
-                the impact of seamless integration. Your journey begins now!
+                See how Acceptify brings the ease of implementation and peace of
+                mind of a fully certified payments platform. Get in touch with
+                our experts now!
               </p>
-              <button className="text-[18px]/[18px] mt-5 bg-primary rounded-lg py-[15px] px-[30px] text-white ">
-                Get Started
+              <button className="md:text-[14px]/[20px] lg:text-[11px]/[16.5px] xl:text-[13px]/[19px] 2xl:text-[16px]/[24px] mt-5 bg-primary rounded-lg py-[10px] px-[14px] text-white ">
+                Contact an Expert
               </button>
             </div>
           </div>
