@@ -82,7 +82,7 @@ const ThemeToggle = () => {
           {["light", "dark", "system"].map((option) => (
             <li key={option}>
               <button
-                className="w-full text-left px-4 py-2 my-2 overflow-hidden text-[#1B1B1B] hover:text-[#3873FD] dark:text-[#3873FD] hover:bg-[#F3F3F3] dark:hover:bg-[#092254]  dark:hover:text-white dark:text-white"
+                className="w-full text-left px-4 py-2 my-2 overflow-hidden text-[#1B1B1B] hover:text-[#3873FD]  hover:bg-[#F3F3F3] dark:hover:bg-[#092254]  dark:hover:text-[#3873FD]dark:text-white"
                 onClick={() => handleThemeChange(option)}>
                 <div className="flex justify-start w-full items-center ">
                   {option === "light" && (
