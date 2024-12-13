@@ -123,7 +123,7 @@ const Header = () => {
                     <li key={menu.id} className="">
                       <Link
                         to={menu.path}
-                        className="flex text-white dark:text-white  justify-center items-center font-Inter font-medium py-2 px-3 lg:text-[14px]/[24px] xl:text-[16px]/[24px]  relative group">
+                        className="flex text-white hover:text-[#06142F] dark:hover:text-[#5745FC] dark:text-white  justify-center items-center font-Inter font-medium py-2 px-3 lg:text-[14px]/[24px] xl:text-[16px]/[24px]  relative group">
                         {menu.title}
                       </Link>
                     </li>
