@@ -90,16 +90,16 @@ const VideoScrollComponent = () => {
               gsap.to(svgElement, {
                 rotation: 283,
                 transformOrigin: "center center",
-                duration: 0.2,
-                ease: "none",
+                duration: 0.4,
+                ease: "power1",
               });
             } else {
               // Scrolling down: normal orientation (tip down)
               gsap.to(svgElement, {
                 rotation: 103,
                 transformOrigin: "center center",
-                duration: 0.3,
-                ease: "none",
+                duration: 0.4,
+                ease: "power1",
               });
             }
           },
