@@ -74,7 +74,7 @@ const VideoScrollComponent = () => {
     mm.add("(min-width: 1024px)", () => {
       // Control the rocket position over the scroll, same as before
       gsap.to(svgElement, {
-        y: 3000,
+        y: 3500,
         ease: "none",
         scrollTrigger: {
           trigger: container,
@@ -90,8 +90,8 @@ const VideoScrollComponent = () => {
               gsap.to(svgElement, {
                 rotation: 283,
                 transformOrigin: "center center",
-                duration: 0.3,
-                ease: "power2.out",
+                duration: 0.2,
+                ease: "expo.in",
               });
             } else {
               // Scrolling down: normal orientation (tip down)
@@ -99,7 +99,7 @@ const VideoScrollComponent = () => {
                 rotation: 103,
                 transformOrigin: "center center",
                 duration: 0.3,
-                ease: "power2.out",
+                ease: "expo.in",
               });
             }
           },
