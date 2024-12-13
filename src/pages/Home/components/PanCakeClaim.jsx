@@ -131,10 +131,10 @@ const VideoScrollComponent = () => {
   return (
     <section className="dark:bg-[#06142F] relative overflow-hidden">
       <div
-        className="absolute -top-[500px]  -left-[1000px] transform  rotate-[175deg] z-0 w-[2022px] h-[1316px] bg-cover bg-no-repeat"
+        className="absolute -top-[770px]  -left-[200px] transform  rotate-[235deg] z-0 w-[1200px] h-[1581px] bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url('https://res.cloudinary.com/dq5guzzge/image/upload/v1734072874/components/parallex_bg_element.png')`,
-          backgroundSize: "60%",
+          backgroundSize: "100%",
           transform: "rotate(180deg)", // This rotates the background image itself
 
           opacity: 1, // Optional: adjust opacity if needed
