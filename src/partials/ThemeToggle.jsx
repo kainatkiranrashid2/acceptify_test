@@ -78,11 +78,11 @@ const ThemeToggle = () => {
         {/* <MdArrowDropDown size={20} /> */}
       </button>
       {isOpen && (
-        <ul className="absolute mt-8 w-32 bg-white dark:text-white dark:bg-[#06142F] border border-gray-300 dark:border-gray-700 rounded-md shadow-lg  right-2">
+        <ul className="absolute mt-8 w-32 bg-white  dark:text-white dark:bg-[#06142F] border border-gray-300 dark:border-[#5D55F9] rounded-md shadow-lg  right-2">
           {["light", "dark", "system"].map((option) => (
             <li key={option}>
               <button
-                className="w-full text-left px-4 py-2 my-2 overflow-hidden text-[#1B1B1B] hover:text-[#3873FD] dark:hover:bg-[#092254] dark:hover:text-white dark:text-white"
+                className="w-full text-left px-4 py-2 my-2 overflow-hidden text-[#1B1B1B] hover:text-[#3873FD] dark:hover:bg-[#092254]  dark:hover:text-white dark:text-white"
                 onClick={() => handleThemeChange(option)}>
                 <div className="flex justify-start w-full items-center ">
                   {option === "light" && (
