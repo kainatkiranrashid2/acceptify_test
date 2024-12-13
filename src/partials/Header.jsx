@@ -131,14 +131,7 @@ const Header = () => {
                 </ul>
               </div>
               <div className="hidden lg:flex gap-4 items-center">
-                <motion.button
-                  className=" bg-primary flex items-center text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px]  !h-[46px] py-[17.5px] px-6 rounded-lg "
-                  whileHover={{
-                    scale: 1.2,
-                    boxShadow: "0px 0px 8px rgb(255,255,255)",
-                    transition: { duration: 0.2 },
-                  }}
-                  whileTap={{ scale: 0.95 }}>
+                <motion.button className=" bg-primary flex items-center hover:bg-[#51A805] text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px]  !h-[46px] py-[17.5px] px-6 rounded-lg ">
                   Get Started
                 </motion.button>
                 <span className="mx-10 text-white">|</span>
