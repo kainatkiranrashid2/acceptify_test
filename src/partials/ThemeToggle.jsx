@@ -52,7 +52,7 @@ const ThemeToggle = () => {
         setInitialIcon(<MdLightMode size={28} />);
         break;
       case "dark":
-        setInitialIcon(<FiMoon size={28} />);
+        setInitialIcon(<FiMoon size={28} className="text-[#3873FD]" />);
         break;
       default:
         setInitialIcon(<MdMonitor size={28} />);
