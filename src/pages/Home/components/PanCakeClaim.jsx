@@ -63,91 +63,54 @@ const videoData = [
 const VideoScrollComponent = () => {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
-  const svgRef = useRef(null); // Ref for the SVG
-  const pathRef = useRef(null); // Ref for the SVG
-  const swishLogoRef = useRef(null); // Ref for the Swish logo
-  const svgWrapperRef = useRef(null); // New wrapper ref
-  const svgInnerWrapperRef = useRef(null); // Inner wrapper ref
-
+  const swishLogoRef = useRef(null);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
+  // Create refs for each section's path and rocket
+  const pathRefs = useRef([]);
+  const rocketRefs = useRef([]);
+
   useEffect(() => {
     const container = containerRef.current;
     const video = videoRef.current;
-    const svgElement = svgRef.current; // Access the SVG element
-    let prevProgress = 0; // Track previous scroll progress
-
-    const swishLogo = swishLogoRef.current; // Access the Swish logo element
-
     const sections = gsap.utils.toArray(".content-section");
     let mm = gsap.matchMedia();
-    // 🌀 Animate the SVG's Y position based on scroll
-    // Pin the svgWrapperRef to keep it fixed during scroll
 
-    const rocket = svgRef.current;
-    const path = pathRef.current.querySelector("path");
-    console.log(path);
-
-    // Create the motion path animation
-    gsap.to(rocket, {
-      motionPath: {
-        path: path,
-        align: path,
-        alignOrigin: [0.5, 0.5],
-        // autoRotate: true,
-      },
-      x: window.innerWidth,
-      duration: 5, // Increased duration for slower movement
-      // repeat: -1, // Infinite repeat
-      ease: "none",
-    });
-
-    // ScrollTrigger.create({
-    //   trigger: container,
-    //   start: "top top",
-    //   end: "bottom bottom",
-    //   pin: svgWrapperRef.current,
-    //   pinSpacing: false,
-    // });
-
-    // // Animate the SVG horizontally based on scroll progress
-    // gsap.to(svgElement, {
-    //   x: () => {
-    //     const containerWidth = container.offsetWidth;
-    //     const svgWidth = svgElement.offsetWidth;
-    //     return containerWidth - svgWidth;
-    //   },
-    //   y: gsap.getProperty(svgElement, "y"),
-
-    //   scrollTrigger: {
-    //     trigger: container,
-    //     start: "top top",
-    //     end: "bottom bottom",
-    //     scrub: true,
-    //     onUpdate: (self) => {
-    //       const progress = self.progress;
-    //       const rotation = progress > prevProgress ? 10 : 190;
-
-    //       // Apply rotation without changing y-position
-    //       gsap.set(svgElement, {
-    //         rotation: rotation,
-    //         y: gsap.getProperty(svgElement, "y"), // Lock Y position
-    //         x: gsap.getProperty(svgElement, "x"), // Preserve X position
-    //         // Keep y fixed to prevent vertical movement
-    //       });
-
-    //       prevProgress = progress;
-    //     },
-    //   },
-    //   ease: "none",
-    // });
-
-    // add a media query. When it matches, the associated function will run
     mm.add("(min-width: 1024px)", () => {
+      // Create ScrollTrigger for each section's rocket
+      sections.forEach((section, index) => {
+        const path = pathRefs.current[index];
+        const rocket = rocketRefs.current[index];
+
+        if (path && rocket) {
+          const pathElement = path.querySelector("path");
+          const sectionHeight = section.offsetHeight;
+
+          gsap.to(rocket, {
+            motionPath: {
+              path: pathElement,
+              align: pathElement,
+              alignOrigin: [0.5, 0.5],
+            },
+            x: window.innerWidth,
+            duration: 5,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: `${sectionHeight / 2} center`, // Start animation in the middle of the section
+              end: `bottom center`,
+              scrub: true,
+            },
+          });
+        }
+      });
+
+      // Existing ScrollTrigger setups for video and swish logo
       ScrollTrigger.create({
         trigger: container,
         start: "top top",
         end: "bottom bottom",
-        pin: swishLogo,
+        pin: swishLogoRef.current,
         pinSpacing: false,
       });
 
@@ -178,6 +141,7 @@ const VideoScrollComponent = () => {
           },
         });
       });
+
       ScrollTrigger.create({
         trigger: container,
         start: "top top",
@@ -186,10 +150,12 @@ const VideoScrollComponent = () => {
         pinSpacing: false,
       });
     });
+
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
   const highlightText = (text, highlightedWords) => {
     if (!text || !highlightedWords) return null;
 
@@ -211,60 +177,32 @@ const VideoScrollComponent = () => {
       />
     );
   };
+
   return (
     <section className="dark:bg-[#06142F] relative overflow-hidden">
       <div
-        className="absolute opacity-100 -top-[1000px]  -left-[200px] transform  rotate-[235deg] z-0 w-[1200px] h-[1581px] bg-cover bg-no-repeat"
-        ref={swishLogoRef} // Add ref to the Swish logo div
+        className="absolute opacity-100 -top-[1000px] -left-[200px] transform rotate-[235deg] z-0 w-[1200px] h-[1581px] bg-cover bg-no-repeat"
+        ref={swishLogoRef}
         style={{
           backgroundImage: `url('https://res.cloudinary.com/dq5guzzge/image/upload/v1734076580/components/swish_logo.png')`,
           backgroundSize: "100%",
-          transform: "rotate(180deg)", // This rotates the background image itself
-
-          opacity: 0.5, // Optional: adjust opacity if needed
+          transform: "rotate(180deg)",
+          opacity: 0.5,
         }}></div>
 
       <div className="container relative">
-        <div className="absolute top-32 z-0 w-full h-16" ref={svgWrapperRef}>
-          {/* Add another wrapper div */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="1280 100 1280 500"
-            id="path"
-            ref={pathRef}>
-            <g>
-              <path
-                style={{
-                  stroke: "rgb(0, 0, 0)",
-                  fill: "none",
-                  strokeWidth: "0.1", // Thin line
-                }}
-                d="M 1301.883 331.427 L 2544.256 325.265"></path>
-            </g>
-          </svg>
-
-          <div className="w-16 h-16" ref={svgRef}>
-            <img
-              className="w-full h-full transform rotate-12"
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
-              alt=""
-              // style={{ transition: "transform 0.3s ease-out" }}
-            />
-          </div>
-        </div>
-
         <div className="block lg:hidden mt-[60px] mx-10">
+          {/* Mobile view remains the same */}
           {videoData.map((item, index) => (
-            <div className="flex flex-col justify-center  mb-28" key={index}>
-              <div className="">
+            <div className="flex flex-col justify-center mb-28" key={index}>
+              <div>
                 <h2 className="w-full mb-3">
                   {highlightText(item.title, item.highlightedWords)}
                 </h2>
-                <p className="dark:text-white">{item.subtitle}</p>{" "}
+                <p className="dark:text-white">{item.subtitle}</p>
               </div>
               <div className="w-2/3 mx-auto mt-[5.5rem]">
                 <video
-                  // ref={videoRef}
                   src={item.url}
                   className="w-full h-auto max-h-full object-cover"
                   autoPlay
@@ -276,37 +214,54 @@ const VideoScrollComponent = () => {
             </div>
           ))}
         </div>
+
         <div
           ref={containerRef}
-          className=" hidden lg:flex lg:relative justify-center lg:gap-[182px] lg:mx-10 xl:mx-20">
-          <div className="lg:w-[384px] xl:w-[430px] 2xl-w-[506px] ">
-            {" "}
+          className="hidden lg:flex lg:relative justify-center lg:gap-[182px] lg:mx-10 xl:mx-20">
+          <div className="lg:w-[384px] xl:w-[430px] 2xl-w-[506px]">
             {videoData.map((item, index) => (
               <div
                 key={index}
-                className="content-section w-full min-h-screen flex items-center justify-center ">
-                {" "}
-                <div className="max-w-xl mx-auto ">
-                  {" "}
+                className="content-section w-full min-h-screen flex items-center justify-center relative">
+                {/* Add SVG Path for each section */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1000 100"
+                  className="absolute top-1/2 left-0 w-full"
+                  ref={(el) => (pathRefs.current[index] = el)}>
+                  <path
+                    style={{
+                      stroke: "rgb(0, 0, 0)",
+                      fill: "none",
+                      strokeWidth: "0.1",
+                    }}
+                    d="M 0 50 L 1000 50"
+                  />
+                </svg>
+
+                {/* Add Rocket for each section */}
+                <div
+                  className="absolute left-0 w-16 h-16 z-10"
+                  ref={(el) => (rocketRefs.current[index] = el)}>
+                  <img
+                    className="w-full h-full transform rotate-12"
+                    src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
+                    alt="Rocket"
+                  />
+                </div>
+
+                <div className="max-w-xl mx-auto">
                   <h2 className="mb-4">
-                    {" "}
                     {highlightText(item.title, item.highlightedWords)}
-                  </h2>{" "}
-                  <p className="dark:text-white">{item.subtitle}</p>{" "}
-                </div>{" "}
+                  </h2>
+                  <p className="dark:text-white">{item.subtitle}</p>
+                </div>
               </div>
-            ))}{" "}
-          </div>{" "}
-          <div className="lg:w-[500px] xl:w-[546px] 2xl:w-[688px]  relative ">
-            {" "}
-            <div className="video-container   sticky top-0 lg:h-[546px] 2xl:h-[790px] flex items-center justify-center">
-              {/* <div className="absolute top-10 left-10 testDive bg-black"></div> */}
-              {/* <div className="absolute -bottom-10 -right-32 overflow-hidden w-full h-full  z-0  transform rotate-[155deg]">
-                <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733818098/components/ellipse.svg"
-                  className="w-full h-full"
-                />
-              </div> */}
+            ))}
+          </div>
+
+          <div className="lg:w-[500px] xl:w-[546px] 2xl:w-[688px] relative">
+            <div className="video-container sticky top-0 lg:h-[546px] 2xl:h-[790px] flex items-center justify-center">
               <video
                 ref={videoRef}
                 src={videoData[currentVideoIndex].url}
@@ -315,12 +270,13 @@ const VideoScrollComponent = () => {
                 loop
                 muted
                 playsInline
-              />{" "}
-            </div>{" "}
-          </div>{" "}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
 export default VideoScrollComponent;
