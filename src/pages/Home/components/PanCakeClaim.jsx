@@ -62,12 +62,14 @@ const VideoScrollComponent = () => {
   const videoRef = useRef(null);
   const svgRef = useRef(null); // Ref for the SVG
   const swishLogoRef = useRef(null); // Ref for the Swish logo
+  const svgWrapperRef = useRef(null); // New wrapper ref
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   useEffect(() => {
     const container = containerRef.current;
     const video = videoRef.current;
     const svgElement = svgRef.current; // Access the SVG element
+
     const swishLogo = swishLogoRef.current; // Access the Swish logo element
 
     const sections = gsap.utils.toArray(".content-section");
@@ -75,35 +77,45 @@ const VideoScrollComponent = () => {
     // 🌀 Animate the SVG's Y position based on scroll
     mm.add("(min-width: 1024px)", () => {
       // Control the rocket position over the scroll, same as before
-      gsap.to(svgElement, {
-        y: 3200,
+
+      ScrollTrigger.create({
+        trigger: container,
+        start: "top top",
+        end: "bottom bottom",
+        pin: svgWrapperRef.current, // Pin the wrapper element
+        pinSpacing: false,
+      });
+
+      gsap.to(svgWrapperRef.current, {
+        x: () => {
+          // Calculate max X outside the return statement for efficiency
+          const containerWidth = container.offsetWidth;
+          const svgWrapperWidth = svgWrapperRef.current.offsetWidth;
+          const maxX = containerWidth - svgWrapperWidth;
+
+          return (self) => {
+            // Use a function that receives 'self'
+            const progress = self.progress; // Now progress is defined
+            return Math.max(0, Math.min(maxX, progress * maxX));
+          };
+        },
+
         ease: "none",
         scrollTrigger: {
           trigger: container,
           start: "top top",
           end: "bottom bottom",
-          scrub: 1,
-          // Here we use the onUpdate callback:
+          scrub: true,
+          invalidateOnRefresh: true,
           onUpdate: (self) => {
-            // self.direction === 1 means scrolling down
-            // self.direction === -1 means scrolling up
-            if (self.direction === -1) {
-              // Scrolling up: flip the rocket so tip is up
-              gsap.to(svgElement, {
-                rotation: 283,
-                transformOrigin: "center center",
-                duration: 0.4,
-                ease: "power1",
-              });
-            } else {
-              // Scrolling down: normal orientation (tip down)
-              gsap.to(svgElement, {
-                rotation: 103,
-                transformOrigin: "center center",
-                duration: 0.4,
-                ease: "power1",
-              });
-            }
+            const progress = self.progress;
+            const maxX =
+              container.offsetWidth - svgWrapperRef.current.offsetWidth;
+
+            gsap.to(svgElement, {
+              x: gsap.utils.clamp(0, maxX, progress * maxX),
+              duration: 0.3,
+            });
           },
         },
       });
@@ -191,19 +203,26 @@ const VideoScrollComponent = () => {
 
           opacity: 0.5, // Optional: adjust opacity if needed
         }}></div>
-      {/* 
-      <img
-        ref={svgRef}
-        className="absolute top-20 transform rotate-[103deg] right-[50%] z-0 w-32 h-32 "
-        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
-        alt=""
-        style={{
-          willChange: "transform", // Hint to browser for smoother animations
-          transition: "transform 0.3s ease-out", // Smooth transition
-        }}
-      /> */}
 
-      <div className="container">
+      <div className="container relative">
+        <div
+          ref={svgWrapperRef}
+          className="absolute top-20 transform rotate-[10deg]  z-0 w-32 h-32"
+          style={{
+            willChange: "transform", // Hint to browser for smoother animations
+          }}>
+          <img
+            ref={svgRef}
+            className=" w-full h-full "
+            src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
+            alt=""
+            style={{
+              // willChange: "transform", // Hint to browser for smoother animations
+              transition: "transform 0.3s ease-out", // Smooth transition
+            }}
+          />
+        </div>
+
         <div className="block lg:hidden mt-[60px] mx-10">
           {videoData.map((item, index) => (
             <div className="flex flex-col justify-center  mb-28" key={index}>
