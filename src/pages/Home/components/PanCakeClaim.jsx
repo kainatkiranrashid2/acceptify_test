@@ -93,13 +93,12 @@ const VideoScrollComponent = () => {
         path: path,
         align: path,
         alignOrigin: [0.5, 0.5],
-        autoRotate: true,
+        // autoRotate: true,
       },
       x: window.innerWidth,
-      duration: 1, // Increased duration for slower movement
-      repeat: -1, // Infinite repeat
-      ease: "none", // Linear movement
-      // yoyo: true, // Move back and forth along the path
+      duration: 5, // Increased duration for slower movement
+      // repeat: -1, // Infinite repeat
+      ease: "none",
     });
 
     // ScrollTrigger.create({
@@ -230,7 +229,7 @@ const VideoScrollComponent = () => {
           {/* Add another wrapper div */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 800 1000"
+            viewBox="1280 100 1280 500"
             id="path"
             ref={pathRef}>
             <g>
@@ -240,7 +239,7 @@ const VideoScrollComponent = () => {
                   fill: "none",
                   strokeWidth: "0.1", // Thin line
                 }}
-                d="M 0 500 C 0 500 134.327 404.218 101.622 282.156 C 68.915 160.095 63.659 158.342 105.709 165.35 C 147.759 172.358 200.322 219.665 200.322 219.665 C 200.322 219.665 361.515 353.408 420.502 185.207 C 479.488 17.008 478.32 32.187 495.257 15.835"></path>
+                d="M 1301.883 331.427 L 2544.256 325.265"></path>
             </g>
           </svg>
 
