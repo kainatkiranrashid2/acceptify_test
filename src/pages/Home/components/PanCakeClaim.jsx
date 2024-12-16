@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin);
 const videoData = [
   {
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817486/components/still_pancake_01.webm",
@@ -61,6 +64,7 @@ const VideoScrollComponent = () => {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
   const svgRef = useRef(null); // Ref for the SVG
+  const pathRef = useRef(null); // Ref for the SVG
   const swishLogoRef = useRef(null); // Ref for the Swish logo
   const svgWrapperRef = useRef(null); // New wrapper ref
   const svgInnerWrapperRef = useRef(null); // Inner wrapper ref
@@ -78,55 +82,75 @@ const VideoScrollComponent = () => {
     let mm = gsap.matchMedia();
     // 🌀 Animate the SVG's Y position based on scroll
     // Pin the svgWrapperRef to keep it fixed during scroll
-    ScrollTrigger.create({
-      trigger: container,
-      start: "top top",
-      end: "bottom bottom",
-      pin: svgWrapperRef.current,
-      pinSpacing: false,
+
+    const rocket = svgRef.current;
+    const path = pathRef.current.querySelector("path");
+    console.log(path);
+
+    // Create the motion path animation
+    gsap.to(rocket, {
+      motionPath: {
+        path: path,
+        align: path,
+        alignOrigin: [0.5, 0.5],
+        autoRotate: true,
+      },
+      x: window.innerWidth,
+      duration: 1, // Increased duration for slower movement
+      repeat: -1, // Infinite repeat
+      ease: "none", // Linear movement
+      // yoyo: true, // Move back and forth along the path
     });
 
-    // Animate the SVG horizontally based on scroll progress
-    gsap.to(svgElement, {
-      x: () => {
-        const containerWidth = container.offsetWidth;
-        const svgWidth = svgElement.offsetWidth;
-        return containerWidth - svgWidth;
-      },
-      y: gsap.getProperty(svgElement, "y"),
+    // ScrollTrigger.create({
+    //   trigger: container,
+    //   start: "top top",
+    //   end: "bottom bottom",
+    //   pin: svgWrapperRef.current,
+    //   pinSpacing: false,
+    // });
 
-      scrollTrigger: {
-        trigger: container,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,
-        onUpdate: (self) => {
-          const progress = self.progress;
-          const rotation = progress > prevProgress ? 10 : 190;
+    // // Animate the SVG horizontally based on scroll progress
+    // gsap.to(svgElement, {
+    //   x: () => {
+    //     const containerWidth = container.offsetWidth;
+    //     const svgWidth = svgElement.offsetWidth;
+    //     return containerWidth - svgWidth;
+    //   },
+    //   y: gsap.getProperty(svgElement, "y"),
 
-          // Apply rotation without changing y-position
-          gsap.set(svgElement, {
-            rotation: rotation,
-            y: gsap.getProperty(svgElement, "y"), // Lock Y position
-            x: gsap.getProperty(svgElement, "x"), // Preserve X position
-            // Keep y fixed to prevent vertical movement
-          });
+    //   scrollTrigger: {
+    //     trigger: container,
+    //     start: "top top",
+    //     end: "bottom bottom",
+    //     scrub: true,
+    //     onUpdate: (self) => {
+    //       const progress = self.progress;
+    //       const rotation = progress > prevProgress ? 10 : 190;
 
-          prevProgress = progress;
-        },
-      },
-      ease: "none",
-    });
+    //       // Apply rotation without changing y-position
+    //       gsap.set(svgElement, {
+    //         rotation: rotation,
+    //         y: gsap.getProperty(svgElement, "y"), // Lock Y position
+    //         x: gsap.getProperty(svgElement, "x"), // Preserve X position
+    //         // Keep y fixed to prevent vertical movement
+    //       });
+
+    //       prevProgress = progress;
+    //     },
+    //   },
+    //   ease: "none",
+    // });
 
     // add a media query. When it matches, the associated function will run
     mm.add("(min-width: 1024px)", () => {
-      // ScrollTrigger.create({
-      //   trigger: container,
-      //   start: "top top",
-      //   end: "bottom bottom",
-      //   pin: swishLogo,
-      //   pinSpacing: false,
-      // });
+      ScrollTrigger.create({
+        trigger: container,
+        start: "top top",
+        end: "bottom bottom",
+        pin: swishLogo,
+        pinSpacing: false,
+      });
 
       sections.forEach((section, index) => {
         ScrollTrigger.create({
@@ -202,18 +226,31 @@ const VideoScrollComponent = () => {
         }}></div>
 
       <div className="container relative">
-        <div className="absolute top-20 z-0" ref={svgWrapperRef}>
+        <div className="absolute top-32 z-0 w-full h-16" ref={svgWrapperRef}>
           {/* Add another wrapper div */}
-          <div ref={svgInnerWrapperRef} className="transform rotate-[10deg]">
-            <div className="w-16 h-16">
-              <img
-                ref={svgRef}
-                className="w-full h-full"
-                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
-                alt=""
-                style={{ transition: "transform 0.3s ease-out" }}
-              />
-            </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 800 1000"
+            id="path"
+            ref={pathRef}>
+            <g>
+              <path
+                style={{
+                  stroke: "rgb(0, 0, 0)",
+                  fill: "none",
+                  strokeWidth: "0.1", // Thin line
+                }}
+                d="M 0 500 C 0 500 134.327 404.218 101.622 282.156 C 68.915 160.095 63.659 158.342 105.709 165.35 C 147.759 172.358 200.322 219.665 200.322 219.665 C 200.322 219.665 361.515 353.408 420.502 185.207 C 479.488 17.008 478.32 32.187 495.257 15.835"></path>
+            </g>
+          </svg>
+
+          <div className="w-16 h-16" ref={svgRef}>
+            <img
+              className="w-full h-full transform rotate-12"
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
+              alt=""
+              // style={{ transition: "transform 0.3s ease-out" }}
+            />
           </div>
         </div>
 
