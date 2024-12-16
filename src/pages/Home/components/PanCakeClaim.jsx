@@ -70,51 +70,52 @@ const VideoScrollComponent = () => {
     const container = containerRef.current;
     const video = videoRef.current;
     const svgElement = svgRef.current; // Access the SVG element
+    let prevProgress = 0; // Track previous scroll progress
 
     const swishLogo = swishLogoRef.current; // Access the Swish logo element
 
     const sections = gsap.utils.toArray(".content-section");
     let mm = gsap.matchMedia();
     // 🌀 Animate the SVG's Y position based on scroll
-    mm.add("(min-width: 1024px)", () => {
-      ScrollTrigger.create({
+    // Pin the svgWrapperRef to keep it fixed during scroll
+    ScrollTrigger.create({
+      trigger: container,
+      start: "top top",
+      end: "bottom bottom",
+      pin: svgWrapperRef.current,
+      pinSpacing: false,
+    });
+
+    // Animate the SVG horizontally based on scroll progress
+    gsap.to(svgElement, {
+      x: () => {
+        const containerWidth = container.offsetWidth;
+        const svgWidth = svgElement.offsetWidth;
+        return containerWidth - svgWidth;
+      },
+      y: gsap.getProperty(svgElement, "y"),
+
+      scrollTrigger: {
         trigger: container,
         start: "top top",
         end: "bottom bottom",
-        pin: svgWrapperRef.current, // Pin the new wrapper element
-        pinSpacing: false,
-      });
+        scrub: true,
+        onUpdate: (self) => {
+          const progress = self.progress;
+          const rotation = progress > prevProgress ? 10 : 190;
 
-      gsap.to(svgWrapperRef.current, {
-        x: () => {
-          const containerWidth = container.offsetWidth;
-          const svgWrapperWidth = svgWrapperRef.current.offsetWidth;
-          const maxX = containerWidth - svgWrapperWidth;
+          // Apply rotation without changing y-position
+          gsap.set(svgElement, {
+            rotation: rotation,
+            y: gsap.getProperty(svgElement, "y"), // Lock Y position
+            x: gsap.getProperty(svgElement, "x"), // Preserve X position
+            y: 0, // Keep y fixed to prevent vertical movement
+          });
 
-          return (self) => {
-            const progress = self.progress;
-            return Math.max(0, Math.min(maxX, progress * maxX));
-          };
+          prevProgress = progress;
         },
-        ease: "none",
-        scrollTrigger: {
-          trigger: container,
-          start: "top top",
-          end: "bottom bottom",
-          scrub: true,
-          invalidateOnRefresh: true,
-          onUpdate: (self) => {
-            const progress = self.progress;
-            const maxX =
-              container.offsetWidth - svgWrapperRef.current.offsetWidth;
-
-            gsap.to(svgElement, {
-              x: gsap.utils.clamp(0, maxX, progress * maxX),
-              duration: 0.3,
-            });
-          },
-        },
-      });
+      },
+      ease: "none",
     });
 
     // add a media query. When it matches, the associated function will run
