@@ -109,7 +109,7 @@ const VideoScrollComponent = () => {
             rotation: rotation,
             y: gsap.getProperty(svgElement, "y"), // Lock Y position
             x: gsap.getProperty(svgElement, "x"), // Preserve X position
-            y: 0, // Keep y fixed to prevent vertical movement
+            // Keep y fixed to prevent vertical movement
           });
 
           prevProgress = progress;
