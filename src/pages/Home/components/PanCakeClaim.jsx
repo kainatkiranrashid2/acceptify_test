@@ -93,7 +93,7 @@ const VideoScrollComponent = () => {
               alignOrigin: [0.5, 0.5],
             },
             x: window.innerWidth,
-            duration: 5,
+            duration: 1,
             ease: "none",
             scrollTrigger: {
               trigger: section,
@@ -233,7 +233,7 @@ const VideoScrollComponent = () => {
                     style={{
                       stroke: "rgb(0, 0, 0)",
                       fill: "none",
-                      strokeWidth: "0.1",
+                      strokeWidth: "0",
                     }}
                     d="M 0 50 L 1000 50"
                   />
