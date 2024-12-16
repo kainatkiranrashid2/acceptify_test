@@ -63,6 +63,7 @@ const VideoScrollComponent = () => {
   const svgRef = useRef(null); // Ref for the SVG
   const swishLogoRef = useRef(null); // Ref for the Swish logo
   const svgWrapperRef = useRef(null); // New wrapper ref
+  const svgInnerWrapperRef = useRef(null); // Inner wrapper ref
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   useEffect(() => {
@@ -76,30 +77,25 @@ const VideoScrollComponent = () => {
     let mm = gsap.matchMedia();
     // 🌀 Animate the SVG's Y position based on scroll
     mm.add("(min-width: 1024px)", () => {
-      // Control the rocket position over the scroll, same as before
-
       ScrollTrigger.create({
         trigger: container,
         start: "top top",
         end: "bottom bottom",
-        pin: svgWrapperRef.current, // Pin the wrapper element
+        pin: svgWrapperRef.current, // Pin the new wrapper element
         pinSpacing: false,
       });
 
       gsap.to(svgWrapperRef.current, {
         x: () => {
-          // Calculate max X outside the return statement for efficiency
           const containerWidth = container.offsetWidth;
           const svgWrapperWidth = svgWrapperRef.current.offsetWidth;
           const maxX = containerWidth - svgWrapperWidth;
 
           return (self) => {
-            // Use a function that receives 'self'
-            const progress = self.progress; // Now progress is defined
+            const progress = self.progress;
             return Math.max(0, Math.min(maxX, progress * maxX));
           };
         },
-
         ease: "none",
         scrollTrigger: {
           trigger: container,
@@ -205,22 +201,19 @@ const VideoScrollComponent = () => {
         }}></div>
 
       <div className="container relative">
-        <div
-          ref={svgWrapperRef}
-          className="absolute top-20 transform rotate-[10deg]  z-0 w-32 h-32"
-          style={{
-            willChange: "transform", // Hint to browser for smoother animations
-          }}>
-          <img
-            ref={svgRef}
-            className=" w-full h-full "
-            src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
-            alt=""
-            style={{
-              // willChange: "transform", // Hint to browser for smoother animations
-              transition: "transform 0.3s ease-out", // Smooth transition
-            }}
-          />
+        <div className="absolute top-20 z-0" ref={svgWrapperRef}>
+          {/* Add another wrapper div */}
+          <div ref={svgInnerWrapperRef} className="transform rotate-[10deg]">
+            <div className="w-16 h-16">
+              <img
+                ref={svgRef}
+                className="w-full h-full"
+                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
+                alt=""
+                style={{ transition: "transform 0.3s ease-out" }}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="block lg:hidden mt-[60px] mx-10">
