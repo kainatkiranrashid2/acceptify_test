@@ -158,7 +158,7 @@ const Header = () => {
               <div
                 className="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-white
               z-50 overflow-y-auto dark:bg-[#06142]">
-                <div className="container  h-[100vh] dark:bg-[#06142F]">
+                <div className="  h-[100vh] dark:bg-[#06142F]">
                   <ul className=" dark:bg-[#06142F]">
                     <li className="flex justify-between items-center border-b-[1px] px-6 py-4 dark:border-[#5D55F9] border-[#E7E7E7">
                       <div>
