@@ -62,7 +62,7 @@ const HeroSection = () => {
               security concerns.
             </p>
 
-            <button className=" mt-4 bg-primary hover:bg-[#51A805] text-[16px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-[10px] rounded-lg  ">
+            <button className=" mt-4 bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[16px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg  ">
               Start Now{" "}
               <img
                 src="./images/arrow.svg"
@@ -73,9 +73,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto !w-[402px]  mt-[102px] text-center  md:hidden    relative  h-full flex justify-center items-center ">
-        <div className="w-full lg:max-w-[430px]">
-          <h1 className=" text-white font-semibold tracking-tighter">
+      <div className="mx-auto sm:mb-16 mb-10 w-[312px] mt-16 sm:!w-[402px]  sm:mt-[102px] text-center  md:hidden    relative  h-full flex justify-center items-center ">
+        <div className="w-full ">
+          <h1 className="w-[258px] mx-auto text-center px-10 sm:w-full text-white font-semibold tracking-tighter ">
             Lighting Fast Mobile Enterprise Payments Anywhere
           </h1>
           <p className="text-white w-full  font-normal my-[12px] ">
@@ -84,7 +84,7 @@ const HeroSection = () => {
             security concerns.
           </p>
 
-          <button className=" mt-4 mx-auto bg-primary hover:bg-[#51A805] text-[16px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-[10px] rounded-lg  ">
+          <button className=" mt-4 mx-auto bg-primary hover:bg-[#51A805] text-[12px]/[16px] sm:text-[14px]/[20px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-[10px] rounded-lg  ">
             Start Now{" "}
             <img src="./images/arrow.svg" className="size-3 mt-[4px]" alt="" />
           </button>

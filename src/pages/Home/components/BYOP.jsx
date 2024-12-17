@@ -4,8 +4,35 @@ const BYOP = () => {
       className="dark:bg-[#06142F]" // Added useful background classes
     >
       <div className="container  ">
-        <div className="py-20">
-          <div className=" relative flex flex-col items-center justify-center overflow-hidden ">
+        <div className="sm:pt-10 sm:pb-20 md:py-20">
+          <div className=" relative lg:hidden flex flex-col items-center justify-center overflow-hidden gap-10 ">
+            {/* <div className="absolute oval-shape right-0  "></div> */}
+
+            <h1 className=" font-semibold mb-4 dark:text-white">
+              BYOP - Bring Your Own Processor
+            </h1>
+
+            <div className="w-[168px] h-[130px] sm:w-[282px] md:h-[212px]">
+              <video
+                className="w-full h-full object-contain"
+                autoPlay
+                loop
+                muted>
+                <source
+                  src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm"
+                  type="video/webm"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <p className=" text-center dark:text-white sm:w-[521px]">
+              Acceptify empowers merchants with complete processor flexibility.
+              Seamlessly integrate your preferred payment processing partner and
+              move between processors without changing a line of code.
+            </p>
+          </div>
+          <div className=" relative hidden md:flex flex-col items-center justify-center overflow-hidden ">
             {/* <div className="absolute oval-shape right-0  "></div> */}
             <div className=" flex flex-col items-center justify-center">
               <h1 className=" font-semibold mb-4 dark:text-white">

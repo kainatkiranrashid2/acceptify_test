@@ -11,13 +11,13 @@ const BeautifulBranding = () => {
             <h1 className=" font-semibold mb-4 dark:text-white">
               Represent Your Brand
             </h1>
-            <p className=" md:w-[30rem] text-center dark:text-white md:max-w-[30rem] lg:w-[37rem] lg:max-w-[37rem]  ">
+            <p className="sm:w-[520px]  md:w-[30rem] text-center dark:text-white md:max-w-[30rem] lg:w-[37rem] lg:max-w-[37rem]  sm:mb-10">
               Acceptify uniquely provides a signature checkout experience by
               personalizing payment devices with your brand&apos;s logos and
               colors.
             </p>
           </div>
-          <div className="2xl:w-[748px] 2xl:h-[453px] xl:w-[645px] xl:h-[391px] lg:w-[495.82px] lg:h-[295.26px] md:w-[371.7px] md:h-[219px] ">
+          <div className="2xl:w-[748px] 2xl:h-[453px] xl:w-[645px] xl:h-[391px] lg:w-[495.82px] lg:h-[295.26px] md:w-[361.7px] md:h-[219px] sm:w-[375px] sm:h-[222px] ">
             <video className="w-full h-full object-contain" autoPlay loop muted>
               <source
                 src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733991376/components/represent_your_branding.webm"

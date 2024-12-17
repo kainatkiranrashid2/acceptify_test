@@ -192,20 +192,22 @@ const VideoScrollComponent = () => {
         }}></div>
 
       <div className="container relative">
-        <div className="block lg:hidden mt-[60px] mx-10">
+        <div className="block lg:hidden mb-20 mt-10 sm:mt-[104px] md:mt-[60px] sm:mx-6 md:mx-10">
           {/* Mobile view remains the same */}
           {videoData.map((item, index) => (
-            <div className="flex flex-col justify-center mb-28" key={index}>
+            <div
+              className="flex flex-col justify-center mb-[60px] sm:mb-20 md:mb-28"
+              key={index}>
               <div>
                 <h2 className="w-full mb-3">
                   {highlightText(item.title, item.highlightedWords)}
                 </h2>
-                <p className="dark:text-white">{item.subtitle}</p>
+                <p className="dark:text-white  w-full">{item.subtitle}</p>
               </div>
-              <div className="w-2/3 mx-auto mt-[5.5rem]">
+              <div className="w-[320px] h-[180px] sm:w-[3px] sm:h-[182px] md:w-[182px] md:h-[120px] mx-auto mt-[60px] sm:mt-20 md:mt-[5.5rem]">
                 <video
                   src={item.url}
-                  className="w-full h-auto max-h-full object-cover"
+                  className="w-full h-auto max-h-full object-cover "
                   autoPlay
                   loop
                   muted

@@ -43,6 +43,9 @@ export default {
           "2xl": "1536px", // This ensures max-width of 1536px at 2xl breakpoint
           xl: "1280px",
           lg: "1024px",
+          md: "786px",
+          sm: "640px",
+          xs: "360px",
         },
         center: true,
         width: "100%",

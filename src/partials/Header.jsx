@@ -96,7 +96,7 @@ const Header = () => {
             {/* Logo section */}
             <a
               href="/"
-              className="h-[52px] md:w-[152px] xl:w-[188px] flex dark:hidden items-center">
+              className="w-[54px] h-[15px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  flex dark:hidden items-center">
               <img
                 src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
                 className="bg-transparent h-full w-auto object-contain"
@@ -106,7 +106,7 @@ const Header = () => {
 
             <a
               href="/"
-              className="h-[52px] md:w-[152px] xl:w-[188px] dark:flex hidden items-center">
+              className="w-[54px] h-[15px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  dark:flex hidden items-center">
               <img
                 src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
                 className="bg-transparent h-full w-auto object-contain"
