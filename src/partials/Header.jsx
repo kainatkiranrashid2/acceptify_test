@@ -4,6 +4,8 @@ import ThemeToggle from "../partials/ThemeToggle";
 
 import TextComponent from "../components/TextComponent";
 import { motion, AnimatePresence } from "framer-motion";
+import { RxCross1 } from "react-icons/rx";
+
 // import { FaE } from "react-icons/fa6";
 import { FaEquals } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -154,242 +156,58 @@ const Header = () => {
           <AnimatePresence>
             {isMobileMenuOpen && (
               <div
-                className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white
-              z-50 overflow-y-auto">
-                <div className="container py-4">
-                  <ul className="space-y-4">
+                className="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-white
+              z-50 overflow-y-auto dark:bg-[#06142]">
+                <div className="container  h-[100vh] dark:bg-[#06142F]">
+                  <ul className=" dark:bg-[#06142F]">
+                    <li className="flex justify-between items-center border-b-[1px] px-6 py-4 dark:border-[#5D55F9] border-[#E7E7E7">
+                      <div>
+                        <a
+                          href="/"
+                          className="w-[54px] h-[15px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  block dark:hidden items-center">
+                          <img
+                            src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
+                            className="bg-transparent h-full w-auto object-contain"
+                            alt="acceptify_logo"
+                          />
+                        </a>
+                        <a
+                          href="/"
+                          className="w-[54px] h-[15px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  dark:flex hidden items-center ">
+                          <img
+                            src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
+                            className="bg-transparent h-full w-auto object-contain"
+                            alt="acceptify_logo"
+                          />
+                        </a>
+                      </div>
+                      <RxCross1
+                        className="size-4 dark:text-white"
+                        onClick={() => {
+                          setIsMobileMenuOpen(!isMobileMenuOpen);
+                          setMobileSubmenu(null);
+                        }}
+                      />
+                    </li>
                     {NavbarMenu.map((menu) => (
-                      <li key={menu.id}>
-                        <div className="flex justify-between items-center font-Inter font-semibold py-2 px-3 hover:text-primary cursor-pointer">
-                          <Link to={menu.path}>{menu.title}</Link>
-                        </div>
-                        {menu.title === "Industries" &&
-                          mobileSubmenu === "Industries" && (
-                            <div className="pl-6 mt-2 space-y-4">
-                              <div>
-                                <h3 className="font-Inter text-light_gray text-[12px] font-semibold mb-2">
-                                  BUSINESS SOLUTIONS
-                                </h3>
-                                <ul className="space-y-2">
-                                  {menu.dropdown.businessSolutions.map(
-                                    (item, index) => (
-                                      <li
-                                        key={index}
-                                        className="flex items-start">
-                                        <div className="mr-2 mt-1 flex justify-center items-center">
-                                          {item.icon}
-                                        </div>
-                                        <div>
-                                          <p className="text-[14px] text-dark font-Inter font-semibold">
-                                            {item.title}
-                                          </p>
-                                          <p className="text-[12px] text-dark2 font-Space_Grotesk">
-                                            {item.description}
-                                          </p>
-                                        </div>
-                                      </li>
-                                    )
-                                  )}
-                                </ul>
-                              </div>
-                              <div>
-                                <h3 className="font-Inter text-light_gray text-[12px] font-semibold mb-2">
-                                  INDUSTRY SOLUTIONS
-                                </h3>
-                                <ul className="space-y-2">
-                                  {menu.dropdown.industrySolutions.map(
-                                    (item, index) => (
-                                      <li
-                                        key={index}
-                                        className="flex items-start">
-                                        <div className="mr-2 mt-1 flex justify-center items-center">
-                                          {item.icon}
-                                        </div>
-                                        <div>
-                                          <p className="text-[14px] text-dark font-Inter font-semibold">
-                                            {item.title}
-                                          </p>
-                                          <p className="text-[12px] text-dark2 font-Space_Grotesk">
-                                            {item.description}
-                                          </p>
-                                        </div>
-                                      </li>
-                                    )
-                                  )}
-                                </ul>
-                              </div>
-                              <div>
-                                <h3 className="font-Inter text-light_gray text-[12px] font-semibold mb-2">
-                                  INDUSTRY SOLUTIONS
-                                </h3>
-                                <ul className="space-y-2">
-                                  {menu.dropdown.insight.map((item, index) => (
-                                    <li
-                                      key={index}
-                                      className="flex items-center">
-                                      <p className="text-dark font-semibold font-Inter">
-                                        {item.title}
-                                      </p>
-                                    </li>
-                                  ))}
-                                </ul>
-                                <div className="mt-2 relative isolate">
-                                  <h3 className="font-Inter text-light_gray text-[12px] font-semibold mb-4">
-                                    INSIGHT
-                                  </h3>
-                                  <img
-                                    src="/assets/illustration.png"
-                                    alt="illustration"
-                                    className="w-full max-w-[200px] mb-4  h-full object-contain mx-auto relative"
-                                  />
-                                  <img
-                                    src="/assets/ornament_top.png"
-                                    alt="Ornament Top"
-                                    className="w-5 max-w-20 absolute right-[-5px] top-[-30px] h-full object-contain mx-auto"
-                                  />
-                                </div>
-                                <div className=" mt-2">
-                                  <TextComponent
-                                    text={menu.dropdown.insightDescription}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          )}
+                      <li
+                        key={menu.id}
+                        className="border-b-[1px] py-4 px-4 mb-0 mt-0 dark:border-[#5D55F9] border-[#E7E7E7]">
+                        <Link to={menu.path} className="dark:text-white ">
+                          {menu.title}
+                        </Link>
                       </li>
                     ))}
+                    <li className="flex justify-between items-center border-b-[1px] px-4 py-8 dark:border-[#5D55F9] border-[#E7E7E7 text-black dark:text-white">
+                      Switch Theme
+                      <ThemeToggle />
+                    </li>
                   </ul>
-                  <button className="primary-btn px-4 py-2 rounded-lg mt-6 w-full">
-                    Request a demo
-                  </button>
                 </div>
               </div>
             )}
           </AnimatePresence>
         </motion.nav>
-
-        {/* Solutions Dropdown - Outside the navbar */}
-        <AnimatePresence>
-          {isSolutionOpen && !isMobile && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute left-0 w-full bg-white shadow-lg p-6 z-40">
-              <div className="container mx-auto grid grid-cols-2 md:grid-cols-6 lg:grid-cols-4 gap-4">
-                <div>
-                  <h3 className="font-Inter text-light_gray text-[12px] font-semibold mb-4">
-                    BUSINESS SOLUTIONS
-                  </h3>
-                  <ul>
-                    {NavbarMenu.find(
-                      (item) => item.title === "Industries"
-                    ).dropdown.businessSolutions.map((item, index) => (
-                      <li key={index} className="flex items-start mb-4">
-                        <div className="mr-2 mt-1 flex justify-center items-center">
-                          {item.icon}
-                        </div>
-                        {/* <i className={`${item.icon} mr-2`}></i> */}
-                        <Link
-                          onClick={() => {
-                            console.log("----");
-                            setIsSolutionOpen(!isSolutionOpen);
-                          }}
-                          className=""
-                          to="">
-                          <p className="text-[16px] text-dark font-Inter  font-semibold">
-                            {item.title}
-                          </p>
-                          <p className="text-[14px] text-dark2 font-Space_Grotesk ">
-                            {item.description}
-                          </p>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-Inter text-light_gray text-[12px] font-semibold mb-4">
-                    INDUSTRY SOLUTIONS
-                  </h3>
-                  <ul>
-                    {NavbarMenu.find(
-                      (item) => item.title === "Industries"
-                    ).dropdown.industrySolutions.map((item, index) => (
-                      <li key={index} className="flex items-start mb-4">
-                        <div className="mr-2 mt-1 flex justify-center items-center">
-                          {item.icon}
-                        </div>
-                        <Link
-                          to=""
-                          onClick={() => {
-                            console.log("----");
-                            setIsSolutionOpen(!isSolutionOpen);
-                          }}>
-                          <p className="text-[16px] text-dark font-Inter  font-semibold">
-                            {item.title}
-                          </p>
-                          <p className="text-[14px] text-dark2 font-Space_Grotesk ">
-                            {item.description}
-                          </p>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-Inter text-light_gray text-[12px] font-semibold mb-4">
-                    INDUSTRY SOLUTIONS
-                  </h3>
-                  <ul>
-                    {NavbarMenu.find(
-                      (item) => item.title === "Industries"
-                    ).dropdown.insight.map((item, index) => (
-                      <li key={index} className="flex items-center mb-2">
-                        {/* <i className={`${item.icon} mr-2`}></i> */}
-                        <Link
-                          onClick={() => {
-                            console.log("----");
-                            setIsSolutionOpen(!isSolutionOpen);
-                          }}
-                          to=""
-                          className="text-dark font-semibold font-Inter">
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-Inter text-light_gray text-[12px] font-semibold mb-4">
-                    INSIGHT
-                  </h3>
-                  <div className="relative isolate">
-                    <img
-                      src="/assets/illustration.png"
-                      className="w-full max-w-[250px] h-full object-contain mx-auto"
-                      alt="illustration"
-                    />
-                    <img
-                      src="/assets/ornament_top.png"
-                      className="w-5 max-w-20 absolute right-[-20px] top-[-60px] h-full object-contain mx-auto"
-                      alt="illustration"
-                    />
-                  </div>
-                  <div className="mt-4">
-                    <TextComponent
-                      text={
-                        NavbarMenu.find((item) => item.title === "Industries")
-                          .dropdown.insightDescription
-                      }
-                    />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </header>
   );

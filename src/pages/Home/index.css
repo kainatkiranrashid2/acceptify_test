@@ -5,6 +5,9 @@
     width: 100%;
   }
 }
+.dark .home {
+  background-color: #06142f;
+}
 .morefeatures {
   background: linear-gradient(0deg, #fff 65.13%, #9ec1ff 192.35%);
 }

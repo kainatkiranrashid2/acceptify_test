@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
-import {
-  MdLightMode,
-  MdDarkMode,
-  MdMonitor,
-  MdArrowDropDown,
-} from "react-icons/md";
+import { MdLightMode, MdMonitor } from "react-icons/md";
 import { FiMoon } from "react-icons/fi";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState("system");
@@ -68,21 +64,29 @@ const ThemeToggle = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center text-center rounded-lg "
+        className="flex items-center text-center rounded-lg"
         aria-haspopup="listbox"
         aria-expanded={isOpen}>
-        <span className="font-semibold  text-white dark:text-white    ">
-          {getIcon()}
+        <span className="font-semibold text-black dark:text-white">
+          <span className="hidden lg:block">{getIcon()}</span>
+          <span
+            className={`flex justify-between items-center gap-2 ${
+              theme !== "system" ? "lg:hidden" : ""
+            }`}>
+            <span className="capitalize flex gap-2 justify-between items-center px-4 py-[10px] border-[1px] dark:border-white rounded-md ">
+              <IoMdArrowDropdown />
+              {theme}
+            </span>
+          </span>
         </span>
-        {/* {theme} */}
-        {/* <MdArrowDropDown size={20} /> */}
       </button>
+
       {isOpen && (
-        <ul className="absolute mt-8 w-32 bg-white  dark:text-white dark:bg-[#06142F] border border-gray-300 dark:border-[#5D55F9] rounded-md shadow-lg  right-2">
+        <ul className="absolute  mt-2 lg:mt-8 w-32 bg-white  dark:text-white dark:bg-[#06142F] border border-gray-300 dark:border-[#5D55F9] rounded-md shadow-lg right-0  lg:right-2">
           {["light", "dark", "system"].map((option) => (
             <li key={option}>
               <button
-                className="w-full text-left px-4 py-2 my-2 overflow-hidden text-[#1B1B1B] hover:text-[#3873FD]  hover:bg-[#F3F3F3] dark:hover:bg-[#092254]  dark:hover:text-[#3873FD] dark:text-[#fff]"
+                className="w-full text-left px-4 py-2 my-1 lg:my-2 overflow-hidden text-[#1B1B1B] hover:text-[#3873FD]  hover:bg-[#F3F3F3] dark:hover:bg-[#092254]  dark:hover:text-[#3873FD] dark:text-[#fff]"
                 onClick={() => handleThemeChange(option)}>
                 <div className="flex justify-start w-full items-center ">
                   {option === "light" && (
