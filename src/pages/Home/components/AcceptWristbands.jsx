@@ -28,7 +28,7 @@ const AcceptWristbands = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-          <p className="text-white text-center sm:w-[592px]">
+          <p className="text-white text-center sm:w-[592px] w-full">
             Acceptify’s revolutionary wristband payment technologies offer
             premium experiences and speed. Customers can make quick payments
             without the need to carry cards or phones through brandable souvenir
