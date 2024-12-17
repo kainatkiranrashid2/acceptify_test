@@ -8,12 +8,14 @@ const AcceptWristbands = () => {
     
     ">
       <div
-        className="absolute inset-0 bg-repeat z-0
+        className="absolute inset-0 bg-repeat z-0 b
         bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733922601/components/dots_grid.png)]
         dark:bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734072935/components/grid_dark_bg.png)]"
-        style={{
-          backgroundSize: "100% 100%", // Adjust size as needed
-        }}
+        style={
+          {
+            // backgroundSize: "100% 100%", // Adjust size as needed
+          }
+        }
       />
 
       <div className="container relative z-10">
