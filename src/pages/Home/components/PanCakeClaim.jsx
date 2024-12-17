@@ -192,7 +192,7 @@ const VideoScrollComponent = () => {
         }}></div>
 
       <div className="container relative">
-        <div className="block lg:hidden mb-20 mt-10 sm:mt-[104px] md:mt-[60px] sm:mx-6 md:mx-10">
+        <div className="block lg:hidden mb-20 mt-10 sm:mt-[104px] md:mt-[60px] mx-5 sm:mx-6 md:mx-10">
           {/* Mobile view remains the same */}
           {videoData.map((item, index) => (
             <div
