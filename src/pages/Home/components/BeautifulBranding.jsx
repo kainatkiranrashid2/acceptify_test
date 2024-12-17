@@ -11,7 +11,7 @@ const BeautifulBranding = () => {
             <h1 className=" font-semibold mb-4 dark:text-white">
               Represent Your Brand
             </h1>
-            <p className="sm:w-[520px]  md:w-[30rem] text-center dark:text-white md:max-w-[30rem] lg:w-[37rem] lg:max-w-[37rem]  sm:mb-10">
+            <p className="w-[315px] sm:w-[520px]  md:w-[30rem] text-center dark:text-white md:max-w-[30rem] lg:w-[37rem] lg:max-w-[37rem]  sm:mb-10">
               Acceptify uniquely provides a signature checkout experience by
               personalizing payment devices with your brand&apos;s logos and
               colors.
