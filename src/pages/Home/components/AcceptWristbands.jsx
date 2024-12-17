@@ -6,7 +6,7 @@ const AcceptWristbands = () => {
       className="bg-gradient-to-r relative from-[#3479FD] to-[#6E23FB] dark:from-[#150731] dark:to-[#1646A7] py-20
     ">
       <div
-        className="absolute inset-0 bg-no-repeat z-0 
+        className="absolute inset-0 bg-repeat z-0 
         bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733922601/components/dots_grid.png)]
         dark:bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734072935/components/grid_dark_bg.png)]"
         style={{
