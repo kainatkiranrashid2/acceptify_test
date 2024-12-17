@@ -11,7 +11,7 @@ const AcceptWristbands = () => {
         dark:bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734072935/components/grid_dark_bg.png)]"
         style={{
           objectFit: "fill",
-          // backgroundSize: "100% 100%", // Adjust size as needed
+          backgroundSize: "100% 100%", // Adjust size as needed
         }}
       />
 
