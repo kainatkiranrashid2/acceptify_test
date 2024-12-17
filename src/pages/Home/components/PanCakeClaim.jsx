@@ -92,6 +92,7 @@ const VideoScrollComponent = () => {
               align: pathElement,
               alignOrigin: [0.5, 0.5],
             },
+
             x: window.innerWidth,
             duration: 1,
             ease: "none",
@@ -227,7 +228,7 @@ const VideoScrollComponent = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1000 100"
-                  className="absolute top-1/2 left-0 w-full"
+                  className="absolute bottom-[10%] left-0 w-full "
                   ref={(el) => (pathRefs.current[index] = el)}>
                   <path
                     style={{
@@ -241,7 +242,7 @@ const VideoScrollComponent = () => {
 
                 {/* Add Rocket for each section */}
                 <div
-                  className="absolute left-0 w-16 h-16 z-10"
+                  className="absolute left-0 w-16 h-16 z-10 opacity-50"
                   ref={(el) => (rocketRefs.current[index] = el)}>
                   <img
                     className="w-full h-full transform rotate-12"
