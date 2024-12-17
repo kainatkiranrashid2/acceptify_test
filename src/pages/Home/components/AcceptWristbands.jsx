@@ -17,7 +17,7 @@ const AcceptWristbands = () => {
       />
 
       <div className="container relative z-10">
-        <div className="mx-20 lg:hidden flex flex-col justify-between items-center gap-8 ">
+        <div className="mx-4 sm:mx-6 md:mx-20 lg:hidden flex flex-col justify-between items-center gap-8 ">
           <h2 className="text-white text-center ">Accept Wristbands</h2>
           <div className="sm:w-[323px] sm:h-[209px]">
             <video className="w-full h-full object-contain" autoPlay loop muted>
@@ -28,7 +28,7 @@ const AcceptWristbands = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-          <p className="text-white text-center sm:w-[592px] w-full">
+          <p className="text-white text-center  w-[100%] sm:w-[592px]">
             Acceptify’s revolutionary wristband payment technologies offer
             premium experiences and speed. Customers can make quick payments
             without the need to carry cards or phones through brandable souvenir
