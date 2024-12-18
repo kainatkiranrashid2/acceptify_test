@@ -1,28 +1,16 @@
 import Slider from "react-slick";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
+  return <div className={className} style={{ ...style }} onClick={onClick} />;
 }
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    />
-  );
+  return <div className={className} style={{ ...style }} onClick={onClick} />;
 }
 
 const CarouselItem = ({ title, description, image, id }) => (
-  <div className="carousel-item py-4 px-3 morefeatures__card parent-container gap-5  2xl:p-6 bg-white dark:bg-[#05122C] relative rounded-[20px] border border-spacing-1  w-[269px] h-[293px] sm:[269px]  overflow-hidden">
+  <div className="carousel-item py-4 px-3 morefeatures__card flex justify-between flex-col parent-container 2xl:p-6 bg-white dark:bg-[#05122C] relative rounded-[20px] border border-spacing-1  w-[269px] h-[293px] sm:[269px]  overflow-hidden">
     <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
     <div className="carousel-item-content">
@@ -96,10 +84,10 @@ const MoreFeatures = () => {
     },
   ];
   const settings = {
-    // dots: true,
+    dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
