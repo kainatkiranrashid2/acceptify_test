@@ -3,7 +3,7 @@ const CTASection = () => {
     <div className="container">
       <div className="md:px-10 md:py-20 xl:p-20  ">
         <div className="flex bg-gradient-to-br from-[#6E3BFB] to-[#3479FD] dark:bg-gradient-to-r dark:from-[#200B49] dark:to-[#1646A7]  overflow-hidden rounded-xl">
-          <div className="w-full md:w-1/2 flex items-center my-10  px-20 rounded-xl ">
+          <div className="w-full md:w-1/2 flex items-center my-10 px-5  sm:px-8 md:px-20 rounded-xl ">
             <div>
               <h2 className="xl:text-[32px]/[32px] font-bold text-white">
                 Ready to get Started?
@@ -13,7 +13,7 @@ const CTASection = () => {
                 mind of a fully certified payments platform. Get in touch with
                 our experts now!
               </p>
-              <button className="md:text-[14px]/[20px] lg:text-[11px]/[16.5px] xl:text-[13px]/[19px] 2xl:text-[16px]/[24px] mt-5 bg-primary hover:bg-[#51A805] rounded-lg py-[10px] px-[14px] text-white ">
+              <button className="text-[9.6px]/[13px] sm:[11px]/[16.5px] md:text-[14px]/[20px] lg:text-[11px]/[16.5px] xl:text-[13px]/[19px] 2xl:text-[16px]/[24px] mt-5 bg-primary hover:bg-[#51A805] rounded-lg py-[10px] px-[14px] text-white ">
                 Contact an Expert
               </button>
             </div>
