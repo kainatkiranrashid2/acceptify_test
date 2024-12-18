@@ -1,16 +1,77 @@
 import Slider from "react-slick";
+import { IoIosArrowDropleftCircle } from "react-icons/io";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { IoIosArrowDropright } from "react-icons/io";
+
+// https://res.cloudinary.com/dq5guzzge/image/upload/v1734514243/components/more_features/chevro_right_light.svg
+
+function customPaging(i) {
+  return (
+    <span className="">
+      <div className="mt-5 h-1 w-2 px-2 rounded-md bg-[#DEDEDE]"></div>
+    </span>
+  );
+}
+
+function appendDots(dots) {
+  return (
+    <div style={{}}>
+      <ul style={{ margin: "4px" }}> {dots} </ul>
+    </div>
+  );
+}
+
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return <div className={className} style={{ ...style }} onClick={onClick} />;
+  const { className, style, onClick, currentSlide } = props;
+  if (currentSlide === 0) {
+    return null;
+  }
+  return (
+    <div
+      style={{ ...style }}
+      onClick={onClick}
+      className="absolute -left-4 top-[40%] z-10 bg-gray">
+      <img
+        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734514251/components/more_features/chevron_left_light.svg"
+        alt=""
+        className="block dark:hidden "
+      />
+      <img
+        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734515439/components/more_features/chevron_dark_mode.svg"
+        alt=""
+        className="hidden dark:block transform rotate-180"
+      />
+    </div>
+  );
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return <div className={className} style={{ ...style }} onClick={onClick} />;
+  const { className, style, onClick, currentSlide, slideCount } = props;
+  if (currentSlide === slideCount - 1) {
+    return null;
+  }
+
+  return (
+    <div
+      style={{ ...style }}
+      onClick={onClick}
+      className="absolute -right-4 rounded-full top-[40%]  z-10 ">
+      <img
+        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734514243/components/more_features/chevro_right_light.svg"
+        alt=""
+        className="block dark:hidden"
+      />
+      <img
+        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734515439/components/more_features/chevron_dark_mode.svg"
+        alt=""
+        className="hidden dark:block"
+      />
+    </div>
+  );
 }
 
 const CarouselItem = ({ title, description, image, id }) => (
-  <div className="carousel-item py-4 px-3 morefeatures__card flex justify-between flex-col parent-container 2xl:p-6 bg-white dark:bg-[#05122C] relative rounded-[20px] border border-spacing-1  w-[269px] h-[293px] sm:[269px]  overflow-hidden">
+  <div className="carousel-item py-4 px-3 morefeatures__card flex justify-between flex-col parent-container 2xl:p-6 bg-white dark:bg-[#05122C] relative rounded-[20px] border border-spacing-1  w-[280px] h-[293px] sm:[280px]  overflow-hidden  ">
     <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
     <div className="carousel-item-content">
@@ -83,17 +144,28 @@ const MoreFeatures = () => {
         "Boost your revenue by using your own processor and customized rates. Maximize earnings by processing transactions anytime, anywhere—even without service.",
     },
   ];
-  const settings = {
+  const settingsForSm = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SamplePrevArrow />,
+    prevArrow: <SampleNextArrow />,
+    customPaging: customPaging,
+    appendDots: appendDots,
+  };
+  const settingsForXS = {
+    dots: true,
+    // infinite: true,
+    speed: 500,
 
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SamplePrevArrow />,
+    prevArrow: <SampleNextArrow />,
+    customPaging: customPaging,
+    appendDots: appendDots,
   };
 
   return (
@@ -104,8 +176,15 @@ const MoreFeatures = () => {
             Loaded with More Features
           </h1>
 
-          <div className="block md:hidden mx-10">
-            <Slider {...settings}>
+          <div className="hidden sm:block md:hidden mx-10">
+            <Slider {...settingsForSm} className="relative">
+              {features.map((feature, index) => (
+                <CarouselItem key={index} {...feature} />
+              ))}
+            </Slider>
+          </div>
+          <div className="block sm:hidden mx-10">
+            <Slider {...settingsForXS} className="relative w-full">
               {features.map((feature, index) => (
                 <CarouselItem key={index} {...feature} />
               ))}
