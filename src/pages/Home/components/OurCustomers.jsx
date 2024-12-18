@@ -71,8 +71,8 @@ const OurCustomers = () => {
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
-                    className={`h-6  object-contain ${
-                      index === 16 ? " md:h-20" : "md:!h-8"
+                    className={`h-6 md:h-8 object-contain ${
+                      index === 16 ? "h-18 md:h-20" : ""
                     }`}
                   />
                 </div>
