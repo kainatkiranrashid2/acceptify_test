@@ -71,7 +71,7 @@ function SamplePrevArrow(props) {
 }
 
 const CarouselItem = ({ title, description, image, id }) => (
-  <div className="carousel-item py-4 px-3 morefeatures__card flex justify-between flex-col parent-container 2xl:p-6 bg-white dark:bg-[#05122C] relative rounded-[20px] border border-spacing-1  w-[280px] h-[293px] sm:[280px]  overflow-hidden  ">
+  <div className="morefeatures__card parent-container lg:px-2 lg:py-4 xl:p-4 2xl:p-6 bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-[280px] h-[293px] sm:[280px]  overflow-hidden  ">
     <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
     <div className="carousel-item-content">
@@ -89,6 +89,15 @@ const CarouselItem = ({ title, description, image, id }) => (
       <p className="morefeatures__card-description dark:text-white text-center relative z-10">
         {description}
       </p>
+    </div>
+
+    <div className="absolute -bottom-52 -right-36 block dark:hidden morefeatures__bottomGradient"></div>
+    <div className="hidden dark:block absolute -bottom-48 -right-56">
+      <div className="gradient-container">
+        <div className="circle"></div>
+        <div className="oval-1"></div>
+        <div className="oval-2"></div>
+      </div>
     </div>
   </div>
 );
