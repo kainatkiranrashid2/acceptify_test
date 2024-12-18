@@ -8,7 +8,7 @@ const CTASection = () => {
               <h2 className="xl:text-[32px]/[32px] font-bold text-white">
                 Ready to get Started?
               </h2>
-              <p className="text-[18px]/[27px] mt-3 text-white">
+              <p className="text-[12px]/[175%] sm:[16px]/[175%] mt-3 text-white">
                 See how Acceptify brings the ease of implementation and peace of
                 mind of a fully certified payments platform. Get in touch with
                 our experts now!
