@@ -186,6 +186,7 @@
 @media screen and (min-width: 360px) and (max-width: 639px) {
   .morefeatures__card-description {
     font-size: 12px;
+    line-height: 160%;
     line-height: 16px;
   }
   .morefeatures__card-img0 {
