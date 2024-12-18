@@ -1,4 +1,7 @@
 import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const FeatureCard = ({ title, description, icon, isLarge = false }) => (
   <div
@@ -79,6 +82,15 @@ const FeaturesGrid = () => {
         "We help you increase lost revenue from declined offline transactions. Our powerful recapture engine resubmits declined transactions until they are approved or expire.",
     },
   ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
 
   return (
     <div className="pb-24 bg-gradient-to-r from-[#6E3BFB] to-[#2D79FF] ">
@@ -86,7 +98,14 @@ const FeaturesGrid = () => {
         Loaded with More Features
       </h2>
 
-      <div className=" mx-10">
+      <div className="block md:hidden mx-10">
+        <Slider {...settings}>
+          {features.map((feature, index) => (
+            <CarouselItem key={index} {...feature} />
+          ))}
+        </Slider>
+      </div>
+      <div className="hidden md:block mx-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
@@ -98,3 +117,15 @@ const FeaturesGrid = () => {
 };
 
 export default FeaturesGrid;
+
+const CarouselItem = ({ title, description, image }) => (
+  <div className="carousel-item">
+    <div className="carousel-item-content">
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
+    <div className="carousel-item-image">
+      <img src={image} alt={title} />
+    </div>
+  </div>
+);

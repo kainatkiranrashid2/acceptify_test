@@ -27,6 +27,8 @@
     "react-intersection-observer": "^9.13.0",
     "react-locomotive-scroll": "^0.2.2",
     "react-router-dom": "^6.26.0",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "three": "^0.169.0",
     "three-globe": "^2.32.0",
     "three-nebula": "^10.0.3"

@@ -70,9 +70,7 @@ const ThemeToggle = () => {
         <span className="font-semibold text-black dark:text-white">
           <span className="hidden lg:block">{getIcon()}</span>
           <span
-            className={`flex justify-between items-center gap-2 ${
-              theme !== "system" ? "lg:hidden" : ""
-            }`}>
+            className={`flex justify-between items-center gap-2 ${"lg:hidden"}`}>
             <span className="capitalize flex gap-2 justify-between items-center px-4 py-[10px] border-[1px] dark:border-white rounded-md ">
               <IoMdArrowDropdown />
               {theme}
