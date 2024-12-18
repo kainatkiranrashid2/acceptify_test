@@ -67,11 +67,11 @@ const ThemeToggle = () => {
         className="flex items-center text-center rounded-lg"
         aria-haspopup="listbox"
         aria-expanded={isOpen}>
-        <span className="font-semibold text-white dark:text-white">
+        <span className="font-semibold text-white dark:text-black">
           <span className="hidden lg:block">{getIcon()}</span>
           <span
             className={`flex justify-between items-center gap-2 ${"lg:hidden"}`}>
-            <span className="capitalize flex gap-2 justify-between items-center px-4 py-[10px] border-[1px] dark:border-white rounded-md ">
+            <span className="capitalize flex gap-2 justify-between items-center px-4 py-[10px] border-[1px] dark:border-white rounded-md text-black  dark:text-white">
               <IoMdArrowDropdown />
               {theme}
             </span>

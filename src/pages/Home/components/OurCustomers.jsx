@@ -62,16 +62,16 @@ const OurCustomers = () => {
     <section className="dark:bg-[#06142F]">
       <div className="container">
         <div className="py-20">
-          <div className="2xl:mx-[160px] xl:mx-8 lg:[196px] md:mx-[104px] xl:mb-[140px] lg:mb-[150px] md:mb-[60px] sm:mb-20 mb-[60px] mx-5 relative dark:hidden">
+          <div className="2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 xl:mb-[140px] lg:mb-[150px] sm:mb-[80px] mb-[60px] relative dark:hidden">
             <div className="grid grid-cols-6 items-center justify-center gap-6">
               {logos.slice(0, 24).map((logo, index) => (
                 <div
                   key={index}
-                  className={`2xl:w-[182px] 2xl:!h-[100px] xl:w-[150px] xl:h-[82.42px] lg:w-[95px] lg:h-[52px] md:w-[83px]  md:h-[46px] sm:w-[92px] sm:h-[51px] !w-[58px] !h-8 py-6 px-5 rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] bg-white dark:bg-[#1D3B9D]`}>
+                  className={`2xl:w-[182px] 2xl:!h-[100px] xl:w-[150px] xl:h-[82.42px] lg:w-[95px] lg:h-[52px] md:w-[83px] md:h-[46px] sm:w-[92px] sm:h-[51px] w-[58px] h-8 px-2 py-2  md:py-6 md:px-5 rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] bg-white dark:bg-[#1D3B9D]`}>
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
-                    className={` !w-full h-12 md:h-8 object-contain md:object-contain ${
+                    className={`h-8 object-contain ${
                       index === 16 ? "h-20" : ""
                     }`}
                   />
@@ -79,12 +79,12 @@ const OurCustomers = () => {
               ))}
             </div>
           </div>
-          <div className="2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 xl:mb-[140px] lg:mb-[150px] md:mb-[60px] relative hidden dark:block">
+          <div className="2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 xl:mb-[140px] lg:mb-[150px] sm:mb-[80px] mb-[60px] relative hidden dark:block">
             <div className="grid grid-cols-6 items-center justify-center gap-6">
               {darkLogos.slice(0, 24).map((logo, index) => (
                 <div
                   key={index}
-                  className={`2xl:w-[182px] 2xl:!h-[100px] xl:w-[150px] xl:h-[82.42px] lg:w-[95px] h-[52px] md:w-[83px] md:h-[46px] py-6 px-5 rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)]   dark:bg-[#1D3B9D]`}>
+                  className={`2xl:w-[182px] 2xl:!h-[100px] xl:w-[150px] xl:h-[82.42px] lg:w-[95px] lg:h-[52px] md:w-[83px] md:h-[46px] sm:w-[92px] sm:h-[51px] w-[58px] h-8 px-2 py-2  md:py-6 md:px-5 rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)]   dark:bg-[#1D3B9D]`}>
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}

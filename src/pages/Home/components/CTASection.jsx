@@ -3,7 +3,7 @@ const CTASection = () => {
     <div className="container">
       <div className="md:px-10 md:py-20 xl:p-20  ">
         <div className="flex bg-gradient-to-br from-[#6E3BFB] to-[#3479FD] dark:bg-gradient-to-r dark:from-[#200B49] dark:to-[#1646A7]  overflow-hidden rounded-xl">
-          <div className="w-1/2 flex items-center  px-20 rounded-xl ">
+          <div className="w-full md:w-1/2 flex items-center my-10  px-20 rounded-xl ">
             <div>
               <h2 className="xl:text-[32px]/[32px] font-bold text-white">
                 Ready to get Started?
@@ -18,7 +18,7 @@ const CTASection = () => {
               </button>
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="hidden md:w-1/2">
             <video className="w-full h-full object-cover " autoPlay loop muted>
               <source src="/assets/CTA/half_vid_v2.webm" type="video/webm" />
               Your browser does not support the video tag.
