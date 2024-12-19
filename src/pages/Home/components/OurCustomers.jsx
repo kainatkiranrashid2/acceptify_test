@@ -62,8 +62,8 @@ const OurCustomers = () => {
     <section className="dark:bg-[#06142F]">
       <div className="container">
         <div className="py-20">
-          <div className="hidden md:block 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px]  sm:mb-[80px] mb-[60px] relative dark:hidden">
-            <div className="grid grid-cols-6 items-center justify-center gap-2 md:gap-6">
+          <div className="hidden md:block 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px]  sm:hidden relative dark:hidden">
+            <div className="hidden md:grid grid-cols-6 items-center justify-center gap-2 md:gap-6">
               {logos.slice(0, 24).map((logo, index) => (
                 <div
                   key={index}
@@ -79,7 +79,7 @@ const OurCustomers = () => {
               ))}
             </div>
           </div>
-          <div className="block md:hidden 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[80px] mb-[60px] relative dark:hidden">
+          <div className="block md:hidden 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[0px] mb-[60px] relative dark:hidden">
             <div className="grid grid-cols-5 items-center justify-center gap-2 mb-2">
               {logos.slice(0, 20).map((logo, index) => (
                 <div
@@ -111,7 +111,7 @@ const OurCustomers = () => {
               ))}
             </div>
           </div>
-          <div className="hidden md:block 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[80px] mb-[60px] relative  dark:block">
+          <div className="hidden md:block 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[0px] mb-[0px] relative  dark:block">
             <div className="hidden md:grid-cols-6 items-center justify-center gap-1 md:gap-6">
               {darkLogos.slice(0, 24).map((logo, index) => (
                 <div
