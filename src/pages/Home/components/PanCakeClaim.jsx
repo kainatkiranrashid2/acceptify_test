@@ -211,7 +211,10 @@ const VideoScrollComponent = () => {
                   autoPlay
                   loop
                   muted
-                  playsInline
+                  controlsList="nodownload" // Prevents download option in controls
+                  disablePictureInPicture // Disables picture-in-picture mode
+                  playsInline // Better mobile experience
+                  onContextMenu={(e) => e.preventDefault()}
                 />
               </div>
             </div>
@@ -272,7 +275,10 @@ const VideoScrollComponent = () => {
                 autoPlay
                 loop
                 muted
-                playsInline
+                controlsList="nodownload" // Prevents download option in controls
+                disablePictureInPicture // Disables picture-in-picture mode
+                playsInline // Better mobile experience
+                onContextMenu={(e) => e.preventDefault()}
               />
             </div>
           </div>

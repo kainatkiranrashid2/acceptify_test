@@ -17,7 +17,11 @@ const BYOP = () => {
                 className="w-full h-full object-contain"
                 autoPlay
                 loop
-                muted>
+                muted
+                controlsList="nodownload" // Prevents download option in controls
+                disablePictureInPicture // Disables picture-in-picture mode
+                playsInline // Better mobile experience
+                onContextMenu={(e) => e.preventDefault()}>
                 <source
                   src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm"
                   type="video/webm"
@@ -50,7 +54,11 @@ const BYOP = () => {
                 className="w-full h-full object-contain"
                 autoPlay
                 loop
-                muted>
+                muted
+                controlsList="nodownload" // Prevents download option in controls
+                disablePictureInPicture // Disables picture-in-picture mode
+                playsInline // Better mobile experience
+                onContextMenu={(e) => e.preventDefault()}>
                 <source
                   src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm"
                   type="video/webm"

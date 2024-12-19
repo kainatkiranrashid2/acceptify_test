@@ -19,7 +19,15 @@ const AcceptWristbands = () => {
         <div className="mx-4 sm:mx-6 md:mx-20 lg:hidden flex flex-col justify-between items-center gap-8 ">
           <h2 className="text-white text-center ">Accept Wristbands</h2>
           <div className="sm:w-[323px] sm:h-[209px]">
-            <video className="w-full h-full object-contain" autoPlay loop muted>
+            <video
+              className="w-full h-full object-contain"
+              autoPlay
+              loop
+              muted
+              controlsList="nodownload" // Prevents download option in controls
+              disablePictureInPicture // Disables picture-in-picture mode
+              playsInline // Better mobile experience
+              onContextMenu={(e) => e.preventDefault()}>
               <source
                 src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm"
                 type="video/webm"
@@ -48,7 +56,15 @@ const AcceptWristbands = () => {
             </p>
           </div>
           <div className="w-1/2">
-            <video className="w-full h-full object-contain" autoPlay loop muted>
+            <video
+              className="w-full h-full object-contain"
+              autoPlay
+              loop
+              muted
+              controlsList="nodownload" // Prevents download option in controls
+              disablePictureInPicture // Disables picture-in-picture mode
+              playsInline // Better mobile experience
+              onContextMenu={(e) => e.preventDefault()}>
               <source
                 src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm"
                 type="video/webm"

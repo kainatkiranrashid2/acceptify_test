@@ -17,7 +17,15 @@ const IndustriesSection = () => {
           <h1 className=" mb-6 font-semibold dark:text-white">Industries</h1>
 
           <div className="mx-auto w-[222px] h-[214px] sm:w-[247px] sm:h-[239px] my-8">
-            <video className="w-full h-full object-contain" autoPlay loop muted>
+            <video
+              className="w-full h-full object-contain"
+              autoPlay
+              loop
+              muted
+              controlsList="nodownload" // Prevents download option in controls
+              disablePictureInPicture // Disables picture-in-picture mode
+              playsInline // Better mobile experience
+              onContextMenu={(e) => e.preventDefault()}>
               <source
                 src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm"
                 type="video/webm"
@@ -47,7 +55,15 @@ const IndustriesSection = () => {
             </button>
           </div>
           <div className="w-1/2 h-full">
-            <video className="w-full h-full object-contain" autoPlay loop muted>
+            <video
+              className="w-full h-full object-contain"
+              autoPlay
+              loop
+              muted
+              controlsList="nodownload" // Prevents download option in controls
+              disablePictureInPicture // Disables picture-in-picture mode
+              playsInline // Better mobile experience
+              onContextMenu={(e) => e.preventDefault()}>
               <source
                 src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm"
                 type="video/webm"
