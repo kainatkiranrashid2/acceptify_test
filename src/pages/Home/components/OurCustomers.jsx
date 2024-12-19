@@ -79,8 +79,8 @@ const OurCustomers = () => {
               ))}
             </div>
           </div>
-          <div className="block md:hidden 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[0px] mb-[60px] relative dark:hidden">
-            <div className="grid grid-cols-5 items-center justify-center gap-2 mb-2">
+          <div className="block 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[0px] mb-[60px] relative dark:hidden">
+            <div className="grid md:hidden  grid-cols-5 items-center justify-center gap-2 mb-2">
               {logos.slice(0, 20).map((logo, index) => (
                 <div
                   key={index}
@@ -95,7 +95,7 @@ const OurCustomers = () => {
                 </div>
               ))}
             </div>
-            <div className="flex  items-center justify-center gap-2 md:gap-6">
+            <div className="flex md:hidden  items-center justify-center gap-2 md:gap-6">
               {logos.slice(20, 24).map((logo, index) => (
                 <div
                   key={index}
@@ -111,7 +111,7 @@ const OurCustomers = () => {
               ))}
             </div>
           </div>
-          <div className="hidden md:block 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[0px] mb-[0px] relative  dark:block">
+          <div className="hidden  2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[0px] mb-[0px] relative  dark:block">
             <div className="hidden md:grid grid-cols-6 items-center justify-center gap-1 md:gap-6">
               {darkLogos.slice(0, 24).map((logo, index) => (
                 <div
@@ -120,8 +120,8 @@ const OurCustomers = () => {
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
-                    className={`h-6  object-contain ${
-                      index === 16 ? "h-20" : "md:h-8"
+                    className={`h-8 object-contain ${
+                      index === 16 ? "h-18 md:h-28" : ""
                     }`}
                   />
                 </div>
