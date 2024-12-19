@@ -67,7 +67,7 @@ const ThemeToggle = () => {
         className="flex items-center text-center rounded-lg"
         aria-haspopup="listbox"
         aria-expanded={isOpen}>
-        <span className="font-semibold text-white dark:text-black">
+        <span className="font-semibold text-white ">
           <span className="hidden lg:block">{getIcon()}</span>
           <span
             className={`flex justify-between items-center gap-2 ${"lg:hidden"}`}>

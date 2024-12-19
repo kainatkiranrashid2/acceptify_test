@@ -144,6 +144,7 @@ const OurCustomers = () => {
                 </div>
               ))}
             </div>
+
             <div className="flex  items-center justify-center gap-2 md:gap-6">
               {darkLogos.slice(20, 24).map((logo, index) => (
                 <div
