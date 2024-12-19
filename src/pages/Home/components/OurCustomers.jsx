@@ -112,7 +112,7 @@ const OurCustomers = () => {
             </div>
           </div>
           <div className="hidden md:block 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[0px] mb-[0px] relative  dark:block">
-            <div className="hidden md:grid-cols-6 items-center justify-center gap-1 md:gap-6">
+            <div className="hidden md:grid grid-cols-6 items-center justify-center gap-1 md:gap-6">
               {darkLogos.slice(0, 24).map((logo, index) => (
                 <div
                   key={index}
@@ -145,7 +145,7 @@ const OurCustomers = () => {
               ))}
             </div>
 
-            <div className="flex  items-center justify-center gap-2 md:gap-6">
+            <div className="md:hidden flex  items-center justify-center gap-2 md:gap-6">
               {darkLogos.slice(20, 24).map((logo, index) => (
                 <div
                   key={index}
