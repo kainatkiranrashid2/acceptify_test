@@ -14,7 +14,7 @@ const NavbarMenu = [
   {
     id: 1,
     title: "Payment Devices",
-    path: "/",
+    path: "/devices",
   },
   {
     id: 2,
