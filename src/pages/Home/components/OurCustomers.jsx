@@ -62,7 +62,7 @@ const OurCustomers = () => {
     <section className="dark:bg-[#06142F]">
       <div className="container">
         <div className="py-20">
-          <div className="2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 xl:mb-[140px] lg:mb-[150px] sm:mb-[80px] mb-[60px] relative dark:hidden">
+          <div className="2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-5 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[80px] mb-[60px] relative dark:hidden">
             <div className="grid grid-cols-6 items-center justify-center gap-2 md:gap-6">
               {logos.slice(0, 24).map((logo, index) => (
                 <div

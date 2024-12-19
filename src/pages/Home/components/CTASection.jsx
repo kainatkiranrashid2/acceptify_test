@@ -2,7 +2,7 @@ const CTASection = () => {
   return (
     <div className="container">
       <div className="md:px-10 md:py-20 xl:p-20  ">
-        <div className="flex bg-gradient-to-br from-[#6E3BFB] to-[#3479FD] dark:bg-gradient-to-r dark:from-[#200B49] dark:to-[#1646A7]  overflow-hidden rounded-xl">
+        <div className="flex bg-gradient-to-br from-[rgb(110,59,251)] to-[#3479FD] dark:bg-gradient-to-r dark:from-[#200B49] dark:to-[#1646A7] mx-5 overflow-hidden rounded-xl">
           <div className="w-full md:w-1/2 flex items-center my-10 px-5  sm:px-8 md:px-20 rounded-xl ">
             <div>
               <h2 className="xl:text-[32px]/[32px] font-bold text-white">
