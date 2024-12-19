@@ -71,7 +71,7 @@ function SamplePrevArrow(props) {
 }
 
 const CarouselItem = ({ title, description, image, id }) => (
-  <div className="morefeatures__card parent-container py-4 px-3 2xl:p-6 bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-[280px] h-[293px] sm:[280px]  overflow-hidden flex flex-col items-center  justify-between  ">
+  <div className="morefeatures__card parent-container  bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-[280px] h-[293px] sm:[280px]  overflow-hidden flex flex-col items-center  justify-between  ">
     <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
     <div className="carousel-item-content">
@@ -180,7 +180,7 @@ const MoreFeatures = () => {
   return (
     <section className="morefeatures w-full h-full">
       <div className="container ">
-        <div className="md:mx-10 lg:mx-[60px] xl:mx-20 py-20">
+        <div className="md:mx-4 lg:mx-[60px] xl:mx-20 py-20">
           <h1 className="text-center font-semibold mb-6 dark:text-white ">
             Loaded with More Features
           </h1>
@@ -203,20 +203,20 @@ const MoreFeatures = () => {
             <div className="grid grid-cols-3  gap-5 max-w-full">
               {features.map((item, index) => (
                 <div
-                  className="morefeatures__card parent-container lg:px-2 lg:py-4 xl:p-4 2xl:p-6 bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF] 2xl:w-[444px] 2xl:h-[406px] xl:w-[316px] xl:h-[344px] lg:w-[269px] lg:h-[293px] overflow-hidden"
+                  className="morefeatures__card parent-container md:px-1 md:py-3 lg:px-2 lg:py-4 xl:p-4 2xl:p-6 bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF] 2xl:w-[444px] 2xl:h-[406px] xl:w-[316px] xl:h-[344px] lg:w-[269px] lg:h-[293px] md:w-[196px] md:h-[230px] overflow-hidden"
                   key={index}>
                   <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
                   <div className="relative flex flex-col items-center h-full justify-between z-10">
-                    <h3 className=" text-center relative z-10 dark:text-white">
+                    <h3 className=" text-center relative  dark:text-white">
                       {item.title}
                     </h3>
                     <img
-                      className={` mx-auto morefeatures__card-img${index} dark:text-white  max-w-full relative z-10`}
+                      className={` mx-auto morefeatures__card-img${index} dark:text-white  max-w-full relative `}
                       src={item.image}
                       alt={item.title}
                     />
-                    <p className="morefeatures__card-description dark:text-white text-center relative z-10">
+                    <p className="morefeatures__card-description dark:text-white text-center relative ">
                       {item.description}
                     </p>
                   </div>

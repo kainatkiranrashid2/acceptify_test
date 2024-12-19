@@ -136,7 +136,7 @@
     line-height: 150%;
   }
 }
-@media screen and (min-width: 786px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   body {
     font-size: 16px;
     letter-spacing: 0.02px;
@@ -166,7 +166,7 @@
   }
 }
 
-@media screen and (min-width: 640px) and (max-width: 785px) {
+@media screen and (min-width: 640px) and (max-width: 767px) {
   body {
     font-size: 16px;
     letter-spacing: 0.02px;
@@ -183,7 +183,7 @@
     letter-spacing: 0.02px;
   }
   h3 {
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 600;
 
     letter-spacing: 0.02px;

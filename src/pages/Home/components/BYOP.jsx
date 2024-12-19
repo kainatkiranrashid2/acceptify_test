@@ -5,7 +5,7 @@ const BYOP = () => {
     >
       <div className="container  ">
         <div className="py-[50px] sm:pt-10 sm:pb-20 md:py-20">
-          <div className=" relative lg:hidden flex flex-col items-center justify-center overflow-hidden gap-10 ">
+          <div className=" relative md:hidden flex flex-col items-center justify-center overflow-hidden gap-10 ">
             {/* <div className="absolute oval-shape right-0  "></div> */}
 
             <h1 className=" font-semibold mb-4 dark:text-white">

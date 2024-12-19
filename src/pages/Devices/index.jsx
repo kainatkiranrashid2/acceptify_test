@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Fragment } from "react";
 
-import "./index.css"
+import "./index.css";
+import Header from "./components/Header";
 
 const Devices = () => {
-
-   document.body.className = "devices";
+  document.body.className = "devices";
 
   return (
-    <div className='h-full py-3'>Devices</div>
-  )
-}
+    <Fragment>
+      <Header />
+    </Fragment>
+  );
+};
 
-export default Devices
+export default Devices;

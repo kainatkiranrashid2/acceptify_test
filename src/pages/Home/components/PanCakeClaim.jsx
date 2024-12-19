@@ -204,10 +204,10 @@ const VideoScrollComponent = () => {
                 </h2>
                 <p className="dark:text-white  w-full">{item.subtitle}</p>
               </div>
-              <div className="w-[320px] h-[220px] sm:w-[3px] sm:h-[182px] md:w-[182px] md:h-[120px] mx-auto mt-[60px] sm:mt-20 md:mt-[5.5rem] bg-transparent dark:bg-transparent">
+              <div className="w-[320px] h-[220px] sm:w-[489px] sm:h-[182px] md:w-[489px] md:h-[300px] mx-auto mt-[60px] sm:mt-20 md:mt-[5.5rem] bg-transparent dark:bg-transparent">
                 <video
                   src={item.url}
-                  className="w-full h-auto max-h-full object-cover bg-transparent "
+                  className="w-full h-auto max-h-full object-cover  bg-transparent "
                   autoPlay
                   loop
                   muted
