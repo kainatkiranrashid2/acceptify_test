@@ -71,7 +71,7 @@ function SamplePrevArrow(props) {
 }
 
 const CarouselItem = ({ title, description, image, id }) => (
-  <div className="morefeatures__card parent-container py-4 px-3 2xl:p-6 bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-[280px] h-[293px] sm:[280px]  overflow-hidden  ">
+  <div className="morefeatures__card parent-container py-4 px-3 2xl:p-6 bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-[280px] h-[293px] sm:[280px]  overflow-hidden flex flex-col items-center  justify-between  ">
     <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
     <div className="carousel-item-content">
