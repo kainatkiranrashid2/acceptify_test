@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 const BeautifulBranding = () => {
+  useEffect(() => {
+    const player = document.getElementById("player");
+    if (player) {
+      player.src = supportsHEVCAlpha()
+        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734596300/components/represent_your_brand/ryb_hev.mov"
+        : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733991376/components/represent_your_branding.webm";
+    }
+  }, []);
+
   return (
     <section
       className="bg-cover bg-center bg-no-repeat py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733922457/components/ryb_light.svg)]
@@ -19,6 +30,7 @@ const BeautifulBranding = () => {
           </div>
           <div className="2xl:w-[748px] 2xl:h-[453px] xl:w-[645px] xl:h-[391px] lg:w-[495.82px] lg:h-[295.26px] md:w-[361.7px] md:h-[219px] sm:w-[375px] sm:h-[222px] ">
             <video
+              id="player"
               className="w-full h-full object-contain"
               autoPlay
               loop
@@ -27,14 +39,6 @@ const BeautifulBranding = () => {
               disablePictureInPicture // Disables picture-in-picture mode
               playsInline // Better mobile experience
               onContextMenu={(e) => e.preventDefault()}>
-              <source
-                src="https://res.cloudinary.com/dq5guzzge/video/upload/v1734596300/components/represent_your_brand/ryb_hev.mov"
-                type="video/webm"
-              />
-              <source
-                src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733991376/components/represent_your_branding.webm"
-                type="video/webm"
-              />
               Your browser does not support the video tag.
             </video>
           </div>
