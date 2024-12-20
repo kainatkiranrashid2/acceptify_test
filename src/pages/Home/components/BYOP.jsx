@@ -61,16 +61,13 @@ const BYOP = () => {
               <video
                 className="w-full h-full object-contain"
                 autoPlay
+                id="byop_player"
                 loop
                 muted
                 controlsList="nodownload" // Prevents download option in controls
                 disablePictureInPicture // Disables picture-in-picture mode
                 playsInline // Better mobile experience
                 onContextMenu={(e) => e.preventDefault()}>
-                <source
-                  src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm"
-                  type="video/webm"
-                />
                 Your browser does not support the video tag.
               </video>
             </div>
