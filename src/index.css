@@ -81,9 +81,8 @@
   }
   h1 {
     font-size: 2.125rem;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 150%;
-
     letter-spacing: 0.02px;
   }
   h2 {
@@ -174,7 +173,7 @@
   h1 {
     font-size: 1.5rem;
     line-height: 120%;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.02px;
   }
   h2 {

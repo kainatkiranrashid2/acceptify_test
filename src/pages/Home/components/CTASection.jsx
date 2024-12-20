@@ -16,10 +16,12 @@ const CTASection = () => {
     <div className="container">
       <div className="md:px-10 md:py-20 xl:p-20  ">
         <div className="flex bg-gradient-to-br from-[rgb(110,59,251)] to-[#3479FD] dark:bg-gradient-to-r dark:from-[#200B49] dark:to-[#1646A7] mx-5 overflow-hidden rounded-xl">
-          <div className="w-full lg:w-1/2 flex items-center my-10 px-5  sm:px-8 md:px-20 rounded-xl ">
+          <div className="w-full lg:w-[350px] xl:w-[491px] flex items-center my-10 px-5  sm:px-8 lg:pl-[56px] lg:pr-[42px] xl:pr-[50px] xl:pl-[80px]  rounded-xl ">
             <div>
-              <h1 className=" font-bold text-white">Ready to get Started?</h1>
-              <p className=" mt-3 text-white">
+              <h1 className="lg:text-[24px] xl:text-[34px] font-bold w-full text-white">
+                Ready to get Started?
+              </h1>
+              <p className=" mt-3 text-le text-white lg:w-[288px] xl:w-[411px]">
                 See how Acceptify brings the ease of implementation and peace of
                 mind of a fully certified payments platform. Get in touch with
                 our experts now!
@@ -29,9 +31,9 @@ const CTASection = () => {
               </button>
             </div>
           </div>
-          <div className="hidden lg:block lg:w-1/2">
+          <div className="hidden lg:flex lg:flex-1 ">
             <video
-              className="w-full h-full object-contain "
+              className="w-full h-full lg:object-cover  "
               autoPlay
               loop
               id="cta_player"
