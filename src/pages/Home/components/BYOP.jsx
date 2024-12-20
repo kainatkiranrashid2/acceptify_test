@@ -35,14 +35,6 @@ const BYOP = () => {
                 disablePictureInPicture // Disables picture-in-picture mode
                 playsInline // Better mobile experience
                 onContextMenu={(e) => e.preventDefault()}>
-                <source
-                  src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm"
-                  type="video/webm"
-                />
-                <source
-                  src="https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov"
-                  type="video/mp4"
-                />
                 Your browser does not support the video tag.
               </video>
             </div>
