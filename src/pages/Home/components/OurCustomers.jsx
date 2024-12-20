@@ -46,7 +46,7 @@ const OurCustomers = () => {
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065016/components/our_customers_dark_mode/fiserv_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065019/components/our_customers_dark_mode/elavon_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065018/components/our_customers_dark_mode/freedompay_logo.svg",
-    "https://res.cloudinary.com/dq5guzzge/image/upload/v1734071592/components/our_customers_dark_mode/gpay_logo.png",
+    "https://res.cloudinary.com/dq5guzzge/image/upload/v1734699656/components/our_customers_dark_mode/global_payments_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733989402/components/our_customers_logo/ace_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734071104/components/our_customers_dark_mode/kaiser_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734069883/components/our_customers_dark_mode/alaska_logo.svg",
@@ -73,7 +73,7 @@ const OurCustomers = () => {
                     className={`${
                       index === 16
                         ? "h-[45px] object-cover"
-                        : "h-8  object-contain "
+                        : "h-12  object-contain "
                     }`}
                   />
                 </div>
@@ -85,14 +85,12 @@ const OurCustomers = () => {
               {logos.slice(0, 20).map((logo, index) => (
                 <div
                   key={index}
-                  className={`2xl:w-[182px] 2xl:!h-[100px] xl:w-[150px] xl:h-[82.42px] lg:w-[95px] lg:h-[52px] md:w-[83px] md:h-[46px] sm:w-[92px] sm:h-[51px] w-[64px] h-10 px-2 py-2  md:py-6 md:px-5 rounded-[8px] sm:rounded-[10px] md:rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] bg-white dark:bg-[#1D3B9D]`}>
+                  className={`2xl:w-[182px] 2xl:!h-[100px] xl:w-[150px] xl:h-[82.42px] lg:w-[95px] lg:h-[52px] md:w-[83px] md:h-[46px] sm:w-[92px] sm:h-[51px] w-[60px] h-10 px-2 py-2  md:py-6 md:px-5 rounded-[8px] sm:rounded-[10px] md:rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] bg-white dark:bg-[#1D3B9D]`}>
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
-                    className={`${
-                      index === 16
-                        ? "h-[44px] object-cover"
-                        : "h-8  object-contain "
+                    className={`h-7 object-contain ${
+                      index === 16 ? "!h-[18px] !object-cover " : ""
                     }`}
                   />
                 </div>
@@ -107,7 +105,7 @@ const OurCustomers = () => {
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
                     className={`h-7 md:h-8 object-contain ${
-                      index === 16 ? "h-18 md:h-20" : ""
+                      index === 16 ? "h-10 md:h-20" : ""
                     }`}
                   />
                 </div>
@@ -125,7 +123,7 @@ const OurCustomers = () => {
                     alt={`Customer logo ${index + 1}`}
                     className={`${
                       index === 16
-                        ? "h-[44px] object-cover"
+                        ? "h-[45px] object-cover"
                         : "h-8  object-contain "
                     }`}
                   />
@@ -142,8 +140,8 @@ const OurCustomers = () => {
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
-                    className={`h-7 md:h-8 object-contain ${
-                      index === 16 ? "h-18 md:h-20" : ""
+                    className={`h-7 object-contain ${
+                      index === 16 ? "!h-[18px] !object-cover " : ""
                     }`}
                   />
                 </div>
