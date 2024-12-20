@@ -18,7 +18,7 @@ const OurCustomers = () => {
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733988799/components/our_customers_logo/fiserv_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733988798/components/our_customers_logo/elavon_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733988798/components/our_customers_logo/freedompay_logo.svg",
-    "https://res.cloudinary.com/dq5guzzge/image/upload/v1734070353/components/our_customers_logo/globalpayment_logo.svg",
+    "https://res.cloudinary.com/dq5guzzge/image/upload/v1734696695/components/our_customers_logo/global_payments.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733989402/components/our_customers_logo/ace_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733988796/components/our_customers_logo/kaiser_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733988795/components/our_customers_logo/alaska_logo.svg",
@@ -70,9 +70,7 @@ const OurCustomers = () => {
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
-                    className={`${
-                      index === 16 ? "h-6 object-cover" : "h-9  object-contain "
-                    }`}
+                    className="h-9  object-contain "
                   />
                 </div>
               ))}
@@ -87,9 +85,7 @@ const OurCustomers = () => {
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
-                    className={`h-7 md:h-8 object-contain ${
-                      index === 16 ? "h-18 md:h-20" : ""
-                    }`}
+                    className={`h-7 md:h-8 object-contain `}
                   />
                 </div>
               ))}
