@@ -1,6 +1,16 @@
-import React from "react";
+import { useEffect } from "react";
+import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 
 const AcceptWristbands = () => {
+  useEffect(() => {
+    const player = document.getElementById("wristband_player");
+    if (player) {
+      player.src = supportsHEVCAlpha()
+        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov"
+        : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm";
+    }
+  }, []);
+
   return (
     <section
       className="bg-gradient-to-r relative from-[#3479FD] to-[#6E23FB] dark:from-[#150731] dark:to-[#1646A7] py-16 lg:py-20
@@ -22,16 +32,13 @@ const AcceptWristbands = () => {
             <video
               className="w-full h-full object-contain"
               autoPlay
+              id="player"
               loop
               muted
               controlsList="nodownload" // Prevents download option in controls
               disablePictureInPicture // Disables picture-in-picture mode
               playsInline // Better mobile experience
               onContextMenu={(e) => e.preventDefault()}>
-              <source
-                src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm"
-                type="video/webm"
-              />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -59,6 +66,7 @@ const AcceptWristbands = () => {
             <video
               className="w-full h-full object-contain"
               autoPlay
+              id="wristband_player"
               loop
               muted
               controlsList="nodownload" // Prevents download option in controls

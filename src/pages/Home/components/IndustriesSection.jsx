@@ -1,6 +1,17 @@
-import React from "react";
+import { useEffect } from "react";
+import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 
+// https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov
+// https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm
 const IndustriesSection = () => {
+  useEffect(() => {
+    const player = document.getElementById("player");
+    if (player) {
+      player.src = supportsHEVCAlpha()
+        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov"
+        : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm";
+    }
+  }, []);
   return (
     <div className="py-13 md:py-20 bg-gradient-to-b from-white from-[16.97%] to-[#3B6FFD] to-[100%] relative overflow-hidden dark:bg-gradient-to-b dark:from-[#0C0221] dark:to-[#0C0221] dark:relative">
       {/* Background Image Layer */}
@@ -20,16 +31,13 @@ const IndustriesSection = () => {
             <video
               className="w-full h-full object-contain"
               autoPlay
+              id="player"
               loop
               muted
               controlsList="nodownload" // Prevents download option in controls
               disablePictureInPicture // Disables picture-in-picture mode
               playsInline // Better mobile experience
               onContextMenu={(e) => e.preventDefault()}>
-              <source
-                src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm"
-                type="video/webm"
-              />
               Your browser does not support the video tag.
             </video>
           </div>

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 const BeautifulBranding = () => {
   useEffect(() => {
-    const player = document.getElementById("player");
+    const player = document.getElementById("branding_player");
     if (player) {
       player.src = supportsHEVCAlpha()
         ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734596300/components/represent_your_brand/ryb_hev.mov"
@@ -30,7 +30,7 @@ const BeautifulBranding = () => {
           </div>
           <div className="2xl:w-[748px] 2xl:h-[453px] xl:w-[645px] xl:h-[391px] lg:w-[495.82px] lg:h-[295.26px] md:w-[361.7px] md:h-[219px] sm:w-[375px] sm:h-[222px] ">
             <video
-              id="player"
+              id="branding_player"
               className="w-full h-full object-contain"
               autoPlay
               loop

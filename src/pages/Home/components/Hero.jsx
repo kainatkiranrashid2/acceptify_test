@@ -3,33 +3,45 @@ import { Cloudinary } from "@cloudinary/url-gen";
 
 // Import required actions and qualifiers.
 import { fill } from "@cloudinary/url-gen/actions/resize";
-import { byRadius } from "@cloudinary/url-gen/actions/roundCorners";
 import { FocusOn } from "@cloudinary/url-gen/qualifiers/focusOn";
 import { Gravity } from "@cloudinary/url-gen/qualifiers";
-import { FaArrowRight } from "react-icons/fa6";
-import { GoArrowRight } from "react-icons/go";
+import { useEffect, useState } from "react";
+import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 
 import { AutoFocus } from "@cloudinary/url-gen/qualifiers/autoFocus";
 
+// https://res.cloudinary.com/dq5guzzge/video/upload/v1734688817/components/hero_section/hero_section.mov
+// https://res.cloudinary.com/dq5guzzge/video/upload/v1734688832/components/hero_section/hero_sect.webm
 const HeroSection = () => {
+  const [videoSource, setVideoSource] = useState("");
+
   // dq5guzzge
 
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: "dq5guzzge",
-    },
-  });
+  useEffect(() => {
+    // Set the appropriate video source based on device capability
+    const videoPath = supportsHEVCAlpha()
+      ? "components/hero_section/hero_section"
+      : "components/hero_section/hero_sect";
 
-  const heroVideo = cld.video("components/hero_section_update");
+    const cld = new Cloudinary({
+      cloud: {
+        cloudName: "dq5guzzge",
+      },
+    });
 
-  heroVideo.resize(
-    fill()
-      .width(1920)
-      .height(1080)
-      .gravity(
-        Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
-      )
-  );
+    const heroVideo = cld.video(videoPath);
+
+    heroVideo.resize(
+      fill()
+        .width(1920)
+        .height(1080)
+        .gravity(
+          Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
+        )
+    );
+
+    setVideoSource(heroVideo);
+  }, []);
 
   return (
     <div className="cp-hero relative bg-gradient-to-br  from-[#6E3BFB] to-[#2D79FF] dark:from-[#282478] dark:to-[#150731] overflow-x-hidden">
@@ -46,7 +58,7 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          cldVid={heroVideo}
+          cldVid={videoSource}
           controls={false}
         />
 

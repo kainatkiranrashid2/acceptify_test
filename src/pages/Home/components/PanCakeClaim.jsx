@@ -2,26 +2,36 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-
+import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
+
+// https://res.cloudinary.com/dq5guzzge/video/upload/v1734687459/components/scroll_animation/lightning_web.webm
+// https://res.cloudinary.com/dq5guzzge/video/upload/v1734685754/components/scroll_animation/lightning_fast.mov
+
 const videoData = [
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817486/components/still_pancake_01.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684092/components/scroll_animation/stll_pancake_01.webm",
+    url_mov:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685197/components/scroll_animation/still_pancake_01.mov",
     title: "Secure, Certified, Lightning Fast Enterprise Payments Anywhere",
     subtitle:
       "Acceptify is designed to meet the stringent security standards of the Payment Card Industry's Data Security Standard (PCI-DSS). Customer's data is always strongly encrypted.",
     highlightedWords: ["Secure,", "Certified,", "Lightning Fast"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817549/components/still_pancake_02.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684222/components/scroll_animation/stll_pancake_02.webm",
+    url_mov:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685199/components/scroll_animation/still_pancake_02.mov",
     title: "Protect your Operation and Reputation",
     subtitle:
       "Acceptify protects against harmful security breaches that negatively impact your brand, disrupts your operations, increases your liabilities and decreases your revenue.",
     highlightedWords: ["Operation", "and", "Reputation"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817596/components/still_pancake_03.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684141/components/scroll_animation/stll_pancake_03.webm",
+    url_mov:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685200/components/scroll_animation/still_pancake_03.mov",
     title:
       "Acceptify is PCI-P2PE Certified Ensuring Compliance to the Industry Highest Standard",
     subtitle:
@@ -29,7 +39,9 @@ const videoData = [
     highlightedWords: ["PCI-P2PE Certified"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733817659/components/still_pancake_04.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684263/components/scroll_animation/stll_pancake_04.webm",
+    url_mov:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685189/components/scroll_animation/still_pancake_04.mov",
     title:
       "Acceptify Simplifying PCI Security Compliance for Online and Offline Payments",
     subtitle:
@@ -37,7 +49,9 @@ const videoData = [
     highlightedWords: ["Simplifying", "PCI Security Compliance"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1733898703/components/code_snippet.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684454/components/scroll_animation/code_snippet.webm",
+    url_mov:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685636/components/scroll_animation/code_snip.mov",
     title: "Implement Ultra-Secure Payments with a few Lines of Code",
     subtitle:
       "We’ve done all the heavy lifting for you. Use the Acceptify’s APIs to connect to a payment device, take a payment, submit the transaction to your processor and receive the approval or declined decision – with just a few lines of code.",
@@ -53,7 +67,9 @@ const videoData = [
     },
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1732531637/components/lightning_fast.webm",
+    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687459/components/scroll_animation/lightning_web.webm",
+    url_mov:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685754/components/scroll_animation/lightning_fast.mov",
     title: "Lightning Fast Payments",
     subtitle:
       "Enterprises that need speedy payments choose Acceptify.  Our payment technologies are designed around “No More Spinners”. Spinners are painful when customers are waiting. Acceptify helps you succeed in high throughput payment workflows where speed matters.",
@@ -65,10 +81,19 @@ const VideoScrollComponent = () => {
   const videoRef = useRef(null);
   const swishLogoRef = useRef(null);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [videoUrls, setVideoUrls] = useState([]);
 
   // Create refs for each section's path and rocket
   const pathRefs = useRef([]);
   const rocketRefs = useRef([]);
+
+  useEffect(() => {
+    // Set video URLs based on device capability
+    const urls = videoData.map((item) =>
+      supportsHEVCAlpha() ? item.url_mov : item.url
+    );
+    setVideoUrls(urls);
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -206,7 +231,8 @@ const VideoScrollComponent = () => {
               </div>
               <div className="w-[320px] h-[220px] sm:w-[489px] sm:h-[182px] md:w-[489px] md:h-[300px] mx-auto mt-[60px] sm:mt-20 md:mt-[5.5rem] bg-transparent dark:bg-transparent">
                 <video
-                  src={item.url}
+                  src={videoUrls[index]}
+                  id="player"
                   className="w-full h-auto max-h-full object-cover  bg-transparent "
                   autoPlay
                   loop
@@ -270,7 +296,7 @@ const VideoScrollComponent = () => {
             <div className="video-container sticky top-0 lg:h-[546px] 2xl:h-[790px] flex items-center justify-center">
               <video
                 ref={videoRef}
-                src={videoData[currentVideoIndex].url}
+                src={videoUrls[currentVideoIndex]}
                 className="w-full h-auto max-h-full object-contain z-10"
                 autoPlay
                 loop

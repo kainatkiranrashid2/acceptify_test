@@ -1,14 +1,25 @@
+import { useEffect } from "react";
+import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
+// https://res.cloudinary.com/dq5guzzge/video/upload/v1734686819/components/cta_section/call_to_action.mov
+// https://res.cloudinary.com/dq5guzzge/video/upload/v1734686901/components/cta_section/call_to_action_mov.webm
+
 const CTASection = () => {
+  useEffect(() => {
+    const player = document.getElementById("cta_player");
+    if (player) {
+      player.src = supportsHEVCAlpha()
+        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686819/components/cta_section/call_to_action.mov"
+        : "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686901/components/cta_section/call_to_action_mov.webm";
+    }
+  }, []);
   return (
     <div className="container">
       <div className="md:px-10 md:py-20 xl:p-20  ">
         <div className="flex bg-gradient-to-br from-[rgb(110,59,251)] to-[#3479FD] dark:bg-gradient-to-r dark:from-[#200B49] dark:to-[#1646A7] mx-5 overflow-hidden rounded-xl">
-          <div className="w-full md:w-1/2 flex items-center my-10 px-5  sm:px-8 md:px-20 rounded-xl ">
+          <div className="w-full lg:w-1/2 flex items-center my-10 px-5  sm:px-8 md:px-20 rounded-xl ">
             <div>
-              <h2 className="xl:text-[32px]/[32px] font-bold text-white">
-                Ready to get Started?
-              </h2>
-              <p className="text-[12px]/[175%] sm:[16px]/[175%] mt-3 text-white">
+              <h1 className=" font-bold text-white">Ready to get Started?</h1>
+              <p className=" mt-3 text-white">
                 See how Acceptify brings the ease of implementation and peace of
                 mind of a fully certified payments platform. Get in touch with
                 our experts now!
@@ -18,17 +29,17 @@ const CTASection = () => {
               </button>
             </div>
           </div>
-          <div className="hidden md:block md:w-1/2">
+          <div className="hidden lg:block lg:w-1/2">
             <video
               className="w-full h-full object-cover "
               autoPlay
               loop
+              id="cta_player"
               muted
               controlsList="nodownload" // Prevents download option in controls
               disablePictureInPicture // Disables picture-in-picture mode
               playsInline // Better mobile experience
               onContextMenu={(e) => e.preventDefault()}>
-              <source src="/assets/CTA/half_vid_v2.webm" type="video/webm" />
               Your browser does not support the video tag.
             </video>
           </div>
