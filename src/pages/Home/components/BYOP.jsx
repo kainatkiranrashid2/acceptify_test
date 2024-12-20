@@ -2,14 +2,14 @@ import { useEffect } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 
 const BYOP = () => {
-  // useEffect(() => {
-  //   const player = document.getElementById("byop_player");
-  //   if (player) {
-  //     player.src = supportsHEVCAlpha()
-  //       ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov"
-  //       : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm";
-  //   }
-  // }, []);
+  useEffect(() => {
+    const player = document.getElementById("byop_player");
+    if (player) {
+      player.src = supportsHEVCAlpha()
+        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov"
+        : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm";
+    }
+  }, []);
 
   return (
     <section
