@@ -6,7 +6,7 @@ const AcceptWristbands = () => {
     const player = document.getElementById("player_wristband");
     if (player) {
       player.src = supportsHEVCAlpha()
-        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov"
+        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734693328/components/accept_wristband/accept_wristband_mov.mov"
         : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm";
     }
   }, []);
