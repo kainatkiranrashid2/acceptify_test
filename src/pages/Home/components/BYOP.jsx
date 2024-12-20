@@ -1,13 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 
 const BYOP = () => {
+  const mobilePlayerRef = useRef(null);
+  const desktopPlayerRef = useRef(null);
+
   useEffect(() => {
-    const player = document.getElementById("player_byop");
-    if (player) {
-      player.src = supportsHEVCAlpha()
-        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov"
-        : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm";
+    const videoSrc = supportsHEVCAlpha()
+      ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov"
+      : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm";
+
+    // Set source for both players
+    if (mobilePlayerRef.current) {
+      mobilePlayerRef.current.src = videoSrc;
+      mobilePlayerRef.current.load(); // Force reload with new source
+      mobilePlayerRef.current.play().catch((error) => {
+        console.log("Error playing mobile video:", error);
+      });
+    }
+
+    if (desktopPlayerRef.current) {
+      desktopPlayerRef.current.src = videoSrc;
+      desktopPlayerRef.current.load(); // Force reload with new source
+      desktopPlayerRef.current.play().catch((error) => {
+        console.log("Error playing desktop video:", error);
+      });
     }
   }, []);
 
@@ -28,7 +45,7 @@ const BYOP = () => {
               <video
                 className="w-full h-full object-contain"
                 autoPlay
-                id="player_byop"
+                ref={mobilePlayerRef}
                 loop
                 muted
                 controlsList="nodownload" // Prevents download option in controls
@@ -61,7 +78,7 @@ const BYOP = () => {
               <video
                 className="w-full h-full object-contain"
                 autoPlay
-                id="player_byop"
+                ref={desktopPlayerRef}
                 loop
                 muted
                 controlsList="nodownload" // Prevents download option in controls

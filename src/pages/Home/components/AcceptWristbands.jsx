@@ -1,13 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 
 const AcceptWristbands = () => {
+  const mobilePlayerRef = useRef(null);
+  const desktopPlayerRef = useRef(null);
+
   useEffect(() => {
-    const player = document.getElementById("player_wristband");
-    if (player) {
-      player.src = supportsHEVCAlpha()
-        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734693328/components/accept_wristband/accept_wristband_mov.mov"
-        : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm";
+    const videoSrc = supportsHEVCAlpha()
+      ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov"
+      : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm";
+
+    // Set source for both players
+    if (mobilePlayerRef.current) {
+      mobilePlayerRef.current.src = videoSrc;
+      mobilePlayerRef.current.load(); // Force reload with new source
+      mobilePlayerRef.current.play().catch((error) => {
+        console.log("Error playing mobile video:", error);
+      });
+    }
+
+    if (desktopPlayerRef.current) {
+      desktopPlayerRef.current.src = videoSrc;
+      desktopPlayerRef.current.load(); // Force reload with new source
+      desktopPlayerRef.current.play().catch((error) => {
+        console.log("Error playing desktop video:", error);
+      });
     }
   }, []);
 
@@ -32,7 +49,7 @@ const AcceptWristbands = () => {
             <video
               className="w-full h-full object-contain"
               autoPlay
-              id="player_wristband"
+              ref={mobilePlayerRef}
               loop
               muted
               controlsList="nodownload" // Prevents download option in controls
@@ -66,7 +83,7 @@ const AcceptWristbands = () => {
             <video
               className="w-full h-full object-contain"
               autoPlay
-              id="player_wristband"
+              ref={desktopPlayerRef}
               loop
               muted
               controlsList="nodownload" // Prevents download option in controls
