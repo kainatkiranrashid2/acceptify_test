@@ -73,10 +73,6 @@ const AcceptWristbands = () => {
               disablePictureInPicture // Disables picture-in-picture mode
               playsInline // Better mobile experience
               onContextMenu={(e) => e.preventDefault()}>
-              <source
-                src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm"
-                type="video/webm"
-              />
               Your browser does not support the video tag.
             </video>
           </div>
