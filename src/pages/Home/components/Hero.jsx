@@ -5,7 +5,7 @@ import { Cloudinary } from "@cloudinary/url-gen";
 import { fill } from "@cloudinary/url-gen/actions/resize";
 import { FocusOn } from "@cloudinary/url-gen/qualifiers/focusOn";
 import { Gravity } from "@cloudinary/url-gen/qualifiers";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 
 import { AutoFocus } from "@cloudinary/url-gen/qualifiers/autoFocus";
@@ -13,34 +13,30 @@ import { AutoFocus } from "@cloudinary/url-gen/qualifiers/autoFocus";
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1734688817/components/hero_section/hero_section.mov
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1734688832/components/hero_section/hero_sect.webm
 const HeroSection = () => {
-  const [videoSource, setVideoSource] = useState("");
-
-  // dq5guzzge
+  const mobilePlayerRef = useRef(null);
+  const desktopPlayerRef = useRef(null);
 
   useEffect(() => {
-    // Set the appropriate video source based on device capability
-    const videoPath = supportsHEVCAlpha()
-      ? "components/hero_section/hero_section"
-      : "components/hero_section/hero_sect";
+    const videoSrc = supportsHEVCAlpha()
+      ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734688817/components/hero_section/hero_section.mov"
+      : "https://res.cloudinary.com/dq5guzzge/video/upload/v1734688832/components/hero_section/hero_sect.webm";
 
-    const cld = new Cloudinary({
-      cloud: {
-        cloudName: "dq5guzzge",
-      },
-    });
+    // Set source for both players
+    if (mobilePlayerRef.current) {
+      mobilePlayerRef.current.src = videoSrc;
+      mobilePlayerRef.current.load(); // Force reload with new source
+      mobilePlayerRef.current.play().catch((error) => {
+        console.log("Error playing mobile video:", error);
+      });
+    }
 
-    const heroVideo = cld.video(videoPath);
-
-    heroVideo.resize(
-      fill()
-        .width(1920)
-        .height(1080)
-        .gravity(
-          Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
-        )
-    );
-
-    setVideoSource(heroVideo);
+    if (desktopPlayerRef.current) {
+      desktopPlayerRef.current.src = videoSrc;
+      desktopPlayerRef.current.load(); // Force reload with new source
+      desktopPlayerRef.current.play().catch((error) => {
+        console.log("Error playing desktop video:", error);
+      });
+    }
   }, []);
 
   return (
@@ -53,14 +49,18 @@ const HeroSection = () => {
       <div className="absolute dark:hidden -top-5 -left-5 w-32 h-32 bg-white/30 rounded-full blur-3xl"></div>
 
       <div className="relative hidden md:block w-full md:h-full   aspect-auto md:aspect-video container ">
-        <AdvancedVideo
+        <video
           className="absolute hidden md:block top-0 left-0 w-full h-full object-contain "
           autoPlay
+          ref={desktopPlayerRef}
           loop
           muted
-          cldVid={videoSource}
-          controls={false}
-        />
+          controlsList="nodownload" // Prevents download option in controls
+          disablePictureInPicture // Disables picture-in-picture mode
+          playsInline // Better mobile experience
+          onContextMenu={(e) => e.preventDefault()}>
+          Your browser does not support the video tag.
+        </video>
 
         {/* Text overlay */}
         <div className="hidden md:flex sm:ml-6 md:ml-10 lg:ml-20  relative z-10 h-full  items-center ">
