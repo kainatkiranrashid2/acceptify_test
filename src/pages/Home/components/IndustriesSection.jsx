@@ -5,7 +5,7 @@ import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm
 const IndustriesSection = () => {
   useEffect(() => {
-    const player = document.getElementById("player");
+    const player = document.getElementById("industry_player");
     if (player) {
       player.src = supportsHEVCAlpha()
         ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov"
@@ -31,7 +31,7 @@ const IndustriesSection = () => {
             <video
               className="w-full h-full object-contain"
               autoPlay
-              id="player"
+              id="industry_player"
               loop
               muted
               controlsList="nodownload" // Prevents download option in controls
@@ -66,6 +66,7 @@ const IndustriesSection = () => {
             <video
               className="w-full h-full object-contain"
               autoPlay
+              id="industry_player"
               loop
               muted
               controlsList="nodownload" // Prevents download option in controls
