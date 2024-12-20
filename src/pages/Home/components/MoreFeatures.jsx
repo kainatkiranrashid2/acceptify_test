@@ -71,7 +71,7 @@ function SamplePrevArrow(props) {
 }
 
 const CarouselItem = ({ title, description, image, id }) => (
-  <div className="morefeatures__card parent-container  bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-[280px] h-[293px] sm:[280px]  overflow-hidden flex flex-col items-center  justify-between  ">
+  <div className="morefeatures__card parent-container px-3 py-2  bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-[280px] h-[293px] sm:[280px]  overflow-hidden flex flex-col items-center  justify-between  ">
     <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
     <div className="carousel-item-content">
@@ -203,7 +203,7 @@ const MoreFeatures = () => {
             <div className="grid grid-cols-3  gap-5 max-w-full items-center justify-center mx-auto">
               {features.map((item, index) => (
                 <div
-                  className="morefeatures__card parent-container md:px-1 md:py-3 lg:px-2 lg:py-4 xl:p-4 2xl:p-6 bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF] 2xl:w-[444px] 2xl:h-[406px] xl:w-[316px] xl:h-[344px] lg:w-[269px] lg:h-[293px] md:w-[196px] md:h-[230px] overflow-hidden"
+                  className="morefeatures__card parent-container md:px-3 md:py-3 lg:px-2 lg:py-4 xl:p-4 2xl:p-6 bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF] 2xl:w-[444px] 2xl:h-[406px] xl:w-[316px] xl:h-[344px] lg:w-[269px] lg:h-[293px] md:w-[196px] md:h-[230px] overflow-hidden"
                   key={index}>
                   <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
