@@ -38,7 +38,6 @@ const BYOP = () => {
                 Your browser does not support the video tag.
               </video>
             </div>
-
             <p className=" text-center dark:text-white sm:w-[521px]">
               Acceptify empowers merchants with complete processor flexibility.
               Seamlessly integrate your preferred payment processing partner and
