@@ -3,7 +3,7 @@ import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 
 const AcceptWristbands = () => {
   useEffect(() => {
-    const player = document.getElementById("wristband_player");
+    const player = document.getElementById("player_wristband");
     if (player) {
       player.src = supportsHEVCAlpha()
         ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov"
@@ -32,7 +32,7 @@ const AcceptWristbands = () => {
             <video
               className="w-full h-full object-contain"
               autoPlay
-              id="player"
+              id="player_wristband"
               loop
               muted
               controlsList="nodownload" // Prevents download option in controls
@@ -66,7 +66,7 @@ const AcceptWristbands = () => {
             <video
               className="w-full h-full object-contain"
               autoPlay
-              id="wristband_player"
+              id="player_wristband"
               loop
               muted
               controlsList="nodownload" // Prevents download option in controls

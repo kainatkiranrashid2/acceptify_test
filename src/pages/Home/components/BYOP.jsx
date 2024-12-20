@@ -3,7 +3,7 @@ import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 
 const BYOP = () => {
   useEffect(() => {
-    const player = document.getElementById("byop_player");
+    const player = document.getElementById("player_byop");
     if (player) {
       player.src = supportsHEVCAlpha()
         ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov"
@@ -28,7 +28,7 @@ const BYOP = () => {
               <video
                 className="w-full h-full object-contain"
                 autoPlay
-                id="byop_player"
+                id="player_byop"
                 loop
                 muted
                 controlsList="nodownload" // Prevents download option in controls
@@ -61,7 +61,7 @@ const BYOP = () => {
               <video
                 className="w-full h-full object-contain"
                 autoPlay
-                id="byop_player"
+                id="player_byop"
                 loop
                 muted
                 controlsList="nodownload" // Prevents download option in controls
