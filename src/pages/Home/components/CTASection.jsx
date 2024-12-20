@@ -31,7 +31,7 @@ const CTASection = () => {
           </div>
           <div className="hidden lg:block lg:w-1/2">
             <video
-              className="w-full h-full object-cover "
+              className="w-full h-full object-contain "
               autoPlay
               loop
               id="cta_player"
