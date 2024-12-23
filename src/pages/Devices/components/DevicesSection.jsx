@@ -120,7 +120,7 @@ const DevicesSection = () => {
                       </video>
                     </div>
 
-                    <div className="w-full md:flex-1 space-y-0">
+                    <div className="w-full md:flex-1 ">
                       <p className="text-[#635BFF] xl:text-[16px] lg:text-[12px]  ">
                         Unified platform
                       </p>
@@ -130,13 +130,21 @@ const DevicesSection = () => {
                           <li
                             key={pointIndex}
                             className="flex items-start space-x-2 devices__card-description ">
-                            <span className="inline-block w-1.5 h-1.5 mt-[10px] rounded-full bg-black flex-shrink-0 dark:bg-white" />
+                            <span className="inline-block ml-2 w-1.5 h-1.5 mt-[10px] rounded-full bg-black flex-shrink-0 dark:bg-white" />
                             <span className="text-black dark:text-white">
                               {point}
                             </span>
                           </li>
                         ))}
                       </ul>
+                      <button className="my-8  bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[16px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg ">
+                        Start With Payments
+                        <img
+                          src="./images/arrow.svg"
+                          className="size-3 mt-[4px]"
+                          alt=""
+                        />
+                      </button>
                     </div>
                   </div>
                 </div>
