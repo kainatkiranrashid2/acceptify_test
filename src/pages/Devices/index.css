@@ -5,3 +5,197 @@
     width: 100%;
   }
 }
+
+@media screen and (min-width: 1536px) {
+  .devices__card-description {
+    font-size: 18px;
+    line-height: 28.8px;
+  }
+  .devices__card-vid0 {
+    width: 384.38px;
+    height: 410px;
+  }
+  .devices__card-vid1 {
+    width: 256.25px;
+    height: 410px;
+  }
+  .devices__card-vid2 {
+    width: 256.25px;
+    height: 410px;
+  }
+  .devices__card-vid3 {
+    width: 256.25px;
+    height: 410px;
+  }
+  .devices__card-vid4 {
+    width: 256.25px;
+    height: 410px;
+  }
+  .devices__card-vid5 {
+    width: 256.25px;
+    height: 410px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1535px) {
+  .devices__card-description {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+  .devices__card-vid0 {
+    width: 328.13px;
+    height: 350px;
+  }
+
+  .devices__card-vid1 {
+    width: 218.75px;
+    height: 350px;
+  }
+  .devices__card-vid2 {
+    width: 218.75px;
+    height: 350px;
+  }
+  .devices__card-vid3 {
+    width: 218.75px;
+    height: 350px;
+  }
+  .devices__card-vid4 {
+    width: 218.75px;
+    height: 350px;
+  }
+  .devices__card-vid5 {
+    width: 218.75px160px;
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .devices__card-description {
+    font-size: 18px;
+    line-height: 165%;
+  }
+  .devices__card-vid0 {
+    width: 109px;
+    height: 112.22px;
+  }
+  .devices__card-vid1 {
+    width: 161.53px;
+    height: 88px;
+  }
+  .devices__card-vid2 {
+    width: 138px;
+    height: 101.27px;
+  }
+  .devices__card-vid3 {
+    width: 106.79px;
+    height: 110.15px;
+  }
+  .devices__card-vid4 {
+    width: 104px;
+    height: 118.1px;
+  }
+  .devices__card-vid5 {
+    object-fit: contain;
+    width: 147px;
+    height: 116.1px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .devices__card-description {
+    font-size: 10px !important;
+    line-height: 16px;
+  }
+  .devices__card-vid0 {
+    width: 63.13px;
+    height: 65px;
+  }
+  .devices__card-vid1 {
+    width: 127.64px;
+    height: 73.33px;
+  }
+  .devices__card-vid2 {
+    width: 98px;
+    height: 82.69px;
+  }
+  .devices__card-vid3 {
+    width: 62px;
+    height: 62px;
+  }
+  .devices__card-vid4 {
+    width: 64px;
+    height: 72.68px;
+  }
+  .devices__card-vid5 {
+    object-fit: contain;
+    width: 104px;
+    height: 82.14px;
+    gap: 0px;
+    opacity: 0px;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  .devices__card-description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .devices__card-vid0 {
+    width: 109px;
+    height: 112px;
+  }
+  .devices__card-vid1 {
+    width: 161px;
+    height: 88px;
+  }
+  .devices__card-vid2 {
+    width: 138px;
+    height: 101px;
+  }
+  .devices__card-vid3 {
+    width: 106px;
+    height: 110px;
+  }
+  .devices__card-vid4 {
+    width: 104px;
+    height: 118px;
+  }
+  .devices__card-vid5 {
+    width: 147px;
+    height: 116px;
+    gap: 0px;
+    opacity: 0px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 639px) {
+  .devices__card-description {
+    font-size: 12px;
+    line-height: 160%;
+    line-height: 16px;
+  }
+  .devices__card-vid0 {
+    width: 109px;
+    height: 112px;
+  }
+  .devices__card-vid1 {
+    width: 161px;
+    height: 88px;
+  }
+  .devices__card-vid2 {
+    width: 138px;
+    height: 101px;
+  }
+  .devices__card-vid3 {
+    width: 106px;
+    height: 110px;
+  }
+  .devices__card-vid4 {
+    width: 104px;
+    height: 118px;
+  }
+  .devices__card-vid5 {
+    width: 147px;
+    height: 116px;
+    gap: 0px;
+    opacity: 0px;
+  }
+}
