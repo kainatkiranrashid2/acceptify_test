@@ -72,7 +72,7 @@ const OurCustomers = () => {
                     alt={`Customer logo ${index + 1}`}
                     className={`${
                       index === 16
-                        ? "h-[45px] object-cover"
+                        ? "h-[45px] object-contain"
                         : "h-12  object-contain "
                     }`}
                   />
@@ -123,7 +123,7 @@ const OurCustomers = () => {
                     alt={`Customer logo ${index + 1}`}
                     className={`${
                       index === 16
-                        ? "h-[45px] object-cover"
+                        ? "h-[45px] object-contain"
                         : "h-8  object-contain "
                     }`}
                   />
