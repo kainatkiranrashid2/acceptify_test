@@ -12,7 +12,6 @@ const Devices = () => {
     <Fragment>
       <Header />
       <DevicesSection />
-      <CTASection />
     </Fragment>
   );
 };

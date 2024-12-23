@@ -1,4 +1,5 @@
 import React from "react";
+import CTASection from "../../Home/components/CTASection";
 
 const DevicesSection = () => {
   const devices = [
@@ -144,6 +145,7 @@ const DevicesSection = () => {
           ))}
         </div>
       </div>
+      <CTASection />
     </section>
   );
 };
