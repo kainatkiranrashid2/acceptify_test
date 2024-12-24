@@ -37,12 +37,12 @@ const BeautifulBranding = () => {
       dark:bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733922457/components/ryb_dark.svg)] 
       dark:bg-[#010C22]">
       <div className="container">
-        <div className="flex flex-col items-center justify-center relative">
-          <div className="flex flex-col items-center justify-center">
+        <div className=" mx-6 flex flex-col items-center justify-center relative">
+          <div className="w-full flex flex-col items-center justify-center">
             <h1 className="font-semibold mb-4 dark:text-white">
               Represent Your Brand
             </h1>
-            <p className="w-[315px] sm:w-[520px] md:w-[30rem] text-center dark:text-white md:max-w-[30rem] lg:w-[37rem] lg:max-w-[37rem] sm:mb-10">
+            <p className="w-full sm:w-[520px] md:w-[30rem] text-center dark:text-white md:max-w-[30rem] lg:w-[37rem] lg:max-w-[37rem] sm:mb-10">
               Acceptify uniquely provides a signature checkout experience by
               personalizing payment devices with your brand&apos;s logos and
               colors.
