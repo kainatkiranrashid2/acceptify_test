@@ -90,7 +90,7 @@ const OurCustomers = () => {
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
                     className={`h-7 object-contain ${
-                      index === 16 ? "!h-[18px] !object-cover " : ""
+                      index === 16 ? "!h-[14px] !object-cover " : ""
                     }`}
                   />
                 </div>
