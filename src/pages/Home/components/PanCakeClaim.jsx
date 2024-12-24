@@ -3,11 +3,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
+import LoadingPancakeVideo from "../../../partials/LoadingPancakeVideo.jsx";
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
-
-// https://res.cloudinary.com/dq5guzzge/video/upload/v1734687459/components/scroll_animation/lightning_web.webm
-// https://res.cloudinary.com/dq5guzzge/video/upload/v1734685754/components/scroll_animation/lightning_fast.mov
 
 const videoData = [
   {
@@ -76,6 +75,7 @@ const videoData = [
     highlightedWords: ["Lightning Fast Payments"],
   },
 ];
+
 const VideoScrollComponent = () => {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
@@ -88,7 +88,6 @@ const VideoScrollComponent = () => {
   const rocketRefs = useRef([]);
 
   useEffect(() => {
-    // Set video URLs based on device capability
     const urls = videoData.map((item) =>
       supportsHEVCAlpha() ? item.url_mov : item.url
     );
@@ -102,7 +101,6 @@ const VideoScrollComponent = () => {
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 1024px)", () => {
-      // Create ScrollTrigger for each section's rocket
       sections.forEach((section, index) => {
         const path = pathRefs.current[index];
         const rocket = rocketRefs.current[index];
@@ -117,18 +115,16 @@ const VideoScrollComponent = () => {
               align: pathElement,
               alignOrigin: [0.5, 0.5],
             },
-
             x: window.innerWidth,
             duration: 1,
             ease: "none",
             scrollTrigger: {
               trigger: section,
-              start: `${sectionHeight / 2} center`, // Start animation in the middle of the section
+              start: `${sectionHeight / 2} center`,
               end: `bottom center`,
               scrub: true,
               onUpdate: (self) => {
                 const isScrollingUp = self.direction === -1;
-
                 gsap.set(rocket.querySelector("img"), {
                   rotation: isScrollingUp ? 192 : 12,
                 });
@@ -138,7 +134,6 @@ const VideoScrollComponent = () => {
         }
       });
 
-      // Existing ScrollTrigger setups for video and swish logo
       ScrollTrigger.create({
         trigger: container,
         start: "top top",
@@ -193,10 +188,8 @@ const VideoScrollComponent = () => {
     if (!text || !highlightedWords) return null;
 
     let result = text;
-
     highlightedWords.forEach((word) => {
       const regex = new RegExp(`(${word})`, "gi");
-
       result = result.replace(
         regex,
         '<span class="text-primary font-semibold">$1</span>'
@@ -211,6 +204,11 @@ const VideoScrollComponent = () => {
     );
   };
 
+  const handleVideoLoad = () => {
+    // Optional: Add any additional logic needed when video loads
+    console.log("Video loaded successfully");
+  };
+
   return (
     <section className="dark:bg-[#06142F] relative overflow-hidden">
       <div
@@ -221,11 +219,12 @@ const VideoScrollComponent = () => {
           backgroundSize: "100%",
           transform: "rotate(180deg)",
           opacity: 0.5,
-        }}></div>
+        }}
+      />
 
       <div className="container relative">
+        {/* Mobile View */}
         <div className="block lg:hidden mb-20 mt-10 sm:mt-[104px] md:mt-[60px] mx-5 sm:mx-6 md:mx-10">
-          {/* Mobile view remains the same */}
           {videoData.map((item, index) => (
             <div
               className="flex flex-col justify-center mb-[60px] sm:mb-20 md:mb-28"
@@ -234,26 +233,27 @@ const VideoScrollComponent = () => {
                 <h2 className="w-full mb-3">
                   {highlightText(item.title, item.highlightedWords)}
                 </h2>
-                <p className="dark:text-white  w-full">{item.subtitle}</p>
+                <p className="dark:text-white w-full">{item.subtitle}</p>
               </div>
               <div className="w-[320px] h-[220px] sm:w-[489px] sm:h-[182px] md:w-[489px] md:h-[300px] mx-auto mt-[60px] sm:mt-20 md:mt-[5.5rem] bg-transparent dark:bg-transparent">
-                <video
+                <LoadingPancakeVideo
                   src={videoUrls[index]}
-                  id="player"
-                  className="w-full h-auto max-h-full object-cover  bg-transparent "
+                  className="w-full h-auto max-h-full object-cover bg-transparent"
                   autoPlay
                   loop
                   muted
-                  controlsList="nodownload" // Prevents download option in controls
-                  disablePictureInPicture // Disables picture-in-picture mode
-                  playsInline // Better mobile experience
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  playsInline
                   onContextMenu={(e) => e.preventDefault()}
+                  onLoadedData={handleVideoLoad}
                 />
               </div>
             </div>
           ))}
         </div>
 
+        {/* Desktop View */}
         <div
           ref={containerRef}
           className="hidden lg:flex lg:relative justify-center lg:gap-[182px] lg:mx-10 xl:mx-20">
@@ -262,11 +262,10 @@ const VideoScrollComponent = () => {
               <div
                 key={index}
                 className="content-section w-full min-h-screen flex items-center justify-center relative">
-                {/* Add SVG Path for each section */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1000 100"
-                  className="absolute bottom-[10%] left-0 w-full "
+                  className="absolute bottom-[10%] left-0 w-full"
                   ref={(el) => (pathRefs.current[index] = el)}>
                   <path
                     style={{
@@ -278,7 +277,6 @@ const VideoScrollComponent = () => {
                   />
                 </svg>
 
-                {/* Add Rocket for each section */}
                 <div
                   className="absolute left-0 w-16 h-16 z-10 opacity-50"
                   ref={(el) => (rocketRefs.current[index] = el)}>
@@ -300,19 +298,22 @@ const VideoScrollComponent = () => {
           </div>
 
           <div className="lg:w-[500px] xl:w-[546px] 2xl:w-[688px] relative">
-            <div className="video-container sticky top-0 lg:h-[546px] 2xl:h-[790px] flex items-center justify-center">
-              <video
-                ref={videoRef}
-                src={videoUrls[currentVideoIndex]}
-                className="w-full h-auto max-h-full object-contain z-10"
-                autoPlay
-                loop
-                muted
-                controlsList="nodownload" // Prevents download option in controls
-                disablePictureInPicture // Disables picture-in-picture mode
-                playsInline // Better mobile experience
-                onContextMenu={(e) => e.preventDefault()}
-              />
+            <div className="video-container sticky min-h-screen top-0 lg:h-[546px] 2xl:h-[790px] flex items-center justify-center">
+              <div className="lg:h-full  w-full flex items-center justify-center">
+                <LoadingPancakeVideo
+                  ref={videoRef}
+                  src={videoUrls[currentVideoIndex]}
+                  className="w-full h-full  object-contain z-10"
+                  autoPlay
+                  loop
+                  muted
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  playsInline
+                  onContextMenu={(e) => e.preventDefault()}
+                  onLoadedData={handleVideoLoad}
+                />
+              </div>
             </div>
           </div>
         </div>

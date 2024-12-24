@@ -1,18 +1,37 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1734686819/components/cta_section/call_to_action.mov
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1734686901/components/cta_section/call_to_action_mov.webm
 
 const CTASection = () => {
+  const videoRef = useRef(null);
+
+  const [videoError, setVideoError] = useState(false);
+  const [videoSrc, setVideoSrc] = useState("");
+
   useEffect(() => {
-    const player = document.getElementById("cta_player");
-    if (player) {
-      player.src = supportsHEVCAlpha()
-        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686819/components/cta_section/call_to_action.mov"
-        : "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686901/components/cta_section/call_to_action_mov.webm";
-    }
+    const src = supportsHEVCAlpha()
+      ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686819/components/cta_section/call_to_action.mov"
+      : "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686901/components/cta_section/call_to_action_mov.webm";
+
+    setVideoSrc(src);
+
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.src = "";
+      }
+    };
   }, []);
+
+  const handleLoadedData = () => {
+    console.log("Video loaded successfully");
+  };
+  const handleError = () => {
+    console.error("Video failed to load");
+    setVideoError(true);
+  };
   return (
     <div className="container">
       <div className="md:px-10 md:py-20 xl:p-20  ">
@@ -33,18 +52,22 @@ const CTASection = () => {
             </div>
           </div>
           <div className="hidden lg:flex lg:flex-1 ">
-            <LoadingVideo
-              className="w-full h-full lg:object-cover  "
-              autoPlay
-              loop
-              id="cta_player"
-              muted
-              controlsList="nodownload" // Prevents download option in controls
-              disablePictureInPicture // Disables picture-in-picture mode
-              playsInline // Better mobile experience
-              onContextMenu={(e) => e.preventDefault()}>
-              Your browser does not support the video tag.
-            </LoadingVideo>
+            {videoSrc && !videoError && (
+              <LoadingVideo
+                className="w-full h-full object-contain"
+                src={videoSrc}
+                ref={videoRef}
+                autoPlay
+                loop
+                muted
+                controlsList="nodownload"
+                disablePictureInPicture
+                playsInline
+                onLoadedData={handleLoadedData}
+                onError={handleError}
+                onContextMenu={(e) => e.preventDefault()}
+              />
+            )}
           </div>
         </div>
       </div>

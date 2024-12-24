@@ -1,19 +1,19 @@
 import { useState, forwardRef, useEffect } from "react";
 
-const LoadingVideo = forwardRef(
+const LoadingPancakeVideo = forwardRef(
   ({ className, onLoadedData, src, ...props }, ref) => {
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
+    const [videoElement, setVideoElement] = useState(null);
 
     useEffect(() => {
-      const video = ref.current;
-      if (!video) return;
+      if (!videoElement) return;
 
       const handleCanPlay = () => {
         setIsLoading(false);
         onLoadedData?.();
         // Attempt to play only after canplay event
-        video.play().catch((error) => {
+        videoElement.play().catch((error) => {
           console.error("Video play error:", error);
           setHasError(true);
         });
@@ -22,25 +22,25 @@ const LoadingVideo = forwardRef(
       const handleError = (error) => {
         console.error("Video loading error:", error);
         setHasError(true);
-        setIsLoading(false);
+        setIsLoading(true);
       };
 
       // Add event listeners
-      video.addEventListener("canplay", handleCanPlay);
-      video.addEventListener("error", handleError);
+      videoElement.addEventListener("canplay", handleCanPlay);
+      videoElement.addEventListener("error", handleError);
 
       // Set source if provided
       if (src) {
-        video.src = src;
-        video.load();
+        videoElement.src = src;
+        videoElement.load();
       }
 
       // Cleanup
       return () => {
-        video.removeEventListener("canplay", handleCanPlay);
-        video.removeEventListener("error", handleError);
+        videoElement.removeEventListener("canplay", handleCanPlay);
+        videoElement.removeEventListener("error", handleError);
       };
-    }, [ref, src, onLoadedData]);
+    }, [videoElement, src, onLoadedData]);
 
     return (
       <div className="relative w-full h-full">
@@ -51,13 +51,20 @@ const LoadingVideo = forwardRef(
         )}
 
         {hasError ? (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-100/10">
+          <div className="absolute  inset-0 flex items-center justify-center bg-gray-100/10">
             <p className="text-red-500">Failed to load video</p>
           </div>
         ) : (
           <video
-            ref={ref}
-            className={`${className} ${
+            ref={(el) => {
+              if (typeof ref === "function") {
+                ref(el);
+              } else if (ref) {
+                ref.current = el;
+              }
+              setVideoElement(el);
+            }}
+            className={`${className} !top-1/2 ${
               isLoading ? "opacity-0" : "opacity-100"
             } transition-opacity duration-300`}
             {...props}
@@ -68,6 +75,6 @@ const LoadingVideo = forwardRef(
   }
 );
 
-LoadingVideo.displayName = "LoadingVideo";
+LoadingPancakeVideo.displayName = "LoadingPancakeVideo";
 
-export default LoadingVideo;
+export default LoadingPancakeVideo;

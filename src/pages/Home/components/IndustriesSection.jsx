@@ -1,18 +1,37 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm
 const IndustriesSection = () => {
+  const videoRef = useRef(null);
+
+  const [videoError, setVideoError] = useState(false);
+  const [videoSrc, setVideoSrc] = useState("");
+
   useEffect(() => {
-    const player = document.getElementById("industry_player");
-    if (player) {
-      player.src = supportsHEVCAlpha()
-        ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov"
-        : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm";
-    }
+    const src = supportsHEVCAlpha()
+      ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov"
+      : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm";
+
+    setVideoSrc(src);
+
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.src = "";
+      }
+    };
   }, []);
+
+  const handleLoadedData = () => {
+    console.log("Video loaded successfully");
+  };
+  const handleError = () => {
+    console.error("Video failed to load");
+    setVideoError(true);
+  };
   return (
     <div className="py-13 md:py-20 bg-gradient-to-b from-white from-[16.97%] to-[#3B6FFD] to-[100%] relative overflow-hidden dark:bg-gradient-to-b dark:from-[#0C0221] dark:to-[#0C0221] dark:relative">
       {/* Background Image Layer */}
@@ -29,18 +48,22 @@ const IndustriesSection = () => {
           <h1 className=" mb-6 font-semibold dark:text-white">Industries</h1>
 
           <div className="mx-auto w-[222px] h-[214px] sm:w-[247px] sm:h-[239px] my-8">
-            <LoadingVideo
-              className="w-full h-full object-contain"
-              autoPlay
-              id="industry_player"
-              loop
-              muted
-              controlsList="nodownload" // Prevents download option in controls
-              disablePictureInPicture // Disables picture-in-picture mode
-              playsInline // Better mobile experience
-              onContextMenu={(e) => e.preventDefault()}>
-              Your browser does not support the video tag.
-            </LoadingVideo>
+            {videoSrc && !videoError && (
+              <LoadingVideo
+                className="w-full h-full object-contain"
+                src={videoSrc}
+                ref={videoRef}
+                autoPlay
+                loop
+                muted
+                controlsList="nodownload"
+                disablePictureInPicture
+                playsInline
+                onLoadedData={handleLoadedData}
+                onError={handleError}
+                onContextMenu={(e) => e.preventDefault()}
+              />
+            )}
           </div>
           <p className="mb-4 dark:text-white text-center ">
             We mean it! Enterprise Mobile Payments Anywhere, Anytime. Acceptify
@@ -64,22 +87,22 @@ const IndustriesSection = () => {
             </button>
           </div>
           <div className="w-1/2 h-full">
-            <LoadingVideo
-              className="w-full h-full object-contain"
-              autoPlay
-              id="industry_player"
-              loop
-              muted
-              controlsList="nodownload" // Prevents download option in controls
-              disablePictureInPicture // Disables picture-in-picture mode
-              playsInline // Better mobile experience
-              onContextMenu={(e) => e.preventDefault()}>
-              <source
-                src="https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm"
-                type="video/webm"
+            {videoSrc && !videoError && (
+              <LoadingVideo
+                className="w-full h-full object-contain"
+                src={videoSrc}
+                ref={videoRef}
+                autoPlay
+                loop
+                muted
+                controlsList="nodownload"
+                disablePictureInPicture
+                playsInline
+                onLoadedData={handleLoadedData}
+                onError={handleError}
+                onContextMenu={(e) => e.preventDefault()}
               />
-              Your browser does not support the video tag.
-            </LoadingVideo>
+            )}
           </div>
         </div>
       </div>
