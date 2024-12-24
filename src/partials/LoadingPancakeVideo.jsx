@@ -45,7 +45,7 @@ const LoadingPancakeVideo = forwardRef(
     return (
       <div className="relative w-full h-full">
         {isLoading && !hasError && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-100/10 backdrop-blur-sm">
+          <div className="absolute inset-0 flex items-center justify-center  backdrop-blur-sm">
             <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin" />
           </div>
         )}
