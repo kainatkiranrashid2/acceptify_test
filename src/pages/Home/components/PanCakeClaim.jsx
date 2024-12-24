@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
+import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -236,7 +237,7 @@ const VideoScrollComponent = () => {
                 <p className="dark:text-white  w-full">{item.subtitle}</p>
               </div>
               <div className="w-[320px] h-[220px] sm:w-[489px] sm:h-[182px] md:w-[489px] md:h-[300px] mx-auto mt-[60px] sm:mt-20 md:mt-[5.5rem] bg-transparent dark:bg-transparent">
-                <video
+                <LoadingVideo
                   src={videoUrls[index]}
                   id="player"
                   className="w-full h-auto max-h-full object-cover  bg-transparent "
@@ -300,7 +301,7 @@ const VideoScrollComponent = () => {
 
           <div className="lg:w-[500px] xl:w-[546px] 2xl:w-[688px] relative">
             <div className="video-container sticky top-0 lg:h-[546px] 2xl:h-[790px] flex items-center justify-center">
-              <video
+              <LoadingVideo
                 ref={videoRef}
                 src={videoUrls[currentVideoIndex]}
                 className="w-full h-auto max-h-full object-contain z-10"

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
+import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 const BeautifulBranding = () => {
   useEffect(() => {
     const player = document.getElementById("branding_player");
@@ -29,7 +30,7 @@ const BeautifulBranding = () => {
             </p>
           </div>
           <div className="2xl:w-[748px] 2xl:h-[453px] xl:w-[645px] xl:h-[391px] lg:w-[495.82px] lg:h-[295.26px] md:w-[361.7px] md:h-[219px] sm:w-[375px] sm:h-[222px] ">
-            <video
+            <LoadingVideo
               id="branding_player"
               className="w-full h-full object-contain"
               autoPlay
@@ -40,7 +41,7 @@ const BeautifulBranding = () => {
               playsInline // Better mobile experience
               onContextMenu={(e) => e.preventDefault()}>
               Your browser does not support the video tag.
-            </video>
+            </LoadingVideo>
           </div>
         </div>
       </div>

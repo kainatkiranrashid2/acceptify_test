@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
+import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm
@@ -28,7 +29,7 @@ const IndustriesSection = () => {
           <h1 className=" mb-6 font-semibold dark:text-white">Industries</h1>
 
           <div className="mx-auto w-[222px] h-[214px] sm:w-[247px] sm:h-[239px] my-8">
-            <video
+            <LoadingVideo
               className="w-full h-full object-contain"
               autoPlay
               id="industry_player"
@@ -39,7 +40,7 @@ const IndustriesSection = () => {
               playsInline // Better mobile experience
               onContextMenu={(e) => e.preventDefault()}>
               Your browser does not support the video tag.
-            </video>
+            </LoadingVideo>
           </div>
           <p className="mb-4 dark:text-white text-center ">
             We mean it! Enterprise Mobile Payments Anywhere, Anytime. Acceptify
@@ -63,7 +64,7 @@ const IndustriesSection = () => {
             </button>
           </div>
           <div className="w-1/2 h-full">
-            <video
+            <LoadingVideo
               className="w-full h-full object-contain"
               autoPlay
               id="industry_player"
@@ -78,7 +79,7 @@ const IndustriesSection = () => {
                 type="video/webm"
               />
               Your browser does not support the video tag.
-            </video>
+            </LoadingVideo>
           </div>
         </div>
       </div>

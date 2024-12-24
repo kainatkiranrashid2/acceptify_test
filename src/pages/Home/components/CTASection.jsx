@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
+import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1734686819/components/cta_section/call_to_action.mov
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1734686901/components/cta_section/call_to_action_mov.webm
 
@@ -32,7 +33,7 @@ const CTASection = () => {
             </div>
           </div>
           <div className="hidden lg:flex lg:flex-1 ">
-            <video
+            <LoadingVideo
               className="w-full h-full lg:object-cover  "
               autoPlay
               loop
@@ -43,7 +44,7 @@ const CTASection = () => {
               playsInline // Better mobile experience
               onContextMenu={(e) => e.preventDefault()}>
               Your browser does not support the video tag.
-            </video>
+            </LoadingVideo>
           </div>
         </div>
       </div>

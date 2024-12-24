@@ -1,14 +1,6 @@
-import { AdvancedVideo } from "@cloudinary/react";
-import { Cloudinary } from "@cloudinary/url-gen";
-
-// Import required actions and qualifiers.
-import { fill } from "@cloudinary/url-gen/actions/resize";
-import { FocusOn } from "@cloudinary/url-gen/qualifiers/focusOn";
-import { Gravity } from "@cloudinary/url-gen/qualifiers";
 import { useEffect, useRef, useState } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
-
-import { AutoFocus } from "@cloudinary/url-gen/qualifiers/autoFocus";
+import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1734688817/components/hero_section/hero_section.mov
 // https://res.cloudinary.com/dq5guzzge/video/upload/v1734688832/components/hero_section/hero_sect.webm
@@ -49,7 +41,7 @@ const HeroSection = () => {
       <div className="absolute dark:hidden -top-5 -left-5 w-32 h-32 bg-white/30 rounded-full blur-3xl"></div>
 
       <div className="relative hidden md:block w-full md:h-full   aspect-auto md:aspect-video container ">
-        <video
+        <LoadingVideo
           className="absolute hidden md:block top-0 left-0 w-full h-full object-contain "
           autoPlay
           ref={desktopPlayerRef}
@@ -60,7 +52,7 @@ const HeroSection = () => {
           playsInline // Better mobile experience
           onContextMenu={(e) => e.preventDefault()}>
           Your browser does not support the video tag.
-        </video>
+        </LoadingVideo>
 
         {/* Text overlay */}
         <div className="hidden md:flex sm:ml-6 md:ml-10 lg:ml-20  relative z-10 h-full  items-center ">

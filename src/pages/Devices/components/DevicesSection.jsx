@@ -1,5 +1,6 @@
 import React from "react";
 import CTASection from "../../Home/components/CTASection";
+import LoadingVideo from "../../../partials/LoadingVideo";
 
 const DevicesSection = () => {
   const devices = [
@@ -108,7 +109,7 @@ const DevicesSection = () => {
                     } 
             items-center gap-8 devices__card`}>
                     <div className={`devices__card-vid${index}  `}>
-                      <video
+                      <LoadingVideo
                         autoPlay
                         loop
                         muted
@@ -117,7 +118,7 @@ const DevicesSection = () => {
                         <source src={device.webMVideo} type="video/webm" />
                         <source src={device.hevcVideo} type="video/mp4" />
                         Your browser does not support the video tag.
-                      </video>
+                      </LoadingVideo>
                     </div>
 
                     <div className="w-full md:flex-1 ">

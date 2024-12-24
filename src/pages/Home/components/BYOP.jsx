@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
+import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 
 const BYOP = () => {
   const mobilePlayerRef = useRef(null);
@@ -42,7 +43,7 @@ const BYOP = () => {
             </h1>
 
             <div className="w-[168px] h-[130px] sm:w-[282px] md:h-[212px]">
-              <video
+              <LoadingVideo
                 className="w-full h-full object-contain"
                 autoPlay
                 ref={mobilePlayerRef}
@@ -53,7 +54,7 @@ const BYOP = () => {
                 playsInline // Better mobile experience
                 onContextMenu={(e) => e.preventDefault()}>
                 Your browser does not support the video tag.
-              </video>
+              </LoadingVideo>
             </div>
             <p className=" text-center dark:text-white sm:w-[521px]">
               Acceptify empowers merchants with complete processor flexibility.
@@ -75,7 +76,7 @@ const BYOP = () => {
               </p>
             </div>
             <div className="2xl:w-[521.88px] 2xl:h-[363px] xl:w-[467px] xl:h-[324px] lg:w-[391px] lg:h-[269.08px] md:w-[297px] md:h-[204px]">
-              <video
+              <LoadingVideo
                 className="w-full h-full object-contain"
                 autoPlay
                 ref={desktopPlayerRef}
@@ -86,7 +87,7 @@ const BYOP = () => {
                 playsInline // Better mobile experience
                 onContextMenu={(e) => e.preventDefault()}>
                 Your browser does not support the video tag.
-              </video>
+              </LoadingVideo>
             </div>
           </div>
         </div>

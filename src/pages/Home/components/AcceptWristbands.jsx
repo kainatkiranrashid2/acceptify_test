@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
+import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 
 const AcceptWristbands = () => {
   const mobilePlayerRef = useRef(null);
@@ -46,7 +47,7 @@ const AcceptWristbands = () => {
         <div className="mx-4 sm:mx-6 md:mx-20 md:hidden flex flex-col justify-between items-center gap-8 ">
           <h2 className="text-white text-center ">Accept Wristbands</h2>
           <div className="sm:w-[323px] sm:h-[209px]">
-            <video
+            <LoadingVideo
               className="w-full h-full object-contain"
               autoPlay
               ref={mobilePlayerRef}
@@ -57,7 +58,7 @@ const AcceptWristbands = () => {
               playsInline // Better mobile experience
               onContextMenu={(e) => e.preventDefault()}>
               Your browser does not support the video tag.
-            </video>
+            </LoadingVideo>
           </div>
           <p className="text-white text-center  w-[100%] sm:w-[592px]">
             Acceptify’s revolutionary wristband payment technologies offer
