@@ -23,9 +23,9 @@ function appendDots(dots) {
 
 function SampleNextArrow(props) {
   const { className, style, onClick, currentSlide } = props;
-  if (currentSlide === 0) {
-    return null;
-  }
+  // if (currentSlide === 0) {
+  //   return null;
+  // }
   return (
     <div
       style={{ ...style }}
@@ -47,9 +47,9 @@ function SampleNextArrow(props) {
 
 function SamplePrevArrow(props) {
   const { className, style, onClick, currentSlide, slideCount } = props;
-  if (currentSlide === slideCount - 1) {
-    return null;
-  }
+  // if (currentSlide === slideCount - 1) {
+  //   return null;
+  // }
 
   return (
     <div
@@ -71,7 +71,7 @@ function SamplePrevArrow(props) {
 }
 
 const CarouselItem = ({ title, description, image, id }) => (
-  <div className="morefeatures__card parent-container px-3 py-4  bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-[280px] h-[293px] sm:[280px]  overflow-hidden flex flex-col items-center  justify-between  ">
+  <div className="morefeatures__card parent-container px-3 py-4  bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-[240px] h-[293px] sm:w-[280px]  overflow-hidden flex flex-col items-center  justify-between  ">
     <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
     <div className="carousel-item-content">

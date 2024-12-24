@@ -182,15 +182,15 @@
     opacity: 0px;
   }
 }
-@media screen and (min-width: 360px) and (max-width: 639px) {
+@media screen and (min-width: 320px) and (max-width: 639px) {
   .morefeatures__card-description {
     font-size: 12px;
     line-height: 160%;
     line-height: 16px;
   }
   .morefeatures__card-img0 {
-    width: 109px;
-    height: 112px;
+    width: 85px;
+    height: 90px;
   }
   .morefeatures__card-img1 {
     width: 161px;
@@ -201,8 +201,8 @@
     height: 101px;
   }
   .morefeatures__card-img3 {
-    width: 106px;
-    height: 110px;
+    width: 90px;
+    height: 95px;
   }
   .morefeatures__card-img4 {
     width: 104px;
