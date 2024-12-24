@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import CTASection from "../../Home/components/CTASection";
 import LoadingVideo from "../../../partials/LoadingVideo";
+import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 
 const DevicesSection = () => {
+  const [isHEVCSupported, setIsHEVCSupported] = useState(false);
+  const videoRefs = useRef(
+    Array(6)
+      .fill(null)
+      .map(() => React.createRef())
+  );
+
+  useEffect(() => {
+    setIsHEVCSupported(supportsHEVCAlpha());
+  }, []);
+
+  const handleVideoLoaded = (index) => {
+    console.log(`Video ${index} loaded successfully`);
+  };
+
   const devices = [
     {
       heading: "QPixel 600",
@@ -15,7 +31,7 @@ const DevicesSection = () => {
       webMVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976126/components/devices_devices_section/qpixel_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734945528/components/devices_devices_section/qpp_600_device.webm",
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042842/components/devices_devices_section/qpixel_hevc.mov",
     },
     {
       heading: "QPP 451",
@@ -28,7 +44,7 @@ const DevicesSection = () => {
       webMVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976455/components/devices_devices_section/qpp_451_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734945528/components/devices_devices_section/qpp_600_device.webm",
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042771/components/devices_devices_section/qpp_451_hevc.mov",
     },
     {
       heading: "QPP 600",
@@ -41,7 +57,7 @@ const DevicesSection = () => {
       webMVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976382/components/devices_devices_section/qpp_600_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734945528/components/devices_devices_section/qpp_600_device.webm",
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042698/components/devices_devices_section/qpp_600_hevc.mov",
     },
     {
       heading: "QPR",
@@ -53,7 +69,7 @@ const DevicesSection = () => {
       webMVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976201/components/devices_devices_section/qpr_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734945528/components/devices_devices_section/qpp_600_device.webm",
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042489/components/devices_devices_section/qpr_hevc.mov",
     },
     {
       heading: "QPP Pro",
@@ -65,7 +81,7 @@ const DevicesSection = () => {
       webMVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976305/components/devices_devices_section/qpp_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734945528/components/devices_devices_section/qpp_600_device.webm",
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042547/components/devices_devices_section/qpp_pro_hevc.mov",
     },
     {
       heading: "QPP Pro Plus",
@@ -77,7 +93,7 @@ const DevicesSection = () => {
       webMVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976247/components/devices_devices_section/qpp_pro_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734945528/components/devices_devices_section/qpp_600_device.webm",
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042632/components/devices_devices_section/qpp_pro_plus_hevc.mov",
     },
   ];
   return (
@@ -109,16 +125,18 @@ const DevicesSection = () => {
                     } 
             items-center gap-8 devices__card`}>
                     <div className={`devices__card-vid${index}  `}>
-                      <video
+                      <LoadingVideo
+                        ref={videoRefs.current[index]}
+                        className="h-full w-full object-contain"
                         autoPlay
                         loop
                         muted
                         playsInline
-                        className="h-full w-full object-contain">
-                        <source src={device.webMVideo} type="video/webm" />
-                        <source src={device.hevcVideo} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
+                        onLoadedData={() => handleVideoLoaded(index)}
+                        src={
+                          isHEVCSupported ? device.hevcVideo : device.webMVideo
+                        }
+                      />
                     </div>
 
                     <div className="w-full md:flex-1 ">
