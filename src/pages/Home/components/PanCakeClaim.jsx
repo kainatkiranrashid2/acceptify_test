@@ -265,7 +265,7 @@ const VideoScrollComponent = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1000 100"
-                  className="absolute bottom-[10%] left-0 w-full "
+                  className="absolute bottom-[4%] left-0 w-full "
                   ref={(el) => (pathRefs.current[index] = el)}>
                   <path
                     style={{
