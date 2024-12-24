@@ -65,7 +65,7 @@ function SamplePrevArrow(props) {
 }
 
 const CarouselItem = ({ title, description, image, id }) => (
-  <div className="morefeatures__card parent-container px-3 py-4  bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-[240px] h-[293px] sm:w-[280px]  overflow-hidden flex flex-col items-center  justify-between  ">
+  <div className="morefeatures__card parent-container px-3 py-4  bg-white dark:bg-[#05122C] dark:border-[#3479FD] relative rounded-[20px] border border-spacing-1 border-[#9EC1FF]  w-full h-[293px] sm:w-[280px]  overflow-hidden flex flex-col items-center  justify-between  ">
     <div className="absolute -top-48 dark:-top-56 -left-28 morefeatures__topGradient"></div>
 
     <div className="carousel-item-content">
@@ -169,6 +169,9 @@ const MoreFeatures = () => {
     prevArrow: <SampleNextArrow />,
     customPaging: customPaging,
     appendDots: appendDots,
+    centerMode: true, // Disable center mode if it was enabled
+    variableWidth: false, // Enable variable width
+    centerPadding: "0px", // Remove center padding
   };
 
   return (
@@ -186,13 +189,16 @@ const MoreFeatures = () => {
               ))}
             </Slider>
           </div>
-          <div className="block sm:hidden mx-10">
-            <Slider {...settingsForXS} className="relative w-full">
-              {features.map((feature, index) => (
-                <CarouselItem key={index} {...feature} />
-              ))}
-            </Slider>
+          <div className="flex justify-center items-center w-full sm:hidden">
+            <div className="w-[280px] mx-auto">
+              <Slider {...settingsForXS} className="relative">
+                {features.map((feature, index) => (
+                  <CarouselItem key={index} {...feature} />
+                ))}
+              </Slider>
+            </div>
           </div>
+
           <div className="hidden md:flex ">
             <div className="grid grid-cols-3  gap-5 max-w-full items-center justify-center mx-auto">
               {features.map((item, index) => (
