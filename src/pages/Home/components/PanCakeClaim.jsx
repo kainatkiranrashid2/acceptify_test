@@ -117,15 +117,21 @@ const VideoScrollComponent = () => {
               align: pathElement,
               alignOrigin: [0.5, 0.5],
             },
-
             x: window.innerWidth,
             duration: 1,
             ease: "none",
             scrollTrigger: {
               trigger: section,
-              start: `${sectionHeight / 2} center`, // Start animation in the middle of the section
+              start: `${sectionHeight / 2} center`,
               end: `bottom center`,
               scrub: true,
+              onUpdate: (self) => {
+                const isScrollingUp = self.direction === -1;
+
+                gsap.set(rocket.querySelector("img"), {
+                  rotation: isScrollingUp ? 192 : 12,
+                });
+              },
             },
           });
         }

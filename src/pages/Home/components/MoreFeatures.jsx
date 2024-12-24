@@ -1,7 +1,4 @@
 import Slider from "react-slick";
-import { IoIosArrowDropleftCircle } from "react-icons/io";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
-import { IoIosArrowDropright } from "react-icons/io";
 
 // https://res.cloudinary.com/dq5guzzge/image/upload/v1734514243/components/more_features/chevro_right_light.svg
 
@@ -22,7 +19,7 @@ function appendDots(dots) {
 }
 
 function SampleNextArrow(props) {
-  const { className, style, onClick, currentSlide } = props;
+  const { style, onClick } = props;
   // if (currentSlide === 0) {
   //   return null;
   // }
@@ -46,10 +43,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick, currentSlide, slideCount } = props;
-  // if (currentSlide === slideCount - 1) {
-  //   return null;
-  // }
+  const { style, onClick } = props;
 
   return (
     <div
