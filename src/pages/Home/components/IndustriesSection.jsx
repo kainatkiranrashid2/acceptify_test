@@ -68,7 +68,7 @@ const IndustriesSection = () => {
       </div>
       {/* Content Layer */}
       <div className="container relative z-10">
-        <div className="flex flex-col md:hidden justify-between items-center  pb-8 pt-10 z-10 ">
+        <div className="mx-6 flex flex-col md:hidden justify-between items-center  pb-8 pt-10 z-10 ">
           <h1 className=" mb-6 font-semibold dark:text-white">Industries</h1>
 
           <div className="mx-auto w-[222px] h-[214px] sm:w-[247px] sm:h-[239px] my-8">

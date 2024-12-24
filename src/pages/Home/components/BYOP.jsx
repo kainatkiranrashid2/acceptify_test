@@ -34,7 +34,7 @@ const BYOP = () => {
       className="dark:bg-[#06142F]" // Added useful background classes
     >
       <div className="container  ">
-        <div className="py-[50px] sm:pt-10 sm:pb-20 md:py-20">
+        <div className="mx-6 py-[50px] sm:pt-10 sm:pb-20 md:py-20">
           <div className=" relative md:hidden flex flex-col items-center justify-center overflow-hidden gap-10 ">
             {/* <div className="absolute oval-shape right-0  "></div> */}
 
