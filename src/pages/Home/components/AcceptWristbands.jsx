@@ -104,18 +104,21 @@ const AcceptWristbands = () => {
             </p>
           </div>
           <div className="w-1/2">
-            <video
-              className="w-full h-full object-contain"
-              autoPlay
-              ref={desktopPlayerRef}
-              loop
-              muted
-              controlsList="nodownload" // Prevents download option in controls
-              disablePictureInPicture // Disables picture-in-picture mode
-              playsInline // Better mobile experience
-              onContextMenu={(e) => e.preventDefault()}>
-              Your browser does not support the video tag.
-            </video>
+            {!videoError && (
+              <LoadingVideo
+                className="w-full h-full object-contain"
+                autoPlay
+                ref={desktopPlayerRef}
+                loop
+                muted
+                controlsList="nodownload"
+                disablePictureInPicture
+                playsInline
+                onLoadedData={handleLoadedData}
+                onError={() => setVideoError(true)}
+                onContextMenu={(e) => e.preventDefault()}
+              />
+            )}
           </div>
         </div>
       </div>
