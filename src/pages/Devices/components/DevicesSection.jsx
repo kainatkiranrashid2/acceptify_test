@@ -109,7 +109,7 @@ const DevicesSection = () => {
                     } 
             items-center gap-8 devices__card`}>
                     <div className={`devices__card-vid${index}  `}>
-                      <LoadingVideo
+                      <video
                         autoPlay
                         loop
                         muted
@@ -118,7 +118,7 @@ const DevicesSection = () => {
                         <source src={device.webMVideo} type="video/webm" />
                         <source src={device.hevcVideo} type="video/mp4" />
                         Your browser does not support the video tag.
-                      </LoadingVideo>
+                      </video>
                     </div>
 
                     <div className="w-full md:flex-1 ">
