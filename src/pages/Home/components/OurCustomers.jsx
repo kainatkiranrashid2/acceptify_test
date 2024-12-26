@@ -36,7 +36,7 @@ const OurCustomers = () => {
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734070672/components/our_customers_dark_mode/googleplay_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065022/components/our_customers_dark_mode/visa_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065019/components/our_customers_dark_mode/discover_logo.svg",
-    "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065018/components/our_customers_dark_mode/jcb_logo.svg",
+    "https://res.cloudinary.com/dq5guzzge/image/upload/v1733988794/components/our_customers_logo/jcb_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733988793/components/our_customers_logo/unionpay_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1735044103/components/our_customers_dark_mode/american_express.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065016/components/our_customers_dark_mode/mastercard_logo.svg",

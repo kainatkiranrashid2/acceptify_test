@@ -97,7 +97,7 @@ const DevicesSection = () => {
     },
   ];
   return (
-    <section className="bg-[#EBEBEB] dark:bg-[#05122C]">
+    <section className="bg-[#F6F9FC] dark:bg-[#05122C]">
       <div className="container">
         <div className="py-20">
           <div className="flex flex-col justify-center items-center gap-4 mb-10">
