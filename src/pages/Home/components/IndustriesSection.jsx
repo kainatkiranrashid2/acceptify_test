@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 
-// https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov
-// https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm
 const IndustriesSection = () => {
   const mobilePlayerRef = useRef(null);
   const desktopPlayerRef = useRef(null);
@@ -11,42 +9,22 @@ const IndustriesSection = () => {
 
   const [videoError, setVideoError] = useState(false);
   const [videoSrc, setVideoSrc] = useState("");
+
   useEffect(() => {
-    const videoSrc = supportsHEVCAlpha()
+    const src = supportsHEVCAlpha()
       ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov"
       : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm";
 
-    const playVideo = async (playerRef) => {
-      if (!playerRef.current) return;
+    setVideoSrc(src);
 
-      try {
-        playerRef.current.src = videoSrc;
-        await playerRef.current.load();
-
-        // Only attempt to play if the video is actually loaded
-        if (playerRef.current.readyState >= 2) {
-          await playerRef.current.play();
-        }
-      } catch (error) {
-        console.error("Error playing video:", error);
-        setVideoError(true);
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.src = "";
       }
     };
-
-    // Initialize both players
-    playVideo(mobilePlayerRef);
-    playVideo(desktopPlayerRef);
-
-    // Cleanup function
-    return () => {
-      [mobilePlayerRef, desktopPlayerRef].forEach((ref) => {
-        if (ref.current) {
-          ref.current.pause();
-          ref.current.src = "";
-        }
-      });
-    };
   }, []);
+
   const handleLoadedData = () => {
     console.log("Video loaded successfully");
   };
@@ -70,18 +48,19 @@ const IndustriesSection = () => {
           <h1 className=" mb-6 font-semibold dark:text-white">Industries</h1>
 
           <div className="mx-auto w-[222px] h-[214px] sm:w-[247px] sm:h-[239px] my-8">
-            {!videoError && (
+            {videoSrc && !videoError && (
               <LoadingVideo
                 className="w-full h-full object-contain"
+                src={videoSrc}
+                ref={videoRef}
                 autoPlay
-                ref={mobilePlayerRef}
                 loop
                 muted
                 controlsList="nodownload"
                 disablePictureInPicture
                 playsInline
                 onLoadedData={handleLoadedData}
-                onError={() => setVideoError(true)}
+                onError={handleError}
                 onContextMenu={(e) => e.preventDefault()}
               />
             )}
