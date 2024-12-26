@@ -18,7 +18,7 @@ const Header = () => {
           </div>
           <div className="2xl:h-[393px] 2xl:w-[715px] xl:h-[301px] xl:w-[547px] lg:h-[232px] lg:w-[421px] ">
             <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734943137/components/devices_header/devices_header.png"
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735210797/components/devices_header/header_devices.png"
               alt=""
             />
           </div>
