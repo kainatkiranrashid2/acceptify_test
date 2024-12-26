@@ -69,7 +69,7 @@ const IndustriesSection = () => {
             processes worldwide transactions for the most complex industries.
             Here are just a few industries we work with.
           </p>
-          <button className="bg-primary text-white px-[14px] hover:bg-[#51A805] rounded-sm md:rounded-lg py-[5px] text-[9.6px]/[14px] sm:text-[11px]/[16px]">
+          <button className="bg-primary text-white px-[14px] hover:bg-[#51A805] rounded-sm md:rounded-lg py-[6.8px] text-[11px]/[16.5px] sm:text-[11px]/[16px]">
             Explore Industries
           </button>
         </div>
