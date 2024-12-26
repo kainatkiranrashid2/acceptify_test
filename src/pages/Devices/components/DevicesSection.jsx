@@ -100,76 +100,144 @@ const DevicesSection = () => {
     <section className="bg-[#EBEBEB] dark:bg-[#05122C]">
       <div className="container">
         <div className="py-20">
-          <div className="flex flex-col justify-center items-center gap-4 mb-[80px]">
+          <div className="flex flex-col justify-center items-center gap-4 mb-10">
             <h1 className="text-center font-semibold dark:text-white">
               Simple, Easy Payments
             </h1>
             <p className="text-center dark:text-white">
               Building a business is hard. Getting paid shouldn&apos;t be.
             </p>
+            <span className="mt-6 sm:h-[2px] sm:w-[28rem] bg-black opacity-50"></span>
           </div>
-          {devices.map((device, index) => (
-            <div
-              className={`mx-auto mb-20 px-[60px] py-[30px] rounded-2xl items-center 2xl:w-[1200px] xl:w-[1000px] lg:w-[800px] bg-white dark:bg-gradient-to-l ${
-                index % 2 === 0
-                  ? "dark:from-[#1D3B9D] dark:to-[#0C0221] "
-                  : "dark:from-[#0C0221] dark:to-[#1D3B9D]"
-              }`}
-              key={index}>
-              <div className="mx-auto 2xl:w-[960px] xl:w-[880px] lg:w-[680px] ">
-                <div className="w-full mx-auto">
-                  <div
-                    key={device.heading}
-                    className={`flex  ${
-                      index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                    } 
+          <div className="hidden md:block">
+            {devices.map((device, index) => (
+              <div
+                className={`mx-auto mb-20 px-[60px] py-[30px] rounded-2xl items-center 2xl:w-[1200px] xl:w-[1000px] lg:w-[800px] bg-white dark:bg-gradient-to-l ${
+                  index % 2 === 0
+                    ? "dark:from-[#1D3B9D] dark:to-[#0C0221] "
+                    : "dark:from-[#0C0221] dark:to-[#1D3B9D]"
+                }`}
+                key={index}>
+                <div className="mx-auto 2xl:w-[960px] xl:w-[880px] lg:w-[680px] ">
+                  <div className="w-full mx-auto">
+                    <div
+                      key={device.heading}
+                      className={`flex  ${
+                        index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                      } 
             items-center gap-8 devices__card`}>
-                    <div className={`devices__card-vid${index}  `}>
-                      <LoadingVideo
-                        ref={videoRefs.current[index]}
-                        className="h-full w-full object-contain"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        onLoadedData={() => handleVideoLoaded(index)}
-                        src={
-                          isHEVCSupported ? device.hevcVideo : device.webMVideo
-                        }
-                      />
-                    </div>
-
-                    <div className="w-full md:flex-1 ">
-                      <p className="text-[#635BFF] xl:text-[16px] lg:text-[12px]  ">
-                        Unified platform
-                      </p>
-                      <h1 className="dark:text-white">{device.heading}</h1>
-                      <ul className="space-y-1 	">
-                        {device.points.map((point, pointIndex) => (
-                          <li
-                            key={pointIndex}
-                            className="flex items-start space-x-2 devices__card-description ">
-                            <span className="inline-block ml-2 w-1.5 h-1.5 mt-[10px] rounded-full bg-black flex-shrink-0 dark:bg-white" />
-                            <span className="text-black dark:text-white">
-                              {point}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                      <button className="my-8  bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[16px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg ">
-                        Start With Payments
-                        <img
-                          src="./images/arrow.svg"
-                          className="size-3 mt-[4px]"
-                          alt=""
+                      <div className={`devices__card-vid${index}  `}>
+                        <LoadingVideo
+                          ref={videoRefs.current[index]}
+                          className="h-full w-full object-contain"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          onLoadedData={() => handleVideoLoaded(index)}
+                          src={
+                            isHEVCSupported
+                              ? device.hevcVideo
+                              : device.webMVideo
+                          }
                         />
-                      </button>
+                      </div>
+
+                      <div className="w-full md:flex-1 ">
+                        <p className="text-[#635BFF] xl:text-[16px] lg:text-[12px]  ">
+                          Unified platform
+                        </p>
+                        <h1 className="dark:text-white">{device.heading}</h1>
+                        <ul className="space-y-1 	">
+                          {device.points.map((point, pointIndex) => (
+                            <li
+                              key={pointIndex}
+                              className="flex items-start space-x-2 devices__card-description ">
+                              <span className="inline-block ml-2 w-1.5 h-1.5 mt-[10px] rounded-full bg-black flex-shrink-0 dark:bg-white" />
+                              <span className="text-black dark:text-white">
+                                {point}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                        <button className="my-8  bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[16px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg ">
+                          Start With Payments
+                          <img
+                            src="./images/arrow.svg"
+                            className="size-3 mt-[4px]"
+                            alt=""
+                          />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="block md:hidden">
+            {devices.map((device, index) => (
+              <div
+                className={`mx-auto mb-20 px-[18px] py-[32px] rounded-2xl items-center sm:w-[525px] h-[573px] bg-white dark:bg-gradient-to-bl dark:from-[#1D3B9D] dark:to-[#0C0221] `}
+                key={index}>
+                <div className="mx-auto 2xl:w-[960px] xl:w-[880px] lg:w-[680px] ">
+                  <div className="w-full mx-auto">
+                    <div
+                      key={device.heading}
+                      className={`flex  flex-col justify-center items-center gap-8 devices__card`}>
+                      <div className=" mx-auto ">
+                        <p className="text-[#635BFF] items-center sm:text-[12px]  ">
+                          Unified platform
+                        </p>
+                        <h1 className="dark:text-white items-center">
+                          {device.heading}
+                        </h1>
+                      </div>
+                      <div className={`devices__card-vid${index}  `}>
+                        <LoadingVideo
+                          ref={videoRefs.current[index]}
+                          className="h-full w-full object-contain"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          onLoadedData={() => handleVideoLoaded(index)}
+                          src={
+                            isHEVCSupported
+                              ? device.hevcVideo
+                              : device.webMVideo
+                          }
+                        />
+                      </div>
+
+                      <div className="w-full">
+                        <ul className="space-y-1 	">
+                          {device.points.map((point, pointIndex) => (
+                            <li
+                              key={pointIndex}
+                              className="flex items-start space-x-2 devices__card-description ">
+                              <span className="inline-block ml-2 w-1 h-1 mt-[6px] rounded-full bg-black flex-shrink-0 dark:bg-white" />
+                              <span className="text-black dark:text-white">
+                                {point}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                        <button className="my-8 mx-auto  bg-primary hover:bg-[#51A805] sm:text-[14px]/[20px]    flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-2 lg:py-[10px] rounded-lg ">
+                          Get Started
+                          <img
+                            src="./images/arrow.svg"
+                            className="size-3 mt-[4px]"
+                            alt=""
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <CTASection />
