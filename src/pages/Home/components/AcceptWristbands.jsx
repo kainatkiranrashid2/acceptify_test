@@ -5,48 +5,30 @@ import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 const AcceptWristbands = () => {
   const mobilePlayerRef = useRef(null);
   const desktopPlayerRef = useRef(null);
+  const [isHEVCSupported, setIsHEVCSupported] = useState(false);
   const [videoError, setVideoError] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const videoSrc = supportsHEVCAlpha()
-      ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov"
-      : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm";
-
-    const playVideo = async (playerRef) => {
-      if (!playerRef.current) return;
-
-      try {
-        playerRef.current.src = videoSrc;
-        await playerRef.current.load();
-
-        // Only attempt to play if the video is actually loaded
-        if (playerRef.current.readyState >= 2) {
-          await playerRef.current.play();
-        }
-      } catch (error) {
-        console.error("Error playing video:", error);
-        setVideoError(true);
-      }
+    const checkSupport = async () => {
+      const supported = await supportsHEVCAlpha();
+      setIsHEVCSupported(supported);
+      console.log("HEVC Support:", supported);
     };
 
-    // Initialize both players
-    playVideo(mobilePlayerRef);
-    playVideo(desktopPlayerRef);
-
-    // Cleanup function
-    return () => {
-      [mobilePlayerRef, desktopPlayerRef].forEach((ref) => {
-        if (ref.current) {
-          ref.current.pause();
-          ref.current.src = "";
-        }
-      });
-    };
+    checkSupport();
   }, []);
 
+  const videoSrc = isHEVCSupported
+    ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov"
+    : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm";
+
   const handleLoadedData = () => {
-    setIsLoading(false);
+    console.log("Video loaded successfully:", videoSrc);
+  };
+
+  const handleError = (error) => {
+    console.error("Video failed to load:", error);
+    setVideoError(true);
   };
 
   return (
@@ -70,15 +52,16 @@ const AcceptWristbands = () => {
             {!videoError && (
               <LoadingVideo
                 className="w-full h-full object-contain"
-                autoPlay
+                src={videoSrc}
                 ref={mobilePlayerRef}
+                autoPlay
                 loop
                 muted
                 controlsList="nodownload"
                 disablePictureInPicture
                 playsInline
                 onLoadedData={handleLoadedData}
-                onError={() => setVideoError(true)}
+                onError={handleError}
                 onContextMenu={(e) => e.preventDefault()}
               />
             )}
@@ -107,15 +90,16 @@ const AcceptWristbands = () => {
             {!videoError && (
               <LoadingVideo
                 className="w-full h-full object-contain"
-                autoPlay
+                src={videoSrc}
                 ref={desktopPlayerRef}
+                autoPlay
                 loop
                 muted
                 controlsList="nodownload"
                 disablePictureInPicture
                 playsInline
                 onLoadedData={handleLoadedData}
-                onError={() => setVideoError(true)}
+                onError={handleError}
                 onContextMenu={(e) => e.preventDefault()}
               />
             )}

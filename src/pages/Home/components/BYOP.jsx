@@ -1,33 +1,34 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 
 const BYOP = () => {
   const mobilePlayerRef = useRef(null);
   const desktopPlayerRef = useRef(null);
+  const [isHEVCSupported, setIsHEVCSupported] = useState(false);
+  const [videoError, setVideoError] = useState(false);
 
   useEffect(() => {
-    const videoSrc = supportsHEVCAlpha()
-      ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov"
-      : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm";
+    const checkSupport = async () => {
+      const supported = await supportsHEVCAlpha();
+      setIsHEVCSupported(supported);
+      console.log("HEVC Support:", supported);
+    };
 
-    // Set source for both players
-    if (mobilePlayerRef.current) {
-      mobilePlayerRef.current.src = videoSrc;
-      mobilePlayerRef.current.load(); // Force reload with new source
-      mobilePlayerRef.current.play().catch((error) => {
-        console.log("Error playing mobile video:", error);
-      });
-    }
-
-    if (desktopPlayerRef.current) {
-      desktopPlayerRef.current.src = videoSrc;
-      desktopPlayerRef.current.load(); // Force reload with new source
-      desktopPlayerRef.current.play().catch((error) => {
-        console.log("Error playing desktop video:", error);
-      });
-    }
+    checkSupport();
   }, []);
+
+  const videoSrc = isHEVCSupported
+    ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov"
+    : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm";
+  const handleLoadedData = () => {
+    console.log("Video loaded successfully:", videoSrc);
+  };
+
+  const handleError = (error) => {
+    console.error("Video failed to load:", error);
+    setVideoError(true);
+  };
 
   return (
     <section
@@ -43,18 +44,22 @@ const BYOP = () => {
             </h1>
 
             <div className="w-[168px] h-[130px] sm:w-[282px] md:h-[212px]">
-              <LoadingVideo
-                className="w-full h-full object-contain"
-                autoPlay
-                ref={mobilePlayerRef}
-                loop
-                muted
-                controlsList="nodownload" // Prevents download option in controls
-                disablePictureInPicture // Disables picture-in-picture mode
-                playsInline // Better mobile experience
-                onContextMenu={(e) => e.preventDefault()}>
-                Your browser does not support the video tag.
-              </LoadingVideo>
+              {!videoError && (
+                <LoadingVideo
+                  className="w-full h-full object-contain"
+                  src={videoSrc}
+                  ref={mobilePlayerRef}
+                  autoPlay
+                  loop
+                  muted
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  playsInline
+                  onLoadedData={handleLoadedData}
+                  onError={handleError}
+                  onContextMenu={(e) => e.preventDefault()}
+                />
+              )}
             </div>
             <p className=" text-center dark:text-white sm:w-[521px]">
               Acceptify empowers merchants with complete processor flexibility.
@@ -76,18 +81,22 @@ const BYOP = () => {
               </p>
             </div>
             <div className="2xl:w-[521.88px] 2xl:h-[363px] xl:w-[467px] xl:h-[324px] lg:w-[391px] lg:h-[269.08px] md:w-[297px] md:h-[204px]">
-              <LoadingVideo
-                className="w-full h-full object-contain"
-                autoPlay
-                ref={desktopPlayerRef}
-                loop
-                muted
-                controlsList="nodownload" // Prevents download option in controls
-                disablePictureInPicture // Disables picture-in-picture mode
-                playsInline // Better mobile experience
-                onContextMenu={(e) => e.preventDefault()}>
-                Your browser does not support the video tag.
-              </LoadingVideo>
+              {!videoError && (
+                <LoadingVideo
+                  className="w-full h-full object-contain"
+                  src={videoSrc}
+                  ref={desktopPlayerRef}
+                  autoPlay
+                  loop
+                  muted
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  playsInline
+                  onLoadedData={handleLoadedData}
+                  onError={handleError}
+                  onContextMenu={(e) => e.preventDefault()}
+                />
+              )}
             </div>
           </div>
         </div>

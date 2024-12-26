@@ -143,7 +143,7 @@ const DevicesSection = () => {
                         />
                       </div>
 
-                      <div className="w-full md:flex-1 ">
+                      <div className="w-full !md:flex-1 ">
                         <p className="text-[#635BFF] xl:text-[16px] lg:text-[12px]  ">
                           Unified platform
                         </p>

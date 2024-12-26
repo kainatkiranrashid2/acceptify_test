@@ -5,33 +5,32 @@ import LoadingVideo from "../../../partials/LoadingVideo.jsx";
 const IndustriesSection = () => {
   const mobilePlayerRef = useRef(null);
   const desktopPlayerRef = useRef(null);
-  const videoRef = useRef(null);
-
+  const [isHEVCSupported, setIsHEVCSupported] = useState(false);
   const [videoError, setVideoError] = useState(false);
-  const [videoSrc, setVideoSrc] = useState("");
 
   useEffect(() => {
-    const src = supportsHEVCAlpha()
-      ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov"
-      : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm";
-
-    setVideoSrc(src);
-
-    return () => {
-      if (videoRef.current) {
-        videoRef.current.pause();
-        videoRef.current.src = "";
-      }
+    const checkSupport = async () => {
+      const supported = await supportsHEVCAlpha();
+      setIsHEVCSupported(supported);
+      console.log("HEVC Support:", supported);
     };
+
+    checkSupport();
   }, []);
 
+  const videoSrc = isHEVCSupported
+    ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov"
+    : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm";
+
   const handleLoadedData = () => {
-    console.log("Video loaded successfully");
+    console.log("Video loaded successfully:", videoSrc);
   };
-  const handleError = () => {
-    console.error("Video failed to load");
+
+  const handleError = (error) => {
+    console.error("Video failed to load:", error);
     setVideoError(true);
   };
+
   return (
     <div className="py-13 md:py-20 bg-gradient-to-b from-white from-[16.97%] to-[#3B6FFD] to-[100%] relative overflow-hidden dark:bg-gradient-to-b dark:from-[#0C0221] dark:to-[#0C0221] dark:relative">
       {/* Background Image Layer */}
@@ -48,11 +47,11 @@ const IndustriesSection = () => {
           <h1 className=" mb-6 font-semibold dark:text-white">Industries</h1>
 
           <div className="mx-auto w-[222px] h-[214px] sm:w-[247px] sm:h-[239px] my-8">
-            {videoSrc && !videoError && (
+            {!videoError && (
               <LoadingVideo
                 className="w-full h-full object-contain"
                 src={videoSrc}
-                ref={videoRef}
+                ref={mobilePlayerRef}
                 autoPlay
                 loop
                 muted
@@ -90,15 +89,16 @@ const IndustriesSection = () => {
             {!videoError && (
               <LoadingVideo
                 className="w-full h-full object-contain"
-                autoPlay
+                src={videoSrc}
                 ref={desktopPlayerRef}
+                autoPlay
                 loop
                 muted
                 controlsList="nodownload"
                 disablePictureInPicture
                 playsInline
                 onLoadedData={handleLoadedData}
-                onError={() => setVideoError(true)}
+                onError={handleError}
                 onContextMenu={(e) => e.preventDefault()}
               />
             )}
