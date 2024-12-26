@@ -124,7 +124,7 @@ const OurCustomers = () => {
                     className={`${
                       index === 16
                         ? "h-[45px] object-contain"
-                        : "h-8  object-contain "
+                        : "h-12  object-contain "
                     }`}
                   />
                 </div>
