@@ -11,7 +11,6 @@ const IndustriesSection = () => {
 
   const [videoError, setVideoError] = useState(false);
   const [videoSrc, setVideoSrc] = useState("");
-
   useEffect(() => {
     const videoSrc = supportsHEVCAlpha()
       ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov"
@@ -48,7 +47,6 @@ const IndustriesSection = () => {
       });
     };
   }, []);
-
   const handleLoadedData = () => {
     console.log("Video loaded successfully");
   };
@@ -110,19 +108,18 @@ const IndustriesSection = () => {
             </button>
           </div>
           <div className="w-1/2 h-full">
-            {videoSrc && !videoError && (
+            {!videoError && (
               <LoadingVideo
                 className="w-full h-full object-contain"
-                src={videoSrc}
-                ref={videoRef}
                 autoPlay
+                ref={desktopPlayerRef}
                 loop
                 muted
                 controlsList="nodownload"
                 disablePictureInPicture
                 playsInline
                 onLoadedData={handleLoadedData}
-                onError={handleError}
+                onError={() => setVideoError(true)}
                 onContextMenu={(e) => e.preventDefault()}
               />
             )}

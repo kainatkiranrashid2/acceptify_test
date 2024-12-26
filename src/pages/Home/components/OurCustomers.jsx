@@ -46,7 +46,7 @@ const OurCustomers = () => {
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065016/components/our_customers_dark_mode/fiserv_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065019/components/our_customers_dark_mode/elavon_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734065018/components/our_customers_dark_mode/freedompay_logo.svg",
-    "https://res.cloudinary.com/dq5guzzge/image/upload/v1735043999/components/our_customers_dark_mode/global_payments.svg",
+    "https://res.cloudinary.com/dq5guzzge/image/upload/v1735187423/components/our_customers_dark_mode/global_payments_dark.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1733989402/components/our_customers_logo/ace_logo.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734948806/components/our_customers_dark_mode/kaiser_logo_dark.svg",
     "https://res.cloudinary.com/dq5guzzge/image/upload/v1734069883/components/our_customers_dark_mode/alaska_logo.svg",
