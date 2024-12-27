@@ -17,6 +17,8 @@ const CloudinaryResponsiveVideo = forwardRef(
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
     const [errorDetails, setErrorDetails] = useState(null);
+    console.log("hevcVideo");
+    console.log(hevcVideo);
 
     // Get the correct video URL based on device width
     const getTransformedUrl = (url) => {
@@ -47,8 +49,8 @@ const CloudinaryResponsiveVideo = forwardRef(
       if (url.includes("hevc")) {
         // HEVC specific transformations
         finalTransformation = isMobile
-          ? "c_limit,w_420,vc_h265,q_auto:best,br_2m/"
-          : "c_limit,w_960,vc_h265,q_auto:best,br_4m/";
+          ? "c_limit,w_420,q_auto:best,br_2m/"
+          : "c_limit,w_960,q_auto:best,br_4m/";
       } else {
         // WebM specific transformations
         finalTransformation = isMobile
