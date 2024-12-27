@@ -135,6 +135,7 @@ const DevicesSection = () => {
                           loop
                           muted
                           playsInline
+                          isHEVCSupported={isHEVCSupported}
                           hevcVideo={device.hevcVideo}
                           webMVideo={device.webMVideo}
                           onLoadedData={() => handleVideoLoaded(index)}
