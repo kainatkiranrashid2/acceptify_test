@@ -85,7 +85,7 @@ const OurCustomers = () => {
               {logos.map((logo, index) => (
                 <div
                   key={index}
-                  className={`2xl:w-[182px] 2xl:!h-[100px] xl:w-[150px] xl:h-[82.42px] lg:w-[95px] lg:h-[52px] md:w-[83px] md:h-[46px] sm:w-[92px] sm:h-[51px] w-[63px] h-8 px-2 py-2  md:py-6 md:px-5 rounded-[8px] sm:rounded-[10px] md:rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] bg-white dark:bg-[#1D3B9D]`}>
+                  className={`2xl:w-[182px] 2xl:!h-[100px] xl:w-[150px] xl:h-[82.42px] lg:w-[95px] lg:h-[52px] md:w-[83px] md:h-[46px] sm:w-[92px] sm:h-[51px] w-[70px] h-10 px-2 py-2  md:py-6 md:px-5 rounded-[8px] sm:rounded-[10px] md:rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] bg-white dark:bg-[#1D3B9D]`}>
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
@@ -136,7 +136,7 @@ const OurCustomers = () => {
               {darkLogos.map((logo, index) => (
                 <div
                   key={index}
-                  className={`2xl:w-[182px] 2xl:!h-[100px] xl:w-[150px] xl:h-[82.42px] lg:w-[95px] lg:h-[52px] md:w-[83px] md:h-[46px] sm:w-[92px] sm:h-[51px] w-[63px] h-8 px-2 py-2  md:py-6 md:px-5 rounded-[8px] sm:rounded-[10px] md:rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] bg-white dark:bg-[#1D3B9D]`}>
+                  className={`2xl:w-[182px] 2xl:!h-[100px] xl:w-[150px] xl:h-[82.42px] lg:w-[95px] lg:h-[52px] md:w-[83px] md:h-[46px] sm:w-[92px] sm:h-[51px] w-[70px] h-10 px-2 py-2  md:py-6 md:px-5 rounded-[8px] sm:rounded-[10px] md:rounded-[18px]  border-1 flex justify-center items-center shadow-[0px_3px_14px_0px_rgba(74,58,255,0.03),0px_-2px_4px_0px_rgba(20,20,43,0.02),0px_12px_24px_0px_rgba(20,20,43,0.04)] bg-white dark:bg-[#1D3B9D]`}>
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
