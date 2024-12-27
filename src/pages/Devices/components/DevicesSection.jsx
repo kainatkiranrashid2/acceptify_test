@@ -179,13 +179,13 @@ const DevicesSection = () => {
           <div className="block md:hidden">
             {devices.map((device, index) => (
               <div
-                className={`mx-auto mb-20 px-[18px] py-[32px] rounded-2xl items-center sm:w-[525px] h-[573px] bg-white dark:bg-gradient-to-bl dark:from-[#1D3B9D] dark:to-[#0C0221] `}
+                className={`mx-auto mb-6 px-[18px] py-3 sm:py-[32px] rounded-2xl items-center w-[300px] sm:w-[525px] sm:h-[573px] bg-white dark:bg-gradient-to-bl dark:from-[#1D3B9D] dark:to-[#0C0221] `}
                 key={index}>
                 <div className="mx-auto 2xl:w-[960px] xl:w-[880px] lg:w-[680px] ">
                   <div className="w-full mx-auto">
                     <div
                       key={device.heading}
-                      className={`flex  flex-col justify-center items-center gap-8 devices__card`}>
+                      className={`flex  flex-col justify-center items-center gap-3 sm:gap-8 devices__card`}>
                       <div className=" mx-auto ">
                         <p className="text-[#635BFF] items-center sm:text-[12px]  ">
                           Unified platform
@@ -208,20 +208,20 @@ const DevicesSection = () => {
                         />
                       </div>
 
-                      <div className="w-full">
+                      <div className="w-full mt-4">
                         <ul className="space-y-1 	">
                           {device.points.map((point, pointIndex) => (
                             <li
                               key={pointIndex}
                               className="flex items-start space-x-2 devices__card-description ">
                               <span className="inline-block ml-2 w-1 h-1 mt-[6px] rounded-full bg-black flex-shrink-0 dark:bg-white" />
-                              <span className="text-black dark:text-white">
+                              <span className="text-black dark:text-white text-[10px] sm:text-[12px]">
                                 {point}
                               </span>
                             </li>
                           ))}
                         </ul>
-                        <button className="my-8 mx-auto  bg-primary hover:bg-[#51A805] sm:text-[14px]/[20px]    flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-2 lg:py-[10px] rounded-lg ">
+                        <button className="mt-8 mx-auto  bg-primary hover:bg-[#51A805] sm:text-[14px]/[20px]    flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-2 lg:py-[10px] rounded-lg ">
                           Get Started
                           <img
                             src="./images/arrow.svg"
