@@ -81,7 +81,7 @@ const OurCustomers = () => {
             </div>
           </div>
           <div className="block 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[0px] mb-[60px] relative dark:hidden">
-            <div className="grid md:hidden  grid-cols-4 items-center justify-center gap-2 mb-2">
+            <div className="grid md:hidden  grid-cols-4 items-center justify-center gap-x-3 gap-y-3 mb-2">
               {logos.map((logo, index) => (
                 <div
                   key={index}
@@ -132,7 +132,7 @@ const OurCustomers = () => {
             </div>
           </div>
           <div className="hidden 2xl:mx-[160px] xl:mx-[130px] lg:mx-[196px] md:mx-12 mx-4 sm:mx-10 xl:mb-[140px] lg:mb-[150px] sm:mb-[80px] mb-[60px] relative  dark:block">
-            <div className="grid md:hidden grid-cols-4 items-center justify-center gap-2 mb-2">
+            <div className="grid md:hidden grid-cols-4 items-center justify-center gap-x-3 gap-y-3 mb-2">
               {darkLogos.map((logo, index) => (
                 <div
                   key={index}

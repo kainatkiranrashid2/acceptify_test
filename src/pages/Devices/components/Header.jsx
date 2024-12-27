@@ -27,7 +27,7 @@ const Header = () => {
         <div className="flex flex-col justify-center items-center mt-[40px] mb-20 md:hidden  lg:ml-20  relative z-10 ">
           <div className="w-[300px] h-[232px] sm:w-[397px] sm:h-[232px]  ">
             <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735275804/components/devices_header/devices.png"
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735296359/components/devices_header/final_devices.png"
               alt=""
               className="w-full h-full object-contain mx-auto"
             />

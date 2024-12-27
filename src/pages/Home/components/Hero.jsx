@@ -94,7 +94,7 @@ const HeroSection = () => {
             certified, online/offline payments while removing all of your
             security concerns.
           </p>
-          <button className="mt-4 mx-auto bg-primary hover:bg-[#51A805] text-[11px]/[16.5px] sm:text-[11px]/[16px] tracking-tight leading-6 flex flex-row justify-center items-center gap-3 text-white font-semibold px-3 py-[10px] rounded-lg">
+          <button className="mt-4 mx-auto bg-primary hover:bg-[#51A805] text-[11px]/[16.5px] sm:text-[12px]/[16px] tracking-tight leading-6 flex flex-row justify-center items-center gap-[10px] text-white font-semibold px-3 py-[10px] rounded-lg">
             Start Now{" "}
             <img
               src="./images/arrow.svg"

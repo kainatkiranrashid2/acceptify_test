@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import CTASection from "../../Home/components/CTASection";
 import LoadingVideo from "../../../partials/LoadingVideo";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
+import CloudinaryResponsiveVideo from "../../../partials/CloudinaryResponsiveVideo.jsx";
 
 const DevicesSection = () => {
   const [isHEVCSupported, setIsHEVCSupported] = useState(false);
@@ -127,19 +128,16 @@ const DevicesSection = () => {
                       } 
             items-center gap-8 devices__card`}>
                       <div className={`devices__card-vid${index}  `}>
-                        <LoadingVideo
+                        <CloudinaryResponsiveVideo
                           ref={videoRefs.current[index]}
                           className="h-full w-full object-contain"
                           autoPlay
                           loop
                           muted
                           playsInline
+                          hevcVideo={device.hevcVideo}
+                          webMVideo={device.webMVideo}
                           onLoadedData={() => handleVideoLoaded(index)}
-                          src={
-                            isHEVCSupported
-                              ? device.hevcVideo
-                              : device.webMVideo
-                          }
                         />
                       </div>
 
@@ -194,19 +192,16 @@ const DevicesSection = () => {
                         </h1>
                       </div>
                       <div className={`devices__card-vid${index}  `}>
-                        <LoadingVideo
+                        <CloudinaryResponsiveVideo
                           ref={videoRefs.current[index]}
                           className="h-full w-full object-contain"
                           autoPlay
                           loop
                           muted
                           playsInline
+                          hevcVideo={device.hevcVideo}
+                          webMVideo={device.webMVideo}
                           onLoadedData={() => handleVideoLoaded(index)}
-                          src={
-                            isHEVCSupported
-                              ? device.hevcVideo
-                              : device.webMVideo
-                          }
                         />
                       </div>
 
@@ -240,7 +235,7 @@ const DevicesSection = () => {
           </div>
         </div>
       </div>
-      <CTASection />
+      {/* <CTASection /> */}
     </section>
   );
 };
