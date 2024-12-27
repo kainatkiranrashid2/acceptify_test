@@ -140,7 +140,7 @@ const OurCustomers = () => {
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
-                    className={`h-7 object-contain ${
+                    className={`w-full h-7 object-contain ${
                       index === 16 ? "!h-[18px]  " : ""
                     }`}
                   />
