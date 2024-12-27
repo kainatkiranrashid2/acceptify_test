@@ -25,7 +25,7 @@ const Header = () => {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center mt-[40px] mb-20 md:hidden  lg:ml-20  relative z-10 ">
-          <div className="w-[397px] h-[232px] sm:w-[397px] sm:h-[232px]  ">
+          <div className="w-[300px] h-[232px] sm:w-[397px] sm:h-[232px]  ">
             <img
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735210797/components/devices_header/header_devices.png"
               alt=""
