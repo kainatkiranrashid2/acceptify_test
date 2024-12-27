@@ -274,28 +274,28 @@
     line-height: 16px;
   }
   .devices__card-vid0 {
-    width: 109px;
-    height: 112px;
+    width: 180px;
+    height: 192px;
   }
   .devices__card-vid1 {
-    width: 161px;
-    height: 88px;
+    width: 106.25px;
+    height: 170px;
   }
   .devices__card-vid2 {
-    width: 138px;
-    height: 101px;
+    width: 106.25px;
+    height: 170px;
   }
   .devices__card-vid3 {
-    width: 106px;
-    height: 110px;
+    width: 106.25px;
+    height: 170px;
   }
   .devices__card-vid4 {
-    width: 104px;
-    height: 118px;
+    width: 106.25px;
+    height: 170px;
   }
   .devices__card-vid5 {
-    width: 147px;
-    height: 116px;
+    width: 106.25px;
+    height: 170px;
     gap: 0px;
     opacity: 0px;
   }

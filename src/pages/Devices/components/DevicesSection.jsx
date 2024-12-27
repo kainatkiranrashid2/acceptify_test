@@ -13,6 +13,8 @@ const DevicesSection = () => {
   );
 
   useEffect(() => {
+    console.log("kkkkkkkkkkkkkkkRRRRRRRRRRRRRRRRR");
+    console.log(supportsHEVCAlpha());
     setIsHEVCSupported(supportsHEVCAlpha());
   }, []);
 

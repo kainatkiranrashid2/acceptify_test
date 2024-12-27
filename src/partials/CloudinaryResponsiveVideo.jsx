@@ -43,6 +43,7 @@ const CloudinaryResponsiveVideo = forwardRef(
 
       // Choose transformation based on video format and device
       let finalTransformation = "";
+      console.log("-----------------", url, "rrrr");
       if (url.includes("hevc")) {
         // HEVC specific transformations
         finalTransformation = isMobile
@@ -59,9 +60,15 @@ const CloudinaryResponsiveVideo = forwardRef(
     };
 
     // Get the appropriate video source
+    console.log("iram appi");
+    console.log(isHEVCSupported);
+    console.log(isHEVCSupported);
     const videoSrc = isHEVCSupported
       ? getTransformedUrl(hevcVideo, transformationType)
       : getTransformedUrl(webMVideo, transformationType);
+
+    console.log("videoSrc");
+    console.log(videoSrc);
 
     const handleRetry = () => {
       if (ref?.current) {
