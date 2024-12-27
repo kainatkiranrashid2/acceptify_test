@@ -85,6 +85,10 @@ const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+    setMobileSubmenu(null);
+  };
 
   return (
     <header>
@@ -193,7 +197,10 @@ const Header = () => {
                       <li
                         key={menu.id}
                         className="border-b-[1px] py-4 px-4 mb-0 mt-0 dark:border-[#5D55F9] border-[#E7E7E7]">
-                        <Link to={menu.path} className="dark:text-white ">
+                        <Link
+                          to={menu.path}
+                          onClick={handleLinkClick}
+                          className="dark:text-white ">
                           {menu.title}
                         </Link>
                       </li>
