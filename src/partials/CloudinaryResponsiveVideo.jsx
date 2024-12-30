@@ -19,6 +19,25 @@ const CloudinaryResponsiveVideo = forwardRef(
     const [errorDetails, setErrorDetails] = useState(null);
     console.log("hevcVideo");
     console.log(hevcVideo);
+    useEffect(() => {
+      const video = document.createElement("video");
+      console.log(
+        "HEVC/H.265 support:",
+        video.canPlayType('video/mp4; codecs="hvc1"')
+      );
+      console.log(
+        "VP9 support:",
+        video.canPlayType('video/webm; codecs="vp9"')
+      );
+      console.log(
+        "Is Safari:",
+        /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+      );
+      console.log(
+        "Is Mobile:",
+        /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+      );
+    }, []);
 
     // Get the correct video URL based on device width
     const getTransformedUrl = (url) => {
@@ -49,8 +68,8 @@ const CloudinaryResponsiveVideo = forwardRef(
       if (url.includes("hevc")) {
         // HEVC specific transformations
         finalTransformation = isMobile
-          ? "f_mp4,c_limit,w_420,vc_h265,b_transparent,q_auto:best,br_2m/"
-          : "f_mp4,c_limit,w_960,vc_h265,b_transparent,q_auto:best,br_4m/";
+          ? "f_mp4,c_limit,w_420,fl_alpha,fl_acodec.none,vc_h265,b_transparent,q_auto:best/"
+          : "f_mp4,c_limit,w_960,fl_alpha,fl_acodec.none,vc_h265,b_transparent,q_auto:best/";
       } else {
         // WebM specific transformations
         finalTransformation = isMobile
