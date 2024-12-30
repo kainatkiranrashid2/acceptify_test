@@ -16,8 +16,7 @@ const CloudinaryResponsiveVideo = forwardRef(
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
     const [errorDetails, setErrorDetails] = useState(null);
-    console.log("hevcVideo");
-    console.log(hevcVideo);
+
     useEffect(() => {
       const video = document.createElement("video");
       console.log(
@@ -63,7 +62,6 @@ const CloudinaryResponsiveVideo = forwardRef(
 
       // Choose transformation based on video format and device
       let finalTransformation = "";
-      console.log("-----------------", url, "rrrr");
       if (url.includes("hevc")) {
         // HEVC specific transformations
         finalTransformation = isMobile
@@ -80,14 +78,13 @@ const CloudinaryResponsiveVideo = forwardRef(
       return `${baseUrl}${finalTransformation}${videoPath}`;
     };
 
+    console.log("value of hevcVideo is", isHEVCSupported);
     const videoSrc = isHEVCSupported
       ? getTransformedUrl(hevcVideo)
       : getTransformedUrl(webMVideo);
     const kainat = isHEVCSupported
       ? "hevcVideo Should be played"
       : "webm Should be played";
-    console.log(kainat);
-    console.log(videoSrc);
 
     const handleRetry = () => {
       if (ref?.current) {
