@@ -47,19 +47,19 @@ const CloudinaryResponsiveVideo = forwardRef(
       const videoPath = url.split("/upload/")[1];
 
       // Different transformation presets
-      const transformations = {
-        optimized: isMobile
-          ? "f_auto,c_limit,w_480,vc_auto,q_auto:best/"
-          : "f_auto,c_limit,w_960,vc_auto,q_auto:best/",
+      // const transformations = {
+      //   optimized: isMobile
+      //     ? "f_auto,c_limit,w_480,vc_auto,q_auto:best/"
+      //     : "f_auto,c_limit,w_960,vc_auto,q_auto:best/",
 
-        resized: isMobile
-          ? "f_auto,c_scale,w_480,h_270,vc_auto,q_auto:best/"
-          : "f_auto,c_scale,w_960,h_540,vc_auto,q_auto:best/",
+      //   resized: isMobile
+      //     ? "f_auto,c_scale,w_480,h_270,vc_auto,q_auto:best/"
+      //     : "f_auto,c_scale,w_960,h_540,vc_auto,q_auto:best/",
 
-        compressed: isMobile
-          ? "f_auto,c_limit,w_480,vc_auto,q_auto,br_2m/"
-          : "f_auto,c_limit,w_960,vc_auto,q_auto,br_4m/",
-      };
+      //   compressed: isMobile
+      //     ? "f_auto,c_limit,w_480,vc_auto,q_auto,br_2m/"
+      //     : "f_auto,c_limit,w_960,vc_auto,q_auto,br_4m/",
+      // };
 
       // Choose transformation based on video format and device
       let finalTransformation = "";
@@ -84,8 +84,8 @@ const CloudinaryResponsiveVideo = forwardRef(
     console.log(isHEVCSupported);
     console.log(isHEVCSupported);
     const videoSrc = isHEVCSupported
-      ? getTransformedUrl(hevcVideo, transformationType)
-      : getTransformedUrl(webMVideo, transformationType);
+      ? getTransformedUrl(hevcVideo)
+      : getTransformedUrl(webMVideo);
 
     console.log("videoSrc");
     console.log(videoSrc);
