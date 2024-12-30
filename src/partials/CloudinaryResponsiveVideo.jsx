@@ -8,7 +8,6 @@ const CloudinaryResponsiveVideo = forwardRef(
       className,
       onLoadedData,
       isHEVCSupported,
-      transformationType = "optimized", // New prop
 
       ...props
     },
