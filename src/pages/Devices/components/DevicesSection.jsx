@@ -110,7 +110,7 @@ const DevicesSection = () => {
             <p className="mx-20 md:mx-0 text-center dark:text-white">
               Building a business is hard. Getting paid shouldn&apos;t be.
             </p>
-            <span className="mt-6 sm:h-[2px] sm:w-[28rem] bg-black opacity-50"></span>
+            <span className="mt-6 h-[2px] w-[14rem] sm:w-[28rem] bg-black opacity-50"></span>
           </div>
           <div className="hidden md:block">
             {devices.map((device, index) => (
@@ -221,7 +221,7 @@ const DevicesSection = () => {
                             </li>
                           ))}
                         </ul>
-                        <button className="mt-8 mx-auto  bg-primary hover:bg-[#51A805] sm:text-[14px]/[20px]    flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-2 lg:py-[10px] rounded-lg ">
+                        <button className="mb-6 mt-8 mx-auto  bg-primary hover:bg-[#51A805] sm:text-[14px]/[20px]    flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-2 lg:py-[10px] rounded-lg ">
                           Get Started
                           <img
                             src="./images/arrow.svg"
