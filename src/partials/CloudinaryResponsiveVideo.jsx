@@ -83,6 +83,7 @@ const CloudinaryResponsiveVideo = forwardRef(
     };
 
     console.log("value of hevcVideo is", isHEVCSupported);
+    console.log("value of hevcVideo2 is", hevc);
     const videoSrc = hevc
       ? getTransformedUrl(hevcVideo)
       : getTransformedUrl(webMVideo);
