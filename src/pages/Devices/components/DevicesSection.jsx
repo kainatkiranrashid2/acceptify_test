@@ -152,9 +152,7 @@ const DevicesSection = () => {
                         <p className="text-[#635BFF] xl:text-[16px] lg:text-[12px]  ">
                           Unified platform
                         </p>
-                        <h1 className="dark:text-white text-center">
-                          {device.heading}
-                        </h1>
+                        <h1 className="dark:text-white ">{device.heading}</h1>
                         <ul className="space-y-1 	">
                           {device.points.map((point, pointIndex) => (
                             <li
