@@ -3,7 +3,15 @@ import { supportsHEVCAlpha } from "../CheckBrowserCapability";
 
 const CloudinaryResponsiveVideo = forwardRef(
   (
-    { hevcVideo, hevcMobile, webMVideo, className, onLoadedData, ...props },
+    {
+      hevcVideo,
+      hevcMobile,
+      webMVideo,
+      className,
+      index,
+      onLoadedData,
+      ...props
+    },
     ref
   ) => {
     const [isLoading, setIsLoading] = useState(true);

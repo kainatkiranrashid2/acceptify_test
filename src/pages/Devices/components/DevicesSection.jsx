@@ -140,6 +140,7 @@ const DevicesSection = () => {
                           loop
                           muted
                           playsInline
+                          index={index}
                           hevcVideo={device.hevcVideo}
                           hevcMobile={device.hevcMobile}
                           webMVideo={device.webMVideo}
@@ -208,6 +209,7 @@ const DevicesSection = () => {
                           playsInline
                           hevcVideo={device.hevcVideo}
                           hevcMobile={device.hevcMobile}
+                          index={index}
                           webMVideo={device.webMVideo}
                           onLoadedData={() => handleVideoLoaded(index)}
                         />
