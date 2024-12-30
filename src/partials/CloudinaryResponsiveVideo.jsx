@@ -72,7 +72,7 @@ const CloudinaryResponsiveVideo = forwardRef(
         const response = await fetch(fullUrl, { method: "HEAD" });
         const contentLength = response.headers.get("content-length");
         const sizeInMB = (contentLength / (1024 * 1024)).toFixed(2);
-        console.log(`Video size: ${sizeInMB} MB`);
+        console.info(`Video size of ${index}: ${sizeInMB} MB`);
       } catch (error) {
         console.error("Error fetching video size:", error);
       }
