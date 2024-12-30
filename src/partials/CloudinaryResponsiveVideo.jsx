@@ -72,7 +72,6 @@ const CloudinaryResponsiveVideo = forwardRef(
       return `${baseUrl}${finalTransformation}${videoPath}`;
     };
 
-    console.log("value of hevcVideo is", isHEVCSupported);
     console.log("value of hevcVideo2 is", hevc);
     const videoSrc = hevc
       ? getTransformedUrl(hevcVideo)
@@ -124,7 +123,6 @@ const CloudinaryResponsiveVideo = forwardRef(
             } transition-opacity duration-300`}
             onLoadedData={() => {
               console.log("Video loaded successfully:", videoSrc);
-              console.log("value of hevcVideo is", isHEVCSupported);
               console.log("value of hevcVideo2 is", hevc);
               setIsLoading(false);
               onLoadedData?.();
