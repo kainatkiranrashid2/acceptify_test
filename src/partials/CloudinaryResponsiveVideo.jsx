@@ -1,4 +1,5 @@
 import React, { useState, forwardRef, useEffect } from "react";
+import { supportsHEVCAlpha } from "../CheckBrowserCapability";
 
 const CloudinaryResponsiveVideo = forwardRef(
   (
@@ -8,7 +9,6 @@ const CloudinaryResponsiveVideo = forwardRef(
       className,
       onLoadedData,
       isHEVCSupported,
-
       ...props
     },
     ref
@@ -16,6 +16,7 @@ const CloudinaryResponsiveVideo = forwardRef(
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
     const [errorDetails, setErrorDetails] = useState(null);
+    const [hevc, setHevc] = useState(null);
 
     useEffect(() => {
       const video = document.createElement("video");
@@ -36,7 +37,10 @@ const CloudinaryResponsiveVideo = forwardRef(
         /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
       );
     }, []);
-
+    useEffect(() => {
+      console.log(supportsHEVCAlpha());
+      setHevc(supportsHEVCAlpha());
+    }, []);
     // Get the correct video URL based on device width
     const getTransformedUrl = (url) => {
       if (!url) return "";
@@ -130,6 +134,7 @@ const CloudinaryResponsiveVideo = forwardRef(
             onLoadedData={() => {
               console.log("Video loaded successfully:", videoSrc);
               console.log("value of hevcVideo is", isHEVCSupported);
+              console.log("value of hevcVideo is", hevc);
               setIsLoading(false);
               onLoadedData?.();
             }}
