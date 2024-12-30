@@ -80,15 +80,13 @@ const CloudinaryResponsiveVideo = forwardRef(
       return `${baseUrl}${finalTransformation}${videoPath}`;
     };
 
-    // Get the appropriate video source
-    console.log("iram appi");
-    console.log(isHEVCSupported);
-    console.log(isHEVCSupported);
     const videoSrc = isHEVCSupported
       ? getTransformedUrl(hevcVideo)
       : getTransformedUrl(webMVideo);
-
-    console.log("videoSrc");
+    const kainat = isHEVCSupported
+      ? "hevcVideo Should be played"
+      : "webm Should be played";
+    console.log(kainat);
     console.log(videoSrc);
 
     const handleRetry = () => {
