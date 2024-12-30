@@ -86,10 +86,10 @@ const CloudinaryResponsiveVideo = forwardRef(
     const videoSrc = isHEVCSupported
       ? getTransformedUrl(hevcVideo)
       : getTransformedUrl(webMVideo);
-    const kainat = isHEVCSupported
+    const kainat = hevc
       ? "hevcVideo Should be played"
       : "webm Should be played";
-
+    console.log(kainat);
     const handleRetry = () => {
       if (ref?.current) {
         console.log("Retrying video load:", videoSrc);
