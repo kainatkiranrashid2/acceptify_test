@@ -5,18 +5,11 @@ import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 import CloudinaryResponsiveVideo from "../../../partials/CloudinaryResponsiveVideo.jsx";
 
 const DevicesSection = () => {
-  const [isHEVCSupported, setIsHEVCSupported] = useState(false);
   const videoRefs = useRef(
     Array(6)
       .fill(null)
       .map(() => React.createRef())
   );
-
-  useEffect(() => {
-    console.log("kkkkkkkkkkkkkkkRRRRRRRRRRRRRRRRR");
-    console.log(supportsHEVCAlpha());
-    setIsHEVCSupported(supportsHEVCAlpha());
-  }, []);
 
   const handleVideoLoaded = (index) => {
     console.log(`Video ${index} loaded successfully`);
@@ -137,7 +130,6 @@ const DevicesSection = () => {
                           loop
                           muted
                           playsInline
-                          isHEVCSupported={isHEVCSupported}
                           hevcVideo={device.hevcVideo}
                           webMVideo={device.webMVideo}
                           onLoadedData={() => handleVideoLoaded(index)}

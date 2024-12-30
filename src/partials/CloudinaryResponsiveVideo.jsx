@@ -2,17 +2,7 @@ import React, { useState, forwardRef, useEffect } from "react";
 import { supportsHEVCAlpha } from "../CheckBrowserCapability";
 
 const CloudinaryResponsiveVideo = forwardRef(
-  (
-    {
-      hevcVideo,
-      webMVideo,
-      className,
-      onLoadedData,
-      isHEVCSupported,
-      ...props
-    },
-    ref
-  ) => {
+  ({ hevcVideo, webMVideo, className, onLoadedData, ...props }, ref) => {
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
     const [errorDetails, setErrorDetails] = useState(null);
