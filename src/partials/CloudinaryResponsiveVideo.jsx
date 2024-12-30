@@ -129,6 +129,7 @@ const CloudinaryResponsiveVideo = forwardRef(
             } transition-opacity duration-300`}
             onLoadedData={() => {
               console.log("Video loaded successfully:", videoSrc);
+              console.log("value of hevcVideo is", isHEVCSupported);
               setIsLoading(false);
               onLoadedData?.();
             }}
