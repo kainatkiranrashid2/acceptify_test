@@ -107,7 +107,7 @@ const DevicesSection = () => {
             <h1 className="text-center font-semibold dark:text-white">
               Simple, Easy Payments
             </h1>
-            <p className="text-center dark:text-white">
+            <p className="mx-20 md:mx-0 text-center dark:text-white">
               Building a business is hard. Getting paid shouldn&apos;t be.
             </p>
             <span className="mt-6 sm:h-[2px] sm:w-[28rem] bg-black opacity-50"></span>
