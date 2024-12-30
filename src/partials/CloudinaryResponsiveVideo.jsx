@@ -58,7 +58,7 @@ const CloudinaryResponsiveVideo = forwardRef(
       let finalTransformation = "";
       if (url.includes("hevc")) {
         // HEVC specific transformations
-        finalTransformation = isMobile ? "w_420/" : "w_960/";
+        // finalTransformation = isMobile ? "w_420/" : "w_960/";
       } else {
         // WebM specific transformations
         finalTransformation = isMobile
