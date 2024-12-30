@@ -32,7 +32,7 @@ const CloudinaryResponsiveVideo = forwardRef(
       setHevc(supportsHEVCAlpha());
     }, []);
     // Get the correct video URL based on device width
-    const getTransformedUrl = async (url) => {
+    const getTransformedUrl = (url) => {
       if (!url) return "";
 
       const isMobile = window.innerWidth <= 768;
@@ -54,15 +54,6 @@ const CloudinaryResponsiveVideo = forwardRef(
       console.log("myfinaltesting");
       console.log(`${baseUrl}${finalTransformation}${videoPath}`);
       const fullUrl = `${baseUrl}${finalTransformation}${videoPath}?v=${Date.now()}`;
-
-      try {
-        const response = await fetch(fullUrl, { method: "HEAD" });
-        const contentLength = response.headers.get("content-length");
-        const sizeInMB = (contentLength / (1024 * 1024)).toFixed(2);
-        console.info(`Video size of ${index}: ${sizeInMB} MB`);
-      } catch (error) {
-        console.error("Error fetching video size:", error);
-      }
 
       return fullUrl;
     };
