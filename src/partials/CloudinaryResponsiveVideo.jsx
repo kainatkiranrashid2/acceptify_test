@@ -134,7 +134,7 @@ const CloudinaryResponsiveVideo = forwardRef(
             onLoadedData={() => {
               console.log("Video loaded successfully:", videoSrc);
               console.log("value of hevcVideo is", isHEVCSupported);
-              console.log("value of hevcVideo is", hevc);
+              console.log("value of hevcVideo2 is", hevc);
               setIsLoading(false);
               onLoadedData?.();
             }}
