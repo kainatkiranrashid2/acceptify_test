@@ -18,6 +18,7 @@ const Header = () => {
           </div>
           <div className="2xl:h-[393px] 2xl:w-[715px] xl:h-[301px] xl:w-[547px] lg:h-[232px] lg:w-[421px] md:h-[186px] md:w-[318px] ">
             <img
+              loading="lazy"
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735210797/components/devices_header/header_devices.png"
               alt=""
               className="w-full h-full object-contain mx-auto"
@@ -27,6 +28,7 @@ const Header = () => {
         <div className="flex flex-col justify-center items-center mt-[40px] mb-20 md:hidden  lg:ml-20  relative z-10 ">
           <div className="w-[300px] h-[232px] sm:w-[397px] sm:h-[232px]  ">
             <img
+              loading="lazy"
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735296359/components/devices_header/final_devices.png"
               alt=""
               className="w-full h-full object-contain mx-auto"

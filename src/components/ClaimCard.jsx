@@ -11,6 +11,7 @@ const ClaimCard = ({ icon, heading, details }) => {
             icon.alt === "online_svg" ? "w-[100px]" : "w-[62px]"
           } h-[62px]`}>
           <img
+            loading="lazy"
             src={icon.src}
             alt={icon.alt}
             className="w-full h-full object-contain"

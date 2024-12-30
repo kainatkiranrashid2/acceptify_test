@@ -77,6 +77,7 @@ const HeroSection = () => {
                 src="./images/arrow.svg"
                 className="size-3 mt-[4px]"
                 alt="arrow"
+                loading="lazy"
               />
             </button>
           </div>
@@ -100,6 +101,7 @@ const HeroSection = () => {
               src="./images/arrow.svg"
               className="size-3 mt-[4px]"
               alt="arrow"
+              loading="lazy"
             />
           </button>
         </div>

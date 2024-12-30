@@ -70,6 +70,7 @@ const OurCustomers = () => {
                   <img
                     src={logo}
                     alt={`Customer logo ${index + 1}`}
+                    loading="lazy"
                     className={`${
                       index === 16
                         ? "h-[45px] object-contain"
@@ -92,6 +93,7 @@ const OurCustomers = () => {
                     className={`h-7 object-contain ${
                       index === 16 ? "!h-[18px] " : ""
                     }`}
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -107,6 +109,7 @@ const OurCustomers = () => {
                     className={`h-7 md:h-8 object-contain ${
                       index === 16 ? "h-10 md:h-20" : ""
                     }`}
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -126,6 +129,7 @@ const OurCustomers = () => {
                         ? "h-[45px] object-contain"
                         : "h-12  object-contain "
                     }`}
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -143,6 +147,7 @@ const OurCustomers = () => {
                     className={`w-full h-7 object-contain ${
                       index === 16 ? "!h-[18px]  " : ""
                     }`}
+                    loading="lazy"
                   />
                 </div>
               ))}

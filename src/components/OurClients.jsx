@@ -155,6 +155,7 @@ const OurClients = ({ classText }) => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}>
               <img
+                loading="lazy"
                 src={logo}
                 alt={`Client logo ${index + 1}`}
                 className={`h-[16px] sm:h-[31px] lg:h-full object-contain ${classText}`}

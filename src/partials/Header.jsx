@@ -107,6 +107,7 @@ const Header = () => {
                 src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
                 className="bg-transparent h-full w-auto object-contain"
                 alt="acceptify_logo"
+                loading="lazy"
               />
             </a>
 
@@ -117,6 +118,7 @@ const Header = () => {
                 src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
                 className="bg-transparent h-full w-auto object-contain"
                 alt="acceptify_logo"
+                loading="lazy"
               />
             </a>
 
@@ -173,6 +175,7 @@ const Header = () => {
                             src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
                             className="bg-transparent h-full w-auto object-contain"
                             alt="acceptify_logo"
+                            loading="lazy"
                           />
                         </a>
                         <a
@@ -182,6 +185,7 @@ const Header = () => {
                             src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
                             className="bg-transparent h-full w-auto object-contain"
                             alt="acceptify_logo"
+                            loading="lazy"
                           />
                         </a>
                       </div>

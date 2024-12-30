@@ -27,6 +27,7 @@ export const ScrollImageSequenceBase = ({
         className={`w-full h-full object-contain transition-opacity duration-150 ${
           isLoading ? "opacity-0" : "opacity-100"
         }`}
+        loading="lazy"
       />
 
       <div className="absolute bottom-4 left-4 right-4 h-1 bg-gray-200 rounded-full">

@@ -284,6 +284,7 @@ const VideoScrollComponent = () => {
                     className="w-full h-full transform rotate-12"
                     src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
                     alt="Rocket"
+                    loading="lazy"
                   />
                 </div>
 

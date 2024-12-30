@@ -39,6 +39,7 @@ const IndustriesSection = () => {
           src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734065022/components/our_customers_dark_mode/industries_bg.png"
           alt=""
           className="w-1/2"
+          loading="lazy"
         />
       </div>
       {/* Content Layer */}

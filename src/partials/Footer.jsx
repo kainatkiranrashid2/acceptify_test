@@ -19,6 +19,7 @@ const Footer = () => {
                   src="/assets/footer/acceptify_icon.png"
                   alt="Logo"
                   className="h-14 w-14"
+                  loading="lazy"
                 />
               </div>
 

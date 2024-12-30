@@ -31,11 +31,13 @@ function SampleNextArrow(props) {
       <img
         src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734514251/components/more_features/chevron_left_light.svg"
         alt=""
+        loading="lazy"
         className="block dark:hidden "
       />
       <img
         src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734515439/components/more_features/chevron_dark_mode.svg"
         alt=""
+        loading="lazy"
         className="hidden dark:block transform rotate-180"
       />
     </div>
@@ -53,11 +55,13 @@ function SamplePrevArrow(props) {
       <img
         src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734514243/components/more_features/chevro_right_light.svg"
         alt=""
+        loading="lazy"
         className="block dark:hidden"
       />
       <img
         src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734515439/components/more_features/chevron_dark_mode.svg"
         alt=""
+        loading="lazy"
         className="hidden dark:block"
       />
     </div>
@@ -77,6 +81,7 @@ const CarouselItem = ({ title, description, image, id }) => (
         className={` mx-auto morefeatures__card-img${id} dark:text-white  max-w-full relative z-10`}
         src={image}
         alt={title}
+        loading="lazy"
       />
     </div>
     <div className="carousel-item-content">
@@ -215,6 +220,7 @@ const MoreFeatures = () => {
                       className={` mx-auto morefeatures__card-img${index} dark:text-white  max-w-full relative `}
                       src={item.image}
                       alt={item.title}
+                      loading="lazy"
                     />
                     <p className="morefeatures__card-description dark:text-white text-center relative ">
                       {item.description}

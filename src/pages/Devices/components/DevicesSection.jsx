@@ -159,6 +159,7 @@ const DevicesSection = () => {
                             src="./images/arrow.svg"
                             className="size-3 mt-[4px]"
                             alt=""
+                            loading="lazy"
                           />
                         </button>
                       </div>
@@ -219,6 +220,7 @@ const DevicesSection = () => {
                             src="./images/arrow.svg"
                             className="size-3 mt-[4px]"
                             alt=""
+                            loading="lazy"
                           />
                         </button>
                       </div>
