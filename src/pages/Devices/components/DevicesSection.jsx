@@ -165,7 +165,7 @@ const DevicesSection = () => {
                             </li>
                           ))}
                         </ul>
-                        <button className="my-8  bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[16px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg ">
+                        <button className="my-8  bg-purple-500 hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[16px] tracking-tight leading-6  flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg ">
                           Start With Payments
                           <img
                             src="./images/arrow.svg"
