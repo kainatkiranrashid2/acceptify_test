@@ -2,33 +2,23 @@ import React, { useState, forwardRef, useEffect } from "react";
 import { supportsHEVCAlpha } from "../CheckBrowserCapability";
 
 const CloudinaryResponsiveVideo = forwardRef(
-  ({ hevcVideo, webMVideo, className, onLoadedData, ...props }, ref) => {
+  (
+    { hevcVideo, hevcMobile, webMVideo, className, onLoadedData, ...props },
+    ref
+  ) => {
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
     const [errorDetails, setErrorDetails] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
     const [hevc, setHevc] = useState(null);
 
     useEffect(() => {
-      const video = document.createElement("video");
-      console.log(
-        "HEVC/H.265 support:",
-        video.canPlayType('video/mp4; codecs="hvc1"')
-      );
-      console.log(
-        "VP9 support:",
-        video.canPlayType('video/webm; codecs="vp9"')
-      );
-      console.log(
-        "Is Safari:",
-        /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-      );
-      console.log(
-        "Is Mobile:",
-        /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-      );
+      if (window.innerWidth <= 768) {
+        setIsMobile(true);
+      }
     }, []);
+
     useEffect(() => {
-      console.log(supportsHEVCAlpha());
       setHevc(supportsHEVCAlpha());
     }, []);
     // Get the correct video URL based on device width
@@ -57,8 +47,9 @@ const CloudinaryResponsiveVideo = forwardRef(
       // Choose transformation based on video format and device
       let finalTransformation = "";
       if (url.includes("hevc")) {
+        console.log("hevcccc");
+        console.log(url);
         // HEVC specific transformations
-        finalTransformation = isMobile ? "" : "";
       } else {
         // WebM specific transformations
         finalTransformation = isMobile
@@ -69,15 +60,14 @@ const CloudinaryResponsiveVideo = forwardRef(
       console.log(`${baseUrl}${finalTransformation}${videoPath}`);
       return `${baseUrl}${finalTransformation}${videoPath}`;
     };
-
-    console.log("value of hevcVideo2 is", hevc);
+    const isMobileVideo = isMobile ? "mobile" : "desktop";
+    console.log(isMobileVideo);
     const videoSrc = hevc
-      ? getTransformedUrl(hevcVideo)
+      ? isMobile
+        ? getTransformedUrl(hevcMobile)
+        : getTransformedUrl(hevcVideo)
       : getTransformedUrl(webMVideo);
-    const kainat = hevc
-      ? "hevcVideo Should be played"
-      : "webm Should be played";
-    console.log(kainat);
+
     const handleRetry = () => {
       if (ref?.current) {
         console.log("Retrying video load:", videoSrc);
@@ -121,7 +111,6 @@ const CloudinaryResponsiveVideo = forwardRef(
             } transition-opacity duration-300`}
             onLoadedData={() => {
               console.log("Video loaded successfully:", videoSrc);
-              console.log("value of hevcVideo2 is", hevc);
               setIsLoading(false);
               onLoadedData?.();
             }}

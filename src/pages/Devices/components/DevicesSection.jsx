@@ -28,12 +28,13 @@ const DevicesSection = () => {
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976126/components/devices_devices_section/qpixel_device.webm",
       hevcVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042842/components/devices_devices_section/qpixel_hevc.mov",
+      hevcMobile:
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555395/components/devices_devices_section/mobile_videos/qpixel_hevc.mov",
     },
     {
       heading: "QPP 451",
       points: [
         "PIN entry keypad",
-
         "Bluetooth low energy interface simplifies pairing to Android, iOS and Windows",
         "Contact and contactless payment interfaces, with optional magnetic stripe reader",
       ],
@@ -41,6 +42,8 @@ const DevicesSection = () => {
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976455/components/devices_devices_section/qpp_451_device.webm",
       hevcVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042771/components/devices_devices_section/qpp_451_hevc.mov",
+      hevcMobile:
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555361/components/devices_devices_section/mobile_videos/qpp_451_hevc.mov",
     },
     {
       heading: "QPP 600",
@@ -54,6 +57,8 @@ const DevicesSection = () => {
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976382/components/devices_devices_section/qpp_600_device.webm",
       hevcVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042698/components/devices_devices_section/qpp_600_hevc.mov",
+      hevcMobile:
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555301/components/devices_devices_section/mobile_videos/qpp_600_hevc.mov",
     },
     {
       heading: "QPR",
@@ -66,6 +71,8 @@ const DevicesSection = () => {
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976201/components/devices_devices_section/qpr_device.webm",
       hevcVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042489/components/devices_devices_section/qpr_hevc.mov",
+      hevcMobile:
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555064/components/devices_devices_section/mobile_videos/qpr_hevc.mov",
     },
     {
       heading: "QPP Pro",
@@ -78,6 +85,8 @@ const DevicesSection = () => {
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976305/components/devices_devices_section/qpp_device.webm",
       hevcVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042547/components/devices_devices_section/qpp_pro_hevc.mov",
+      hevcMobile:
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555237/components/devices_devices_section/mobile_videos/qpp_pro_hevc.mov",
     },
     {
       heading: "QPP Pro Plus",
@@ -90,6 +99,8 @@ const DevicesSection = () => {
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976247/components/devices_devices_section/qpp_pro_device.webm",
       hevcVideo:
         "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042632/components/devices_devices_section/qpp_pro_plus_hevc.mov",
+      hevcMobile:
+        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555196/components/devices_devices_section/mobile_videos/qpp_pro_plus_hevc.mov",
     },
   ];
   return (
@@ -131,6 +142,7 @@ const DevicesSection = () => {
                           muted
                           playsInline
                           hevcVideo={device.hevcVideo}
+                          hevcMobile={device.hevcMobile}
                           webMVideo={device.webMVideo}
                           onLoadedData={() => handleVideoLoaded(index)}
                         />
@@ -196,6 +208,7 @@ const DevicesSection = () => {
                           muted
                           playsInline
                           hevcVideo={device.hevcVideo}
+                          hevcMobile={device.hevcMobile}
                           webMVideo={device.webMVideo}
                           onLoadedData={() => handleVideoLoaded(index)}
                         />
