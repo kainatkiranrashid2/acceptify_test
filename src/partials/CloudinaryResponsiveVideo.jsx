@@ -146,6 +146,7 @@ const CloudinaryResponsiveVideo = forwardRef(
               setIsLoading(false);
             }}
             {...props}
+            playsInline // Important for iOS
           />
         )}
       </div>
