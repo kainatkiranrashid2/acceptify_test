@@ -228,7 +228,7 @@ const DevicesSection = () => {
                             </li>
                           ))}
                         </ul>
-                        <button className="mb-6 mt-8 mx-auto  bg-primary hover:bg-[#51A805] sm:text-[14px]/[20px]    flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-2 lg:py-[10px] rounded-lg ">
+                        <button className="mb-6 mt-8 mx-auto  bg-blue hover:bg-[#51A805] sm:text-[14px]/[20px]    flex flex-row justify-center items-center gap-3 text-white  font-semibold px-3 py-2 lg:py-[10px] rounded-lg ">
                           Get Started
                           <img
                             src="./images/arrow.svg"
