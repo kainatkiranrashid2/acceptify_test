@@ -75,7 +75,8 @@ const CloudinaryResponsiveVideo = forwardRef(
           ? "c_limit,w_420,vc_vp9,q_auto:best,br_2m/"
           : "c_limit,w_960,vc_vp9,q_auto:best,br_4m/";
       }
-
+      console.log("myfinaltesting");
+      console.log(`${baseUrl}${finalTransformation}${videoPath}`);
       return `${baseUrl}${finalTransformation}${videoPath}`;
     };
 
