@@ -18,6 +18,8 @@ const CloudinaryResponsiveVideo = forwardRef(
     const [hasError, setHasError] = useState(false);
     const [errorDetails, setErrorDetails] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [videoSrc, setVideoSrc] = useState("");
+
     const [hevc, setHevc] = useState(null);
 
     useEffect(() => {
@@ -81,11 +83,18 @@ const CloudinaryResponsiveVideo = forwardRef(
     };
     const isMobileVideo = isMobile ? "mobile" : "desktop";
     console.log(isMobileVideo);
-    const videoSrc = hevc
-      ? isMobile
-        ? getTransformedUrl(hevcMobile)
-        : getTransformedUrl(hevcVideo)
-      : getTransformedUrl(webMVideo);
+    useEffect(() => {
+      const loadVideo = async () => {
+        const source = hevc
+          ? isMobile
+            ? await getTransformedUrl(hevcMobile)
+            : await getTransformedUrl(hevcVideo)
+          : await getTransformedUrl(webMVideo);
+        setVideoSrc(source);
+      };
+
+      loadVideo();
+    }, [hevc, isMobile, hevcMobile, hevcVideo, webMVideo]); // Only runs when these dependencies change
 
     const handleRetry = () => {
       if (ref?.current) {
