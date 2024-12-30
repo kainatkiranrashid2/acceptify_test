@@ -68,7 +68,7 @@ const CloudinaryResponsiveVideo = forwardRef(
       }
       console.log("myfinaltesting");
       console.log(`${baseUrl}${finalTransformation}${videoPath}`);
-      const fullUrl = `${baseUrl}${finalTransformation}${videoPath}`;
+      const fullUrl = `${baseUrl}${finalTransformation}${videoPath}?v=${Date.now()}`;
 
       try {
         const response = await fetch(fullUrl, { method: "HEAD" });
