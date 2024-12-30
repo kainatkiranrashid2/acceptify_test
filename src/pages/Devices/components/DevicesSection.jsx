@@ -246,7 +246,7 @@ const DevicesSection = () => {
           </div>
         </div>
       </div>
-      {/* <CTASection /> */}
+      <CTASection />
     </section>
   );
 };
