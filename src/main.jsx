@@ -17,8 +17,9 @@ import Test from "./pages/Test";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>{/* These routes use a template component that include header, footer, etc. */}
+      <Routes key={Date.now()}>
+        <Route path="/" element={<Layout />}>
+          {/* These routes use a template component that include header, footer, etc. */}
           <Route index element={<Home />} />
           <Route path="devices" element={<Devices />} />
         </Route>
