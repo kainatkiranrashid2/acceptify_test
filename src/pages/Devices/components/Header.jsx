@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <section
-      className="h-full relative w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734934920/components/devices_header/devices_header_bg.jpg)]
+      className="h-full w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734934920/components/devices_header/devices_header_bg.jpg)]
     // dark:bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734935940/components/devices_header/devices_header_dark_bg.jpg)]">
       <div className="absolute dark:hidden -top-64 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl" />
       <div className="absolute hidden dark:block -top-64 -left-32 w-[376px] h-[376px] bg-[#431C95] rounded-full blur-3xl" />
