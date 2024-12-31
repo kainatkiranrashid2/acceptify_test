@@ -11,7 +11,7 @@ gsap.registerPlugin(MotionPathPlugin);
 const videoData = [
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734684092/components/scroll_animation/stll_pancake_01.webm",
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684092/components/scroll_animation/stll_pancake_01.webm",
     url_webm_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684092/components/scroll_animation/stll_pancake_01.webm",
     url_mov:
@@ -25,7 +25,7 @@ const videoData = [
   },
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734684222/components/scroll_animation/stll_pancake_02.webm",
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684222/components/scroll_animation/stll_pancake_02.webm",
     url_webm_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684222/components/scroll_animation/stll_pancake_02.webm",
     url_mov:
@@ -40,7 +40,7 @@ const videoData = [
   },
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734684141/components/scroll_animation/stll_pancake_03.webm",
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684141/components/scroll_animation/stll_pancake_03.webm",
     url_webm_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684141/components/scroll_animation/stll_pancake_03.webm",
     url_mov:
@@ -55,7 +55,7 @@ const videoData = [
   },
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734684263/components/scroll_animation/stll_pancake_04.webm",
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684263/components/scroll_animation/stll_pancake_04.webm",
     url_webm_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684263/components/scroll_animation/stll_pancake_04.webm",
     url_mov:
@@ -70,7 +70,7 @@ const videoData = [
   },
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734684454/components/scroll_animation/code_snippet.webm",
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684454/components/scroll_animation/code_snippet.webm",
     url_webm_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684454/components/scroll_animation/code_snippet.webm",
     url_mov:
@@ -93,7 +93,7 @@ const videoData = [
   },
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734687459/components/scroll_animation/lightning_web.webm",
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734687459/components/scroll_animation/lightning_web.webm",
     url_webm_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734687459/components/scroll_animation/lightning_web.webm",
     url_mov:
