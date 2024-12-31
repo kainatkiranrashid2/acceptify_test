@@ -118,7 +118,7 @@ const DevicesSection = () => {
           <div className="hidden md:block">
             {devices.map((device, index) => (
               <div
-                className={`mx-auto mb-20 px-[60px] py-[30px] rounded-2xl items-center 2xl:w-[1200px] xl:w-[1000px] lg:w-[800px] bg-white dark:bg-gradient-to-l ${
+                className={`mx-auto mb-20 px-[60px] py-[30px] rounded-2xl items-center 2xl:w-[1200px] xl:w-[1000px] lg:w-[800px] md:w-[717px] bg-white dark:bg-gradient-to-l ${
                   index % 2 === 0
                     ? "dark:from-[#1D3B9D] dark:to-[#0C0221] "
                     : "dark:from-[#0C0221] dark:to-[#1D3B9D]"
