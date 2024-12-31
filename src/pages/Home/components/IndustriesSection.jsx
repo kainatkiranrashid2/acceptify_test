@@ -1,29 +1,20 @@
-import { useEffect, useRef, useState } from "react";
-import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
-import LoadingVideo from "../../../partials/LoadingVideo.jsx";
+import { useRef, useState } from "react";
+import CloudinaryResponsiveVideo from "../../../partials/CloudinaryResponsiveVideo.jsx";
 
 const IndustriesSection = () => {
   const mobilePlayerRef = useRef(null);
   const desktopPlayerRef = useRef(null);
-  const [isHEVCSupported, setIsHEVCSupported] = useState(false);
   const [videoError, setVideoError] = useState(false);
 
-  useEffect(() => {
-    const checkSupport = async () => {
-      const supported = await supportsHEVCAlpha();
-      setIsHEVCSupported(supported);
-      console.log("HEVC Support:", supported);
-    };
+  const hevcVideo =
+    "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov";
+  const webMVideo =
+    "https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm";
+  const hevcMobile =
+    "https://res.cloudinary.com/dq5guzzge/video/upload/v1735630910/components/industries_section/mobile_version/industries_section.mov";
 
-    checkSupport();
-  }, []);
-
-  const videoSrc = isHEVCSupported
-    ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov"
-    : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm";
-
-  const handleLoadedData = () => {
-    console.log("Video loaded successfully:", videoSrc);
+  const handleVideoLoaded = () => {
+    console.log("Video loaded successfully:");
   };
 
   const handleError = (error) => {
@@ -49,19 +40,19 @@ const IndustriesSection = () => {
 
           <div className="mx-auto w-[222px] h-[214px] sm:w-[247px] sm:h-[239px] my-8">
             {!videoError && (
-              <LoadingVideo
-                className="w-full h-full object-contain"
-                src={videoSrc}
+              <CloudinaryResponsiveVideo
                 ref={mobilePlayerRef}
+                className="h-full w-full object-contain"
                 autoPlay
                 loop
                 muted
-                controlsList="nodownload"
-                disablePictureInPicture
                 playsInline
-                onLoadedData={handleLoadedData}
+                hevcVideo={hevcVideo}
+                hevcMobile={hevcMobile}
+                webMVideo={webMVideo}
                 onError={handleError}
                 onContextMenu={(e) => e.preventDefault()}
+                onLoadedData={() => handleVideoLoaded()}
               />
             )}
           </div>
@@ -88,19 +79,19 @@ const IndustriesSection = () => {
           </div>
           <div className="w-1/2 h-full">
             {!videoError && (
-              <LoadingVideo
-                className="w-full h-full object-contain"
-                src={videoSrc}
+              <CloudinaryResponsiveVideo
                 ref={desktopPlayerRef}
+                className="h-full w-full object-contain"
                 autoPlay
                 loop
                 muted
-                controlsList="nodownload"
-                disablePictureInPicture
                 playsInline
-                onLoadedData={handleLoadedData}
+                hevcVideo={hevcVideo}
+                hevcMobile={hevcMobile}
+                webMVideo={webMVideo}
                 onError={handleError}
                 onContextMenu={(e) => e.preventDefault()}
+                onLoadedData={() => handleVideoLoaded()}
               />
             )}
           </div>
