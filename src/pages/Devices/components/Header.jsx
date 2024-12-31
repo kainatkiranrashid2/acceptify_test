@@ -3,8 +3,11 @@ import React from "react";
 const Header = () => {
   return (
     <section
-      className="h-full  w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734934920/components/devices_header/devices_header_bg.jpg)]
+      className="h-full relative w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734934920/components/devices_header/devices_header_bg.jpg)]
     // dark:bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734935940/components/devices_header/devices_header_dark_bg.jpg)]">
+      <div className="absolute dark:hidden -top-64 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl" />
+      <div className="absolute hidden dark:block -top-64 -left-32 w-[376px] h-[376px] bg-[#431C95] rounded-full blur-3xl" />
+      <div className="absolute dark:hidden -top-5 -left-5 w-32 h-32 bg-white/30 rounded-full blur-3xl" />
       <div className="container">
         <div className="hidden mt-[132px] mb-20 md:flex sm:ml-6 md:ml-10 lg:ml-20  relative z-10 w-[1376] h-[393]  items-center md:gap-10 lg:gap-20">
           <div className=" 2xl:w-[500px] lg:w-[425px] md:w-[375px]">
