@@ -113,7 +113,7 @@ const DevicesSection = () => {
             <p className="mx-20 md:mx-0 text-center dark:text-white">
               Building a business is hard. Getting paid shouldn&apos;t be.
             </p>
-            <span className="mt-6 h-[2px] w-[14rem] sm:w-[28rem] bg-black opacity-50"></span>
+            <span className="mt-6 h-[2px] w-[14rem] sm:w-[28rem] bg-black opacity-50 dark:bg-[#EBEBEB] dark:opacity-50"></span>
           </div>
           <div className="hidden md:block">
             {devices.map((device, index) => (
