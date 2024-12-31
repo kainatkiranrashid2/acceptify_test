@@ -1,28 +1,20 @@
-import { useEffect, useRef, useState } from "react";
-import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
-import LoadingVideo from "../../../partials/LoadingVideo.jsx";
+import { useRef, useState } from "react";
+import CloudinaryResponsiveVideo from "../../../partials/CloudinaryResponsiveVideo.jsx";
 
 const BYOP = () => {
   const mobilePlayerRef = useRef(null);
   const desktopPlayerRef = useRef(null);
-  const [isHEVCSupported, setIsHEVCSupported] = useState(false);
   const [videoError, setVideoError] = useState(false);
 
-  useEffect(() => {
-    const checkSupport = async () => {
-      const supported = await supportsHEVCAlpha();
-      setIsHEVCSupported(supported);
-      console.log("HEVC Support:", supported);
-    };
+  const hevcVideo =
+    "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov";
+  const webMVideo =
+    "https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm";
+  const hevcMobile =
+    "https://res.cloudinary.com/dq5guzzge/video/upload/v1735630690/components/byop/mobile_version/bring_your_own_process.mov";
 
-    checkSupport();
-  }, []);
-
-  const videoSrc = isHEVCSupported
-    ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov"
-    : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm";
-  const handleLoadedData = () => {
-    console.log("Video loaded successfully:", videoSrc);
+  const handleVideoLoaded = () => {
+    console.log("Video loaded successfully:");
   };
 
   const handleError = (error) => {
@@ -45,19 +37,19 @@ const BYOP = () => {
 
             <div className="w-[168px] h-[130px] sm:w-[282px] md:h-[212px]">
               {!videoError && (
-                <LoadingVideo
-                  className="w-full h-full object-contain"
-                  src={videoSrc}
+                <CloudinaryResponsiveVideo
                   ref={mobilePlayerRef}
+                  className="h-full w-full object-contain"
                   autoPlay
                   loop
                   muted
-                  controlsList="nodownload"
-                  disablePictureInPicture
                   playsInline
-                  onLoadedData={handleLoadedData}
+                  hevcVideo={hevcVideo}
+                  hevcMobile={hevcMobile}
+                  webMVideo={webMVideo}
                   onError={handleError}
                   onContextMenu={(e) => e.preventDefault()}
+                  onLoadedData={() => handleVideoLoaded()}
                 />
               )}
             </div>
@@ -82,19 +74,19 @@ const BYOP = () => {
             </div>
             <div className="2xl:w-[521.88px] 2xl:h-[363px] xl:w-[467px] xl:h-[324px] lg:w-[391px] lg:h-[269.08px] md:w-[297px] md:h-[204px]">
               {!videoError && (
-                <LoadingVideo
-                  className="w-full h-full object-contain"
-                  src={videoSrc}
+                <CloudinaryResponsiveVideo
                   ref={desktopPlayerRef}
+                  className="h-full w-full object-contain"
                   autoPlay
                   loop
                   muted
-                  controlsList="nodownload"
-                  disablePictureInPicture
                   playsInline
-                  onLoadedData={handleLoadedData}
+                  hevcVideo={hevcVideo}
+                  hevcMobile={hevcMobile}
+                  webMVideo={webMVideo}
                   onError={handleError}
                   onContextMenu={(e) => e.preventDefault()}
+                  onLoadedData={() => handleVideoLoaded()}
                 />
               )}
             </div>
@@ -106,6 +98,3 @@ const BYOP = () => {
 };
 
 export default BYOP;
-
-// https://res.cloudinary.com/dq5guzzge/video/upload/v1733312259/components/represent_your_brand.webm
-// https://res.cloudinary.com/dq5guzzge/image/upload/v1733312955/components/represent_your_brand.svg
