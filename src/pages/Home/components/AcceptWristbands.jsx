@@ -12,7 +12,7 @@ const AcceptWristbands = () => {
   const hevcVideo =
     "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov";
   const webMVideo =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm";
+    "https://res.cloudinary.com/dq5guzzge/video/upload/v1735637404/components/accept_wristband/accept_wristband_webm.webm";
   const hevcMobile =
     "https://res.cloudinary.com/dq5guzzge/video/upload/v1735630616/components/accept_wristband/mobile_version/accept_wristband.mov";
 
