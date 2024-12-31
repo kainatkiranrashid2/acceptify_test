@@ -1,29 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 import LoadingVideo from "../../../partials/LoadingVideo.jsx";
+import CloudinaryResponsiveVideo from "../../../partials/CloudinaryResponsiveVideo.jsx";
 
 const AcceptWristbands = () => {
   const mobilePlayerRef = useRef(null);
   const desktopPlayerRef = useRef(null);
-  const [isHEVCSupported, setIsHEVCSupported] = useState(false);
+
   const [videoError, setVideoError] = useState(false);
 
-  useEffect(() => {
-    const checkSupport = async () => {
-      const supported = await supportsHEVCAlpha();
-      setIsHEVCSupported(supported);
-      console.log("HEVC Support:", supported);
-    };
+  const hevcVideo =
+    "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov";
+  const webMVideo =
+    "https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm";
+  const hevcMobile =
+    "https://res.cloudinary.com/dq5guzzge/video/upload/v1735630616/components/accept_wristband/mobile_version/accept_wristband.mov";
 
-    checkSupport();
-  }, []);
-
-  const videoSrc = isHEVCSupported
-    ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov"
-    : "https://res.cloudinary.com/dq5guzzge/video/upload/v1733391834/components/accept_wristband.webm";
-
-  const handleLoadedData = () => {
-    console.log("Video loaded successfully:", videoSrc);
+  const handleVideoLoaded = () => {
+    console.log("Video loaded successfully:");
   };
 
   const handleError = (error) => {
@@ -49,22 +43,20 @@ const AcceptWristbands = () => {
         <div className="mx-6 sm:mx-6 md:mx-20 md:hidden flex flex-col justify-between items-center gap-8 ">
           <h2 className="text-white text-center ">Accept Wristbands</h2>
           <div className="sm:w-[323px] sm:h-[209px]">
-            {!videoError && (
-              <LoadingVideo
-                className="w-full h-full object-contain"
-                src={videoSrc}
-                ref={mobilePlayerRef}
-                autoPlay
-                loop
-                muted
-                controlsList="nodownload"
-                disablePictureInPicture
-                playsInline
-                onLoadedData={handleLoadedData}
-                onError={handleError}
-                onContextMenu={(e) => e.preventDefault()}
-              />
-            )}
+            <CloudinaryResponsiveVideo
+              ref={mobilePlayerRef}
+              className="h-full w-full object-contain"
+              autoPlay
+              loop
+              muted
+              playsInline
+              hevcVideo={hevcVideo}
+              hevcMobile={hevcMobile}
+              webMVideo={webMVideo}
+              onError={handleError}
+              onContextMenu={(e) => e.preventDefault()}
+              onLoadedData={() => handleVideoLoaded()}
+            />
           </div>
           <p className="text-white text-center  w-[100%] sm:w-[592px]">
             Acceptify’s revolutionary wristband payment technologies offer
@@ -88,19 +80,19 @@ const AcceptWristbands = () => {
           </div>
           <div className="w-1/2">
             {!videoError && (
-              <LoadingVideo
-                className="w-full h-full object-contain"
-                src={videoSrc}
+              <CloudinaryResponsiveVideo
                 ref={desktopPlayerRef}
+                className="h-full w-full object-contain"
                 autoPlay
                 loop
                 muted
-                controlsList="nodownload"
-                disablePictureInPicture
                 playsInline
-                onLoadedData={handleLoadedData}
+                hevcVideo={hevcVideo}
+                hevcMobile={hevcMobile}
+                webMVideo={webMVideo}
                 onError={handleError}
                 onContextMenu={(e) => e.preventDefault()}
+                onLoadedData={() => handleVideoLoaded()}
               />
             )}
           </div>
@@ -111,5 +103,3 @@ const AcceptWristbands = () => {
 };
 
 export default AcceptWristbands;
-
-// https://res.cloudinary.com/dq5guzzge/image/upload/v1734072874/components/parallex_bg_element.png
