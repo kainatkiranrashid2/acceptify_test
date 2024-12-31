@@ -10,10 +10,13 @@ gsap.registerPlugin(MotionPathPlugin);
 
 const videoData = [
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684092/components/scroll_animation/stll_pancake_01.webm",
+    url_webm:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734684092/components/scroll_animation/stll_pancake_01.webm",
+    url_webm_mob_ver:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684092/components/scroll_animation/stll_pancake_01.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685197/components/scroll_animation/still_pancake_01.mov",
-    mobile_version:
+    url_mov_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631152/components/scroll_animation/mobile_version/pancake_01.mov",
     title: "Secure, Certified, Lightning Fast Enterprise Payments Anywhere",
     subtitle:
@@ -21,10 +24,13 @@ const videoData = [
     highlightedWords: ["Secure,", "Certified,", "Lightning Fast"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684222/components/scroll_animation/stll_pancake_02.webm",
+    url_webm:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734684222/components/scroll_animation/stll_pancake_02.webm",
+    url_webm_mob_ver:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684222/components/scroll_animation/stll_pancake_02.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685199/components/scroll_animation/still_pancake_02.mov",
-    mobile_version:
+    url_mov_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631236/components/scroll_animation/mobile_version/pancake_02.mov",
     title: "Protect your Operation and Reputation",
     subtitle:
@@ -33,10 +39,13 @@ const videoData = [
     highlightedWords: ["Operation", "and", "Reputation"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684141/components/scroll_animation/stll_pancake_03.webm",
+    url_webm:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734684141/components/scroll_animation/stll_pancake_03.webm",
+    url_webm_mob_ver:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684141/components/scroll_animation/stll_pancake_03.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685200/components/scroll_animation/still_pancake_03.mov",
-    mobile_version:
+    url_mov_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631274/components/scroll_animation/mobile_version/pancake_03.mov",
     title:
       "Acceptify is PCI-P2PE Certified Ensuring Compliance to the Industry Highest Standard",
@@ -45,10 +54,13 @@ const videoData = [
     highlightedWords: ["PCI-P2PE Certified"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684263/components/scroll_animation/stll_pancake_04.webm",
+    url_webm:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734684263/components/scroll_animation/stll_pancake_04.webm",
+    url_webm_mob_ver:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684263/components/scroll_animation/stll_pancake_04.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685189/components/scroll_animation/still_pancake_04.mov",
-    mobile_version:
+    url_mov_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631346/components/scroll_animation/mobile_version/pancake_04.mov",
     title:
       "Acceptify Simplifying PCI Security Compliance for Online and Offline Payments",
@@ -57,11 +69,14 @@ const videoData = [
     highlightedWords: ["Simplifying", "PCI Security Compliance"],
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684454/components/scroll_animation/code_snippet.webm",
+    url_webm:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734684454/components/scroll_animation/code_snippet.webm",
+    url_webm_mob_ver:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684454/components/scroll_animation/code_snippet.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685636/components/scroll_animation/code_snip.mov",
     title: "Implement Ultra-Secure Payments with a few Lines of Code",
-    mobile_version:
+    url_mov_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631430/components/scroll_animation/mobile_version/code_snippet.mov",
     subtitle:
       "We’ve done all the heavy lifting for you. Use the Acceptify’s APIs to connect to a payment device, take a payment, submit the transaction to your processor and receive the approval or declined decision – with just a few lines of code.",
@@ -77,10 +92,13 @@ const videoData = [
     },
   },
   {
-    url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687459/components/scroll_animation/lightning_web.webm",
+    url_webm:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_960,vc_vp9,q_auto:best,br_4m/v1734687459/components/scroll_animation/lightning_web.webm",
+    url_webm_mob_ver:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734687459/components/scroll_animation/lightning_web.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685754/components/scroll_animation/lightning_fast.mov",
-    mobile_version:
+    url_mov_mob_ver:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631516/components/scroll_animation/mobile_version/lighting_fast.mov",
     title: "Lightning Fast Payments",
     subtitle:
@@ -103,9 +121,11 @@ const VideoScrollComponent = () => {
   useEffect(() => {
     const urls = videoData.map((item) => {
       if (window.innerWidth <= 1023) {
-        return supportsHEVCAlpha() ? item.mobile_version : item.url;
+        return supportsHEVCAlpha()
+          ? item.url_mov_mob_ver
+          : item.url_webm_mob_ver;
       } else {
-        return supportsHEVCAlpha() ? item.url_mov : item.url;
+        return supportsHEVCAlpha() ? item.url_mov : item.url_webm;
       }
     });
     setVideoUrls(urls);
