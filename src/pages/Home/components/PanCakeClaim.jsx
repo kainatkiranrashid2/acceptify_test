@@ -13,6 +13,8 @@ const videoData = [
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684092/components/scroll_animation/stll_pancake_01.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685197/components/scroll_animation/still_pancake_01.mov",
+    mobile_version:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631152/components/scroll_animation/mobile_version/pancake_01.mov",
     title: "Secure, Certified, Lightning Fast Enterprise Payments Anywhere",
     subtitle:
       "Acceptify is designed to meet the stringent security standards of the Payment Card Industry's Data Security Standard (PCI-DSS). Customer's data is always strongly encrypted.",
@@ -22,15 +24,20 @@ const videoData = [
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684222/components/scroll_animation/stll_pancake_02.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685199/components/scroll_animation/still_pancake_02.mov",
+    mobile_version:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631236/components/scroll_animation/mobile_version/pancake_02.mov",
     title: "Protect your Operation and Reputation",
     subtitle:
       "Acceptify protects against harmful security breaches that negatively impact your brand, disrupts your operations, increases your liabilities and decreases your revenue.",
+
     highlightedWords: ["Operation", "and", "Reputation"],
   },
   {
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684141/components/scroll_animation/stll_pancake_03.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685200/components/scroll_animation/still_pancake_03.mov",
+    mobile_version:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631274/components/scroll_animation/mobile_version/pancake_03.mov",
     title:
       "Acceptify is PCI-P2PE Certified Ensuring Compliance to the Industry Highest Standard",
     subtitle:
@@ -41,6 +48,8 @@ const videoData = [
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734684263/components/scroll_animation/stll_pancake_04.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685189/components/scroll_animation/still_pancake_04.mov",
+    mobile_version:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631346/components/scroll_animation/mobile_version/pancake_04.mov",
     title:
       "Acceptify Simplifying PCI Security Compliance for Online and Offline Payments",
     subtitle:
@@ -52,6 +61,8 @@ const videoData = [
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685636/components/scroll_animation/code_snip.mov",
     title: "Implement Ultra-Secure Payments with a few Lines of Code",
+    mobile_version:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631430/components/scroll_animation/mobile_version/code_snippet.mov",
     subtitle:
       "We’ve done all the heavy lifting for you. Use the Acceptify’s APIs to connect to a payment device, take a payment, submit the transaction to your processor and receive the approval or declined decision – with just a few lines of code.",
     highlightedWords: ["Ultra-Secure Payments"],
@@ -69,6 +80,8 @@ const videoData = [
     url: "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687459/components/scroll_animation/lightning_web.webm",
     url_mov:
       "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685754/components/scroll_animation/lightning_fast.mov",
+    mobile_version:
+      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631516/components/scroll_animation/mobile_version/lighting_fast.mov",
     title: "Lightning Fast Payments",
     subtitle:
       "Enterprises that need speedy payments choose Acceptify.  Our payment technologies are designed around “No More Spinners”. Spinners are painful when customers are waiting. Acceptify helps you succeed in high throughput payment workflows where speed matters.",
@@ -88,9 +101,13 @@ const VideoScrollComponent = () => {
   const rocketRefs = useRef([]);
 
   useEffect(() => {
-    const urls = videoData.map((item) =>
-      supportsHEVCAlpha() ? item.url_mov : item.url
-    );
+    const urls = videoData.map((item) => {
+      if (window.innerWidth <= 1023) {
+        return supportsHEVCAlpha() ? item.mobile_version : item.url;
+      } else {
+        return supportsHEVCAlpha() ? item.url_mov : item.url;
+      }
+    });
     setVideoUrls(urls);
   }, []);
 
@@ -238,7 +255,7 @@ const VideoScrollComponent = () => {
               <div className="w-[280px] h-[220px] sm:w-[489px] sm:h-[182px] md:w-[489px] md:h-[300px] mx-auto mt-[60px] sm:mt-20 md:mt-[5.5rem] bg-transparent dark:bg-transparent">
                 <LoadingPancakeVideo
                   src={videoUrls[index]}
-                  className="w-full h-full max-h-full object-contain sm:object-cover bg-transparent"
+                  className="w-full h-full max-h-full object-contain  bg-transparent"
                   autoPlay
                   loop
                   muted
