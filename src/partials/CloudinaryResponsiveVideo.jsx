@@ -103,6 +103,7 @@ const CloudinaryResponsiveVideo = forwardRef(
             ref={ref}
             key={videoSrc} // Force re-render when src changes
             src={videoSrc}
+            preload="metadata"
             className={`${className} ${
               isLoading ? "opacity-0" : "opacity-100"
             } transition-opacity duration-300`}

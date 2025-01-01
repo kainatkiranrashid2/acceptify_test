@@ -93,6 +93,7 @@ const LoadingVideo = forwardRef(
         ) : (
           <video
             ref={ref}
+            preload="metadata"
             src={src} // This was missing before
             className={`${className} ${
               isLoading ? "opacity-0" : "opacity-100"

@@ -64,6 +64,7 @@ const LoadingPancakeVideo = forwardRef(
               }
               setVideoElement(el);
             }}
+            preload="metadata"
             className={`${className} !top-1/2 ${
               isLoading ? "opacity-0" : "opacity-100"
             } transition-opacity duration-300`}
