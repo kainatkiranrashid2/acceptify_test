@@ -12,6 +12,7 @@ import Layout from "./App";
 import Home from "./pages/Home";
 import Devices from "./pages/Devices";
 import Test from "./pages/Test";
+import Developers from "./pages/Developers";
 
 // Place routing at root level of the application to have one location to manage
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           {/* These routes use a template component that include header, footer, etc. */}
           <Route index element={<Home />} />
           <Route path="devices" element={<Devices />} />
+          <Route path="developers" element={<Developers />} />
         </Route>
         {/* These routes do not have the header and footer template  */}
         <Route path="test" element={<Test />} />

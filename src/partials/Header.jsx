@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "../partials/ThemeToggle";
 
-import TextComponent from "../components/TextComponent";
 import { motion, AnimatePresence } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 
@@ -29,7 +28,7 @@ const NavbarMenu = [
   {
     id: 4,
     title: "Developers",
-    path: "/industries",
+    path: "/developers",
   },
   {
     id: 5,

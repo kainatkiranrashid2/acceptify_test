@@ -1,27 +1,46 @@
-import { Fragment } from "react";
-import Hero from "./components/Hero";
-import PanCakeClaim from "./components/PanCakeClaim";
-import IndustriesSection from "./components/IndustriesSection";
+import React, { Fragment, Suspense } from "react";
+const Hero = React.lazy(() => import("./components/Hero"));
+const PanCakeClaim = React.lazy(() => import("./components/PanCakeClaim"));
+const IndustriesSection = React.lazy(() =>
+  import("./components/IndustriesSection")
+);
+const BeautifulBranding = React.lazy(() =>
+  import("./components/BeautifulBranding")
+);
+const AcceptWristbands = React.lazy(() =>
+  import("./components/AcceptWristbands")
+);
+const BYOP = React.lazy(() => import("./components/BYOP"));
+const MoreFeatures = React.lazy(() => import("./components/MoreFeatures"));
+const OurCustomers = React.lazy(() => import("./components/OurCustomers"));
+
 import "./index.css";
-import BeautifulBranding from "./components/BeautifulBranding";
-import AcceptWristbands from "./components/AcceptWristbands";
-import BYOP from "./components/BYOP";
-import MoreFeatures from "./components/MoreFeatures";
-import OurCustomers from "./components/OurCustomers";
 
 const Home = () => {
   document.body.className = "home";
 
+  const LoadingFallback = () => (
+    <div className="flex justify-center items-center bg-white h-[100vh]">
+      <img
+        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
+        className="h-10"
+        alt="logo"
+      />
+    </div>
+  );
+
   return (
     <Fragment>
-      <Hero />
-      <PanCakeClaim />
-      <BeautifulBranding />
-      <AcceptWristbands />
-      <BYOP />
-      <MoreFeatures />
-      <IndustriesSection />
-      <OurCustomers />
+      <Suspense fallback={<LoadingFallback />}>
+        <Hero />
+        <PanCakeClaim />
+        <BeautifulBranding />
+        <AcceptWristbands />
+        <BYOP />
+        <MoreFeatures />
+        <IndustriesSection />
+        <OurCustomers />
+      </Suspense>
     </Fragment>
   );
 };

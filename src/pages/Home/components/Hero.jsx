@@ -85,8 +85,8 @@ const HeroSection = () => {
       </div>
 
       {/* Mobile View */}
-      <div className="mx-6 sm:mb-16 mb-10 max-w-fit mt-16 sm:!w-[402px] sm:mt-[102px] text-center md:hidden relative h-full flex justify-center items-center">
-        <div className="w-full">
+      <div className="mx-auto sm:mb-16 mb-10 max-w-fit mt-16 sm:!w-[402px] sm:mt-[102px] text-center md:hidden relative h-full flex justify-center items-center">
+        <div className="w-full ">
           <h1 className="w-full  text-center px-5 sm:w-full text-white font-semibold tracking-tighter">
             Lighting Fast Mobile Enterprise Payments Anywhere
           </h1>
