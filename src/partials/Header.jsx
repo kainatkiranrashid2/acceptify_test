@@ -2,11 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "../partials/ThemeToggle";
 
-import { motion, AnimatePresence } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 
-// import { FaE } from "react-icons/fa6";
-import { FaEquals } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const NavbarMenu = [
@@ -92,11 +89,7 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-        <motion.nav
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="h-[52px] mx-4 lg:mx-6 lg:my-[19px] xl:mt-[14px]  relative z-50 ">
+        <nav className="h-[52px] mx-4 lg:mx-6 lg:my-[19px] xl:mt-[14px]  relative z-50 ">
           <div className=" bg-transparent h-full flex justify-between items-center gap-[60px]">
             {/* Logo section */}
             <a
@@ -138,9 +131,9 @@ const Header = () => {
                 </ul>
               </div>
               <div className="hidden lg:flex gap-4 items-center">
-                <motion.button className=" bg-primary flex items-center hover:bg-[#51A805] text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px]  !h-[46px] py-[17.5px] px-6 rounded-lg ">
+                <button className=" bg-primary flex items-center hover:bg-[#51A805] text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px]  !h-[46px] py-[17.5px] px-6 rounded-lg ">
                   Get Started
-                </motion.button>
+                </button>
                 <span className="mx-10 text-white">|</span>
                 <ThemeToggle />
               </div>
@@ -158,66 +151,65 @@ const Header = () => {
             </div>
           </div>
           {/* Mobile Menu */}
-          <AnimatePresence>
-            {isMobileMenuOpen && (
-              <div
-                className="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-white
+
+          {isMobileMenuOpen && (
+            <div
+              className="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-white
               z-50 overflow-y-auto dark:bg-[#06142] ">
-                <div className=" h-[100vh] dark:bg-[#06142F]">
-                  <ul className=" dark:bg-[#06142F]">
-                    <li className="flex justify-between items-center border-b-[1px] px-6 py-4 dark:border-[#5D55F9] border-[#E7E7E7">
-                      <div>
-                        <a
-                          href="/"
-                          className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  block dark:hidden items-center">
-                          <img
-                            src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
-                            className="bg-transparent h-full w-auto object-contain"
-                            alt="acceptify_logo"
-                            loading="lazy"
-                          />
-                        </a>
-                        <a
-                          href="/"
-                          className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  dark:flex hidden items-center ">
-                          <img
-                            src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
-                            className="bg-transparent h-full w-auto object-contain"
-                            alt="acceptify_logo"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                      <RxCross1
-                        className="size-4 dark:text-white"
-                        onClick={() => {
-                          setIsMobileMenuOpen(!isMobileMenuOpen);
-                          setMobileSubmenu(null);
-                        }}
-                      />
+              <div className=" h-[100vh] dark:bg-[#06142F]">
+                <ul className=" dark:bg-[#06142F]">
+                  <li className="flex justify-between items-center border-b-[1px] px-6 py-4 dark:border-[#5D55F9] border-[#E7E7E7">
+                    <div>
+                      <a
+                        href="/"
+                        className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  block dark:hidden items-center">
+                        <img
+                          src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
+                          className="bg-transparent h-full w-auto object-contain"
+                          alt="acceptify_logo"
+                          loading="lazy"
+                        />
+                      </a>
+                      <a
+                        href="/"
+                        className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  dark:flex hidden items-center ">
+                        <img
+                          src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
+                          className="bg-transparent h-full w-auto object-contain"
+                          alt="acceptify_logo"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                    <RxCross1
+                      className="size-4 dark:text-white"
+                      onClick={() => {
+                        setIsMobileMenuOpen(!isMobileMenuOpen);
+                        setMobileSubmenu(null);
+                      }}
+                    />
+                  </li>
+                  {NavbarMenu.map((menu) => (
+                    <li
+                      key={menu.id}
+                      className="border-b-[1px] py-4 px-4 mb-0 mt-0 dark:border-[#5D55F9] border-[#E7E7E7]">
+                      <Link
+                        to={menu.path}
+                        onClick={handleLinkClick}
+                        className="dark:text-white ">
+                        {menu.title}
+                      </Link>
                     </li>
-                    {NavbarMenu.map((menu) => (
-                      <li
-                        key={menu.id}
-                        className="border-b-[1px] py-4 px-4 mb-0 mt-0 dark:border-[#5D55F9] border-[#E7E7E7]">
-                        <Link
-                          to={menu.path}
-                          onClick={handleLinkClick}
-                          className="dark:text-white ">
-                          {menu.title}
-                        </Link>
-                      </li>
-                    ))}
-                    <li className="flex justify-between items-center border-b-[1px] px-4 py-8 dark:border-[#5D55F9] border-[#E7E7E7 text-black dark:text-white">
-                      Switch Theme
-                      <ThemeToggle />
-                    </li>
-                  </ul>
-                </div>
+                  ))}
+                  <li className="flex justify-between items-center border-b-[1px] px-4 py-8 dark:border-[#5D55F9] border-[#E7E7E7 text-black dark:text-white">
+                    Switch Theme
+                    <ThemeToggle />
+                  </li>
+                </ul>
               </div>
-            )}
-          </AnimatePresence>
-        </motion.nav>
+            </div>
+          )}
+        </nav>
       </div>
     </header>
   );
