@@ -12,7 +12,7 @@ const LoadingPancakeVideo = forwardRef(
     useEffect(() => {
       const options = {
         root: null,
-        rootMargin: "100px", // Start loading when video is 50px from viewport
+        rootMargin: "200px", // Start loading when video is 50px from viewport
         threshold: 0.1,
       };
 
