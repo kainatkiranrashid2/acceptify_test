@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -112,23 +112,21 @@ const VideoScrollComponent = () => {
   const videoRef = useRef(null);
   const swishLogoRef = useRef(null);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const [videoUrls, setVideoUrls] = useState([]);
+  // const [videoUrls, setVideoUrls] = useState([]);
 
   // Create refs for each section's path and rocket
   const pathRefs = useRef([]);
   const rocketRefs = useRef([]);
 
-  useEffect(() => {
-    const urls = videoData.map((item) => {
+  const videoUrls = useMemo(() => {
+    return videoData.map((item) => {
       if (window.innerWidth <= 1023) {
         return supportsHEVCAlpha()
           ? item.url_mov_mob_ver
           : item.url_webm_mob_ver;
-      } else {
-        return supportsHEVCAlpha() ? item.url_mov : item.url_webm;
       }
+      return supportsHEVCAlpha() ? item.url_mov : item.url_webm;
     });
-    setVideoUrls(urls);
   }, []);
 
   useEffect(() => {
@@ -241,10 +239,9 @@ const VideoScrollComponent = () => {
     );
   };
 
-  const handleVideoLoad = () => {
-    // Optional: Add any additional logic needed when video loads
+  const handleVideoLoad = useCallback(() => {
     console.log("Video loaded successfully");
-  };
+  }, []); // Now stable across renders
 
   return (
     <section className="dark:bg-[#06142F] relative overflow-hidden">
@@ -278,11 +275,11 @@ const VideoScrollComponent = () => {
                   className="w-full h-full max-h-full object-contain  bg-transparent"
                   autoPlay
                   loop
+                  index={index}
                   muted
                   controlsList="nodownload"
                   disablePictureInPicture
                   playsInline
-                  onContextMenu={(e) => e.preventDefault()}
                   onLoadedData={handleVideoLoad}
                 />
               </div>
@@ -343,12 +340,12 @@ const VideoScrollComponent = () => {
                   src={videoUrls[currentVideoIndex]}
                   className="w-full h-full  object-contain z-10"
                   autoPlay
+                  index={currentVideoIndex}
                   loop
                   muted
                   controlsList="nodownload"
                   disablePictureInPicture
                   playsInline
-                  onContextMenu={(e) => e.preventDefault()}
                   onLoadedData={handleVideoLoad}
                 />
               </div>

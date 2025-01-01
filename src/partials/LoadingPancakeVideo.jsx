@@ -5,17 +5,18 @@ import {
   useRef,
   useMemo,
   useCallback,
+  memo,
 } from "react";
 
-const LoadingPancakeVideo = forwardRef(
-  ({ className, onLoadedData, src, ...props }, ref) => {
+const LoadingPancakeVideo = memo(
+  forwardRef(({ className, onLoadedData, index, src, ...props }, ref) => {
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
-    const [videoElement, setVideoElement] = useState(null);
     const [isInView, setIsInView] = useState(false);
+    const videoRef = useRef(null);
     const containerRef = useRef(null);
+    const prevSrcRef = useRef(src);
 
-    // Memoize observer options
     const observerOptions = useMemo(
       () => ({
         root: null,
@@ -25,23 +26,17 @@ const LoadingPancakeVideo = forwardRef(
       []
     );
 
-    // Memoize event handlers
     const handleCanPlay = useCallback(() => {
       setIsLoading(false);
       onLoadedData?.();
-      videoElement?.play().catch((error) => {
-        console.error("Video play error:", error);
-        setHasError(true);
-      });
-    }, [videoElement, onLoadedData]);
+      videoRef.current?.play().catch(console.error);
+    }, []); // Removed onLoadedData dependency
 
-    const handleError = useCallback((error) => {
-      console.error("Video loading error:", error);
+    const handleError = useCallback(() => {
       setHasError(true);
       setIsLoading(true);
     }, []);
 
-    // Memoize class string
     const videoClassName = useMemo(() => {
       return `${className} !top-1/2 ${
         isLoading ? "opacity-0" : "opacity-100"
@@ -66,35 +61,39 @@ const LoadingPancakeVideo = forwardRef(
     }, [observerOptions]);
 
     useEffect(() => {
-      if (!videoElement || !isInView) return;
+      if (prevSrcRef.current !== src) {
+        setIsLoading(true);
+        setHasError(false);
+        prevSrcRef.current = src;
+      }
+    }, [src]);
 
-      // Add event listeners
-      videoElement.addEventListener("canplay", handleCanPlay);
-      videoElement.addEventListener("error", handleError);
+    useEffect(() => {
+      const video = videoRef.current;
+      if (!video || !isInView) return;
 
-      // Only set source if video is in view
+      video.addEventListener("canplay", handleCanPlay);
+      video.addEventListener("error", handleError);
+
       if (src && isInView) {
-        videoElement.src = src;
-        videoElement.load();
+        video.src = src;
+        video.load();
       }
 
       return () => {
-        videoElement.removeEventListener("canplay", handleCanPlay);
-        videoElement.removeEventListener("error", handleError);
+        video.removeEventListener("canplay", handleCanPlay);
+        video.removeEventListener("error", handleError);
       };
-    }, [videoElement, src, isInView, handleCanPlay, handleError]);
+    }, [src, isInView, handleCanPlay, handleError]);
 
-    const setVideoRef = useCallback(
-      (el) => {
-        if (typeof ref === "function") {
-          ref(el);
-        } else if (ref) {
-          ref.current = el;
-        }
-        setVideoElement(el);
-      },
-      [ref]
-    );
+    useEffect(() => {
+      if (!ref) return;
+      if (typeof ref === "function") {
+        ref(videoRef.current);
+      } else {
+        ref.current = videoRef.current;
+      }
+    }, [ref]);
 
     return (
       <div ref={containerRef} className="relative w-full h-full">
@@ -110,15 +109,17 @@ const LoadingPancakeVideo = forwardRef(
           </div>
         ) : (
           <video
-            ref={setVideoRef}
+            ref={videoRef}
             preload="metadata"
             className={videoClassName}
+            onLoadedData={onLoadedData}
+            onContextMenu={(e) => e.preventDefault()}
             {...props}
           />
         )}
       </div>
     );
-  }
+  })
 );
 
 LoadingPancakeVideo.displayName = "LoadingPancakeVideo";
