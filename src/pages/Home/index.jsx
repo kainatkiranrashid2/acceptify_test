@@ -20,11 +20,17 @@ const Home = () => {
   document.body.className = "home";
 
   const LoadingFallback = () => (
-    <div className="flex justify-center items-center bg-white h-[100vh]">
+    <div className="flex justify-center items-center bg-white dark:bg-[#06142F] h-[100vh]">
       <img
         src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
-        className="h-10"
+        className="h-10 hidden dark:block"
         alt="logo"
+      />
+      <img
+        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
+        className="bg-transparent h-10 block dark:hidden"
+        alt="acceptify_logo"
+        loading="lazy"
       />
     </div>
   );
