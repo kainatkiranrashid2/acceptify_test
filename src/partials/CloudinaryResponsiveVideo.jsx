@@ -1,4 +1,11 @@
-import React, { useState, forwardRef, useEffect, useRef } from "react";
+import React, {
+  useState,
+  forwardRef,
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback,
+} from "react";
 import { supportsHEVCAlpha } from "../CheckBrowserCapability";
 
 const CloudinaryResponsiveVideo = forwardRef(
@@ -17,28 +24,18 @@ const CloudinaryResponsiveVideo = forwardRef(
     const videoRef = useRef(null);
     const containerRef = useRef(null);
 
-    // Combine the forwarded ref with our local ref
-    const setRefs = (element) => {
-      videoRef.current = element;
-      if (typeof ref === "function") {
-        ref(element);
-      } else if (ref) {
-        ref.current = element;
-      }
-    };
+    // Memoize observer options
+    const observerOptions = useMemo(
+      () => ({
+        root: null,
+        rootMargin: "100%",
+        threshold: 0.1,
+      }),
+      []
+    );
 
-    useEffect(() => {
-      if (window.innerWidth <= 768) {
-        setIsMobile(true);
-      }
-    }, [window.innerWidth]);
-
-    useEffect(() => {
-      setHevc(supportsHEVCAlpha());
-    }, []);
-
-    // Get the correct video URL based on device width
-    const getTransformedUrl = (url) => {
+    // Memoize the transform URL function
+    const getTransformedUrl = useCallback((url) => {
       if (!url) return "";
 
       const isMobile = window.innerWidth <= 768;
@@ -53,33 +50,86 @@ const CloudinaryResponsiveVideo = forwardRef(
       }
 
       return `${baseUrl}${finalTransformation}${videoPath}?v=${Date.now()}`;
-    };
+    }, []);
 
-    // Set up Intersection Observer
+    // Memoize video class names
+    const videoClassName = useMemo(() => {
+      return `${className} ${
+        isLoading ? "opacity-0" : "opacity-100"
+      } transition-opacity duration-300`;
+    }, [className, isLoading]);
+
+    // Memoize video style
+    const videoStyle = useMemo(
+      () => ({
+        backgroundColor: "transparent",
+      }),
+      []
+    );
+
+    // Memoize ref setter
+    const setRefs = useCallback(
+      (element) => {
+        videoRef.current = element;
+        if (typeof ref === "function") {
+          ref(element);
+        } else if (ref) {
+          ref.current = element;
+        }
+      },
+      [ref]
+    );
+
+    // Memoize event handlers
+    const handleLoadedData = useCallback(() => {
+      console.log("Video loaded successfully:", videoSrc);
+      setIsLoading(false);
+      onLoadedData?.();
+    }, [videoSrc, onLoadedData]);
+
+    const handleError = useCallback((e) => {
+      console.error("Video error:", e);
+      setHasError(true);
+      setErrorDetails(e.currentTarget.error?.message || "Unknown error");
+      setIsLoading(false);
+    }, []);
+
+    const handleRetry = useCallback(() => {
+      if (videoRef.current) {
+        console.log("Retrying video load:", videoSrc);
+        setIsLoading(true);
+        setHasError(false);
+        videoRef.current.load();
+      }
+    }, [videoSrc]);
+
     useEffect(() => {
-      const options = {
-        root: null,
-        rootMargin: "100%", // Start loading when video is 50px from viewport
-        threshold: 0.1,
-      };
+      if (window.innerWidth <= 768) {
+        setIsMobile(true);
+      }
+    }, [window.innerWidth]);
 
+    useEffect(() => {
+      setHevc(supportsHEVCAlpha());
+    }, []);
+
+    useEffect(() => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsInView(true);
-            observer.disconnect(); // Once we've started loading, we can disconnect the observer
+            observer.disconnect();
           }
         });
-      }, options);
+      }, observerOptions);
 
       if (containerRef.current) {
         observer.observe(containerRef.current);
       }
 
       return () => observer.disconnect();
-    }, []);
+    }, [observerOptions]);
 
-    // Only load video when in view
     useEffect(() => {
       if (isInView) {
         const source = hevc
@@ -89,16 +139,15 @@ const CloudinaryResponsiveVideo = forwardRef(
           : getTransformedUrl(webMVideo);
         setVideoSrc(source);
       }
-    }, [hevc, isMobile, hevcMobile, hevcVideo, webMVideo, isInView]);
-
-    const handleRetry = () => {
-      if (videoRef.current) {
-        console.log("Retrying video load:", videoSrc);
-        setIsLoading(true);
-        setHasError(false);
-        videoRef.current.load();
-      }
-    };
+    }, [
+      hevc,
+      isMobile,
+      hevcMobile,
+      hevcVideo,
+      webMVideo,
+      isInView,
+      getTransformedUrl,
+    ]);
 
     useEffect(() => {
       if (videoSrc) {
@@ -132,25 +181,12 @@ const CloudinaryResponsiveVideo = forwardRef(
             key={videoSrc}
             src={isInView ? videoSrc : undefined}
             preload="metadata"
-            className={`${className} ${
-              isLoading ? "opacity-0" : "opacity-100"
-            } transition-opacity duration-300`}
-            onLoadedData={() => {
-              console.log("Video loaded successfully:", videoSrc);
-              setIsLoading(false);
-              onLoadedData?.();
-            }}
-            onError={(e) => {
-              console.error("Video error:", e);
-              setHasError(true);
-              setErrorDetails(
-                e.currentTarget.error?.message || "Unknown error"
-              );
-              setIsLoading(false);
-            }}
+            className={videoClassName}
+            onLoadedData={handleLoadedData}
+            onError={handleError}
             {...props}
             playsInline
-            style={{ backgroundColor: "transparent" }}
+            style={videoStyle}
           />
         )}
       </div>

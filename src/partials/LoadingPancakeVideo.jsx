@@ -1,4 +1,11 @@
-import { useState, forwardRef, useEffect, useRef } from "react";
+import {
+  useState,
+  forwardRef,
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback,
+} from "react";
 
 const LoadingPancakeVideo = forwardRef(
   ({ className, onLoadedData, src, ...props }, ref) => {
@@ -8,48 +15,58 @@ const LoadingPancakeVideo = forwardRef(
     const [isInView, setIsInView] = useState(false);
     const containerRef = useRef(null);
 
-    // Set up Intersection Observer
-    useEffect(() => {
-      const options = {
+    // Memoize observer options
+    const observerOptions = useMemo(
+      () => ({
         root: null,
-        rootMargin: "100%", // Start loading when video is 50px from viewport
+        rootMargin: "100%",
         threshold: 0.1,
-      };
+      }),
+      []
+    );
 
+    // Memoize event handlers
+    const handleCanPlay = useCallback(() => {
+      setIsLoading(false);
+      onLoadedData?.();
+      videoElement?.play().catch((error) => {
+        console.error("Video play error:", error);
+        setHasError(true);
+      });
+    }, [videoElement, onLoadedData]);
+
+    const handleError = useCallback((error) => {
+      console.error("Video loading error:", error);
+      setHasError(true);
+      setIsLoading(true);
+    }, []);
+
+    // Memoize class string
+    const videoClassName = useMemo(() => {
+      return `${className} !top-1/2 ${
+        isLoading ? "opacity-0" : "opacity-100"
+      } transition-opacity duration-300`;
+    }, [className, isLoading]);
+
+    useEffect(() => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsInView(true);
-            observer.disconnect(); // Once we've started loading, we can disconnect
+            observer.disconnect();
           }
         });
-      }, options);
+      }, observerOptions);
 
       if (containerRef.current) {
         observer.observe(containerRef.current);
       }
 
       return () => observer.disconnect();
-    }, []);
+    }, [observerOptions]);
 
     useEffect(() => {
       if (!videoElement || !isInView) return;
-
-      const handleCanPlay = () => {
-        setIsLoading(false);
-        onLoadedData?.();
-        // Attempt to play only after canplay event
-        videoElement.play().catch((error) => {
-          console.error("Video play error:", error);
-          setHasError(true);
-        });
-      };
-
-      const handleError = (error) => {
-        console.error("Video loading error:", error);
-        setHasError(true);
-        setIsLoading(true);
-      };
 
       // Add event listeners
       videoElement.addEventListener("canplay", handleCanPlay);
@@ -61,22 +78,23 @@ const LoadingPancakeVideo = forwardRef(
         videoElement.load();
       }
 
-      // Cleanup
       return () => {
         videoElement.removeEventListener("canplay", handleCanPlay);
         videoElement.removeEventListener("error", handleError);
       };
-    }, [videoElement, src, onLoadedData, isInView]);
+    }, [videoElement, src, isInView, handleCanPlay, handleError]);
 
-    // Handle video element ref
-    const setVideoRef = (el) => {
-      if (typeof ref === "function") {
-        ref(el);
-      } else if (ref) {
-        ref.current = el;
-      }
-      setVideoElement(el);
-    };
+    const setVideoRef = useCallback(
+      (el) => {
+        if (typeof ref === "function") {
+          ref(el);
+        } else if (ref) {
+          ref.current = el;
+        }
+        setVideoElement(el);
+      },
+      [ref]
+    );
 
     return (
       <div ref={containerRef} className="relative w-full h-full">
@@ -94,9 +112,7 @@ const LoadingPancakeVideo = forwardRef(
           <video
             ref={setVideoRef}
             preload="metadata"
-            className={`${className} !top-1/2 ${
-              isLoading ? "opacity-0" : "opacity-100"
-            } transition-opacity duration-300`}
+            className={videoClassName}
             {...props}
           />
         )}
