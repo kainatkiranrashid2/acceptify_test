@@ -201,13 +201,13 @@ const DeveloperBenefits = () => {
                       <div className="float-end  gap-4 pt-4">
                         <button
                           type="submit"
-                          className="flex-1 bg-primary mx-4 text-white py-2 px-4 rounded-md hover:bg-primary">
+                          className=" bg-primary text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg">
                           Submit
                         </button>
                         <button
                           type="button"
                           onClick={() => setShowModal(false)}
-                          className="flex-1 border border-[#5D55F9] text-[#5D55F9] py-2 px-4 rounded-md hover:bg-indigo-50">
+                          className="bg-primary px-[14px]  py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg border border-[#5D55F9] text-[#5D55F9] ">
                           Cancel
                         </button>
                       </div>
