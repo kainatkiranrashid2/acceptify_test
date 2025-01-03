@@ -207,7 +207,7 @@ const DeveloperBenefits = () => {
                         <button
                           type="button"
                           onClick={() => setShowModal(false)}
-                          className="bg-primary px-[14px]  py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg border border-[#5D55F9] text-[#5D55F9] ">
+                          className=" px-[14px] ml-3  py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg border border-[#5D55F9] text-[#5D55F9] ">
                           Cancel
                         </button>
                       </div>
