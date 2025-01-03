@@ -41,9 +41,9 @@ const DeveloperBenefits = () => {
   ];
 
   return (
-    <section className="dark:bg-[#070713] ">
+    <section className="dark:bg-[#070713] relative overflow-hidden">
       <div className="container ">
-        <div className="py-24 relative">
+        <div className="py-24 ">
           <div className="absolute right-0 top-1/3 developerBenefit__oval"></div>
           <div className="absolute right-0 top-2/3 developerBenefit__oval"></div>
 
