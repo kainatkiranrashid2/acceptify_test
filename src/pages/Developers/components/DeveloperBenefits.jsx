@@ -46,14 +46,14 @@ const DeveloperBenefits = () => {
     <section className="container">
       <div className="my-24">
         <h2 className="text-center mb-10">Developer Benefits</h2>
-        <div className="py-9 px-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+        <div className="py-9 px-10 gap-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
           {benefits.map((benefit, index) => (
             <div
-              className="flex flex-col justify-center items-center"
+              className="flex flex-col justify-center items-start"
               key={index}>
               <img src="" alt="-----" />
-              <h3 className="text-2xl mb-4">{benefit.heading}</h3>
-              <p className="text-gray-600 text-lg">{benefit.description}</p>
+              <h3 className="mb-4">{benefit.heading}</h3>
+              <p className="">{benefit.description}</p>
             </div>
           ))}
         </div>

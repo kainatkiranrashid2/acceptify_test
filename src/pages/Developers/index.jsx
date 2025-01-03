@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 
 import "./index.css";
 import Header from "./components/Header";
+import DeveloperBenefits from "./components/DeveloperBenefits";
 
 const Developers = () => {
   document.body.className = "devices";
@@ -9,6 +10,7 @@ const Developers = () => {
   return (
     <Fragment>
       <Header />
+      <DeveloperBenefits />
     </Fragment>
   );
 };

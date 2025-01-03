@@ -33,11 +33,23 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
       </div>
       <CodeHighlighter />
       <div className="flex flex-col justify-center items-center mt-8">
-        <p className="lg:text-[18px]">Available in</p>
-        <div className="flex flex-col justify-center items-center gap-4">
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+        <p className="lg:text-[18px] text-white">Available in</p>
+        <div className="flex mt-3 justify-center items-center gap-4">
+          <img
+            src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735887831/components/developers_header/ios_icon.svg"
+            alt="ios_icon"
+            className="h-10 w-10"
+          />
+          <img
+            src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735887865/components/developers_header/android_icon.svg"
+            alt="android_icon"
+            className="h-10 w-10"
+          />
+          <img
+            src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735887788/components/developers_header/windows_icon.svg"
+            alt="windows_icon"
+            className="h-10 w-10"
+          />
         </div>
       </div>
     </section>
