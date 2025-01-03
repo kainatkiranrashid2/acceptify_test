@@ -41,9 +41,12 @@ const DeveloperBenefits = () => {
   ];
 
   return (
-    <section className="dark:bg-[#070713]">
+    <section className="dark:bg-[#070713] ">
       <div className="container ">
-        <div className="py-24">
+        <div className="py-24 relative">
+          <div className="absolute right-0 top-1/3 developerBenefit__oval"></div>
+          <div className="absolute right-0 top-2/3 developerBenefit__oval"></div>
+
           <h2 className="text-center mb-10 dark:text-white">
             Developer Benefits
           </h2>
