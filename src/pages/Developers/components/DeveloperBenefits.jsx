@@ -50,7 +50,7 @@ const DeveloperBenefits = () => {
           loading="lazy"
         />
       </div>
-      <div className="container ">
+      <div className="container z-10 relative ">
         <div className="pt-[100px] pb-[120px]  ">
           <div className="absolute right-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
           <div className="absolute right-0 bottom-[25%] opacity-10 dark:opacity-30 developerBenefit__oval"></div>
