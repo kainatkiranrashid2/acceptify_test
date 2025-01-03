@@ -42,7 +42,7 @@ const DeveloperBenefits = () => {
 
   return (
     <section className="dark:bg-[#070713] relative overflow-hidden ">
-      <div className="block absolute  opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
+      <div className="hidden md:block absolute  opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
         <img
           src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734065022/components/our_customers_dark_mode/industries_bg.png"
           alt=""
@@ -54,7 +54,7 @@ const DeveloperBenefits = () => {
         <div className="pt-[100px] pb-[120px]  ">
           <div className="absolute right-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
           <div className="absolute right-0 bottom-[25%] opacity-10 dark:opacity-50 developerBenefit__oval"></div>
-          <div className="absolute left-0 bottom-[25%] developerBenefit__ovalLeft"></div>
+          <div className="absolute z-100 left-0 bottom-[25%] developerBenefit__ovalLeft"></div>
           <h2 className="text-center mb-10 dark:text-white">
             Developer Benefits
           </h2>
