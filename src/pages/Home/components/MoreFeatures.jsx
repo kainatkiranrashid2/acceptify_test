@@ -107,7 +107,7 @@ const MoreFeatures = () => {
       id: 0,
       title: "Smart Transaction",
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1733919671/components/smart_transaction.png",
+        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877347/components/more_features/smart_transections.svg",
       description:
         "Acceptify allows you to ‘tag’ transactions with fully customizable meta-data relevant to your business. This enables more efficient categorization and searchability for greater insight and reporting.",
     },
@@ -115,14 +115,14 @@ const MoreFeatures = () => {
       id: 1,
       title: "Recapture Engine",
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1733919815/components/recapture_engine.png",
+        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877626/components/more_features/recapture_engine.svg",
       description:
         "We help you increase lost revenue from declined offline transactions. Our powerful recapture engine resubmits declined transactions until they are approved or expire.",
     },
     {
       id: 2,
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1733919425/components/configurable_data.png",
+        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877417/components/more_features/configurable_data.svg",
       title: "Configurable Data",
       description:
         "Add relevant, searchable data to each transaction. An order number, parking lot ID, flight number, event name - whatever is important to you and your customer.",
@@ -130,7 +130,7 @@ const MoreFeatures = () => {
     {
       id: 3,
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1733919376/components/global_payments.png",
+        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877464/components/more_features/global_payments.svg",
       title: "Enterprise Payments Anywhere",
       description:
         "We are a true enterprise payment solution. We enable you to take local payments in nearly all worldwide currencies. Bring you own processors or we can help you select one.",
@@ -138,7 +138,7 @@ const MoreFeatures = () => {
     {
       id: 4,
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1733919324/components/beautiful_branding.png",
+        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877693/components/more_features/accept_cards.svg",
       title: "Accept Cards/Wallets",
       description:
         "Swipe, tap or insert. Acceptify safely accepts electronics payments whether your customers choose credit cards or e-wallets to run transactions.",
@@ -146,7 +146,7 @@ const MoreFeatures = () => {
     {
       id: 5,
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1733919170/components/increased_revenue.png",
+        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877519/components/more_features/increased_revenue.svg",
       title: "Increase Revenue",
       description:
         "Boost your revenue by using your own processor and customized rates. Maximize earnings by processing transactions anytime, anywhere—even without service.",

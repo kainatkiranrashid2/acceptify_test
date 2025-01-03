@@ -70,10 +70,6 @@
   }
 }
 
-.para {
-  font-size: 1.25rem;
-}
-
 @media screen and (min-width: 1280px) and (max-width: 1535px) {
   body {
     font-size: 16px;
