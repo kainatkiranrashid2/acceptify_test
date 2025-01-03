@@ -19,7 +19,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
 
   return (
     <section
-      className="flex flex-col justify-center items-center 2xl:h-[1000px] xl:h-[900px] lg:h-[800px] w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1735800494/components/developers_header/bg_light.png)]
+      className="flex flex-col justify-center items-center 2xl:h-[1000px] xl:h-[850px] lg:h-[800px] w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1735800494/components/developers_header/bg_light.png)]
     // dark:bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1735800477/components/developers_header/bg_dark.png)]">
       <div className="xl:w-[893px] lg:w-[772px] md:w-[632px]  sm:w-[486px] flex flex-col justify-center items-center gap-6 mb-8">
         <h1 className="text-white text-center xl:w-[893px] lg:w-[772px] md:w-[636px]  sm:w-[432px]  capitalize">
