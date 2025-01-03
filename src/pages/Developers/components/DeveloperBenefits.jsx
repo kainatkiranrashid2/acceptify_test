@@ -198,16 +198,16 @@ const DeveloperBenefits = () => {
                         </div>
                       </div>
 
-                      <div className="flex gap-4 pt-4">
+                      <div className="float-end  gap-4 pt-4">
                         <button
                           type="submit"
-                          className="flex-1 bg-primary text-white py-2 px-4 rounded-md hover:bg-primary">
+                          className="flex-1 bg-primary mx-4 text-white py-2 px-4 rounded-md hover:bg-primary">
                           Submit
                         </button>
                         <button
                           type="button"
                           onClick={() => setShowModal(false)}
-                          className="flex-1 border border-indigo-500 text-indigo-500 py-2 px-4 rounded-md hover:bg-indigo-50">
+                          className="flex-1 border border-[#5D55F9] text-[#5D55F9] py-2 px-4 rounded-md hover:bg-indigo-50">
                           Cancel
                         </button>
                       </div>
