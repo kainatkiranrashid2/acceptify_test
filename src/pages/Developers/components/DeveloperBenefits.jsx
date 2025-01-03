@@ -120,7 +120,7 @@ const DeveloperBenefits = () => {
           </div>
           <div className="w-[300px] h-[300px]">
             <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900657/components/developers_benefits/github_light.svg"
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900649/components/developers_benefits/nsxguoxhm2k3ehiiwsez.svg"
               alt=""
               className="w-full h-full object-contain dark:hidden"
             />
