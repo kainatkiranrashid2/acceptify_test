@@ -32,7 +32,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
         </p>
       </div>
       <CodeHighlighter />
-      <div className="flex flex-col justify-center items-center mt-32">
+      <div className="flex flex-col justify-center items-center mt-8">
         <p className="lg:text-[18px]">Available in</p>
         <div className="flex flex-col justify-center items-center gap-4">
           <img src="" alt="" />
