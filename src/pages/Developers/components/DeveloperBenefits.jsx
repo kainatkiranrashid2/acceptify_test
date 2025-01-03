@@ -1,6 +1,8 @@
-import React from "react";
+import React , {useState}from "react";
 
 const DeveloperBenefits = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const benefits = [
     {
       heading: "Simplified Development",
@@ -39,7 +41,9 @@ const DeveloperBenefits = () => {
       src: "https://res.cloudinary.com/dq5guzzge/image/upload/v1735888164/components/developers_benefits/dev_friendly.svg",
     },
   ];
-
+const handleClick = () => {
+  setModal(true)
+}
   return (
     <section className="dark:bg-[#070713] relative overflow-hidden ">
       <div className="hidden md:block absolute  opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
@@ -50,7 +54,7 @@ const DeveloperBenefits = () => {
           loading="lazy"
         />
       </div>
-      <div className="container z-10 relative ">
+      <div className="container z-10 relative overflow-hidden ">
         <div className="pt-[100px] pb-[120px]  ">
           <div className="absolute right-0 z-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
           <div className="absolute right-0 z-0 bottom-[25%] opacity-10 dark:opacity-30 developerBenefit__oval"></div>
@@ -89,7 +93,7 @@ const DeveloperBenefits = () => {
               Join the waitlist today and stay ahead with payments anywhere
               anytime.{" "}
             </p>
-            <button className="bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg">
+            <button className="bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg" onClick={handleClick}>
               Join the Waitlist
             </button>
           </div>
@@ -107,6 +111,35 @@ const DeveloperBenefits = () => {
           </div>
         </div>
       </div>
+      {showModal ? (
+        <>
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black bg-opacity-50">
+            <div className="relative w-auto max-w-3xl mx-auto my-6">
+              <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
+                <div className="flex flex-col max-h-[80vh] overflow-y-auto scrollbar-hide">
+                  <div className="p-6">
+                    <Image
+                      src={filepath2.replace("../../public", "")}
+                      alt="kainat"
+                      width={800}
+                      height={1200}
+                      className=" !w-[100%] md:w-[30%] md:!h-[500px] "
+                    />
+                  </div>
+                </div>
+                <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                  <button
+                    className="bg-red-500 text-white rounded-md background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
+                    type="button"
+                    onClick={() => setShowModal(false)}>
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : null}
     </section>
   );
 };
