@@ -47,7 +47,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
   };
 
   return (
-    <div className="w-full max-w-3xl rounded-lg overflow-hidden bg-[#22212c]">
+    <div className="2xl:w-[968px] xl:w-[793px] lg:w-[688px] md:w-[580px] sm:w-full hidden sm:block rounded-lg overflow-hidden bg-[#22212c]">
       <div className="flex items-center justify-between px-4 py-2 bg-[#22212c]  ">
         <div className="flex space-x-2">
           <div className="w-3 h-3 rounded-full bg-red-500" />
@@ -65,11 +65,11 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
         <SyntaxHighlighter
           language="javascript"
           style={nightOwl}
-          wrapLongLines={true}
+          // wrapLongLines={true}
           customStyle={{
             background: "transparent",
             margin: 0,
-            padding: 0,
+            padding: 1,
             color: "#65d008",
             fontSize: "13px",
           }}
