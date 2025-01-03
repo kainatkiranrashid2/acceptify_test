@@ -41,16 +41,23 @@ const DeveloperBenefits = () => {
   ];
 
   return (
-    <section className="dark:bg-[#070713] relative overflow-hidden">
+    <section className="dark:bg-[#070713] relative overflow-hidden ">
+      <div className="block absolute  opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
+        <img
+          src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734065022/components/our_customers_dark_mode/industries_bg.png"
+          alt=""
+          className="w-1/2"
+          loading="lazy"
+        />
+      </div>
       <div className="container ">
-        <div className="py-24 ">
-          <div className="absolute right-0 top-1/3 developerBenefit__oval"></div>
+        <div className="pt-[100px] pb-[120px]  ">
+          <div className="absolute right-0 bottom-0 developerBenefit__oval"></div>
           <div className="absolute right-0 top-2/3 developerBenefit__oval"></div>
-
           <h2 className="text-center mb-10 dark:text-white">
             Developer Benefits
           </h2>
-          <div className="relative py-9 px-10 gap-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 overflow-hidden rounded-lg">
+          <div className="relative py-9 px-10 gap-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 overflow-hidden dark:bg-[#05122C] border-1 border border-[#3479FD] rounded-lg">
             <div className="absolute -top-48 dark:-top-56 -left-28 overflow-hidden developerBenefit__topGradient"></div>
             <div className="absolute -bottom-52 -right-20 opacity-20   developerBenefit__topGradient"></div>
 
@@ -72,6 +79,30 @@ const DeveloperBenefits = () => {
                 <p className="dark:text-white">{benefit.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="flex justify-between items-center px-10 mb-[100px]">
+          <div className="w-[400px] flex flex-col gap-4 ">
+            <h2 className="dark:text-white">Get Notified </h2>
+            <p className="dark:text-white">
+              Join the waitlist today and stay ahead with payments anywhere
+              anytime.{" "}
+            </p>
+            <button className="bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg">
+              Join the Waitlist
+            </button>
+          </div>
+          <div className="w-[300px] h-[300px]">
+            <img
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900657/components/developers_benefits/github_light.svg"
+              alt=""
+              className="w-full h-full object-contain dark:hidden"
+            />
+            <img
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900657/components/developers_benefits/github_dark.svg"
+              alt=""
+              className="w-full h-full object-contain hidden dark:block"
+            />
           </div>
         </div>
       </div>
