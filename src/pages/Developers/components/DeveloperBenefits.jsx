@@ -52,10 +52,10 @@ const DeveloperBenefits = () => {
       </div>
       <div className="container z-10 relative ">
         <div className="pt-[100px] pb-[120px]  ">
-          <div className="absolute right-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
-          <div className="absolute right-0 bottom-[25%] opacity-10 dark:opacity-30 developerBenefit__oval"></div>
-          <div className="absolute z-100 left-0 bottom-[15%] developerBenefit__ovalLeft"></div>
-          <h2 className="text-center mb-10 dark:text-white">
+          <div className="absolute right-0 z-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
+          <div className="absolute right-0 z-0 bottom-[25%] opacity-10 dark:opacity-30 developerBenefit__oval"></div>
+          <div className="absolute z-100 z-0 left-0 bottom-[15%] developerBenefit__ovalLeft"></div>
+          <h2 className="text-center mb-10  dark:text-white">
             Developer Benefits
           </h2>
           <div className="relative py-9 px-10 gap-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 overflow-hidden dark:bg-[#05122C] border-1 border border-[#3479FD] rounded-[20px]">
