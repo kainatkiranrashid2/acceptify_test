@@ -45,9 +45,16 @@
 }
 .developerBenefit__oval {
   background-color: #32cafd;
-  opacity: 100%;
   filter: blur(700px);
   height: 340px;
   width: 280px;
+  border-radius: 40%;
+}
+.developerBenefit__ovalLeft {
+  background-color: #7214ff;
+  opacity: 100%;
+  filter: blur(500px);
+  height: 274px;
+  width: 226px;
   border-radius: 40%;
 }

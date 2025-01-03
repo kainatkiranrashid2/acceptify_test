@@ -52,8 +52,9 @@ const DeveloperBenefits = () => {
       </div>
       <div className="container ">
         <div className="pt-[100px] pb-[120px]  ">
-          <div className="absolute right-0 bottom-0 developerBenefit__oval"></div>
-          <div className="absolute right-0 top-2/3 developerBenefit__oval"></div>
+          <div className="absolute right-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
+          <div className="absolute right-0 bottom-[25%] opacity-10 dark:opacity-50 developerBenefit__oval"></div>
+          <div className="absolute left-0 bottom-[25%] developerBenefit__ovalLeft"></div>
           <h2 className="text-center mb-10 dark:text-white">
             Developer Benefits
           </h2>
