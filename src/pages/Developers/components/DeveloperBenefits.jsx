@@ -1,7 +1,11 @@
-import React , {useState}from "react";
+import React, { useState } from "react";
 
 const DeveloperBenefits = () => {
   const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+  });
 
   const benefits = [
     {
@@ -41,9 +45,24 @@ const DeveloperBenefits = () => {
       src: "https://res.cloudinary.com/dq5guzzge/image/upload/v1735888164/components/developers_benefits/dev_friendly.svg",
     },
   ];
-const handleClick = () => {
-  setModal(true)
-}
+  const handleClick = () => {
+    setShowModal(true);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", formData);
+    setShowModal(false);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   return (
     <section className="dark:bg-[#070713] relative overflow-hidden ">
       <div className="hidden md:block absolute  opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
@@ -93,7 +112,9 @@ const handleClick = () => {
               Join the waitlist today and stay ahead with payments anywhere
               anytime.{" "}
             </p>
-            <button className="bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg" onClick={handleClick}>
+            <button
+              className="bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg"
+              onClick={handleClick}>
               Join the Waitlist
             </button>
           </div>
@@ -113,27 +134,85 @@ const handleClick = () => {
       </div>
       {showModal ? (
         <>
-          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black bg-opacity-50">
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black bg-opacity-50 ">
             <div className="relative w-auto max-w-3xl mx-auto my-6">
-              <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
-                <div className="flex flex-col max-h-[80vh] overflow-y-auto scrollbar-hide">
+              <div className="relative flex flex-col  bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none w-[560px]">
+                <div className="flex flex-col  overflow-y-auto scrollbar-hide">
                   <div className="p-6">
-                    <Image
-                      src={filepath2.replace("../../public", "")}
-                      alt="kainat"
-                      width={800}
-                      height={1200}
-                      className=" !w-[100%] md:w-[30%] md:!h-[500px] "
-                    />
+                    <div className="flex relative justify-between items-center mb-8">
+                      <div></div>
+                      <h2 className="text-center font-semibold">
+                        Join the Waitlist
+                      </h2>
+                      <button
+                        onClick={() => setShowModal(false)}
+                        className="text-gray-500 hover:text-gray-700">
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </button>
+                      <div className="absolute bottom-[-20px] left-[5%] right-[5%] h-[1px] bg-gray-200"></div>
+                    </div>
+
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="flex justify-center items-center ">
+                        <label htmlFor="name" className="">
+                          <p className="font-semibold text-[20px] ">Name</p>
+                        </label>
+                        <div className="h-[51px] w-[389px] ml-4">
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            placeholder="John Doe"
+                            className="w-full h-full px-2  ml-2 border border-gray-300 rounded-md xl:w-[389px] bg-gray-100"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="flex justify-center items-center">
+                        <label htmlFor="email" className="">
+                          <p className="font-semibold text-[20px] ">Email</p>
+                        </label>
+                        <div className="h-[51px] w-[389px] ml-4">
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            placeholder="johndoe@youremail.com"
+                            className="w-full h-full px-2  ml-2 border border-gray-300 rounded-md xl:w-[389px] bg-gray-100"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="flex gap-4 pt-4">
+                        <button
+                          type="submit"
+                          className="flex-1 bg-primary text-white py-2 px-4 rounded-md hover:bg-primary">
+                          Submit
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setShowModal(false)}
+                          className="flex-1 border border-indigo-500 text-indigo-500 py-2 px-4 rounded-md hover:bg-indigo-50">
+                          Cancel
+                        </button>
+                      </div>
+                    </form>
                   </div>
-                </div>
-                <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-                  <button
-                    className="bg-red-500 text-white rounded-md background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
-                    type="button"
-                    onClick={() => setShowModal(false)}>
-                    Close
-                  </button>
                 </div>
               </div>
             </div>
