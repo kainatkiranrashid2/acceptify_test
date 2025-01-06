@@ -109,7 +109,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
           }
           @media (min-width: 1024px) {
             .line-height-container pre {
-              line-height: 1.3 !important;
+              line-height: 1.25 !important;
             }
           }
         `}
