@@ -71,7 +71,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
             <FaRegCopy size={16} />
           </button>
         </div>
-        <div className="p-4 h-[calc(215px-36px)] sm:h-[calc(237px-36px)] lg:h-[calc(336px-36px)] xl:h-[calc(356px-36px)] md:h-[calc(283px-36px)]">
+        <div className="p-1 sm:p-2 md:p-4 h-[calc(215px-36px)] sm:h-[calc(237px-36px)] lg:h-[calc(336px-36px)] xl:h-[calc(356px-36px)] md:h-[calc(283px-36px)]">
           {" "}
           {/* 36px accounts for the header height */}
           <SyntaxHighlighter
@@ -84,7 +84,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
               color: "#65d008",
               // fontSize: "8px",
               height: "100%",
-              lineHeight: "0.7", // Added this line to reduce spacing
+              lineHeight: "0.6", // Added this line to reduce spacing
             }}
             codeTagProps={{
               className:
