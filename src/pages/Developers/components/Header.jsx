@@ -18,12 +18,14 @@ var transaction = paymentEngine.BuildTransaction(invoice)
 paymentEngine.StartTransaction(transaction, (transactionResult, transactionResponse) => { ... });`;
 
   return (
-    <section className="flex flex-col justify-center items-center 2xl:h-[1000px] xl:h-[850px] lg:h-[800px] w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1735800494/components/developers_header/bg_light.png)]">
+    <section
+      className="flex flex-col justify-center items-center 2xl:h-[1000px] xl:h-[850px] lg:h-[800px] md:h-[662px] sm:h-[700px] h-[530px]
+    w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1735800494/components/developers_header/bg_light.png)]">
       <div className="xl:w-[893px] lg:w-[772px] md:w-[632px]  sm:w-[486px] flex flex-col justify-center items-center gap-5 mb-8">
         <h1 className="text-white px-2 text-center xl:w-[893px] lg:w-[772px] md:w-[636px]  sm:w-[433px]  capitalize">
           Worldwide secure processing with a few lines of code
         </h1>
-        <p className="text-white  2xl:w-[879px] xl:w-[658px] lg:w-[580px] md:w-[620px] sm:w-[43 3px] text-center">
+        <p className="text-white  2xl:w-[879px] xl:w-[658px] lg:w-[580px] md:w-[620px] sm:w-[433px] text-center">
           Empower your creativity with Acceptify, a cutting-edge coding tool
           inspired by simplicity and efficiency unleash the full potential of
           your projects.
@@ -32,7 +34,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
       <div className="xl:w-[893px] lg:w-[772px] md:w-[620px]  sm:w-[486px] flex flex-col justify-center items-center">
         <CodeHighlighter />
       </div>
-      <div className="flex flex-col justify-center items-center mt-8">
+      <div className="flex flex-col justify-center items-center mt-4 md:mt-8">
         <p className="lg:text-[18px] text-white">Available in</p>
         <div className="flex mt-3 justify-center items-center gap-4">
           <img
