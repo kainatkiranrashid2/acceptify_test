@@ -57,7 +57,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
 
   return (
     <>
-      <div className="2xl:w-[968px] xl:w-[793px] lg:w-[688px] md:w-[580px] sm:w-full sm:h-[240px] md:h-[283px] xl:h-[356px] lg:[336px] hidden sm:block rounded-lg overflow-hidden bg-[#22212c]">
+      <div className="2xl:w-[968px] xl:w-[793px] lg:w-[688px] md:w-[580px] sm:w-full sm:h-[240px] md:h-[283px] xl:h-[356px] lg:[336px] h-[215px]  w-[288px] rounded-lg overflow-hidden bg-[#22212c]">
         <div className="flex items-center justify-between px-4 py-2 bg-[#22212c]  ">
           <div className="flex space-x-2">
             <div className="w-3 h-3 rounded-full bg-red-500" />
@@ -71,7 +71,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
             <FaRegCopy size={16} />
           </button>
         </div>
-        <div className="p-4 h-[calc(237px-36px)] lg:h-[calc(336px-36px)] xl:h-[calc(356px-36px)] md:h-[calc(283px-36px)]">
+        <div className="p-4 h-[calc(215px-36px)] sm:h-[calc(237px-36px)] lg:h-[calc(336px-36px)] xl:h-[calc(356px-36px)] md:h-[calc(283px-36px)]">
           {" "}
           {/* 36px accounts for the header height */}
           <SyntaxHighlighter
@@ -80,10 +80,15 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
             customStyle={{
               background: "transparent",
               margin: 0,
-              padding: 1,
+              // padding: 1,
               color: "#65d008",
-              fontSize: "13px",
+              // fontSize: "8px",
               height: "100%",
+              lineHeight: "0.7", // Added this line to reduce spacing
+            }}
+            codeTagProps={{
+              className:
+                "text-[9px] sm:text-[10px] md:text-[11px] lg:text-[13px] ",
             }}
             showLineNumbers>
             {codeString}
