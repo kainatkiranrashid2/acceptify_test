@@ -55,8 +55,66 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
     }
   };
 
+  const getResponsiveStyles = () => {
+    return {
+      syntaxHighlighter: {
+        background: "transparent",
+        margin: 0,
+        color: "#65d008",
+        height: "100%",
+      },
+      wrapper: {
+        [`@media (max-width: 640px)`]: {
+          "& pre": {
+            lineHeight: "0.8 ",
+          },
+        },
+        [`@media (min-width: 641px) and (max-width: 768px)`]: {
+          "& pre": {
+            lineHeight: "0.9",
+          },
+        },
+        [`@media (min-width: 769px) and (max-width: 1024px)`]: {
+          "& pre": {
+            lineHeight: "1 ",
+          },
+        },
+        [`@media (min-width: 1025px)`]: {
+          "& pre": {
+            lineHeight: "1 ",
+          },
+        },
+      },
+    };
+  };
+
+  const styles = getResponsiveStyles();
+
   return (
     <>
+      <style>
+        {`
+          .line-height-container pre {
+            line-height: 0.7 !important;
+          }
+          @media (min-width: 640px) {
+            .line-height-container pre {
+              line-height: 0.9 !important;
+            }
+          }
+          @media (min-width: 768px) {
+            .line-height-container pre {
+              line-height: 1.1 !important;
+            }
+          }
+          @media (min-width: 1024px) {
+            .line-height-container pre {
+              line-height: 1.3 !important;
+            }
+          }
+        `}
+      </style>
+
       <div className="2xl:w-[968px] xl:w-[793px] lg:w-[688px] md:w-[580px] sm:w-full sm:h-[240px] md:h-[283px] xl:h-[356px] lg:[336px] h-[215px]  w-[288px] rounded-lg overflow-hidden bg-[#22212c]">
         <div className="flex items-center justify-between px-4 py-2 bg-[#22212c]  ">
           <div className="flex space-x-2">
@@ -72,27 +130,19 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
           </button>
         </div>
         <div className="p-1 sm:p-2 md:p-4 h-[calc(215px-10px)] sm:h-[calc(237px-18px)] lg:h-[calc(336px-36px)] xl:h-[calc(356px-36px)] md:h-[calc(283px-36px)]">
-          {" "}
-          {/* 36px accounts for the header height */}
-          <SyntaxHighlighter
-            language="javascript"
-            style={nightOwl}
-            customStyle={{
-              background: "transparent",
-              margin: 0,
-              // padding: 1,
-              color: "#65d008",
-              // fontSize: "8px",
-              height: "100%",
-              lineHeight: "0.7", // Added this line to reduce spacing
-            }}
-            codeTagProps={{
-              className:
-                "text-[8px] sm:text-[10px] md:text-[11px] lg:text-[13px] ",
-            }}
-            showLineNumbers>
-            {codeString}
-          </SyntaxHighlighter>
+          <div className="line-height-container">
+            <SyntaxHighlighter
+              language="javascript"
+              style={nightOwl}
+              customStyle={styles.syntaxHighlighter}
+              codeTagProps={{
+                className:
+                  "text-[8px] sm:text-[10px] md:text-[11px] lg:text-[13px] ",
+              }}
+              showLineNumbers>
+              {codeString}
+            </SyntaxHighlighter>
+          </div>
         </div>
       </div>
       <Toaster
