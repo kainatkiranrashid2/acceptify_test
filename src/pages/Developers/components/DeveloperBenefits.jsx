@@ -77,7 +77,7 @@ const DeveloperBenefits = () => {
         <div className="pt-[100px] pb-[120px]  lg:mx-20  ">
           <div className="absolute right-0 z-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
           <div className="absolute right-0 z-0 bottom-[25%] opacity-10 dark:opacity-30 developerBenefit__oval"></div>
-          <div className="absolute z-100 z-0 left-0 bottom-[15%] developerBenefit__ovalLeft"></div>
+          <div className="hidden dark:block absolute z-100 z-0 left-0 bottom-[15%] developerBenefit__ovalLeft"></div>
           <h2 className="text-center mb-10  dark:text-white">
             Developer Benefits
           </h2>
@@ -105,7 +105,7 @@ const DeveloperBenefits = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-between items-center px-10 mb-[100px]">
+        <div className="flex justify-between items-center px-10 mb-[100px] lg:mx-20">
           <div className="w-[400px] flex flex-col gap-4 ">
             <h2 className="dark:text-white">Get Notified </h2>
             <p className="dark:text-white">
@@ -120,14 +120,9 @@ const DeveloperBenefits = () => {
           </div>
           <div className="w-[300px] h-[300px]">
             <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900649/components/developers_benefits/nsxguoxhm2k3ehiiwsez.svg"
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736159167/components/developers_benefits/sdk_image.png"
               alt=""
-              className="w-full h-full object-contain dark:hidden"
-            />
-            <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900657/components/developers_benefits/github_dark.svg"
-              alt=""
-              className="w-full h-full object-contain hidden dark:block"
+              className="w-full h-full object-contain "
             />
           </div>
         </div>
