@@ -73,7 +73,7 @@ const DeveloperBenefits = () => {
           loading="lazy"
         />
       </div>
-      <div className="container z-10 relative overflow-hidden ">
+      <div className="container z-10 ">
         <div className="pt-[100px] pb-[120px]  lg:mx-20  ">
           <div className="absolute right-0 z-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
           <div className="absolute right-0 z-0 bottom-[25%] opacity-10 dark:opacity-30 developerBenefit__oval"></div>
