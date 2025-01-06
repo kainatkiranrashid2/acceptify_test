@@ -84,7 +84,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
               color: "#65d008",
               // fontSize: "8px",
               height: "100%",
-              lineHeight: "0.6", // Added this line to reduce spacing
+              lineHeight: "0.7", // Added this line to reduce spacing
             }}
             codeTagProps={{
               className:
