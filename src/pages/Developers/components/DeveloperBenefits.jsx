@@ -74,7 +74,7 @@ const DeveloperBenefits = () => {
         />
       </div>
       <div className="container z-10 ">
-        <div className="pt-[100px] pb-[120px]  lg:mx-20  ">
+        <div className="pt-[100px] pb-[120px]  lg:mx-10 xl:mx-20 ">
           <div className="absolute right-0 z-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
           <div className="absolute right-0 z-0 bottom-[25%] opacity-10 dark:opacity-30 developerBenefit__oval"></div>
           <div className="hidden dark:block absolute z-100 z-0 left-0 bottom-[15%] developerBenefit__ovalLeft"></div>
@@ -105,8 +105,8 @@ const DeveloperBenefits = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-between items-center px-10 mb-[100px] lg:mx-20">
-          <div className="w-[476px] flex flex-col gap-4 ">
+        <div className="flex justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
+          <div className="lg:w-[476px] flex flex-col gap-4 ">
             <h2 className="dark:text-white">Get Notified </h2>
             <p className="dark:text-white">
               Join the waitlist today and stay ahead with payments anywhere
