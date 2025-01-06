@@ -116,6 +116,7 @@ const DeveloperBenefits = () => {
             </p>
             <button
               className="bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg"
+              style={{ position: "relative", zIndex: 20 }}
               onClick={handleClick}>
               Join the Waitlist
             </button>
@@ -147,7 +148,9 @@ const DeveloperBenefits = () => {
           </div>
           <button
             className=" bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg text-center"
+            style={{ position: "relative", zIndex: 20 }}
             onClick={handleClick}>
+            {" "}
             Join the Waitlist
           </button>
         </div>
