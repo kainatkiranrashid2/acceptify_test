@@ -88,7 +88,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
             }}
             codeTagProps={{
               className:
-                "text-[9px] sm:text-[10px] md:text-[11px] lg:text-[13px] ",
+                "text-[7px] sm:text-[10px] md:text-[11px] lg:text-[13px] ",
             }}
             showLineNumbers>
             {codeString}
