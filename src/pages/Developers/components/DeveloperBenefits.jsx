@@ -106,11 +106,11 @@ const DeveloperBenefits = () => {
           </div>
         </div>
         <div className="flex justify-between items-center px-10 mb-[100px] lg:mx-20">
-          <div className="w-[400px] flex flex-col gap-4 ">
+          <div className="w-[476px] flex flex-col gap-4 ">
             <h2 className="dark:text-white">Get Notified </h2>
             <p className="dark:text-white">
               Join the waitlist today and stay ahead with payments anywhere
-              anytime.{" "}
+              anytime. Be the first one to get access to our powerful SDK
             </p>
             <button
               className="bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg"
@@ -118,7 +118,7 @@ const DeveloperBenefits = () => {
               Join the Waitlist
             </button>
           </div>
-          <div className="w-[300px] h-[300px]">
+          <div className="w-[277px] h-[283px]">
             <img
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736159167/components/developers_benefits/sdk_image.png"
               alt=""
