@@ -46,6 +46,8 @@ const DeveloperBenefits = () => {
     },
   ];
   const handleClick = () => {
+    console.log("Button clicked!");
+
     setShowModal(true);
   };
   const handleSubmit = (e) => {
@@ -65,7 +67,7 @@ const DeveloperBenefits = () => {
 
   return (
     <section className="dark:bg-[#070713] relative overflow-hidden ">
-      <div className="hidden md:block absolute  opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
+      <div className="hidden md:block absolute   opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
         <img
           src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734065022/components/our_customers_dark_mode/industries_bg.png"
           alt=""
@@ -74,14 +76,14 @@ const DeveloperBenefits = () => {
         />
       </div>
       <div className="container z-10 ">
-        <div className="pt-[100px] pb-[120px]  lg:mx-10 xl:mx-20 ">
+        <div className="py-10  md:pt-[100px] md:pb-[120px]  lg:mx-10 xl:mx-20 md:mx-[60px] mx-6 ">
           <div className="absolute right-0 z-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
           <div className="absolute right-0 z-0 bottom-[25%] opacity-10 dark:opacity-30 developerBenefit__oval"></div>
           <div className="hidden dark:block absolute rounded-full z-0 left-0 bottom-[15%] developerBenefit__ovalLeft"></div>
           <h2 className="text-center mb-10  dark:text-white">
             Developer Benefits
           </h2>
-          <div className="relative py-9 px-10 gap-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 overflow-hidden dark:bg-[#05122C] border-1 border border-[#3479FD] rounded-[20px]">
+          <div className="relative p-6 md:py-9 md:px-10 gap-8 md:gap-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 overflow-hidden dark:bg-[#05122C] border-1 border border-[#3479FD] rounded-[20px]">
             <div className="absolute -top-48 dark:-top-56 -left-28 overflow-hidden developerBenefit__topGradient"></div>
             <div className="absolute -bottom-52 -right-20 opacity-20   developerBenefit__topGradient"></div>
 
@@ -97,7 +99,7 @@ const DeveloperBenefits = () => {
                   src={benefit.src}
                   alt={benefit.heading}
                   loading="lazy"
-                  className="2xl:w-10 2xl:h-[38px] md:w-8 md:h-8"
+                  className="2xl:w-10 2xl:h-[38px] md:w-8 md:h-8 w-6 h-6"
                 />
                 <h3 className="mb-4 dark:text-white">{benefit.heading}</h3>
                 <p className="dark:text-white">{benefit.description}</p>
@@ -105,8 +107,8 @@ const DeveloperBenefits = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
-          <div className="lg:w-[476px] flex flex-col gap-4 ">
+        <div className="hidden md:flex justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
+          <div className="lg:w-[476px] md:w-[332px] flex flex-col gap-4 ">
             <h2 className="dark:text-white">Get Notified </h2>
             <p className="dark:text-white">
               Join the waitlist today and stay ahead with payments anywhere
@@ -118,7 +120,7 @@ const DeveloperBenefits = () => {
               Join the Waitlist
             </button>
           </div>
-          <div className="w-[277px] h-[283px]">
+          <div className="md:w-[188px] md:h-[192px] lg:w-[277px] lg:h-[283px]">
             <img
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736159167/components/developers_benefits/sdk_image.png"
               alt=""
@@ -126,12 +128,35 @@ const DeveloperBenefits = () => {
             />
           </div>
         </div>
+        <div className="md:hidden flex flex-col justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
+          <div className="w-[322px]  flex flex-col gap-4 ">
+            <h2 className="dark:text-white text-center font-semibold">
+              Get Notified{" "}
+            </h2>
+            <p className="dark:text-white">
+              Join the waitlist today and stay ahead with payments anywhere
+              anytime. Be the first one to get access to our powerful SDK
+            </p>
+          </div>
+          <div className="w-[122px] h-[124px ]sm:w-[200px] sm:h-[192px] mb-8 md:mb-0 mt-6 md:mt-0">
+            <img
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736159167/components/developers_benefits/sdk_image.png"
+              alt=""
+              className="w-full h-full object-contain "
+            />
+          </div>
+          <button
+            className=" bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg text-center"
+            onClick={handleClick}>
+            Join the Waitlist
+          </button>
+        </div>
       </div>
       {showModal ? (
         <>
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black bg-opacity-50 ">
             <div className="relative w-auto max-w-3xl mx-auto my-6">
-              <div className="relative flex flex-col  bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none w-[560px]">
+              <div className="relative flex flex-col  bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none w-[300px] sm:w-[544px] md:w-[560px]">
                 <div className="flex flex-col  overflow-y-auto scrollbar-hide">
                   <div className="p-6">
                     <div className="flex relative justify-between items-center mb-8">

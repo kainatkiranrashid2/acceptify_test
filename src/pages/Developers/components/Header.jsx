@@ -20,16 +20,16 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
   return (
     <section className="flex flex-col justify-center items-center 2xl:h-[1000px] xl:h-[850px] lg:h-[800px] w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1735800494/components/developers_header/bg_light.png)]">
       <div className="xl:w-[893px] lg:w-[772px] md:w-[632px]  sm:w-[486px] flex flex-col justify-center items-center gap-5 mb-8">
-        <h1 className="text-white text-center xl:w-[893px] lg:w-[772px] md:w-[636px]  sm:w-[432px]  capitalize">
+        <h1 className="text-white px-2 text-center xl:w-[893px] lg:w-[772px] md:w-[636px]  sm:w-[433px]  capitalize">
           Worldwide secure processing with a few lines of code
         </h1>
-        <p className="text-white  2xl:w-[879px] xl:w-[658px] lg:w-[580px] md:w-[630px] sm:w-[433px] text-center">
+        <p className="text-white  2xl:w-[879px] xl:w-[658px] lg:w-[580px] md:w-[620px] sm:w-[43 3px] text-center">
           Empower your creativity with Acceptify, a cutting-edge coding tool
           inspired by simplicity and efficiency unleash the full potential of
           your projects.
         </p>
       </div>
-      <div className="xl:w-[893px] lg:w-[772px] md:w-[632px]  sm:w-[486px] flex flex-col justify-center items-center">
+      <div className="xl:w-[893px] lg:w-[772px] md:w-[620px]  sm:w-[486px] flex flex-col justify-center items-center">
         <CodeHighlighter />
       </div>
       <div className="flex flex-col justify-center items-center mt-8">
@@ -38,17 +38,17 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
           <img
             src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735887831/components/developers_header/ios_icon.svg"
             alt="ios_icon"
-            className="h-10 w-10"
+            className="h-4 w-4 md:h-10 md:w-10"
           />
           <img
             src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735887865/components/developers_header/android_icon.svg"
             alt="android_icon"
-            className="h-10 w-10"
+            className="h-4 w-4 md:h-10 md:w-10"
           />
           <img
             src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735887788/components/developers_header/windows_icon.svg"
             alt="windows_icon"
-            className="h-10 w-10"
+            className="h-4 w-4 md:h-10 md:w-10"
           />
         </div>
       </div>
