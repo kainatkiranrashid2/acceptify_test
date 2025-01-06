@@ -131,7 +131,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
             </div>
           </button>
         </div>
-        <div className="p-1 sm:p-2 md:p-4 h-[calc(215px-10px)] sm:h-[calc(237px-18px)] lg:h-[calc(336px-36px)] xl:h-[calc(356px-36px)] md:h-[calc(283px-36px)]">
+        <div className="py-0 px-1 sm:p-2 md:p-4 h-[calc(215px-10px)] sm:h-[calc(237px-18px)] lg:h-[calc(336px-36px)] xl:h-[calc(356px-36px)] md:h-[calc(283px-36px)]">
           <div className="line-height-container">
             <SyntaxHighlighter
               language="javascript"
