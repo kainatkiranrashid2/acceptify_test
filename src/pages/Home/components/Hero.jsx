@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { supportsHEVCAlpha } from "../../../CheckBrowserCapability/index.js";
 import LoadingVideo from "../../../partials/LoadingVideo.jsx";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const desktopPlayerRef = useRef(null);
   const [videoError, setVideoError] = useState(false);
   const [videoSrc, setVideoSrc] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const src = supportsHEVCAlpha()
@@ -29,6 +31,9 @@ const HeroSection = () => {
   const handleError = () => {
     console.error("Video failed to load");
     setVideoError(true);
+  };
+  const handleClick = () => {
+    navigate("contactus");
   };
 
   return (
@@ -71,7 +76,9 @@ const HeroSection = () => {
               certified, online/offline payments while removing all of your
               security concerns.
             </p>
-            <button className="mt-4 bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[16px] tracking-tight leading-6 flex flex-row justify-center items-center gap-3 text-white font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg">
+            <button
+              className="mt-4 bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[16px] tracking-tight leading-6 flex flex-row justify-center items-center gap-3 text-white font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg"
+              onClick={handleClick}>
               Start Now{" "}
               <img
                 src="./images/arrow.svg"
