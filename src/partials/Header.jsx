@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "../partials/ThemeToggle";
 import { useNavigate } from "react-router-dom";
 
@@ -41,6 +41,10 @@ const Header = () => {
   const [mobileSubmenu, setMobileSubmenu] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const blackTextPaths = ["/contactus"];
+
+  const shouldUseBlackText = blackTextPaths.includes(location.pathname);
 
   const dropdownRef = useRef(null);
   const checkIfMobile = () => {
@@ -128,7 +132,11 @@ const Header = () => {
                     <li key={menu.id} className="">
                       <Link
                         to={menu.path}
-                        className="flex text-white hover:text-[#06142F] dark:hover:text-[#5745FC] dark:text-white  justify-center items-center font-Inter font-medium py-2 px-3 lg:text-[14px]/[24px] xl:text-[16px]/[24px]  relative group">
+                        className={`flex ${
+                          shouldUseBlackText
+                            ? "text-black hover:text-[#06142F]"
+                            : "text-white hover:text-[#06142F]"
+                        } dark:hover:text-[#5745FC] dark:text-white justify-center items-center font-Inter font-medium py-2 px-3 lg:text-[14px]/[24px] xl:text-[16px]/[24px] relative group`}>
                         {menu.title}
                       </Link>
                     </li>
@@ -137,11 +145,17 @@ const Header = () => {
               </div>
               <div className="hidden lg:flex gap-4 items-center">
                 <button
-                  className=" bg-primary flex items-center hover:bg-[#51A805] text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px]  !h-[46px] py-[17.5px] px-6 rounded-lg "
+                  className="bg-primary flex items-center hover:bg-[#51A805] text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px]  !h-[46px] py-[17.5px] px-6 rounded-lg "
                   onClick={handleClick}>
                   Get Started
                 </button>
-                <span className="mx-10 text-white">|</span>
+                <span
+                  className={`mx-10 shouldUseBlackText
+                            ? "text-black hover:text-[#06142F]"
+                            : "text-white hover:text-[#06142F]"
+                            `}>
+                  |
+                </span>
                 <ThemeToggle />
               </div>
             </div>

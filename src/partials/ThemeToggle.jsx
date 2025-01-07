@@ -2,11 +2,17 @@ import { useState, useEffect } from "react";
 import { MdLightMode, MdMonitor } from "react-icons/md";
 import { FiMoon } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { useLocation } from "react-router-dom";
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState("system");
   const [isOpen, setIsOpen] = useState(false);
   const [initialIcon, setInitialIcon] = useState(<MdLightMode size={28} />);
+  const location = useLocation();
+
+  // Add all paths that should have black text
+  const blackTextPaths = ["/contactus", "/devices", "/developers"];
+  const shouldUseBlackText = blackTextPaths.includes(location.pathname);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "system";
@@ -30,7 +36,6 @@ const ThemeToggle = () => {
       document.documentElement.classList.remove("dark");
     } else {
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
         document.documentElement.classList.add("dark");
       } else {
         document.documentElement.classList.remove("dark");
@@ -67,11 +72,18 @@ const ThemeToggle = () => {
         className="flex items-center text-center rounded-lg"
         aria-haspopup="listbox"
         aria-expanded={isOpen}>
-        <span className="font-semibold text-white ">
+        <span
+          className={`font-semibold ${
+            shouldUseBlackText ? "text-black" : "text-white"
+          } dark:text-white`}>
           <span className="hidden lg:block">{getIcon()}</span>
-          <span
-            className={`flex justify-between items-center gap-2 ${"lg:hidden"}`}>
-            <span className="capitalize flex gap-2 justify-between items-center px-4 py-[10px] border-[1px] dark:border-white rounded-md text-black  dark:text-white">
+          <span className="flex justify-between items-center gap-2 lg:hidden">
+            <span
+              className={`capitalize flex gap-2 justify-between items-center px-4 py-[10px] border-[1px] ${
+                shouldUseBlackText
+                  ? "border-black text-black"
+                  : "border-white text-white"
+              } dark:border-white rounded-md dark:text-white`}>
               <IoMdArrowDropdown />
               {theme}
             </span>
@@ -80,13 +92,13 @@ const ThemeToggle = () => {
       </button>
 
       {isOpen && (
-        <ul className="absolute  mt-2 lg:mt-8 w-32 bg-white  dark:text-white dark:bg-[#06142F] border border-gray-300 dark:border-[#5D55F9] rounded-md shadow-lg right-0  lg:right-2">
+        <ul className="absolute mt-2 lg:mt-8 w-32 bg-white dark:text-white dark:bg-[#06142F] border border-gray-300 dark:border-[#5D55F9] rounded-md shadow-lg right-0 lg:right-2">
           {["light", "dark", "system"].map((option) => (
             <li key={option}>
               <button
-                className="w-full text-left px-4 py-2 my-1 lg:my-2 overflow-hidden text-[#1B1B1B] hover:text-[#3873FD]  hover:bg-[#F3F3F3] dark:hover:bg-[#092254]  dark:hover:text-[#3873FD] dark:text-[#fff]"
+                className="w-full text-left px-4 py-2 my-1 lg:my-2 overflow-hidden text-[#1B1B1B] hover:text-[#3873FD] hover:bg-[#F3F3F3] dark:hover:bg-[#092254] dark:hover:text-[#3873FD] dark:text-[#fff]"
                 onClick={() => handleThemeChange(option)}>
-                <div className="flex justify-start w-full items-center ">
+                <div className="flex justify-start w-full items-center">
                   {option === "light" && (
                     <MdLightMode
                       size={20}
@@ -99,8 +111,7 @@ const ThemeToggle = () => {
                   {option === "system" && (
                     <MdMonitor size={24} className="mr-2 dark:text-[#868686]" />
                   )}
-
-                  <span className="capitalize ">{option}</span>
+                  <span className="capitalize">{option}</span>
                 </div>
               </button>
             </li>
