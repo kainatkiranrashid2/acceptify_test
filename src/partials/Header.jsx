@@ -151,8 +151,8 @@ const Header = () => {
                 </button>
                 <span
                   className={`mx-10 shouldUseBlackText
-                            ? "text-black hover:text-[#06142F]"
-                            : "text-white hover:text-[#06142F]"
+                            ? "text-black "
+                            : "text-white "
                             `}>
                   |
                 </span>
