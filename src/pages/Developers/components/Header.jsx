@@ -1,22 +1,6 @@
-import React, { useEffect } from "react";
 import CodeHighlighter from "../../../partials/CodeHighlighter";
 
 const Header = () => {
-  const codeString = `// Step 1: create a payment engine...
-var paymentEngine = PaymentEngine.Builder().Server(ServerEnvironment.Test).Build();
-
-// Step 2: connect...
-paymentEngine.Connect();
-
-// Step 3: create a transaction...
-var transaction = paymentEngine.BuildTransaction(invoice)
-    .Sale()
-    .Amount(1.00, Currency.USD)
-    .Build();
-
-// Step 4: start the transaction
-paymentEngine.StartTransaction(transaction, (transactionResult, transactionResponse) => { ... });`;
-
   return (
     <section
       className="flex flex-col justify-center items-center 2xl:h-[1000px] xl:h-[850px] lg:h-[800px] md:h-[662px] sm:h-[700px] h-[630px]

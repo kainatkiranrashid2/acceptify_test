@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const DeveloperBenefits = () => {
   const [showModal, setShowModal] = useState(false);
