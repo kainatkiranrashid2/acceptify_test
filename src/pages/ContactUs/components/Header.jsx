@@ -29,6 +29,8 @@ const Header = () => {
   };
   return (
     <section className=" relative overflow-hidden dark:bg-[#06142F]">
+      <div className="absolute dark:hidden -top-64 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl" />
+      <div className="absolute hidden dark:block -top-64 -left-32 w-[376px] h-[376px] bg-[#431C95] rounded-full blur-3xl" />
       <div className="absolute dark:hidden top-10 contact__leftoval opacity-20 -left-[20%] z-0 "></div>
       <div className="absolute dark:hidden top-[550px] contact__rightoval opacity-10 dark:opacity-5 -right-[20%] z-0 "></div>
       <div className="absolute hidden dark:block top-[300px] contact__rightoval_dark opacity-10 dark:opacity-5 -right-0 z-0 "></div>
@@ -52,24 +54,34 @@ const Header = () => {
             </div>
             <div className="hidden lg:flex flex-col gap-8 xl:gap-4 xl:flex-row justify-between mt-12">
               <div className="gap-2  border-l py-0 pl-5 border-[#6137FC]/50  pr-2 flex flex-col w-full xl:w-[182px]">
-                <FaMapMarkedAlt size={24} />
-                <p className="font-bold xl:text-[14px]">Address</p>
-                <p className="xl:text-[14px] w-full">
+                <FaMapMarkedAlt size={24} className="dark:text-white" />
+                <p className="font-bold xl:text-[14px] dark:text-white">
+                  Address
+                </p>
+                <p className="xl:text-[14px] w-full dark:text-white">
                   17681 Mitchell N Suite A Irvine, CA 92614
                 </p>
               </div>
               <div className="gap-2  border-l py-0 border-[#6137FC]/50  pl-5  pr-2 flex flex-col w-full xl:w-[202px]">
-                <HiOutlineMail size={24} />
-                <p className="font-bold xl:text-[14px]">Email</p>
-                <p className="xl:text-[14px]/[14px]">sales@acceptify.com </p>
-                <p className="xl:text-[14px]/[14px]">support@acceptify.com </p>
+                <HiOutlineMail size={24} className="dark:text-white" />
+                <p className="font-bold xl:text-[14px] dark:text-white">
+                  Email
+                </p>
+                <p className="xl:text-[14px]/[14px] dark:text-white">
+                  sales@acceptify.com{" "}
+                </p>
+                <p className="xl:text-[14px]/[14px] dark:text-white">
+                  support@acceptify.com{" "}
+                </p>
               </div>
               <div className="gap-2 border-l pl-5 py-0 border-[#6137FC]/50  pr-2 flex flex-col w-full xl:w-[150px]">
-                <FiPhone size={24} />
-                <p className="font-bold xl:text-[14px]/[15px] my-0">
+                <FiPhone size={24} className="dark:text-white" />
+                <p className="font-bold dark:text-white xl:text-[14px]/[15px] my-0">
                   Main Number
                 </p>
-                <p className="xl:text-[14px]/[14px]">(949) 222-0300</p>
+                <p className="xl:text-[14px]/[14px] dark:text-white">
+                  (949) 222-0300
+                </p>
               </div>
             </div>
           </div>
@@ -178,24 +190,32 @@ const Header = () => {
           </div>
           <div className="lg:hidden flex flex-row gap-8 xl:gap-4  justify-between mt-20">
             <div className="  gap-2  border-l py-0 pl-5 border-[#6137FC]/50  pr-2 flex flex-col w-full xl:w-[182px]">
-              <FaMapMarkedAlt size={24} />
-              <p className="font-bold xl:text-[14px]">Address</p>
-              <p className="xl:text-[14px] w-full">
+              <FaMapMarkedAlt size={24} className="dark:text-white" />
+              <p className="font-bold xl:text-[14px] dark:text-white">
+                Address
+              </p>
+              <p className="xl:text-[14px] w-full dark:text-white">
                 17681 Mitchell N Suite A Irvine, CA 92614
               </p>
             </div>
             <div className="gap-2  border-l py-0 border-[#6137FC]/50  pl-5  pr-2 flex flex-col w-full xl:w-[202px]">
-              <HiOutlineMail size={24} />
-              <p className="font-bold xl:text-[14px]">Email</p>
-              <p className="xl:text-[14px]/[14px]">sales@acceptify.com </p>
-              <p className="xl:text-[14px]/[14px]">support@acceptify.com </p>
+              <HiOutlineMail className="dark:text-white" size={24} />
+              <p className="font-bold xl:text-[14px] dark:text-white">Email</p>
+              <p className="xl:text-[14px]/[14px] dark:text-white">
+                sales@acceptify.com{" "}
+              </p>
+              <p className="xl:text-[14px]/[14px] dark:text-white">
+                support@acceptify.com{" "}
+              </p>
             </div>
             <div className="gap-2 border-l pl-5 py-0 border-[#6137FC]/50  pr-2 flex flex-col w-full xl:w-[150px]">
-              <FiPhone size={24} />
-              <p className="font-bold xl:text-[14px]/[15px] my-0">
+              <FiPhone size={24} className="dark:text-white" />
+              <p className="font-bold xl:text-[14px]/[15px] dark:text-white my-0">
                 Main Number
               </p>
-              <p className="xl:text-[14px]/[14px]">(949) 222-0300</p>
+              <p className="xl:text-[14px]/[14px] dark:text-white">
+                (949) 222-0300
+              </p>
             </div>
           </div>
         </div>

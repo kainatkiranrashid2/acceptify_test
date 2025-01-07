@@ -5,6 +5,8 @@ const Header = () => {
     <section
       className="flex flex-col justify-center items-center 2xl:h-[1000px] xl:h-[850px] lg:h-[800px] md:h-[662px] sm:h-[700px] h-[630px]
     w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1735800494/components/developers_header/bg_light.png)]">
+      <div className="absolute dark:hidden -top-64 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl" />
+      <div className="absolute hidden dark:block -top-64 -left-32 w-[376px] h-[376px] bg-[#431C95] rounded-full blur-3xl" />
       <div className="xl:w-[893px] lg:w-[772px] md:w-[632px]  sm:w-[486px] w-[288px] flex flex-col justify-center items-center gap-5 mb-4 md:mb-8">
         <h1 className="text-white px-2 text-center xl:w-[893px] lg:w-[772px] md:w-[636px] w-[288px] sm:w-[433px]  capitalize">
           Worldwide secure processing with a few lines of code
