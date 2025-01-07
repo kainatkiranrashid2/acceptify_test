@@ -104,7 +104,7 @@ const Header = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="John Doe"
-                      className="w-full h-full px-2  ml-2 border border-gray-300 rounded-md  bg-gray-100"
+                      className="w-full h-full px-2  ml-2  border dark:border-none border-gray-300 rounded-md  bg-gray-100 dark:bg-[#150731]"
                     />
                   </div>
                 </div>
@@ -123,7 +123,7 @@ const Header = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="johndoe@youremail.com"
-                      className=" h-full px-2  ml-2 border border-gray-300 rounded-md w-full bg-gray-100"
+                      className=" h-full px-2  ml-2 border border-gray-300 dark:border-none dark:bg-[#150731] rounded-md w-full bg-gray-100"
                     />
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const Header = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="johndoe@youremail.com"
-                      className=" h-full px-2  ml-2 border border-gray-300 rounded-md w-full bg-gray-100"
+                      className=" h-full px-2  ml-2 border dark:border-none border-gray-300 rounded-md w-full bg-gray-100 dark:bg-[#150731]"
                     />
                   </div>
                 </div>
@@ -159,7 +159,7 @@ const Header = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="johndoe@youremail.com"
-                      className=" h-full px-2  ml-2 border border-gray-300 rounded-md w-full bg-gray-100"
+                      className=" h-full px-2  ml-2 border dark:border-none dark:border-none border-gray-300 rounded-md w-full dark:bg-[#150731] bg-gray-100"
                     />
                   </div>
                 </div>
@@ -174,7 +174,7 @@ const Header = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="johndoe@youremail.com"
-                      className=" h-full resize-none py-2 px-2  ml-2 border border-gray-300 rounded-md w-full bg-gray-100"
+                      className=" h-full resize-none py-2 px-2 dark:border-none  ml-2 border dark:bg-[#150731] border-gray-300 rounded-md w-full bg-gray-100"
                     />
                   </div>
                 </div>
