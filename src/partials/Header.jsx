@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "../partials/ThemeToggle";
+import { useNavigate } from "react-router-dom";
 
 import { RxCross1 } from "react-icons/rx";
 
@@ -39,6 +40,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
 
   const dropdownRef = useRef(null);
   const checkIfMobile = () => {
@@ -84,6 +86,9 @@ const Header = () => {
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
     setMobileSubmenu(null);
+  };
+  const handleClick = () => {
+    navigate("contactus");
   };
 
   return (
@@ -131,7 +136,9 @@ const Header = () => {
                 </ul>
               </div>
               <div className="hidden lg:flex gap-4 items-center">
-                <button className=" bg-primary flex items-center hover:bg-[#51A805] text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px]  !h-[46px] py-[17.5px] px-6 rounded-lg ">
+                <button
+                  className=" bg-primary flex items-center hover:bg-[#51A805] text-white 3xl:text-[16px]/[16px] font-semibold !w-[139px]  !h-[46px] py-[17.5px] px-6 rounded-lg "
+                  onClick={handleClick}>
                   Get Started
                 </button>
                 <span className="mx-10 text-white">|</span>

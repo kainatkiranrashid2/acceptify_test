@@ -1,7 +1,9 @@
-import React from "react";
-
 const Header = () => {
-  return <div>Header</div>;
+  return (
+    <section>
+      <div>Header</div>
+    </section>
+  );
 };
 
 export default Header;
