@@ -163,10 +163,7 @@ const Header = () => {
             {/* Mobile Hamburger menu section */}
             <div className="lg:hidden ">
               <RxHamburgerMenu
-                className={`size-5  shouldUseBlackText
-                  ? "text-black "
-                  : "text-white "
-                  `}
+                className={`size-5 text-white`}
                 onClick={() => {
                   setIsMobileMenuOpen(!isMobileMenuOpen);
                   setMobileSubmenu(null);
