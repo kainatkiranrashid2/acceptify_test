@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import CTASection from "../../Home/components/CTASection";
-import LoadingVideo from "../../../partials/LoadingVideo";
 import CloudinaryResponsiveVideo from "../../../partials/CloudinaryResponsiveVideo.jsx";
 
 const DevicesSection = () => {
