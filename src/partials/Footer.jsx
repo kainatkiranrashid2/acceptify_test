@@ -4,23 +4,38 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-gradient-to-r from-[#3479FD] to-[#6E23FB] dark:from-[#6E23FB] dark:to-[#3479FD]">
       <div
         className="p-4 bg-cover bg-no-repeat bg-center "
         style={{
           backgroundImage: `url('/assets/footer/footer_bg.svg')`,
         }}>
-        <div className="bg-white m-10 pt-16 pb-6 rounded-xl">
+        <div className=" m-10 pt-16 pb-6 rounded-xl">
           <div className="max-w-7xl mx-8 my-4 px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
               {/* Logo */}
               <div className="md:col-span-4">
-                <img
-                  src="/assets/footer/acceptify_icon.png"
-                  alt="Logo"
-                  className="h-14 w-14"
-                  loading="lazy"
-                />
+                <a
+                  href="/"
+                  className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  flex dark:hidden items-center">
+                  <img
+                    src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
+                    className="bg-transparent h-full w-auto object-contain"
+                    alt="acceptify_logo"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  href="/"
+                  className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  dark:flex hidden items-center">
+                  <img
+                    src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
+                    className="bg-transparent h-full w-auto object-contain"
+                    alt="acceptify_logo"
+                    loading="lazy"
+                  />
+                </a>
               </div>
 
               {/* Information Section */}

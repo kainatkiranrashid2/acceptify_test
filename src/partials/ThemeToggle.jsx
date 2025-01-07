@@ -11,7 +11,7 @@ const ThemeToggle = () => {
   const location = useLocation();
 
   // Add all paths that should have black text
-  const blackTextPaths = ["/contactus", "/devices", "/developers"];
+  const blackTextPaths = ["/contactus"];
   const shouldUseBlackText = blackTextPaths.includes(location.pathname);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ const ThemeToggle = () => {
               className={`capitalize flex gap-2 justify-between items-center px-4 py-[10px] border-[1px] ${
                 shouldUseBlackText
                   ? "border-black text-black"
-                  : "border-white text-white"
+                  : "border-black text-black"
               } dark:border-white rounded-md dark:text-white`}>
               <IoMdArrowDropdown />
               {theme}
