@@ -139,7 +139,7 @@ paymentEngine.StartTransaction(transaction, (transactionResult, transactionRespo
               customStyle={styles.syntaxHighlighter}
               codeTagProps={{
                 className:
-                  "text-[8px] sm:text-[10px] md:text-[11px] lg:text-[13px] ",
+                  "text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] ",
               }}
               showLineNumbers>
               {codeString}
