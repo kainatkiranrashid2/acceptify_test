@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaMapMarkedAlt } from "react-icons/fa";
-import { LiaMapMarkedAltSolid } from "react-icons/lia";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhone } from "react-icons/fi";
 
