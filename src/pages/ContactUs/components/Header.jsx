@@ -34,13 +34,13 @@ const Header = () => {
       <div className="absolute dark:hidden top-[550px] contact__rightoval opacity-10 dark:opacity-5 -right-[20%] z-0 "></div>
       <div className="absolute hidden dark:block top-[300px] contact__rightoval_dark opacity-10 dark:opacity-5 -right-0 z-0 "></div>
       <div className="container relative z-10">
-        <div className="flex flex-col lg:flex-row  lg:justify-between lg:items-start md:pt-16 lg:pt-48 md:pb-10 lg:pb-72 md:mx-10 lg:mx-20 md:gap-10 lg:gap-20">
+        <div className="flex flex-col lg:flex-row  lg:justify-between lg:items-start xl:items-center md:pt-16 lg:pt-48 sm:pb-72 lg:pb-80 md:mx-10 lg:mx-20 md:gap-10 lg:gap-20">
           <div className="flex flex-col xl:w-[580px] lg:w-[348px] md:w-[644px] md:mx-auto mt-10 ">
             <div className="flex flex-col w-full  ">
               <h2 className="dark:text-white text-center lg:text-left">
                 Have a question?
               </h2>
-              <h3 className="dark:text-white text-center md:hidden lg:block lg:text-left">
+              <h3 className="dark:text-white text-center  lg:block lg:text-left">
                 Contact Us!
               </h3>
               <p className="dark:text-white lg:mt-12">
@@ -84,7 +84,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="mx-auto md:w-[533px] h-[580px] bg-white dark:bg-[#282478] shadow-[0px_4px_40px_rgba(0,0,0,0.1)]">
+          <div className="mx-auto sm:w-[524px] md:w-[533px] h-[580px] bg-white dark:bg-[#282478] shadow-[0px_4px_40px_rgba(0,0,0,0.1)]">
             <form
               onSubmit={handleSubmit}
               className="flex flex-col   px-10 py-12 w-full">
@@ -95,7 +95,7 @@ const Header = () => {
                       Name
                     </p>
                   </label>
-                  <div className="md:h-[45px] md:w-[325px] ml-4">
+                  <div className="sm:h-[45px] sm:w-[325px] ml-4">
                     <input
                       type="text"
                       id="name"
@@ -114,7 +114,7 @@ const Header = () => {
                       Email
                     </p>
                   </label>
-                  <div className="md:h-[45px] md:w-[325px] ">
+                  <div className="sm:h-[45px] sm:w-[325px] ">
                     <input
                       type="email"
                       id="email"
@@ -132,7 +132,7 @@ const Header = () => {
                       Phone
                     </p>
                   </label>
-                  <div className="md:h-[45px] md:w-[325px] ">
+                  <div className="sm:h-[45px] sm:w-[325px] ">
                     <input
                       type="text"
                       id="phone"
@@ -150,7 +150,7 @@ const Header = () => {
                       Company
                     </p>
                   </label>
-                  <div className="md:h-[45px] md:w-[325px] ">
+                  <div className="sm:h-[45px] sm:w-[325px] ">
                     <input
                       type="text"
                       id="company"
@@ -158,7 +158,7 @@ const Header = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="johndoe@youremail.com"
-                      className=" h-full px-2  ml-2 border dark:border-none dark:border-none border-gray-300 rounded-md w-full dark:bg-[#150731] bg-gray-100"
+                      className=" h-full px-2  ml-2 border  dark:border-none border-gray-300 rounded-md w-full dark:bg-[#150731] bg-gray-100"
                     />
                   </div>
                 </div>
@@ -166,7 +166,7 @@ const Header = () => {
                   <label htmlFor="company" className="dark:text-white">
                     <p className="font-semibold text-[20px] ">Message</p>
                   </label>
-                  <div className="md:h-[120px] md:w-[325px] ">
+                  <div className="sm:h-[120px] sm:w-[325px] ">
                     <textarea
                       id="message"
                       name="message"
@@ -187,7 +187,7 @@ const Header = () => {
               </div>
             </form>
           </div>
-          <div className="lg:hidden flex flex-row gap-8 xl:gap-4  justify-between mt-20">
+          <div className=" lg:hidden flex flex-row gap-8 xl:gap-4  justify-between mt-10 md:mt-20">
             <div className="  gap-2  border-l py-0 pl-5 border-[#6137FC]/50  pr-2 flex flex-col w-full xl:w-[182px]">
               <FaMapMarkedAlt size={24} className="dark:text-white" />
               <p className="font-bold xl:text-[14px] dark:text-white">
