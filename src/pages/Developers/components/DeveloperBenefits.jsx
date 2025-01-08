@@ -83,7 +83,7 @@ const DeveloperBenefits = () => {
           <h2 className="text-center mb-10  dark:text-white">
             Developer Benefits
           </h2>
-          <div className="relative p-6 md:py-9 md:px-10 gap-8 md:gap-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 overflow-hidden dark:bg-[#05122C] border-1 border border-[#3479FD] rounded-[20px]">
+          <div className="relative px-10 py-9 md:py-9 md:px-10 gap-8 md:gap-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 overflow-hidden dark:bg-[#05122C] border-1 border border-[#3479FD] rounded-[20px]">
             <div className="absolute -top-48 dark:-top-56 -left-28 overflow-hidden developerBenefit__topGradient"></div>
             <div className="absolute -bottom-52 -right-20 opacity-20   developerBenefit__topGradient"></div>
 
@@ -158,10 +158,10 @@ const DeveloperBenefits = () => {
       {showModal ? (
         <>
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black bg-opacity-50 ">
-            <div className="relative w-auto max-w-3xl mx-auto my-6">
+            <div className="relative w-auto  mx-auto my-6">
               <div className="relative flex flex-col  bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none w-[300px] sm:w-[544px] md:w-[560px]">
                 <div className="flex flex-col  overflow-y-auto scrollbar-hide">
-                  <div className="p-6">
+                  <div className="py-9 px-10">
                     <div className="flex relative justify-between items-center mb-8">
                       <div></div>
                       <h2 className="text-center font-semibold">
