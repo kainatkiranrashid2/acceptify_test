@@ -1,6 +1,29 @@
+import { useState } from "react";
+
 const Footer = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+  });
   const handleClick = () => {
-    console.log("-----");
+    console.log("Button clicked!");
+
+    setShowModal(true);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", formData);
+    setShowModal(false);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
   return (
     <div className="bg-gradient-to-r from-[#3479FD] to-[#6E23FB] dark:from-[#090218] dark:to-[#090218]">
@@ -405,6 +428,93 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      {showModal ? (
+        <>
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black bg-opacity-50 ">
+            <div className="relative w-auto  mx-auto my-6">
+              <div className="relative flex flex-col  bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none w-[300px] sm:w-[544px] md:w-[560px]">
+                <div className="flex flex-col  overflow-y-auto scrollbar-hide">
+                  <div className="py-9 px-10">
+                    <div className="flex relative justify-between items-center mb-8">
+                      <div></div>
+                      <h2 className="text-center font-semibold">
+                        Join the Waitlist
+                      </h2>
+                      <button
+                        onClick={() => setShowModal(false)}
+                        className="text-gray-500 hover:text-gray-700">
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </button>
+                      <div className="absolute bottom-[-20px] left-[5%] right-[5%] h-[1px] bg-gray-200"></div>
+                    </div>
+
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="flex justify-center items-center ">
+                        <label htmlFor="name" className="">
+                          <p className="font-semibold text-[20px] ">Name</p>
+                        </label>
+                        <div className="h-[51px] w-[389px] ml-4">
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            placeholder="John Doe"
+                            className="w-full h-full px-2  ml-2 border border-gray-300 rounded-md xl:w-[389px] bg-gray-100"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="flex justify-center items-center">
+                        <label htmlFor="email" className="">
+                          <p className="font-semibold text-[20px] ">Email</p>
+                        </label>
+                        <div className="h-[51px] w-[389px] ml-4">
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            placeholder="johndoe@youremail.com"
+                            className="w-full h-full px-2  ml-2 border border-gray-300 rounded-md xl:w-[389px] bg-gray-100"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="float-end  gap-4 pt-4">
+                        <button
+                          type="submit"
+                          className=" bg-primary text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg">
+                          Submit
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setShowModal(false)}
+                          className=" px-[14px] ml-3  py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg border border-[#5D55F9] text-[#5D55F9] ">
+                          Cancel
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : null}
     </div>
   );
 };
