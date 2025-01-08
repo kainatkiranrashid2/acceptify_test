@@ -91,7 +91,7 @@ const DeveloperBenefits = () => {
               <div
                 className={`flex flex-col gap-3 justify-start items-start px-4 rounded-md relative ${
                   index === 1 || index === 4
-                    ? "lg:before:absolute before:w-[2px] lg:before:bg-[#9EC1FF] lg:dark:before:bg-[#3479FD]  dark:lg:after:bg-[#3479FD] lg:before:-left-2 lg:before:top-4 lg:before:bottom-4 lg:after:absolute lg:after:w-[2px] lg:after:bg-[#9EC1FF] lg:after:right-0 lg:after:top-4 lg:after:bottom-4"
+                    ? "lg:before:absolute before:w-[2px] lg:before:bg-[#9EC1FF] lg:dark:before:bg-[#3479FD]  dark:lg:after:bg-[#3479FD] lg:before:-left-2 lg:before:top-4 lg:before:bottom-4 lg:after:absolute lg:after:w-[2px] lg:after:bg-[#9EC1FF] lg:after:-right-4 lg:after:top-4 lg:after:bottom-4"
                     : ""
                 }`}
                 key={index}>
