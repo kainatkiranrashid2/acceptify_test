@@ -33,7 +33,7 @@ const Header = () => {
       <div className="absolute inset-0 w-full h-full">
         {videoSrc && !videoError && (
           <LoadingVideo
-            className="hidden md:block w-full h-full object-cover"
+            className="hidden md:block w-full h-full object-contain"
             src={videoSrc}
             autoPlay
             ref={desktopPlayerRef}
