@@ -16,7 +16,7 @@ const NavbarMenu = [
   {
     id: 2,
     title: "Industries",
-    path: "#",
+    path: "/industries",
   },
   {
     id: 3,

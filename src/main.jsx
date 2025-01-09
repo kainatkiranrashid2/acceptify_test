@@ -15,6 +15,7 @@ import Devices from "./pages/Devices";
 import Test from "./pages/Test";
 import Developers from "./pages/Developers";
 import ContactUs from "./pages/ContactUs";
+import Industries from "./pages/industries";
 
 const PageLoader = () => (
   <div className="flex justify-center items-center bg-white dark:bg-[#06142F] h-[100vh]">
@@ -44,6 +45,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="devices" element={<Devices />} />
             <Route path="developers" element={<Developers />} />
             <Route path="contactus" element={<ContactUs />} />
+            <Route path="industries" element={<Industries />} />
           </Route>
           {/* These routes do not have the header and footer template  */}
           <Route path="test" element={<Test />} />
