@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <section className="cp-hero relative hidden md:block w-full h-screen">
       {/* Video Container */}
-      <div className="relative hidden md:block w-full md:h-full aspect-auto md:aspect-video container">
+      <div className="relative hidden md:block w-full md:h-full aspect-auto md:aspect-video ">
         <div className="absolute inset-0 w-full h-full">
           {videoSrc && !videoError && (
             <LoadingVideo
