@@ -175,7 +175,7 @@ const DeveloperBenefits = () => {
             <h2 className="dark:text-white text-center font-semibold mb-4">
               Get Access to our SDK
             </h2>
-            <p className="dark:text-white mb-6 text-center">
+            <p className="dark:text-white text-[14px]/[29px] mb-6 text-center">
               Request access to our SDK, documentation and code samples and see
               how easy it is to integrate Acceptify.
             </p>
