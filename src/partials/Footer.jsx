@@ -132,7 +132,7 @@ const Footer = () => {
                     <p className="text-[16px]/[140%] text-white font-semibold  mb-2">
                       Sign-Up
                     </p>
-                    <div className="flex justify-between items-start gap-2">
+                    <div className="flex  items-start gap-5">
                       <div className="md:h-[45px] lg:w-[196px] xl:w-[224px] ">
                         <input
                           type="email"
