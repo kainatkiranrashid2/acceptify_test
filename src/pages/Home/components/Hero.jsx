@@ -44,7 +44,7 @@ const HeroSection = () => {
       <div className="absolute dark:hidden -top-5 -left-5 w-32 h-32 bg-white/30 rounded-full blur-3xl" />
 
       {/* Desktop View */}
-      <div className="relative hidden md:block w-full md:h-full aspect-auto md:aspect-video container">
+      <div className="relative hidden md:block w-full md:h-full aspect-auto md:aspect-video ">
         {/* Video Container with lower z-index */}
         <div className="absolute inset-0 z-0">
           {videoSrc && !videoError && (
