@@ -108,11 +108,52 @@ const DeveloperBenefits = () => {
           </div>
         </div>
         <div className="hidden md:flex justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
-          <div className="lg:w-[476px] md:w-[332px] flex flex-col gap-4 ">
+          <div className="lg:w-[492px] md:w-[458px] flex flex-col gap-4 ">
             <h2 className="dark:text-white">Get Notified </h2>
             <p className="dark:text-white">
-              Join the waitlist today and stay ahead with payments anywhere
-              anytime. Be the first one to get access to our powerful SDK
+              Sign Up for SDK, Security, and Maintenence Updates Receive the
+              latest news allowing you to integrate and test new features and
+              fixes. We&apos;ll also notify you of scheduled updates ahead of
+              time.
+            </p>
+            <div className="flex items-center gap-2">
+              <button
+                className="bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg"
+                style={{ position: "relative", zIndex: 20 }}
+                onClick={handleClick}>
+                Visit GitHub Repository
+              </button>
+              <button
+                className="bg-transparent border-1 border-[#5D55F9] w-fit text-[#5D55F9] px-[14px]  py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg"
+                style={{ position: "relative", zIndex: 20 }}
+                onClick={handleClick}>
+                Visit GitHub Repository
+              </button>
+            </div>
+          </div>
+          <div className="md:w-[162px] md:h-[162px] lg:w-[206px] lg:h-[206px]">
+            <img
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900649/components/developers_benefits/nsxguoxhm2k3ehiiwsez.svg"
+              alt=""
+              className="w-full h-full object-contain  dark:hidden"
+            />
+          </div>
+          <div className="md:w-[162px] md:h-[162px] lg:w-[206px] lg:h-[206px]">
+            <img
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900657/components/developers_benefits/github_dark.svg"
+              alt=""
+              className="w-full h-full object-contain  hidden dark:block"
+            />
+          </div>
+        </div>
+        <div className="hidden md:flex md:flex-row-reverse justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
+          <div className="xl:w-[551px]lg:w-[493px] md:w-[413px] flex flex-col gap-4 ">
+            <h2 className="dark:text-white">Get Notified </h2>
+            <p className="dark:text-white">
+              Sign Up for SDK, Security, and Maintenence Updates Receive the
+              latest news allowing you to integrate and test new features and
+              fixes. We&apos;ll also notify you of scheduled updates ahead of
+              time.
             </p>
             <button
               className="bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg"
@@ -129,6 +170,7 @@ const DeveloperBenefits = () => {
             />
           </div>
         </div>
+
         <div className="md:hidden flex flex-col justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
           <div className="w-[322px]  flex flex-col gap-4 ">
             <h2 className="dark:text-white text-center font-semibold">
