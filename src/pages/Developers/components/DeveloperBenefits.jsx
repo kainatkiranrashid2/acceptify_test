@@ -170,36 +170,8 @@ const DeveloperBenefits = () => {
             />
           </div>
         </div>
-
-        <div className="md:hidden flex flex-col justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
-          <div className="w-[322px]  flex flex-col gap-4 ">
-            <h2 className="dark:text-white text-center font-semibold">
-              Get Notified{" "}
-            </h2>
-            <p className="dark:text-white">
-              Sign Up for SDK, Security, and Maintenence Updates Receive the
-              latest news allowing you to integrate and test new features and
-              fixes. We&apos;ll also notify you of scheduled updates ahead of
-              time.
-            </p>
-          </div>
-          <div className="w-[122px] h-[124px ]sm:w-[200px] sm:h-[192px] mb-8 md:mb-0 mt-6 md:mt-0">
-            <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736159167/components/developers_benefits/sdk_image.png"
-              alt=""
-              className="w-full h-full object-contain "
-            />
-          </div>
-          <button
-            className=" bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg text-center"
-            style={{ position: "relative", zIndex: 20 }}
-            onClick={handleClick}>
-            {" "}
-            Join the Waitlist
-          </button>
-        </div>
-        <div className="md:hidden flex flex-col justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
-          <div className="sm:w-[348px]   flex flex-col gap-4 ">
+        <div className="md:hidden flex flex-col justify-between w-[259px] sm:w-[458px] items-center px-10 mb-[60px] lg:mx-12 xl:mx-20">
+          <div className=" w-full mx-auto  flex flex-col gap-4 ">
             <h2 className="dark:text-white text-center font-semibold">
               Get Access to our SDK
             </h2>
@@ -238,6 +210,33 @@ const DeveloperBenefits = () => {
               Quick Start Guide
             </button>
           </div>
+        </div>
+        <div className="md:hidden flex flex-col justify-between items-center px-10 w-[259px] sm:w-[458px] mb-[100px] lg:mx-12 xl:mx-20">
+          <div className="  flex flex-col gap-4 ">
+            <h2 className="dark:text-white text-center font-semibold">
+              Get Notified{" "}
+            </h2>
+            <p className="dark:text-white">
+              Sign Up for SDK, Security, and Maintenence Updates Receive the
+              latest news allowing you to integrate and test new features and
+              fixes. We&apos;ll also notify you of scheduled updates ahead of
+              time.
+            </p>
+          </div>
+          <div className="w-[122px] h-[124px ]sm:w-[200px] sm:h-[192px] mb-8 md:mb-0 mt-6 md:mt-0">
+            <img
+              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736159167/components/developers_benefits/sdk_image.png"
+              alt=""
+              className="w-full h-full object-contain "
+            />
+          </div>
+          <button
+            className=" bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg text-center"
+            style={{ position: "relative", zIndex: 20 }}
+            onClick={handleClick}>
+            {" "}
+            Join the Waitlist
+          </button>
         </div>
       </div>
       {showModal ? (

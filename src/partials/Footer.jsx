@@ -34,7 +34,7 @@ const Footer = () => {
         }}>
         <div className="container">
           <div className="hidden lg:block pt-8 pb-6">
-            <div className="px-6">
+            <div className="px-6 xl:px-10">
               <div className="flex justify-between w-full">
                 {/* Logo */}
                 <div className="lg:w-[131px] h-9 xl:mr-[100px]">
