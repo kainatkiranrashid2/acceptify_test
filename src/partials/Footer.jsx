@@ -130,7 +130,7 @@ const Footer = () => {
                 <div className="lg:flex-1">
                   <div className="">
                     <p className="text-[16px]/[140%] text-white font-semibold  mb-2">
-                      Sign-Up
+                      Sign-up for Newsletter
                     </p>
                     <div className="flex  items-start gap-5">
                       <div className="md:h-[45px] lg:w-[196px] xl:w-[224px] ">
@@ -145,7 +145,7 @@ const Footer = () => {
                         />
                       </div>
                       <button className="w-[92px] bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[16px]/[24px]   text-white font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg">
-                        Sign up
+                        Sign-up
                       </button>
                     </div>
                   </div>
@@ -265,8 +265,8 @@ const Footer = () => {
 
               <div className="col-span-6 items-end">
                 <div className=" w-fit float-end">
-                  <p className="text-[16px]/[140%] text-white font-semibold  mb-2">
-                    Sign-Up
+                  <p className="text-[16px]/[140%]  text-white font-semibold  mb-2">
+                    Sign-up for Newsletter
                   </p>
                   <div className="flex justify-between items-start gap-2">
                     <div className="md:h-[36px] md:w-[150px]">
@@ -396,8 +396,8 @@ const Footer = () => {
 
               <div className="col-span-12 sm:col-span-3 items-start sm:items-end">
                 <div className=" w-fit mt-8 sm:mt-0 sm:float-end">
-                  <p className="text-[16px]/[140%] text-white font-semibold  mb-2">
-                    Sign-Up
+                  <p className="text-[16px]/[140%] w-[95px] text-white font-semibold  mb-2">
+                    Sign-up for Newsletter
                   </p>
                   <div className="flex justify-between items-start">
                     <button
