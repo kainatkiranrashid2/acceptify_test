@@ -44,7 +44,7 @@ const Header = () => {
               <h3 className="dark:text-white text-center  lg:block lg:text-left">
                 Contact Us!
               </h3>
-              <p className=" text-center text-[12px]/[20px] sm:text-[16px]/[32px] lg:text-[14px]/[32px] xl:text-[20]/[32px]    dark:text-white ">
+              <p className=" text-center lg:text-left text-[12px]/[20px] sm:text-[16px]/[32px] lg:text-[14px]/[32px] xl:text-[20]/[32px]    dark:text-white ">
                 Ready to get started, would you like more information on
                 Acceptify’s features and benefits or pricing information? We are
                 here to help. Our team is ready to provide exceptional support
