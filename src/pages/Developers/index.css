@@ -52,8 +52,8 @@
 }
 .developerBenefit__ovalLeft {
   background-color: #7214ff;
-  opacity: 100%;
-  filter: blur(400px);
+  opacity: 50%;
+  filter: blur(250px);
   height: 274px;
   width: 226px;
   border-radius: 50%;

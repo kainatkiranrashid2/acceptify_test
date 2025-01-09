@@ -79,7 +79,7 @@ const DeveloperBenefits = () => {
         <div className="py-10  md:pt-[100px] md:pb-[120px]  lg:mx-10 xl:mx-20 md:mx-[60px] mx-6 ">
           <div className="absolute right-0 z-0 bottom-0 opacity-10 dark:opacity-50 developerBenefit__oval"></div>
           <div className="absolute right-0 z-0 bottom-[25%] opacity-10 dark:opacity-30 developerBenefit__oval"></div>
-          <div className="hidden dark:block absolute rounded-full z-0 left-0 bottom-[15%] developerBenefit__ovalLeft"></div>
+          <div className=" block absolute rounded-full z-0 left-0 bottom-[15%] developerBenefit__ovalLeft"></div>
           <h2 className="text-center mb-10  dark:text-white">
             Developer Benefits
           </h2>
@@ -107,7 +107,7 @@ const DeveloperBenefits = () => {
             ))}
           </div>
         </div>
-        <div className="hidden md:flex justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
+        <div className="hidden md:flex md:justify-between items-center px-10 mb-[100px] lg:mx-12 xl:mx-20">
           <div className="lg:w-[492px] md:w-[458px] flex flex-col gap-4 ">
             <h2 className="dark:text-white">Get Notified </h2>
             <p className="dark:text-white">
@@ -131,18 +131,18 @@ const DeveloperBenefits = () => {
               </button>
             </div>
           </div>
-          <div className="md:w-[162px] md:h-[162px] lg:w-[206px] lg:h-[206px]">
+          <div className="md:w-[162px] md:h-[162px] lg:w-[206px] lg:h-[206px] dark:hidden">
             <img
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900649/components/developers_benefits/nsxguoxhm2k3ehiiwsez.svg"
               alt=""
-              className="w-full h-full object-contain  dark:hidden"
+              className="w-full h-full object-contain  "
             />
           </div>
-          <div className="md:w-[162px] md:h-[162px] lg:w-[206px] lg:h-[206px]">
+          <div className="md:w-[162px] md:h-[162px] lg:w-[206px] lg:h-[206px] hidden dark:block">
             <img
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900657/components/developers_benefits/github_dark.svg"
               alt=""
-              className="w-full h-full object-contain  hidden dark:block"
+              className="w-full h-full object-contain  hidden "
             />
           </div>
         </div>
