@@ -497,12 +497,6 @@ const Footer = () => {
                           className=" bg-primary text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg">
                           Submit
                         </button>
-                        <button
-                          type="button"
-                          onClick={() => setShowModal(false)}
-                          className=" px-[14px] ml-3  py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg border border-[#5D55F9] text-[#5D55F9] ">
-                          Cancel
-                        </button>
                       </div>
                     </form>
                   </div>
