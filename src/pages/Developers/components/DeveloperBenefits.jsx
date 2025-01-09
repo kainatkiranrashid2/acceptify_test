@@ -170,17 +170,17 @@ const DeveloperBenefits = () => {
             />
           </div>
         </div>
-        <div className="md:hidden flex flex-col justify-between mx-auto w-[289px] sm:w-[458px] items-center px-10 mb-[60px] ">
+        <div className="md:hidden flex flex-col justify-between mx-auto w-[259px] sm:w-[458px] items-center  mb-[60px] ">
           <div className=" w-full mx-auto  flex flex-col  ">
             <h2 className="dark:text-white text-center font-semibold mb-4">
               Get Access to our SDK
             </h2>
-            <p className="dark:text-white text-[14px]/[29px] mb-6 text-center">
+            <p className="dark:text-white text-[14px]/[29px] mb-6 w-[254px] text-center">
               Request access to our SDK, documentation and code samples and see
               how easy it is to integrate Acceptify.
             </p>
           </div>
-          <div className="w-[124px] h-[124px] sm:w-[162px] mb-6 sm:mb-8 sm:h-[162px] mb-6 dark:hidden">
+          <div className="w-[124px] h-[124px] sm:w-[162px] mb-6 sm:mb-8 sm:h-[162px]  dark:hidden">
             <img
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900649/components/developers_benefits/nsxguoxhm2k3ehiiwsez.svg"
               alt=""
@@ -212,12 +212,12 @@ const DeveloperBenefits = () => {
             </button>
           </div>
         </div>
-        <div className="md:hidden flex flex-col justify-between items-center px-10 mx-auto w-[289px] sm:w-[458px] mb-[100px] lg:mx-12 xl:mx-20">
+        <div className="md:hidden flex flex-col justify-between items-center  mx-auto w-[259px] sm:w-[458px] mb-[100px] lg:mx-12 xl:mx-20">
           <div className="  flex flex-col gap-4 ">
             <h2 className="dark:text-white text-center font-semibold">
               Get Notified{" "}
             </h2>
-            <p className="dark:text-white text-center text-[14px]/[29px] w-full">
+            <p className="dark:text-white text-center text-[14px]/[29px] w-[254px] ">
               Sign Up for SDK, Security, and Maintenence Updates Receive the
               latest news allowing you to integrate and test new features and
               fixes. We&apos;ll also notify you of scheduled updates ahead of
