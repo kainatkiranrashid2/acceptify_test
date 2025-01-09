@@ -34,10 +34,10 @@ const Footer = () => {
         }}>
         <div className="container">
           <div className="hidden lg:block pt-8 pb-6">
-            <div className="">
-              <div className="flex items-start">
+            <div className="px-6">
+              <div className="flex justify-between w-full">
                 {/* Logo */}
-                <div className="xl:w-[131px] lg:mx-8  xl:mr-[100px]">
+                <div className="lg:w-[131px] h-9 xl:mr-[100px]">
                   <a
                     href="/"
                     className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[131px] xl:h-[36px]  flex dark:hidden items-center">
@@ -62,39 +62,43 @@ const Footer = () => {
                 </div>
 
                 {/* Information Section */}
-                <div className="xl:w-[131px] lg:mr-[34px] xl:mr-[60px]">
-                  <h3 className="text-[16px]/[140%] text-white  mb-4">
+                <div className="lg:w-[134px] lg:mr-[60px]">
+                  <h3 className="text-[14px]/[140%] text-white  mb-4">
                     EXPLORE
                   </h3>
                   <ul className="space-y-3">
                     <li>
                       <a
                         href="/devices"
-                        className="text-white lg:text-[16px]/[140%]">
+                        className="text-white lg:text-[14px]/[140%] xl:text-[16px]/[140%]">
                         Payment Devices
                       </a>
                     </li>
                     <li>
                       <a
                         href="/industries"
-                        className="text-white lg:text-[16px]/[140%]">
+                        className="text-white lg:text-[14px]/[140%] xl:text-[16px]/[140%]">
                         Industries
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-white lg:text-[16px]/[140%]">
+                      <a
+                        href="#"
+                        className="text-white lg:text-[14px]/[140%] xl:text-[16px]/[140%]">
                         Solutions{" "}
                       </a>
                     </li>
                     <li>
                       <a
                         href="/developers"
-                        className="text-white lg:text-[16px]/[140%]">
+                        className="text-white lg:text-[14px]/[140%] xl:text-[16px]/[140%]">
                         Developers{" "}
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-white :text-[16px]/[140%]">
+                      <a
+                        href="#"
+                        className="text-white lg:text-[14px]/[140%] xl:text-[16px]/[140%]">
                         Processors
                       </a>
                     </li>
@@ -102,13 +106,15 @@ const Footer = () => {
                 </div>
 
                 {/* Menu Section */}
-                <div className="xl:w-[131px] lg:w-[86px] xl:mr-[60px]">
+                <div className="xl:w-[134px] lg:w-[86px] xl:mr-[60px]">
                   <h3 className="text-sm text-white font-medium mb-4 uppercase">
                     Company
                   </h3>
                   <ul className="space-y-3">
                     <li>
-                      <a href="#" className="text-white lg:text-[16px]/[140%]">
+                      <a
+                        href="#"
+                        className="text-white lg:text-[14px]/[140%] xl:text-[16px]/[140%]">
                         Contact Us
                       </a>
                     </li>
@@ -117,19 +123,19 @@ const Footer = () => {
 
                 {/* Contact Section */}
                 <div className="lg:w-[158px] xl:w-[183px] xl:mr-[60px] flex flex-col items-start justify-start">
-                  <h3 className="text-[16px]/[140%] text-white uppercase  mb-4">
+                  <h3 className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white uppercase  mb-4">
                     INQUIRIES
                   </h3>
-                  <p className="text-[16px]/[140%] text-white">
+                  <p className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white">
                     Sales@acceptify.com
                   </p>
-                  <p className="text-[16px]/[140%] text-white mt-4 ">
+                  <p className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white mt-4 ">
                     support@acceptify.com
                   </p>
                 </div>
-                <div className="lg:flex-1">
-                  <div className="">
-                    <p className="text-[16px]/[140%] text-white font-semibold  mb-2">
+                <div className="lg:w-[284px]">
+                  <div className="flex flex-col gap-3">
+                    <p className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white font-semibold  mb-2">
                       Sign-up for Newsletter
                     </p>
                     <div className="flex  items-start gap-5">
@@ -173,7 +179,7 @@ const Footer = () => {
           </div>
           {/* tab version */}
           <div className="hidden md:block lg:hidden  px-4 pt-2 pb-5">
-            <div className="xl:w-[131px] lg:mx-8 mb-6 xl:mr-[100px]">
+            <div className="md:px-10 md:py-6 w-full">
               <a
                 href="/"
                 className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[131px] xl:h-[36px]  flex dark:hidden items-center">
@@ -196,76 +202,80 @@ const Footer = () => {
                 />
               </a>
             </div>
-            <div className="grid grid-cols-12 gap-4">
-              <div className="col-span-3">
-                <h3 className="text-[16px]/[140%] text-white  mb-4">EXPLORE</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="/devices"
-                      className="text-white md:text-[14px]/[140%]">
-                      Payment Devices
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/industries"
-                      className="text-white md:text-[14px]/[140%]">
-                      Industries
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-white md:text-[14px]/[140%]">
-                      Solutions{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/developers"
-                      className="text-white md:text-[14px]/[140%]">
-                      Developers{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-white md:text-[14px]/[140%]">
-                      Processors
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-span-3">
-                <div className="flex flex-col">
+            <div className="flex flex-row md:px-10 md:py-6 justify-between">
+              <div className="w-[316px] flex">
+                <div className="w-[134px]">
+                  <h3 className="lg:text-[16px]/[140%] xl:text-[16px]/[140%] text-white  mb-4">
+                    EXPLORE
+                  </h3>
+                  <ul className="space-y-3">
+                    <li>
+                      <a
+                        href="/devices"
+                        className="text-white md:text-[14px]/[140%]">
+                        Payment Devices
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/industries"
+                        className="text-white md:text-[14px]/[140%]">
+                        Industries
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white md:text-[14px]/[140%]">
+                        Solutions{" "}
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/developers"
+                        className="text-white md:text-[14px]/[140%]">
+                        Developers{" "}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white md:text-[14px]/[140%]">
+                        Processors
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-[158px]">
                   <div className="flex flex-col">
-                    <h3 className="text-sm text-white font-medium mb-4 uppercase">
-                      Company
-                    </h3>
-                    <ul className="space-y-3">
-                      <li>
-                        <a
-                          href="#"
-                          className="text-white md:text-[14px]/[140%]">
-                          Contact Us
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="flex flex-col mt-8">
-                    <h3 className="text-[14px]/[140%] text-white uppercase  mb-4">
-                      INQUIRIES
-                    </h3>
-                    <p className="text-[14px]/[140%] text-white">
-                      Sales@acceptify.com
-                    </p>
-                    <p className="text-[14px]/[140%] text-white mt-4 ">
-                      support@acceptify.com
-                    </p>
+                    <div className="flex flex-col">
+                      <h3 className="text-sm text-white font-medium mb-4 uppercase">
+                        Company
+                      </h3>
+                      <ul className="space-y-3">
+                        <li>
+                          <a
+                            href="#"
+                            className="text-white md:text-[14px]/[140%]">
+                            Contact Us
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="flex flex-col mt-8">
+                      <h3 className="text-[14px]/[140%] text-white uppercase  mb-4">
+                        INQUIRIES
+                      </h3>
+                      <p className="text-[14px]/[140%] text-white">
+                        Sales@acceptify.com
+                      </p>
+                      <p className="text-[14px]/[140%] text-white mt-4 ">
+                        support@acceptify.com
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="col-span-6 items-end">
-                <div className=" w-fit float-end">
-                  <p className="text-[16px]/[140%]  text-white font-semibold  mb-2">
+              <div className="w-[240px] ">
+                <div className=" w-fit ">
+                  <p className="lg:text-[16px]/[140%] xl:text-[16px]/[140%] text-white font-semibold  mb-2">
                     Sign-up for Newsletter
                   </p>
                   <div className="flex justify-between items-start gap-2">
@@ -331,7 +341,9 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-12 gap-3">
               <div className="col-span-6 sm:col-span-3">
-                <h3 className="text-[16px]/[140%] text-white  mb-4">EXPLORE</h3>
+                <h3 className="lg:text-[16px]/[140%] xl:text-[16px]/[140%] text-white  mb-4">
+                  EXPLORE
+                </h3>
                 <ul className="space-y-3">
                   <li>
                     <a href="#" className="text-white md:text-[14px]/[140%]">
