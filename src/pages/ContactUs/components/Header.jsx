@@ -221,7 +221,7 @@ const Header = () => {
               <img
                 src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425854/components/contact_us/email_dark.svg"
                 alt=""
-                className="hidden dark:block h-6 w-6"
+                className="hidden dark:block  h-6 w-6"
               />
               <p className="font-bold xl:text-[14px] dark:text-white">Email</p>
               <div>
@@ -243,7 +243,7 @@ const Header = () => {
               <img
                 src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425855/components/contact_us/phone_dark.svg"
                 alt=""
-                className="hidden dark:block"
+                className="hidden dark:block h-6 w-6"
               />
               <p className="font-bold sm:text-[14px]/[140%] w-full dark:text-white my-0">
                 Main Number
