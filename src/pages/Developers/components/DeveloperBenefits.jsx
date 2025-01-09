@@ -170,17 +170,17 @@ const DeveloperBenefits = () => {
             />
           </div>
         </div>
-        <div className="md:hidden flex flex-col justify-between w-[259px] sm:w-[458px] items-center px-10 mb-[60px] lg:mx-12 xl:mx-20">
-          <div className=" w-full mx-auto  flex flex-col gap-4 ">
-            <h2 className="dark:text-white text-center font-semibold">
+        <div className="md:hidden flex flex-col justify-between mx-auto w-[289px] sm:w-[458px] items-center px-10 mb-[60px] ">
+          <div className=" w-full mx-auto  flex flex-col  ">
+            <h2 className="dark:text-white text-center font-semibold mb-4">
               Get Access to our SDK
             </h2>
-            <p className="dark:text-white">
+            <p className="dark:text-white mb-6 text-center">
               Request access to our SDK, documentation and code samples and see
               how easy it is to integrate Acceptify.
             </p>
           </div>
-          <div className="w-[124px] h-[124px] sm:w-[162px] mb-6 sm:mb-8 sm:h-[162px] dark:hidden">
+          <div className="w-[124px] h-[124px] sm:w-[162px] mb-6 sm:mb-8 sm:h-[162px] mb-6 dark:hidden">
             <img
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900649/components/developers_benefits/nsxguoxhm2k3ehiiwsez.svg"
               alt=""
@@ -191,19 +191,20 @@ const DeveloperBenefits = () => {
             <img
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900657/components/developers_benefits/github_dark.svg"
               alt=""
-              className="w-full h-full object-contain  hidden "
+              className="w-full h-full object-contain   "
             />
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-[188.12px] sm:w-auto">
             <button
-              className=" bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[20px]  rounded-sm md:rounded-lg text-center"
+              className=" bg-primary w-full text-white px-[14px] hover:bg-[#51A805] py-[10px]
+               text-[11.74px]/[16.8px]  rounded-sm md:rounded-lg text-center"
               style={{ position: "relative", zIndex: 20 }}
               onClick={handleClick}>
               {" "}
               Visit GitHub Repository
             </button>
             <button
-              className="bg-transparent border-[2px] border-[#5D55F9] w-fit text-[#5D55F9] px-[14px]  py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg"
+              className="bg-transparent w-full text-[#5D55F9] border-[2px] border-[#5D55F9]   px-[14px]  py-[10px] text-[11.74px]/[16.8px] font-bold  rounded-sm md:rounded-lg"
               style={{ position: "relative", zIndex: 20 }}
               onClick={handleClick}>
               {" "}
