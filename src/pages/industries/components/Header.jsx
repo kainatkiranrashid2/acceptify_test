@@ -28,25 +28,27 @@ const Header = () => {
   }, []);
 
   return (
-    <section className="relative hidden md:block w-full h-screen">
+    <section className="cp-hero relative hidden md:block w-full h-screen">
       {/* Video Container */}
-      <div className="absolute inset-0 w-full h-full">
-        {videoSrc && !videoError && (
-          <LoadingVideo
-            className="hidden md:block w-full h-full object-contain"
-            src={videoSrc}
-            autoPlay
-            ref={desktopPlayerRef}
-            loop
-            muted
-            controlsList="nodownload"
-            disablePictureInPicture
-            playsInline
-            onLoadedData={handleLoadedData}
-            onError={handleError}
-            onContextMenu={(e) => e.preventDefault()}
-          />
-        )}
+      <div className="relative hidden md:block w-full md:h-full aspect-auto md:aspect-video container">
+        <div className="absolute inset-0 w-full h-full">
+          {videoSrc && !videoError && (
+            <LoadingVideo
+              className="hidden md:block w-full h-full object-cover"
+              src={videoSrc}
+              autoPlay
+              ref={desktopPlayerRef}
+              loop
+              muted
+              controlsList="nodownload"
+              disablePictureInPicture
+              playsInline
+              onLoadedData={handleLoadedData}
+              onError={handleError}
+              onContextMenu={(e) => e.preventDefault()}
+            />
+          )}
+        </div>
       </div>
     </section>
   );
