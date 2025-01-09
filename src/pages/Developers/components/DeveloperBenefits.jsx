@@ -175,7 +175,7 @@ const DeveloperBenefits = () => {
             <h2 className="dark:text-white text-center font-semibold mb-4">
               Get Access to our SDK
             </h2>
-            <p className="dark:text-white text-[14px]/[29px] mb-6 w-[254px] text-center">
+            <p className="dark:text-white text-[14px]/[29px] mb-6 w-[244px] text-center">
               Request access to our SDK, documentation and code samples and see
               how easy it is to integrate Acceptify.
             </p>
@@ -212,7 +212,7 @@ const DeveloperBenefits = () => {
             </button>
           </div>
         </div>
-        <div className="md:hidden flex flex-col justify-between items-center  mx-auto w-[259px] sm:w-[458px] mb-[100px] lg:mx-12 xl:mx-20">
+        <div className="md:hidden flex flex-col justify-between items-center  mx-auto w-[244px] sm:w-[458px] mb-[100px] lg:mx-12 xl:mx-20">
           <div className="  flex flex-col gap-4 ">
             <h2 className="dark:text-white text-center font-semibold">
               Get Notified{" "}
