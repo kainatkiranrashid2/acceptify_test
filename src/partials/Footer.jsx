@@ -473,27 +473,12 @@ const Footer = () => {
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="flex justify-center items-center ">
-                        <label htmlFor="name" className="">
-                          <p className="font-semibold text-[20px] ">Name</p>
-                        </label>
-                        <div className="h-[51px] w-[389px] ml-4">
-                          <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleInputChange}
-                            placeholder="John Doe"
-                            className="w-full h-full px-2  ml-2 border border-gray-300 rounded-md xl:w-[389px] bg-gray-100"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="flex justify-center items-center">
                         <label htmlFor="email" className="">
-                          <p className="font-semibold text-[20px] ">Email</p>
+                          <p className="font-semibold lg:text-[16px]/[27px] ">
+                            Email
+                          </p>
                         </label>
-                        <div className="h-[51px] w-[389px] ml-4">
+                        <div className="sm:h-[35px] h-[28px]  w-[199px] sm:w-[379px] ml-4">
                           <input
                             type="email"
                             id="email"
@@ -501,11 +486,11 @@ const Footer = () => {
                             value={formData.email}
                             onChange={handleInputChange}
                             placeholder="johndoe@youremail.com"
-                            className="w-full h-full px-2  ml-2 border border-gray-300 rounded-md xl:w-[389px] bg-gray-100"
+                            className="h-full px-2  ml-2 border border-gray-300 rounded-md w-full bg-gray-100"
                           />
                         </div>
                       </div>
-
+                      \
                       <div className="float-end  gap-4 pt-4">
                         <button
                           type="submit"
