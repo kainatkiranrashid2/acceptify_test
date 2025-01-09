@@ -28,6 +28,7 @@
   height: 350px;
   background: radial-gradient(circle, #6436e4 0%, rgba(255, 255, 255, 0.9) 70%);
   margin-left: 0;
+  filter: blur(700px);
   opacity: 25%;
   border-radius: 50%;
   margin-right: auto;

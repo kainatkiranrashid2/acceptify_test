@@ -127,7 +127,7 @@ const Footer = () => {
                     INQUIRIES
                   </h3>
                   <p className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white">
-                    Sales@acceptify.com
+                    sales@acceptify.com
                   </p>
                   <p className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white mt-4 ">
                     support@acceptify.com
@@ -263,7 +263,7 @@ const Footer = () => {
                         INQUIRIES
                       </h3>
                       <p className="text-[14px]/[140%] text-white">
-                        Sales@acceptify.com
+                        sales@acceptify.com
                       </p>
                       <p className="text-[14px]/[140%] text-white mt-4 ">
                         support@acceptify.com
@@ -397,7 +397,7 @@ const Footer = () => {
                       INQUIRIES
                     </h3>
                     <p className="text-[14px]/[140%] text-white">
-                      Sales@acceptify.com
+                      sales@acceptify.com
                     </p>
                     <p className="text-[14px]/[140%] text-white mt-4 ">
                       support@acceptify.com
