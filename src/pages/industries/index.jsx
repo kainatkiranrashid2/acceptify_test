@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 const Header = React.lazy(() => import("./components/Header"));
+const IndustriesSection = React.lazy(() => import("./components/industries"));
 
 import "./index.css";
 
@@ -9,6 +10,7 @@ const Industries = () => {
   return (
     <Fragment>
       <Header />
+      <IndustriesSection />
     </Fragment>
   );
 };

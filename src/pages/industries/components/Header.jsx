@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <section className="relative hidden md:block w-full h-screen">
       {/* Video Container */}
-      <div className="fixed inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full">
         {videoSrc && !videoError && (
           <LoadingVideo
             className="hidden md:block w-full h-full object-cover"
