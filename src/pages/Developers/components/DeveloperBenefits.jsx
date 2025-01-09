@@ -217,7 +217,7 @@ const DeveloperBenefits = () => {
             <h2 className="dark:text-white text-center font-semibold">
               Get Notified{" "}
             </h2>
-            <p className="dark:text-white text-center w-full">
+            <p className="dark:text-white text-center text-[14px]/[29px] w-full">
               Sign Up for SDK, Security, and Maintenence Updates Receive the
               latest news allowing you to integrate and test new features and
               fixes. We&apos;ll also notify you of scheduled updates ahead of
