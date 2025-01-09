@@ -83,7 +83,7 @@ const DeveloperBenefits = () => {
           <h2 className="text-center mb-10  dark:text-white">
             Developer Benefits
           </h2>
-          <div className="relative px-10 py-9 md:py-9 md:px-10 gap-8 md:gap-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 overflow-hidden dark:bg-[#05122C] border-1 border border-[#3479FD] rounded-[20px]">
+          <div className="relative px-10 py-9 md:py-9 md:px-10 gap-8 md:gap-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 overflow-hidden dark:bg-[#05122C] border-[1px] border border-[#3479FD] rounded-[20px]">
             <div className="absolute -top-48 dark:-top-56 -left-28 overflow-hidden developerBenefit__topGradient"></div>
             <div className="absolute -bottom-52 -right-20 opacity-20   developerBenefit__topGradient"></div>
 
