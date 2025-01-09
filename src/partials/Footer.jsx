@@ -494,7 +494,7 @@ const Footer = () => {
                       <div className="float-end  gap-4 pt-4">
                         <button
                           type="submit"
-                          className=" bg-primary text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg">
+                          className=" bg-primary text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[14px]/[20px] rounded-sm md:rounded-lg">
                           Submit
                         </button>
                       </div>
