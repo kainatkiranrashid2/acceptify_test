@@ -62,7 +62,7 @@ const Footer = () => {
                 </div>
 
                 {/* Information Section */}
-                <div className="lg:w-[134px] lg:mr-[60px]">
+                <div className="lg:w-[134px] lg:mr-[60px] ]">
                   <h3 className="text-[14px]/[140%] text-white  mb-4">
                     EXPLORE
                   </h3>
@@ -133,7 +133,7 @@ const Footer = () => {
                     support@acceptify.com
                   </p>
                 </div>
-                <div className="lg:w-[284px]">
+                <div className="lg:w-[284px] xl:[240px]">
                   <div className="flex flex-col gap-3">
                     <p className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white font-semibold  mb-2">
                       Sign-up for Newsletter
