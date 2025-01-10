@@ -84,7 +84,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="mx-auto w-[240px]  sm:w-[524px] md:w-[524px] h-[580px] bg-white dark:bg-[#282478] shadow-[0px_4px_40px_rgba(0,0,0,0.1)]">
+          <div className="mx-auto w-[240px] h-[600px] sm:w-[524px] md:w-[524px] sm:h-[580px] bg-white dark:bg-[#282478] shadow-[0px_4px_40px_rgba(0,0,0,0.1)]">
             <form
               onSubmit={handleSubmit}
               className="flex flex-col  px-6 py-6 sm:px-10 sm:py-12 w-full">
@@ -180,10 +180,10 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-end pt-4 mt-10 sm:mt-6">
+              <div className="flex justify-end pt-4 mt-10 sm:mt-6  ">
                 <button
                   type="submit"
-                  className="bg-primary text-white px-8 py-3 text-base rounded-lg hover:bg-[#51A805] transition-colors">
+                  className="bg-primary text-white px-8 py-3 text-base rounded-lg hover:bg-[#51A805] transition-colors ">
                   Submit
                 </button>
               </div>
