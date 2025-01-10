@@ -41,7 +41,7 @@ const Header = () => {
               <h2 className="dark:text-white text-center lg:text-left">
                 Have a question?
               </h2>
-              <h3 className="dark:text-white text-center  lg:block lg:text-left">
+              <h3 className="dark:text-white text-center  lg:block lg:text-left xl:text-[24px] sm:text-[18px] text-[14px] ">
                 Contact Us!
               </h3>
               <p className=" text-center lg:text-left text-[12px]/[20px] sm:text-[16px]/[32px] lg:text-[14px]/[32px] xl:text-[20]/[32px]    dark:text-white ">
