@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <section className=" relative overflow-hidden dark:bg-[#06142F]">
       <div className="absolute dark:hidden -top-64 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl" />
-      <div className="absolute hidden dark:block -top-64 -left-32 w-[376px] h-[376px] bg-[#431C95] rounded-full blur-3xl" />
+      <div className="absolute  hidden dark:block -top-64 -left-32 w-[376px] h-[376px] bg-[#431C95] rounded-full blur-3xl" />
       <div className="absolute  block dark:hidden sm:top-40 md:top-10 contact__leftoval opacity-30 md:opacity-30 -left-[40%] sm:-left-[30%] md:-left-[20%] z-0 "></div>
       <div className="absolute dark:hidden  block top-[620px] sm:top-[620px] md:top-[850px] lg:top-[550px] contact__rightoval opacity-30 dark:opacity-5 -right-10 z-0"></div>
       <div className="absolute hidden dark:block top-[300px] contact__rightoval_dark opacity-10 dark:opacity-5 -right-0 z-0 "></div>
