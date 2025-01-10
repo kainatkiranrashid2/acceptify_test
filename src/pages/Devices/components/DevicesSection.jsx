@@ -245,7 +245,9 @@ const DevicesSection = () => {
           </div>
         </div>
       </div>
-      <CTASection />
+      <div className="mb-20">
+        <CTASection />
+      </div>
     </section>
   );
 };
