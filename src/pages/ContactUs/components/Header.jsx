@@ -30,10 +30,10 @@ const Header = () => {
     <section className=" relative overflow-hidden dark:bg-[#06142F]">
       <div className="absolute dark:hidden -top-64 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl" />
       <div className="absolute hidden dark:block -top-64 -left-32 w-[376px] h-[376px] bg-[#431C95] rounded-full blur-3xl" />
-      <div className="absolute  hidden lg:block dark:hidden top-10 contact__leftoval opacity-10 md:opacity-30 -left-[40%] md:-left-[20%] z-0 "></div>
+      <div className="absolute  block dark:hidden top-10 contact__leftoval opacity-10 md:opacity-30 -left-[40%] md:-left-[20%] z-0 "></div>
       <div className="absolute dark:hidden hidden sm:block sm:top-[620px] md:top-[850px] lg:top-[550px] contact__rightoval opacity-30 dark:opacity-5 -right-10 z-0"></div>
       <div className="absolute hidden dark:block top-[300px] contact__rightoval_dark opacity-10 dark:opacity-5 -right-0 z-0 "></div>
-      <div className="absolute block dark:hidden top-[350px] sm:top-[300px] md:top-[300px] blur-3xl md:blur-3xl lg:top-[200px] contact__midOval opacity-10 sm:opacity-30 md:opacity-30 lg:opacity-20 dark:opacity-5 md:left-0 lg:right-[40%] z-0 "></div>
+      <div className="absolute hidden lg:block dark:hidden top-[350px] sm:top-[300px] md:top-[300px] blur-3xl md:blur-3xl lg:top-[200px] contact__midOval opacity-10 sm:opacity-30 md:opacity-30 lg:opacity-20 dark:opacity-5 md:left-0 lg:right-[40%] z-0 "></div>
       <div className="container relative z-10">
         <div className="flex flex-col lg:flex-row  lg:justify-between lg:items-start xl:items-center md:pt-16 lg:pt-44 pt-[72px] sm:pt-16 pb-[60px] sm:pb-8 lg:pb-[312px] md:mx-10 lg:mx-20 md:gap-10 lg:gap-20">
           <div className="flex flex-col mx-auto w-[240px] sm:w-[524px] xl:w-[580px] lg:w-[348px] md:w-[644px] md:mx-auto mt-10 ">
