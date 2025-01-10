@@ -8,7 +8,7 @@ const Header = () => {
       <div className="absolute dark:hidden -top-72 -left-64 sm:-top-64 sm:-left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl z-0" />
       <div className="absolute hidden dark:block -top-64 -left-32 w-[376px] h-[376px] bg-[#431C95] rounded-full blur-3xl z-0" />
       <div className="xl:w-[893px] lg:w-[772px] md:w-[632px] z-10 sm:w-[486px] w-[288px] flex flex-col justify-center items-center gap-5 mb-4 md:mb-8">
-        <h1 className="text-white px-2 text-center xl:w-[893px] lg:w-[772px] md:w-[636px] w-[288px] sm:w-[433px]  capitalize">
+        <h1 className="text-white font-semibold px-2 text-center xl:w-[893px] lg:w-[772px] md:w-[636px] w-[288px] sm:w-[433px]  capitalize">
           Worldwide secure processing with a few lines of code
         </h1>
         <p className="text-white  2xl:w-[879px] xl:w-[658px] lg:w-[580px] md:w-[620px] sm:w-[433px] text-center">
