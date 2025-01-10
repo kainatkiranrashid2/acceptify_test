@@ -142,7 +142,7 @@ const DeveloperBenefits = () => {
             <img
               src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900657/components/developers_benefits/github_dark.svg"
               alt=""
-              className="w-full h-full object-contain  hidden "
+              className="w-full h-full object-contain "
             />
           </div>
         </div>
