@@ -53,7 +53,16 @@ const Header = () => {
             </div>
             <div className="hidden lg:flex  flex-col gap-8 xl:gap-4 xl:flex-row justify-between mt-12">
               <div className="gap-2  border-l py-0 pl-5 border-[#6137FC]/50  pr-2 flex flex-col w-full xl:w-[182px]">
-                <FaMapMarkedAlt size={24} className="dark:text-white" />
+                <img
+                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425662/components/contact_us/address_light.svg"
+                  alt=""
+                  className="dark:hidden h-6 w-6"
+                />
+                <img
+                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425854/components/contact_us/address_dark.svg"
+                  alt=""
+                  className="hidden dark:block h-6 w-6"
+                />
                 <p className="font-bold xl:text-[14px] dark:text-white">
                   Address
                 </p>
@@ -62,22 +71,44 @@ const Header = () => {
                 </p>
               </div>
               <div className="gap-2  border-l py-0 border-[#6137FC]/50  pl-5  pr-2 flex flex-col w-full xl:w-[202px]">
-                <HiOutlineMail size={24} className="dark:text-white" />
+                <img
+                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425662/components/contact_us/mail_light.svg"
+                  className="h-6 w-6  dark:hidden "
+                  alt="dark:hidden  "
+                />
+                <img
+                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425854/components/contact_us/email_dark.svg"
+                  alt=""
+                  className="hidden dark:block  h-6 w-6"
+                />
                 <p className="font-bold xl:text-[14px] dark:text-white">
                   Email
                 </p>
-                <p className="xl:text-[14px]/[14px] dark:text-white">
-                  sales@acceptify.com{" "}
-                </p>
-                <p className="xl:text-[14px]/[14px] dark:text-white">
-                  support@acceptify.com{" "}
-                </p>
+                <div>
+                  <p className="xl:text-[14px]/[14px] dark:text-white">
+                    sales@acceptify.com{" "}
+                  </p>
+                  <p className="xl:text-[14px]/[14px] dark:text-white">
+                    support@acceptify.com{" "}
+                  </p>
+                </div>
               </div>
               <div className="gap-2 border-l pl-5 py-0 border-[#6137FC]/50  pr-2 flex flex-col w-full xl:w-[150px]">
-                <FiPhone size={24} className="dark:text-white" />
-                <p className="font-bold dark:text-white xl:text-[14px]/[15px] my-0">
-                  Main Number
-                </p>
+                <img
+                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425662/components/contact_us/phone_light.svg"
+                  alt=""
+                  className="dark:hidden h-6 w-6"
+                />
+                <img
+                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425855/components/contact_us/phone_dark.svg"
+                  alt=""
+                  className="hidden dark:block h-6 w-6"
+                />
+                <div className="">
+                  <p className="font-bold xl:text-[14px] dark:text-white ">
+                    Main Number
+                  </p>
+                </div>
                 <p className="xl:text-[14px]/[14px] dark:text-white">
                   (949) 222-0300
                 </p>
@@ -128,7 +159,7 @@ const Header = () => {
                 </div>
                 <div className="flex flex-col sm:flex-row justify-start items-start sm:justify-between   sm:items-center">
                   <label htmlFor="phone" className="">
-                    <p className="font-medium text-[14px]/[27px] text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px] sm:text-[16px]/[27px] md:text-[18px]/[27px]lg:text-[20px] dark:text-white mb-2 sm:mb-0">
+                    <p className="font-medium  text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px]  md:text-[18px]/[27px]lg:text-[20px] dark:text-white mb-2 sm:mb-0">
                       Phone
                     </p>
                   </label>
@@ -245,9 +276,11 @@ const Header = () => {
                 alt=""
                 className="hidden dark:block h-6 w-6"
               />
-              <p className="font-bold sm:text-[14px]/[140%] w-full dark:text-white my-0">
-                Main Number
-              </p>
+              <div className="my-[3px]">
+                <p className="font-bold sm:text-[14px]/[140%] w-full dark:text-white ">
+                  Main Number
+                </p>
+              </div>
               <p className="sm:text-[14px]/[140%] dark:text-white">
                 (949) 222-0300
               </p>
