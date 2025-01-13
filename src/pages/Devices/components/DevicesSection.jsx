@@ -114,7 +114,7 @@ const DevicesSection = () => {
             </p>
             <span className="mt-6 h-[2px] w-[14rem] sm:w-[28rem] bg-black opacity-50 dark:bg-[#EBEBEB] dark:opacity-50"></span>
           </div>
-          <div className="hidden md:block md:mb-[114px] lg:mb-[102px] xl:mb-[140px]">
+          <div className="hidden md:block md:mb-[50px] lg:mb-[40px] xl:mb-[60px]">
             {devices.map((device, index) => (
               <div
                 className={`mx-auto mb-20 px-[60px] py-[30px] rounded-2xl items-center 2xl:w-[1200px] xl:w-[1000px] lg:w-[800px] md:w-[717px] bg-white dark:bg-gradient-to-l ${
