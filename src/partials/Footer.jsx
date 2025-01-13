@@ -3,7 +3,7 @@ import { useState } from "react";
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
+    // name: "",
     email: "",
   });
   const handleClick = () => {
@@ -144,10 +144,18 @@ const Footer = () => {
                           type="email"
                           id="email"
                           name="email"
-                          // value={}
-                          // onChange={}
+                          value={formData.email}
+
+                          onChange={handleInputChange}
                           placeholder="Email"
-                          className=" h-full px-2   border  border-gray-300 rounded-md w-full dark:bg-[#150731] bg-gray-100"
+                          className=" h-full px-2   border  border-gray-300 rounded-md w-full dark:bg-[#150731] bg-gray-100 [&:-webkit-autofill]:!bg-gray-100
+                        dark:[&:-webkit-autofill]:!bg-[#150731]
+                        [&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#f3f4f6]
+                        dark:[&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#150731]
+                        [&:-webkit-autofill]:!-webkit-text-fill-color-[#000]
+                        dark:[&:-webkit-autofill]:!-webkit-text-fill-color-[#fff]
+                        dark:[&:-webkit-autofill]:[color-scheme:dark]
+                        appearance-none"
                         />
                       </div>
                       <button className="lg:w-[76px] xl:w-[92px] bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[14px]/[20px] xl:text-[16px]/[24px]   text-white font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg">
@@ -284,10 +292,20 @@ const Footer = () => {
                         type="email"
                         id="email"
                         name="email"
+                        value={formData.email}
+
+                        onChange={handleInputChange}
                         // value={}
                         // onChange={}
                         placeholder="Email"
-                        className=" h-full px-2   border  border-gray-300 rounded-md w-full dark:bg-[#150731] bg-gray-100"
+                        className=" h-full px-2   border  border-gray-300 rounded-md w-full dark:bg-[#150731] bg-gray-100 [&:-webkit-autofill]:!bg-gray-100
+                        dark:[&:-webkit-autofill]:!bg-[#150731]
+                        [&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#f3f4f6]
+                        dark:[&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#150731]
+                        [&:-webkit-autofill]:!-webkit-text-fill-color-[#000]
+                        dark:[&:-webkit-autofill]:!-webkit-text-fill-color-[#fff]
+                        dark:[&:-webkit-autofill]:[color-scheme:dark]
+                        appearance-none"
                       />
                     </div>
                     <button className="w-[76px] bg-primary hover:bg-[#51A805] md:text-[14px]/[20px]   text-white font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg">
@@ -486,7 +504,14 @@ const Footer = () => {
                             value={formData.email}
                             onChange={handleInputChange}
                             placeholder="johndoe@youremail.com"
-                            className="h-full px-2  ml-2 border border-gray-300 rounded-md w-full bg-gray-100"
+                            className="h-full px-2  ml-2 border border-gray-300 rounded-md w-full bg-gray-100 [&:-webkit-autofill]:!bg-gray-100
+                                  dark:[&:-webkit-autofill]:!bg-[#150731]
+                                  [&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#f3f4f6]
+                                  dark:[&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#150731]
+                                  [&:-webkit-autofill]:!-webkit-text-fill-color-[#000]
+                                  dark:[&:-webkit-autofill]:!-webkit-text-fill-color-[#fff]
+                                  dark:[&:-webkit-autofill]:[color-scheme:dark]
+                                  appearance-none"
                           />
                         </div>
                       </div>
