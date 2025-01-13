@@ -21,7 +21,7 @@ const NavbarMenu = [
   {
     id: 3,
     title: "Solutions",
-    path: "#",
+    path: "/contactus",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const NavbarMenu = [
   {
     id: 5,
     title: "Processors",
-    path: "#",
+    path: "/contactus",
   },
 ];
 
