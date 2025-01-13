@@ -216,7 +216,7 @@ const Header = () => {
                   {NavbarMenu.map((menu) => (
                     <li
                       key={menu.id}
-                      className="border-b-[1px] py-4 px-4 mb-0 mt-0 dark:border-[#5D55F9] border-[#E7E7E7]">
+                      className=" py-4 px-4 mb-0 mt-0 border-b-[1px] dark:border-[#5D55F9] border-[#E7E7E7]">
                       <Link
                         to={menu.path}
                         onClick={handleLinkClick}
@@ -225,6 +225,13 @@ const Header = () => {
                       </Link>
                     </li>
                   ))}
+                  <div className="border-b-[1px] dark:border-[#5D55F9] border-[#E7E7E7] py-[22px] px-4">
+                    <button
+                      className=" bg-primary flex items-center hover:bg-[#51A805] text-white text-[11px]/[16px] font-semibold !w-[92px]   py-[10px] px-[14px] rounded-lg "
+                      onClick={handleClick}>
+                      Get Started
+                   </button>
+                    </div>
                   <li className="flex justify-between items-center border-b-[1px] px-4 py-8 dark:border-[#5D55F9] border-[#E7E7E7 text-black dark:text-white">
                     Switch Theme
                     <ThemeToggle />
