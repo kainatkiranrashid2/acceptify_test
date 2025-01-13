@@ -359,36 +359,36 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-12 gap-3">
               <div className="col-span-6 sm:col-span-3">
-                <h3 className="lg:text-[16px]/[140%] xl:text-[16px]/[140%] text-white  mb-4">
+                <h3 className="text-[14px]/[140%] text-white  mb-4">
                   EXPLORE
                 </h3>
                 <ul className="space-y-3">
                   <li>
-                    <a href="/contactus" className="text-white md:text-[14px]/[140%]">
+                    <a href="/contactus" className="text-white text-[14px]/[140%]">
                       Payment Devices
                     </a>
                   </li>
                   <li>
                     <a
                       href="/contactus"
-                      className="text-white md:text-[14px]/[140%]">
+                      className="text-white text-[14px]/[140%]">
                       Industries
                     </a>
                   </li>
                   <li>
-                    <a href="/contactus" className="text-white md:text-[14px]/[140%]">
+                    <a href="/contactus" className="text-white text-[14px]/[140%]">
                       Solutions{" "}
                     </a>
                   </li>
                   <li>
                     <a
                       href="/developers"
-                      className="text-white md:text-[14px]/[140%]">
+                      className="text-white text-[14px]/[140%]">
                       Developers{" "}
                     </a>
                   </li>
                   <li>
-                    <a href="/contactus" className="text-white md:text-[14px]/[140%]">
+                    <a href="/contactus" className="text-white text-[14px]/[140%]">
                       Processors
                     </a>
                   </li>
@@ -426,7 +426,7 @@ const Footer = () => {
 
               <div className="col-span-12 sm:col-span-3 items-start sm:items-end">
                 <div className=" w-fit mt-8 sm:mt-0 sm:float-end">
-                  <p className="text-[16px]/[140%] w-[95px] text-white font-semibold  mb-2">
+                  <p className="text-[14px]/[140%] w-[95px] text-white font-semibold  mb-2">
                     Sign-up for Newsletter
                   </p>
                   <div className="flex justify-between items-start">
