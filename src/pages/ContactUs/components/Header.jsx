@@ -221,7 +221,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-end pt-4 sm:mt-6  ">
+              <div className="flex justify-end pt-4   ">
               <button type="submit" className="bg-primary hidden md:block text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg">
                Submit
               </button>
