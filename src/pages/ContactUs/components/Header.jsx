@@ -134,7 +134,7 @@ const Header = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="John Doe"
-                      className="w-full h-full px-2 py-1 sm:p-2  text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px]  sm:ml-2 dark:text-white  border dark:border-none border-gray-300 rounded-[4px] sm:rounded-md  bg-gray-100 dark:bg-[#150731] outline-none"
+                      className="w-full h-full px-2 py-1 sm:p-2  text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px]  sm:ml-2 dark:text-white  border dark:border-none border-gray-300 rounded-[4px] sm:rounded-md  bg-gray-100 dark:bg-[#150731] outline-none [&:-webkit-autofill]:!bg-gray-100 [&:-webkit-autofill]:!shadow-[0_0_0_30px_#f3f4f6_inset] [&:-webkit-autofill]:!-webkit-text-fill-color-[#000] dark:[&:-webkit-autofill]:!shadow-[0_0_0_30px_#150731_inset] dark:[&:-webkit-autofill]:![color-scheme:dark] dark:[&:-webkit-autofill]:![background-image:none] dark:[&:-webkit-autofill]:!text-white dark:[&:-webkit-autofill]:![appearance:none] dark:[&:-webkit-autofill]:!-webkit-text-fill-color-[#fff]"
                     />
                   </div>
                 </div>
@@ -153,7 +153,7 @@ const Header = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="johndoe@youremail.com"
-                      className=" w-full h-full px-2 py-1 sm:p-2 text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px]  sm:ml-2  border dark:text-white dark:border-none border-gray-300 rounded-[4px] sm:rounded-md  bg-gray-100 dark:bg-[#150731] outline-none"
+                      className=" w-full h-full px-2 py-1 sm:p-2 text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px]  sm:ml-2  border dark:text-white dark:border-none border-gray-300 rounded-[4px] sm:rounded-md  bg-gray-100 dark:bg-[#150731] outline-none [&:-webkit-autofill]:!bg-gray-100 [&:-webkit-autofill]:!shadow-[0_0_0_30px_#f3f4f6_inset] [&:-webkit-autofill]:!-webkit-text-fill-color-[#000] dark:[&:-webkit-autofill]:!shadow-[0_0_0_30px_#150731_inset] dark:[&:-webkit-autofill]:![color-scheme:dark] dark:[&:-webkit-autofill]:![background-image:none] dark:[&:-webkit-autofill]:!text-white dark:[&:-webkit-autofill]:![appearance:none] dark:[&:-webkit-autofill]:!-webkit-text-fill-color-[#fff]"
                     />
                   </div>
                 </div>
@@ -171,7 +171,7 @@ const Header = () => {
                       placeholder="(949) 222-0300"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className=" w-full h-full px-2 py-1 sm:p-2 text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px] sm:ml-2  border dark:text-white dark:border-none border-gray-300 rounded-[4px] sm:rounded-md  bg-gray-100 dark:bg-[#150731] outline-none"
+                      className=" w-full h-full px-2 py-1 sm:p-2 text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px] sm:ml-2  border dark:text-white dark:border-none border-gray-300 rounded-[4px] sm:rounded-md  bg-gray-100 dark:bg-[#150731] outline-none [&:-webkit-autofill]:!bg-gray-100 [&:-webkit-autofill]:!shadow-[0_0_0_30px_#f3f4f6_inset] [&:-webkit-autofill]:!-webkit-text-fill-color-[#000] dark:[&:-webkit-autofill]:!shadow-[0_0_0_30px_#150731_inset] dark:[&:-webkit-autofill]:![color-scheme:dark] dark:[&:-webkit-autofill]:![background-image:none] dark:[&:-webkit-autofill]:!text-white dark:[&:-webkit-autofill]:![appearance:none] dark:[&:-webkit-autofill]:!-webkit-text-fill-color-[#fff]"
                     />
                   </div>
                 </div>
@@ -189,7 +189,7 @@ const Header = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Company Name"
-                      className="w-full h-full px-2 py-1 sm:p-2 text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px]  sm:ml-2  border dark:text-white dark:border-none border-gray-300 rounded-[4px] sm:rounded-md  bg-gray-100 dark:bg-[#150731] outline-none"
+                      className="w-full h-full px-2 py-1 sm:p-2 text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px]  sm:ml-2  border dark:text-white dark:border-none border-gray-300 rounded-[4px] sm:rounded-md  bg-gray-100 dark:bg-[#150731] outline-none [&:-webkit-autofill]:!bg-gray-100 [&:-webkit-autofill]:!shadow-[0_0_0_30px_#f3f4f6_inset] [&:-webkit-autofill]:!-webkit-text-fill-color-[#000] dark:[&:-webkit-autofill]:!shadow-[0_0_0_30px_#150731_inset] dark:[&:-webkit-autofill]:![color-scheme:dark] dark:[&:-webkit-autofill]:![background-image:none] dark:[&:-webkit-autofill]:!text-white dark:[&:-webkit-autofill]:![appearance:none] dark:[&:-webkit-autofill]:!-webkit-text-fill-color-[#fff]"
                     />
                   </div>
                 </div>
@@ -203,10 +203,21 @@ const Header = () => {
                     <textarea
                       id="message"
                       name="message"
-                      value={formData.company}
+                      rows={10}
+                      value={formData.message}
                       onChange={handleInputChange}
                       placeholder="Write a message..."
-                      className="w-full h-full px-2 py-1 sm:p-2 text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px]  sm:ml-2  border dark:text-white dark:border-none border-gray-300 rounded-[4px] sm:rounded-md  bg-gray-100 dark:bg-[#150731] outline-none"
+                      className="w-full h-full px-2 py-1 sm:p-2 text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px] sm:ml-2 
+                        border dark:text-white dark:border-none border-gray-300 rounded-[4px] sm:rounded-md 
+                        bg-gray-100 dark:bg-[#150731] outline-none 
+                        [&:-webkit-autofill]:!bg-gray-100
+                        dark:[&:-webkit-autofill]:!bg-[#150731]
+                        [&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#f3f4f6]
+                        dark:[&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#150731]
+                        [&:-webkit-autofill]:!-webkit-text-fill-color-[#000]
+                        dark:[&:-webkit-autofill]:!-webkit-text-fill-color-[#fff]
+                        dark:[&:-webkit-autofill]:[color-scheme:dark]
+                        appearance-none"
                     />
                   </div>
                 </div>
