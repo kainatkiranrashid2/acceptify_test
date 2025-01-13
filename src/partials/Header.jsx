@@ -92,6 +92,7 @@ const Header = () => {
     setMobileSubmenu(null);
   };
   const handleClick = () => {
+    setIsMobileMenuOpen(false);
     navigate("contactus");
   };
 
