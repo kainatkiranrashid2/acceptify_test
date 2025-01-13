@@ -133,7 +133,7 @@ const Footer = () => {
                     support@acceptify.com
                   </p>
                 </div>
-                <div className="lg:w-[284px] xl:[324px]">
+                <div className="lg:w-[304px] xl:[324px]">
                   <div className="flex flex-col gap-1">
                     <p className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white font-semibold  mb-2">
                       Sign-up for Newsletter
