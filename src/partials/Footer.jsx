@@ -63,7 +63,7 @@ const Footer = () => {
 
                 {/* Information Section */}
                 <div className="lg:w-[134px] lg:mr-[60px] ]">
-                  <h3 className="text-[14px]/[140%] text-white  mb-4">
+                  <h3 className="lg:text-[14px]/[140%] font-medium xl:text-[16px]/[140%] text-white uppercase mb-4">
                     EXPLORE
                   </h3>
                   <ul className="space-y-3">
@@ -107,7 +107,7 @@ const Footer = () => {
 
                 {/* Menu Section */}
                 <div className="xl:w-[134px] lg:w-[86px] xl:mr-[60px]">
-                  <h3 className="text-sm text-white font-medium mb-4 uppercase">
+                  <h3 className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] font-medium text-white uppercase  mb-4">
                     Company
                   </h3>
                   <ul className="space-y-3">
@@ -123,7 +123,7 @@ const Footer = () => {
 
                 {/* Contact Section */}
                 <div className="lg:w-[158px] xl:w-[183px] xl:mr-[60px] flex flex-col items-start justify-start">
-                  <h3 className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white uppercase  mb-4">
+                  <h3 className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] font-medium text-white uppercase  mb-4">
                     INQUIRIES
                   </h3>
                   <p className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white">
@@ -133,7 +133,7 @@ const Footer = () => {
                     support@acceptify.com
                   </p>
                 </div>
-                <div className="lg:w-[284px] xl:[240px]">
+                <div className="lg:w-[284px] xl:[324px]">
                   <div className="flex flex-col gap-1">
                     <p className="lg:text-[14px]/[140%] xl:text-[16px]/[140%] text-white font-semibold  mb-2">
                       Sign-up for Newsletter
