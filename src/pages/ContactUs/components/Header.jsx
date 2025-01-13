@@ -115,7 +115,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="mx-auto w-[240px] h-[600px] sm:w-[524px] md:w-[524px] sm:h-[580px] bg-white dark:bg-[#282478] shadow-[0px_4px_40px_rgba(0,0,0,0.1)]">
+          <div className="mx-auto w-[240px] h-[57x] sm:w-[524px] md:w-[524px] sm:h-[580px] bg-white dark:bg-[#282478] shadow-[0px_4px_40px_rgba(0,0,0,0.1)]">
             <form
               onSubmit={handleSubmit}
               className="flex flex-col  px-6 py-6 sm:px-10 sm:py-12 w-full">
@@ -199,17 +199,16 @@ const Header = () => {
                       Message
                     </p>
                   </label>
-                  <div className="h-[80px] w-48  sm:h-[120px] sm:w-[325px] ">
+                  <div className="h-[60px] w-48  sm:h-[140px] sm:w-[325px] ">
                     <textarea
                       id="message"
                       name="message"
-                      rows={10}
                       value={formData.message}
                       onChange={handleInputChange}
                       placeholder="Write a message..."
-                      className="w-full h-full px-2 py-1 sm:p-2 text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px] sm:ml-2 
+                      className="w-full !h-full px-2 py-1 sm:p-2 text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px] sm:ml-2 
                         border dark:text-white dark:border-none border-gray-300 rounded-[4px] sm:rounded-md 
-                        bg-gray-100 dark:bg-[#150731] outline-none 
+                        bg-gray-100 dark:bg-[#150731] outline-none resize-none
                         [&:-webkit-autofill]:!bg-gray-100
                         dark:[&:-webkit-autofill]:!bg-[#150731]
                         [&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#f3f4f6]
@@ -222,12 +221,13 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-end pt-4 mt-10 sm:mt-6  ">
-                <button
-                  type="submit"
-                  className="bg-primary text-white px-8 py-3 text-base rounded-lg hover:bg-[#51A805] transition-colors ">
-                  Submit
-                </button>
+              <div className="flex justify-end pt-4 sm:mt-6  ">
+              <button type="submit" className="bg-primary hidden md:block text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px] rounded-sm md:rounded-lg">
+               Submit
+              </button>
+              <button className="block md:hidden bg-primary text-white px-[14px] hover:bg-[#51A805] rounded-sm md:rounded-lg py-[6.8px] text-[11px]/[16.5px] sm:text-[11px]/[16px]">
+                Submit
+              </button>
               </div>
             </form>
           </div>
