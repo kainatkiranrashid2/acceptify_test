@@ -76,14 +76,14 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="/industries"
+                        href="/contactus"
                         className="text-white lg:text-[14px]/[140%] xl:text-[16px]/[140%]">
                         Industries
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/contactus"
                         className="text-white lg:text-[14px]/[140%] xl:text-[16px]/[140%]">
                         Solutions{" "}
                       </a>
@@ -97,7 +97,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/contactus"
                         className="text-white lg:text-[14px]/[140%] xl:text-[16px]/[140%]">
                         Processors
                       </a>
@@ -113,7 +113,7 @@ const Footer = () => {
                   <ul className="space-y-3">
                     <li>
                       <a
-                        href="#"
+                        href="/contactus"
                         className="text-white lg:text-[14px]/[140%] xl:text-[16px]/[140%]">
                         Contact Us
                       </a>
@@ -226,13 +226,13 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="/industries"
+                        href="/contactus"
                         className="text-white md:text-[14px]/[140%]">
                         Industries
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-white md:text-[14px]/[140%]">
+                      <a href="/contactus" className="text-white md:text-[14px]/[140%]">
                         Solutions{" "}
                       </a>
                     </li>
@@ -244,7 +244,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-white md:text-[14px]/[140%]">
+                      <a href="/contactus" className="text-white md:text-[14px]/[140%]">
                         Processors
                       </a>
                     </li>
@@ -259,7 +259,7 @@ const Footer = () => {
                       <ul className="space-y-3">
                         <li>
                           <a
-                            href="#"
+                            href="/contactus"
                             className="text-white md:text-[14px]/[140%]">
                             Contact Us
                           </a>
@@ -364,19 +364,19 @@ const Footer = () => {
                 </h3>
                 <ul className="space-y-3">
                   <li>
-                    <a href="#" className="text-white md:text-[14px]/[140%]">
+                    <a href="/contactus" className="text-white md:text-[14px]/[140%]">
                       Payment Devices
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/industries"
+                      href="/contactus"
                       className="text-white md:text-[14px]/[140%]">
                       Industries
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-white md:text-[14px]/[140%]">
+                    <a href="/contactus" className="text-white md:text-[14px]/[140%]">
                       Solutions{" "}
                     </a>
                   </li>
@@ -388,7 +388,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-white md:text-[14px]/[140%]">
+                    <a href="/contactus" className="text-white md:text-[14px]/[140%]">
                       Processors
                     </a>
                   </li>
@@ -403,7 +403,7 @@ const Footer = () => {
                     <ul className="space-y-3">
                       <li>
                         <a
-                          href="#"
+                          href="/contactus"
                           className="text-white md:text-[14px]/[140%]">
                           Contact Us
                         </a>
