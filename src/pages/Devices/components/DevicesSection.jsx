@@ -104,8 +104,8 @@ const DevicesSection = () => {
   return (
     <section className="bg-[#F6F9FC] dark:bg-[#05122C]">
       <div className="container">
-        <div className="py-20">
-          <div className="flex flex-col justify-center items-center gap-4 mb-10">
+        <div className="py-20 ">
+          <div className="flex flex-col justify-center items-center gap-4 ">
             <h1 className="text-center font-semibold dark:text-white">
               Simple, Easy Payments
             </h1>
@@ -114,7 +114,7 @@ const DevicesSection = () => {
             </p>
             <span className="mt-6 h-[2px] w-[14rem] sm:w-[28rem] bg-black opacity-50 dark:bg-[#EBEBEB] dark:opacity-50"></span>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:block md:mb-[114px] lg:mb-[102px] xl:mb-[140px]">
             {devices.map((device, index) => (
               <div
                 className={`mx-auto mb-20 px-[60px] py-[30px] rounded-2xl items-center 2xl:w-[1200px] xl:w-[1000px] lg:w-[800px] md:w-[717px] bg-white dark:bg-gradient-to-l ${
@@ -180,7 +180,7 @@ const DevicesSection = () => {
               </div>
             ))}
           </div>
-          <div className="block md:hidden">
+          <div className="block md:hidden  ">
             {devices.map((device, index) => (
               <div
                 className={`mx-auto mb-6 px-[18px] py-3 sm:py-[32px] rounded-2xl items-center w-[300px] sm:w-[525px] sm:h-[573px] bg-white dark:bg-gradient-to-bl dark:from-[#1D3B9D] dark:to-[#0C0221] `}
@@ -243,11 +243,10 @@ const DevicesSection = () => {
               </div>
             ))}
           </div>
+          <CTASection />
         </div>
       </div>
-      <div className="mb-20">
-        <CTASection />
-      </div>
+      
     </section>
   );
 };
