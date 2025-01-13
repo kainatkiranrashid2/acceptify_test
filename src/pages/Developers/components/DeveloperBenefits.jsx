@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const DeveloperBenefits = () => {
   const [showModal, setShowModal] = useState(false);
@@ -6,6 +7,7 @@ const DeveloperBenefits = () => {
     name: "",
     email: "",
   });
+  const Navigate = useNavigate()
 
   const benefits = [
     {
@@ -64,7 +66,9 @@ const DeveloperBenefits = () => {
       [name]: value,
     }));
   };
-
+  const handleClickGithub = () => {
+    Navigate('/contactus')
+  }
   return (
     <section className="dark:bg-[#070713] relative overflow-hidden ">
       <div className="hidden md:block absolute   opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
@@ -120,13 +124,13 @@ const DeveloperBenefits = () => {
               <button
                 className="bg-primary w-fit text-white px-[14px] hover:bg-[#51A805] py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg"
                 style={{ position: "relative", zIndex: 20 }}
-                onClick={handleClick}>
+                onClick={handleClickGithub}>
                 Visit GitHub Repository
               </button>
               <button
                 className="bg-transparent border-[2px] border-[#5D55F9] w-fit text-[#5D55F9] px-[14px]  py-[10px] text-[16px]/[27px]  rounded-sm md:rounded-lg"
                 style={{ position: "relative", zIndex: 20 }}
-                onClick={handleClick}>
+                onClick={handleClickGithub}>
                 Quick Start Guide
               </button>
             </div>
@@ -199,14 +203,14 @@ const DeveloperBenefits = () => {
               className=" bg-primary w-full text-white px-[14px] hover:bg-[#51A805] py-[10px]
                text-[11.74px]/[16.8px]  rounded-sm md:rounded-lg text-center"
               style={{ position: "relative", zIndex: 20 }}
-              onClick={handleClick}>
+              onClick={handleClickGithub}>
               {" "}
               Visit GitHub Repository
             </button>
             <button
               className="bg-transparent w-full text-[#5D55F9] border-[2px] border-[#5D55F9]   px-[14px]  py-[10px] text-[11.74px]/[16.8px] font-bold  rounded-sm md:rounded-lg"
               style={{ position: "relative", zIndex: 20 }}
-              onClick={handleClick}>
+              onClick={handleClickGithub}>
               {" "}
               Quick Start Guide
             </button>
