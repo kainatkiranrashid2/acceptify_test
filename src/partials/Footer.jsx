@@ -150,7 +150,7 @@ const Footer = () => {
                           className=" h-full px-2   border  border-gray-300 rounded-md w-full dark:bg-[#150731] bg-gray-100"
                         />
                       </div>
-                      <button className="lg:w-[76px] xl:[92px] bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[16px]/[24px]   text-white font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg">
+                      <button className="lg:w-[76px] xl:[92px] bg-primary hover:bg-[#51A805] md:text-[14px]/[20px] lg:text-[14px]/[20px] xl:text-[16px]/[24px]   text-white font-semibold px-3 md:py-2 lg:py-[10px] rounded-lg">
                         Sign-up
                       </button>
                     </div>
