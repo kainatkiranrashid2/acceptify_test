@@ -26,6 +26,39 @@ const Header = () => {
       [name]: value,
     }));
   };
+
+    // Common input styles using only allowed Tailwind classes
+    const inputClasses = `
+    w-full h-full px-2 py-1 sm:p-2
+    text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px]
+    sm:ml-2 border dark:text-white dark:border-none
+    border-gray-300 rounded-[4px] sm:rounded-md
+    bg-gray-100 dark:bg-[#150731]
+    outline-none appearance-none
+    [&:-webkit-autofill]:!bg-gray-100
+    dark:[&:-webkit-autofill]:!bg-[#150731]
+    [&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#f3f4f6]
+    dark:[&:-webkit-autofill]:shadow-[inset_0_0_0_100px_#150731]
+    [&:-webkit-autofill]:!-webkit-text-fill-color-[#000]
+    dark:[&:-webkit-autofill]:!-webkit-text-fill-color-[#fff]
+    dark:[&:-webkit-autofill]:[color-scheme:dark]
+  `;
+
+  // Additional Safari-specific styles using inline style
+  const safariAutofillStyle = {
+    WebkitBoxShadow: "0 0 0 100px #f3f4f6 inset",
+    WebkitTextFillColor: "#000",
+    colorScheme: "light",
+    backgroundColor: "#f3f4f6",
+  };
+
+  const safariAutofillStyleDark = {
+    WebkitBoxShadow: "0 0 0 100px #150731 inset",
+    WebkitTextFillColor: "#fff",
+    colorScheme: "dark",
+    backgroundColor: "#150731",
+  };
+
   return (
     <section className=" relative overflow-hidden dark:bg-[#06142F]">
       <div className="absolute dark:hidden -top-64 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl" />
@@ -134,8 +167,7 @@ const Header = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="John Doe"
-                      className="w-full h-full px-2 py-1 sm:p-2  text-[12px]/[12px] sm:text-[12px]/[27px] lg:text-[16px]/[27px] xl:text-[16px]/[27px]  sm:ml-2 dark:text-white  border dark:border-none border-gray-300 rounded-[4px] sm:rounded-md  bg-gray-100 dark:bg-[#150731] outline-none [&:-webkit-autofill]:!bg-gray-100 [&:-webkit-autofill]:!shadow-[0_0_0_30px_#f3f4f6_inset] [&:-webkit-autofill]:!-webkit-text-fill-color-[#000] dark:[&:-webkit-autofill]:!shadow-[0_0_0_30px_#150731_inset] dark:[&:-webkit-autofill]:![color-scheme:dark] dark:[&:-webkit-autofill]:![background-image:none] dark:[&:-webkit-autofill]:!text-white dark:[&:-webkit-autofill]:![appearance:none] dark:[&:-webkit-autofill]:!-webkit-text-fill-color-[#fff]"
-                    />
+                      style={document.documentElement.classList.contains('dark') ? safariAutofillStyleDark : safariAutofillStyle}/>
                   </div>
                 </div>
 
