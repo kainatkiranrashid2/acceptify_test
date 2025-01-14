@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 
-// https://res.cloudinary.com/dq5guzzge/image/upload/v1734514243/components/more_features/chevro_right_light.svg
+// https://res.cloudinary.com/acceptify/image/upload/v1734514243/components/more_features/chevro_right_light.svg
 
 function customPaging(i) {
   return (
@@ -29,13 +29,13 @@ function SampleNextArrow(props) {
       onClick={onClick}
       className="absolute -left-4 top-[40%] z-10 bg-gray">
       <img
-        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734514251/components/more_features/chevron_left_light.svg"
+        src="https://res.cloudinary.com/acceptify/image/upload/v1734514251/components/more_features/chevron_left_light.svg"
         alt=""
         loading="lazy"
         className="block dark:hidden "
       />
       <img
-        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734515439/components/more_features/chevron_dark_mode.svg"
+        src="https://res.cloudinary.com/acceptify/image/upload/v1734515439/components/more_features/chevron_dark_mode.svg"
         alt=""
         loading="lazy"
         className="hidden dark:block transform rotate-180"
@@ -53,13 +53,13 @@ function SamplePrevArrow(props) {
       onClick={onClick}
       className="absolute -right-4 rounded-full top-[40%]  z-10 ">
       <img
-        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734514243/components/more_features/chevro_right_light.svg"
+        src="https://res.cloudinary.com/acceptify/image/upload/v1734514243/components/more_features/chevro_right_light.svg"
         alt=""
         loading="lazy"
         className="block dark:hidden"
       />
       <img
-        src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734515439/components/more_features/chevron_dark_mode.svg"
+        src="https://res.cloudinary.com/acceptify/image/upload/v1734515439/components/more_features/chevron_dark_mode.svg"
         alt=""
         loading="lazy"
         className="hidden dark:block"
@@ -107,7 +107,7 @@ const MoreFeatures = () => {
       id: 0,
       title: "Smart Transaction",
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877347/components/more_features/smart_transections.svg",
+        "https://res.cloudinary.com/acceptify/image/upload/v1735877347/components/more_features/smart_transections.svg",
       description:
         "Acceptify allows you to ‘tag’ transactions with fully customizable meta-data relevant to your business. This enables more efficient categorization and searchability for greater insight and reporting.",
     },
@@ -115,14 +115,14 @@ const MoreFeatures = () => {
       id: 1,
       title: "Recapture Engine",
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877626/components/more_features/recapture_engine.svg",
+        "https://res.cloudinary.com/acceptify/image/upload/v1735877626/components/more_features/recapture_engine.svg",
       description:
         "We help you increase lost revenue from declined offline transactions. Our powerful recapture engine resubmits declined transactions until they are approved or expire.",
     },
     {
       id: 2,
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877417/components/more_features/configurable_data.svg",
+        "https://res.cloudinary.com/acceptify/image/upload/v1735877417/components/more_features/configurable_data.svg",
       title: "Configurable Data",
       description:
         "Add relevant, searchable data to each transaction. An order number, parking lot ID, flight number, event name - whatever is important to you and your customer.",
@@ -130,7 +130,7 @@ const MoreFeatures = () => {
     {
       id: 3,
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877464/components/more_features/global_payments.svg",
+        "https://res.cloudinary.com/acceptify/image/upload/v1735877464/components/more_features/global_payments.svg",
       title: "Enterprise Payments Anywhere",
       description:
         "We are a true enterprise payment solution. We enable you to take local payments in nearly all worldwide currencies. Bring you own processors or we can help you select one.",
@@ -138,7 +138,7 @@ const MoreFeatures = () => {
     {
       id: 4,
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877693/components/more_features/accept_cards.svg",
+        "https://res.cloudinary.com/acceptify/image/upload/v1735877693/components/more_features/accept_cards.svg",
       title: "Accept Cards/Wallets",
       description:
         "Swipe, tap or insert. Acceptify safely accepts electronics payments whether your customers choose credit cards or e-wallets to run transactions.",
@@ -146,7 +146,7 @@ const MoreFeatures = () => {
     {
       id: 5,
       image:
-        "https://res.cloudinary.com/dq5guzzge/image/upload/v1735877519/components/more_features/increased_revenue.svg",
+        "https://res.cloudinary.com/acceptify/image/upload/v1735877519/components/more_features/increased_revenue.svg",
       title: "Increase Revenue",
       description:
         "Boost your revenue by using your own processor and customized rates. Maximize earnings by processing transactions anytime, anywhere—even without service.",

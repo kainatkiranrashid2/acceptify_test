@@ -3,8 +3,8 @@ import React from "react";
 const Header = () => {
   return (
     <section
-      className="h-full w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734934920/components/devices_header/devices_header_bg.jpg)]
-    // dark:bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734935940/components/devices_header/devices_header_dark_bg.jpg)]">
+      className="h-full w-full  bg-cover bg-center relative bg-no-repeat py-16 md:py-20 bg-[url(https://res.cloudinary.com/acceptify/image/upload/v1734934920/components/devices_header/devices_header_bg.jpg)]
+    // dark:bg-[url(https://res.cloudinary.com/acceptify/image/upload/v1734935940/components/devices_header/devices_header_dark_bg.jpg)]">
       <div className="absolute dark:hidden -top-64 -left-32 w-[376px] h-[376px] bg-white rounded-full blur-3xl" />
       <div className="absolute hidden dark:block -top-64 -left-32 w-[376px] h-[376px] bg-[#431C95] rounded-full blur-3xl" />
       <div className="absolute dark:hidden -top-5 -left-5 w-32 h-32 bg-white/30 rounded-full blur-3xl" />
@@ -22,7 +22,7 @@ const Header = () => {
           <div className="2xl:h-[393px] 2xl:w-[715px] xl:h-[301px] xl:w-[547px] lg:h-[232px] lg:w-[421px] md:h-[186px] md:w-[318px] ">
             <img
               loading="lazy"
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735210797/components/devices_header/header_devices.png"
+              src="https://res.cloudinary.com/acceptify/image/upload/v1735210797/components/devices_header/header_devices.png"
               alt=""
               className="w-full h-full object-contain mx-auto"
             />
@@ -32,7 +32,7 @@ const Header = () => {
           <div className="w-[300px] h-[232px] sm:w-[397px] sm:h-[232px]  ">
             <img
               loading="lazy"
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735296359/components/devices_header/final_devices.png"
+              src="https://res.cloudinary.com/acceptify/image/upload/v1735296359/components/devices_header/final_devices.png"
               alt=""
               className="w-full h-full object-contain mx-auto"
             />

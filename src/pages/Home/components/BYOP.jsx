@@ -7,11 +7,11 @@ const BYOP = () => {
   const [videoError, setVideoError] = useState(false);
 
   const hevcVideo =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685976/components/byop/byop.mov";
+    "https://res.cloudinary.com/acceptify/video/upload/v1734685976/components/byop/byop.mov";
   const webMVideo =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1733836482/components/bring_your_own_process.webm";
+    "https://res.cloudinary.com/acceptify/video/upload/v1733836482/components/bring_your_own_process.webm";
   const hevcMobile =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1735630690/components/byop/mobile_version/bring_your_own_process.mov";
+    "https://res.cloudinary.com/acceptify/video/upload/v1735630690/components/byop/mobile_version/bring_your_own_process.mov";
 
   const handleVideoLoaded = () => {
     console.log("Video loaded successfully:");

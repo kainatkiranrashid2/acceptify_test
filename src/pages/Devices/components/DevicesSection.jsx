@@ -23,11 +23,11 @@ const DevicesSection = () => {
         "Dockable and detachable payment device for any workflow",
       ],
       webMVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976126/components/devices_devices_section/qpixel_device.webm",
+        "https://res.cloudinary.com/acceptify/video/upload/v1734976126/components/devices_devices_section/qpixel_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042842/components/devices_devices_section/qpixel_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735042842/components/devices_devices_section/qpixel_hevc.mov",
       hevcMobile:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555395/components/devices_devices_section/mobile_videos/qpixel_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735555395/components/devices_devices_section/mobile_videos/qpixel_hevc.mov",
     },
     {
       heading: "QPP 451",
@@ -37,11 +37,11 @@ const DevicesSection = () => {
         "Contact and contactless payment interfaces, with optional magnetic stripe reader",
       ],
       webMVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976455/components/devices_devices_section/qpp_451_device.webm",
+        "https://res.cloudinary.com/acceptify/video/upload/v1734976455/components/devices_devices_section/qpp_451_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042771/components/devices_devices_section/qpp_451_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735042771/components/devices_devices_section/qpp_451_hevc.mov",
       hevcMobile:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555361/components/devices_devices_section/mobile_videos/qpp_451_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735555361/components/devices_devices_section/mobile_videos/qpp_451_hevc.mov",
     },
     {
       heading: "QPP 600",
@@ -52,11 +52,11 @@ const DevicesSection = () => {
         "48mm printer, ideal when printed receipts are a fiscal requirement.",
       ],
       webMVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976382/components/devices_devices_section/qpp_600_device.webm",
+        "https://res.cloudinary.com/acceptify/video/upload/v1734976382/components/devices_devices_section/qpp_600_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042698/components/devices_devices_section/qpp_600_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735042698/components/devices_devices_section/qpp_600_hevc.mov",
       hevcMobile:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555301/components/devices_devices_section/mobile_videos/qpp_600_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735555301/components/devices_devices_section/mobile_videos/qpp_600_hevc.mov",
     },
     {
       heading: "QPR",
@@ -66,11 +66,11 @@ const DevicesSection = () => {
         "Contact and contactless payment interfaces, with optional magnetic stripe reader",
       ],
       webMVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976201/components/devices_devices_section/qpr_device.webm",
+        "https://res.cloudinary.com/acceptify/video/upload/v1734976201/components/devices_devices_section/qpr_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042489/components/devices_devices_section/qpr_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735042489/components/devices_devices_section/qpr_hevc.mov",
       hevcMobile:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555064/components/devices_devices_section/mobile_videos/qpr_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735555064/components/devices_devices_section/mobile_videos/qpr_hevc.mov",
     },
     {
       heading: "QPP Pro",
@@ -80,11 +80,11 @@ const DevicesSection = () => {
         "Contact & Contactless payment interfaces, with on screen PIN entry",
       ],
       webMVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976305/components/devices_devices_section/qpp_device.webm",
+        "https://res.cloudinary.com/acceptify/video/upload/v1734976305/components/devices_devices_section/qpp_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042547/components/devices_devices_section/qpp_pro_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735042547/components/devices_devices_section/qpp_pro_hevc.mov",
       hevcMobile:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555237/components/devices_devices_section/mobile_videos/qpp_pro_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735555237/components/devices_devices_section/mobile_videos/qpp_pro_hevc.mov",
     },
     {
       heading: "QPP Pro Plus",
@@ -94,11 +94,11 @@ const DevicesSection = () => {
         "Android “all in one” payment device with contact, contactless, magnetic swipe reader and on-screen PIN entry.",
       ],
       webMVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1734976247/components/devices_devices_section/qpp_pro_device.webm",
+        "https://res.cloudinary.com/acceptify/video/upload/v1734976247/components/devices_devices_section/qpp_pro_device.webm",
       hevcVideo:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735042632/components/devices_devices_section/qpp_pro_plus_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735042632/components/devices_devices_section/qpp_pro_plus_hevc.mov",
       hevcMobile:
-        "https://res.cloudinary.com/dq5guzzge/video/upload/v1735555196/components/devices_devices_section/mobile_videos/qpp_pro_plus_hevc.mov",
+        "https://res.cloudinary.com/acceptify/video/upload/v1735555196/components/devices_devices_section/mobile_videos/qpp_pro_plus_hevc.mov",
     },
   ];
   return (

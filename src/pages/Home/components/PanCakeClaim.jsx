@@ -11,13 +11,13 @@ gsap.registerPlugin(MotionPathPlugin);
 const videoData = [
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684092/components/scroll_animation/stll_pancake_01.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684092/components/scroll_animation/stll_pancake_01.webm",
     url_webm_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684092/components/scroll_animation/stll_pancake_01.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684092/components/scroll_animation/stll_pancake_01.webm",
     url_mov:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685197/components/scroll_animation/still_pancake_01.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1734685197/components/scroll_animation/still_pancake_01.mov",
     url_mov_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631152/components/scroll_animation/mobile_version/pancake_01.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1735631152/components/scroll_animation/mobile_version/pancake_01.mov",
     title: "Secure, Certified, Lightning Fast Enterprise Payments Anywhere",
     subtitle:
       "Acceptify is designed to meet the stringent security standards of the Payment Card Industry's Data Security Standard (PCI-DSS). Customer's data is always strongly encrypted.",
@@ -25,13 +25,13 @@ const videoData = [
   },
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684222/components/scroll_animation/stll_pancake_02.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684222/components/scroll_animation/stll_pancake_02.webm",
     url_webm_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684222/components/scroll_animation/stll_pancake_02.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684222/components/scroll_animation/stll_pancake_02.webm",
     url_mov:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685199/components/scroll_animation/still_pancake_02.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1734685199/components/scroll_animation/still_pancake_02.mov",
     url_mov_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631236/components/scroll_animation/mobile_version/pancake_02.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1735631236/components/scroll_animation/mobile_version/pancake_02.mov",
     title: "Protect your Operation and Reputation",
     subtitle:
       "Acceptify protects against harmful security breaches that negatively impact your brand, disrupts your operations, increases your liabilities and decreases your revenue.",
@@ -40,13 +40,13 @@ const videoData = [
   },
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684141/components/scroll_animation/stll_pancake_03.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684141/components/scroll_animation/stll_pancake_03.webm",
     url_webm_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684141/components/scroll_animation/stll_pancake_03.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684141/components/scroll_animation/stll_pancake_03.webm",
     url_mov:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685200/components/scroll_animation/still_pancake_03.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1734685200/components/scroll_animation/still_pancake_03.mov",
     url_mov_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631274/components/scroll_animation/mobile_version/pancake_03.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1735631274/components/scroll_animation/mobile_version/pancake_03.mov",
     title:
       "Acceptify is PCI-P2PE Certified Ensuring Compliance to the Industry Highest Standard",
     subtitle:
@@ -55,13 +55,13 @@ const videoData = [
   },
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684263/components/scroll_animation/stll_pancake_04.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684263/components/scroll_animation/stll_pancake_04.webm",
     url_webm_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684263/components/scroll_animation/stll_pancake_04.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684263/components/scroll_animation/stll_pancake_04.webm",
     url_mov:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685189/components/scroll_animation/still_pancake_04.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1734685189/components/scroll_animation/still_pancake_04.mov",
     url_mov_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631346/components/scroll_animation/mobile_version/pancake_04.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1735631346/components/scroll_animation/mobile_version/pancake_04.mov",
     title:
       "Acceptify Simplifying PCI Security Compliance for Online and Offline Payments",
     subtitle:
@@ -70,19 +70,19 @@ const videoData = [
   },
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684454/components/scroll_animation/code_snippet.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734684454/components/scroll_animation/code_snippet.webm",
     url_webm_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684454/components/scroll_animation/code_snippet.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734684454/components/scroll_animation/code_snippet.webm",
     url_mov:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685636/components/scroll_animation/code_snip.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1734685636/components/scroll_animation/code_snip.mov",
     title: "Implement Ultra-Secure Payments with a few Lines of Code",
     url_mov_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631430/components/scroll_animation/mobile_version/code_snippet.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1735631430/components/scroll_animation/mobile_version/code_snippet.mov",
     subtitle:
       "We’ve done all the heavy lifting for you. Use the Acceptify’s APIs to connect to a payment device, take a payment, submit the transaction to your processor and receive the approval or declined decision – with just a few lines of code.",
     highlightedWords: ["Ultra-Secure Payments"],
     backgroundImage:
-      "url('https://res.cloudinary.com/dq5guzzge/image/upload/v1733818098/components/ellipse.svg')", // Replace with your actual image URL
+      "url('https://res.cloudinary.com/acceptify/image/upload/v1733818098/components/ellipse.svg')", // Replace with your actual image URL
     backgroundStyle: {
       backgroundSize: "cover",
       backgroundPosition: "right bottom", // Positioned to right bottom
@@ -93,13 +93,13 @@ const videoData = [
   },
   {
     url_webm:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734687459/components/scroll_animation/lightning_web.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_800,vc_vp9,q_auto:best,br_4m/v1734687459/components/scroll_animation/lightning_web.webm",
     url_webm_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734687459/components/scroll_animation/lightning_web.webm",
+      "https://res.cloudinary.com/acceptify/video/upload/c_limit,w_420,vc_vp9,q_auto:best,br_2m/v1734687459/components/scroll_animation/lightning_web.webm",
     url_mov:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1734685754/components/scroll_animation/lightning_fast.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1734685754/components/scroll_animation/lightning_fast.mov",
     url_mov_mob_ver:
-      "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631516/components/scroll_animation/mobile_version/lighting_fast.mov",
+      "https://res.cloudinary.com/acceptify/video/upload/v1735631516/components/scroll_animation/mobile_version/lighting_fast.mov",
     title: "Lightning Fast Payments",
     subtitle:
       "Enterprises that need speedy payments choose Acceptify.  Our payment technologies are designed around “No More Spinners”. Spinners are painful when customers are waiting. Acceptify helps you succeed in high throughput payment workflows where speed matters.",
@@ -249,7 +249,7 @@ const VideoScrollComponent = () => {
         className="absolute opacity-100 -top-[1000px] -left-[200px] transform rotate-[235deg] z-0 w-[1200px] h-[1581px] bg-cover bg-no-repeat"
         ref={swishLogoRef}
         style={{
-          backgroundImage: `url('https://res.cloudinary.com/dq5guzzge/image/upload/v1734076580/components/swish_logo.png')`,
+          backgroundImage: `url('https://res.cloudinary.com/acceptify/image/upload/v1734076580/components/swish_logo.png')`,
           backgroundSize: "100%",
           transform: "rotate(180deg)",
           opacity: 0.5,
@@ -316,7 +316,7 @@ const VideoScrollComponent = () => {
                   ref={(el) => (rocketRefs.current[index] = el)}>
                   <img
                     className="w-full h-full transform rotate-12"
-                    src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734090001/components/rocket_svg.svg"
+                    src="https://res.cloudinary.com/acceptify/image/upload/v1734090001/components/rocket_svg.svg"
                     alt="Rocket"
                     loading="lazy"
                   />

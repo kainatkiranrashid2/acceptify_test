@@ -7,11 +7,11 @@ const IndustriesSection = () => {
   const [videoError, setVideoError] = useState(false);
 
   const hevcVideo =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1734687227/components/industries_section/industries_section.mov";
+    "https://res.cloudinary.com/acceptify/video/upload/v1734687227/components/industries_section/industries_section.mov";
   const webMVideo =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1733459520/components/industries.webm";
+    "https://res.cloudinary.com/acceptify/video/upload/v1733459520/components/industries.webm";
   const hevcMobile =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1735630910/components/industries_section/mobile_version/industries_section.mov";
+    "https://res.cloudinary.com/acceptify/video/upload/v1735630910/components/industries_section/mobile_version/industries_section.mov";
 
   const handleVideoLoaded = () => {
     console.log("Video loaded successfully:");
@@ -27,7 +27,7 @@ const IndustriesSection = () => {
       {/* Background Image Layer */}
       <div className="block absolute  opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
         <img
-          src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734065022/components/our_customers_dark_mode/industries_bg.png"
+          src="https://res.cloudinary.com/acceptify/image/upload/v1734065022/components/our_customers_dark_mode/industries_bg.png"
           alt=""
           className="w-1/2"
           loading="lazy"
@@ -102,4 +102,4 @@ const IndustriesSection = () => {
 };
 
 export default IndustriesSection;
-// https://res.cloudinary.com/dq5guzzge/video/upload/c_fill,w_1000,h_600/v1733459520/components/industries.webm
+// https://res.cloudinary.com/acceptify/video/upload/c_fill,w_1000,h_600/v1733459520/components/industries.webm

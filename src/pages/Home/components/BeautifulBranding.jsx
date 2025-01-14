@@ -8,11 +8,11 @@ const BeautifulBranding = () => {
   const [videoError, setVideoError] = useState(false);
   const [videoSrc, setVideoSrc] = useState("");
   const hevcVideo =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1734596300/components/represent_your_brand/ryb_hev.mov";
+    "https://res.cloudinary.com/acceptify/video/upload/v1734596300/components/represent_your_brand/ryb_hev.mov";
   const webMVideo =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1733991376/components/represent_your_branding.webm";
+    "https://res.cloudinary.com/acceptify/video/upload/v1733991376/components/represent_your_branding.webm";
   const hevcMobile =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1735631070/components/represent_your_brand/mobile_version/represent_your_brand.mov";
+    "https://res.cloudinary.com/acceptify/video/upload/v1735631070/components/represent_your_brand/mobile_version/represent_your_brand.mov";
 
   const handleError = () => {
     console.error("Video failed to load");
@@ -24,8 +24,8 @@ const BeautifulBranding = () => {
 
   return (
     <section
-      className="bg-cover bg-center bg-no-repeat py-20 bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733922457/components/ryb_light.svg)]
-      dark:bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733922457/components/ryb_dark.svg)] 
+      className="bg-cover bg-center bg-no-repeat py-20 bg-[url(https://res.cloudinary.com/acceptify/image/upload/v1733922457/components/ryb_light.svg)]
+      dark:bg-[url(https://res.cloudinary.com/acceptify/image/upload/v1733922457/components/ryb_dark.svg)] 
       dark:bg-[#010C22]">
       <div className="container">
         <div className=" mx-6 flex flex-col items-center justify-center relative">

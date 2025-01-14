@@ -14,37 +14,37 @@ const DeveloperBenefits = () => {
       heading: "Simplified Development",
       description:
         "The Acceptify SDK eliminates the need for developers to write complex code to handle hardware and payment processor integrations. With an intuitive API, integrating a PCI-PTS certified payment devices into a P2PE validated solution is seamless.",
-      src: "https://res.cloudinary.com/dq5guzzge/image/upload/v1735888329/components/developers_benefits/simplified_development.svg",
+      src: "https://res.cloudinary.com/acceptify/image/upload/v1735888329/components/developers_benefits/simplified_development.svg",
     },
     {
       heading: "Enhanced Security",
       description:
         "Acceptify is PCI-DSS and P2PE certified, ensuring that sensitive payment data is encrypted from the point of interaction, providing you with the highest level of security and taking your code out of scope for PCI Audits.",
-      src: "https://res.cloudinary.com/dq5guzzge/image/upload/v1735888204/components/developers_benefits/enhanced_security.svg",
+      src: "https://res.cloudinary.com/acceptify/image/upload/v1735888204/components/developers_benefits/enhanced_security.svg",
     },
     {
       heading: "Payment Processor Portability",
       description:
         "Acceptify integrates with all major payment processors. Ideal for software vendors allowing simplified development. Ideal for customers allowing them to bring their processors. ",
-      src: "https://res.cloudinary.com/dq5guzzge/image/upload/v1735888318/components/developers_benefits/payment_processor.svg",
+      src: "https://res.cloudinary.com/acceptify/image/upload/v1735888318/components/developers_benefits/payment_processor.svg",
     },
     {
       heading: "Cost & Time Savings ",
       description:
         "Acceptify abstracts the complexities of hardware, processor and security specific coding, significantly reducing the effort required, allowing you to focus on the value added by your solution.",
-      src: "https://res.cloudinary.com/dq5guzzge/image/upload/v1735888117/components/developers_benefits/cost_and_time.svg",
+      src: "https://res.cloudinary.com/acceptify/image/upload/v1735888117/components/developers_benefits/cost_and_time.svg",
     },
     {
       heading: "Future Proof Design ",
       description:
         "Acceptify ensures that your payment integration remains robust and compliant with evolving standards. The future-proofing reduces the amount of time needed to maintain code, protecting your investment. ",
-      src: "https://res.cloudinary.com/dq5guzzge/image/upload/v1735888243/components/developers_benefits/future_design_proof.svg",
+      src: "https://res.cloudinary.com/acceptify/image/upload/v1735888243/components/developers_benefits/future_design_proof.svg",
     },
     {
       heading: "Developer Friendly Tools and Support ",
       description:
         "Comprehensive documentation, sample code and developer support resources make it easy for teams to integrate and deploy payment solutions confidently and quickly. ",
-      src: "https://res.cloudinary.com/dq5guzzge/image/upload/v1735888164/components/developers_benefits/dev_friendly.svg",
+      src: "https://res.cloudinary.com/acceptify/image/upload/v1735888164/components/developers_benefits/dev_friendly.svg",
     },
   ];
   const handleClick = () => {
@@ -73,7 +73,7 @@ const DeveloperBenefits = () => {
     <section className="dark:bg-[#070713] relative overflow-hidden ">
       <div className="hidden md:block absolute   opacity-100  dark:opacity-100 -left-72 bottom-0 transform -rotate-[9deg] z-0">
         <img
-          src="https://res.cloudinary.com/dq5guzzge/image/upload/v1734065022/components/our_customers_dark_mode/industries_bg.png"
+          src="https://res.cloudinary.com/acceptify/image/upload/v1734065022/components/our_customers_dark_mode/industries_bg.png"
           alt=""
           className="w-1/2"
           loading="lazy"
@@ -137,14 +137,14 @@ const DeveloperBenefits = () => {
           </div>
           <div className="md:w-[162px] md:h-[162px] lg:w-[206px] lg:h-[206px] dark:hidden">
             <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900649/components/developers_benefits/nsxguoxhm2k3ehiiwsez.svg"
+              src="https://res.cloudinary.com/acceptify/image/upload/v1735900649/components/developers_benefits/nsxguoxhm2k3ehiiwsez.svg"
               alt=""
               className="w-full h-full object-contain  "
             />
           </div>
           <div className="md:w-[162px] md:h-[162px] lg:w-[206px] lg:h-[206px] hidden dark:block">
             <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900657/components/developers_benefits/github_dark.svg"
+              src="https://res.cloudinary.com/acceptify/image/upload/v1735900657/components/developers_benefits/github_dark.svg"
               alt=""
               className="w-full h-full object-contain "
             />
@@ -168,7 +168,7 @@ const DeveloperBenefits = () => {
           </div>
           <div className="md:w-[188px] md:h-[192px] lg:w-[277px] lg:h-[283px]">
             <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736159167/components/developers_benefits/sdk_image.png"
+              src="https://res.cloudinary.com/acceptify/image/upload/v1736159167/components/developers_benefits/sdk_image.png"
               alt=""
               className="w-full h-full object-contain "
             />
@@ -186,14 +186,14 @@ const DeveloperBenefits = () => {
           </div>
           <div className="w-[124px] h-[124px] sm:w-[162px] mb-6 sm:mb-8 sm:h-[162px]  dark:hidden">
             <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900649/components/developers_benefits/nsxguoxhm2k3ehiiwsez.svg"
+              src="https://res.cloudinary.com/acceptify/image/upload/v1735900649/components/developers_benefits/nsxguoxhm2k3ehiiwsez.svg"
               alt=""
               className="w-full h-full object-contain  "
             />
           </div>
           <div className="w-[124px] h-[124px] sm:w-[162px] sm:h-[162px] mb-6 sm:mb-8 hidden dark:block">
             <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1735900657/components/developers_benefits/github_dark.svg"
+              src="https://res.cloudinary.com/acceptify/image/upload/v1735900657/components/developers_benefits/github_dark.svg"
               alt=""
               className="w-full h-full object-contain   "
             />
@@ -230,7 +230,7 @@ const DeveloperBenefits = () => {
           </div>
           <div className="w-[122px] h-[124px ]sm:w-[200px] sm:h-[192px] mb-8 md:mb-0 mt-6 md:mt-0">
             <img
-              src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736159167/components/developers_benefits/sdk_image.png"
+              src="https://res.cloudinary.com/acceptify/image/upload/v1736159167/components/developers_benefits/sdk_image.png"
               alt=""
               className="w-full h-full object-contain "
             />

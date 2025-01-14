@@ -11,8 +11,8 @@ const HeroSection = () => {
 
   useEffect(() => {
     const src = supportsHEVCAlpha()
-      ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734688817/components/hero_section/hero_section.mov"
-      : "https://res.cloudinary.com/dq5guzzge/video/upload/v1734688832/components/hero_section/hero_sect.webm";
+      ? "https://res.cloudinary.com/acceptify/video/upload/v1734688817/components/hero_section/hero_section.mov"
+      : "https://res.cloudinary.com/acceptify/video/upload/v1734688832/components/hero_section/hero_sect.webm";
 
     setVideoSrc(src);
 

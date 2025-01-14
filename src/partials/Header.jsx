@@ -106,7 +106,7 @@ const Header = () => {
               href="/"
               className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  flex dark:hidden items-center">
               <img
-                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
+                src="https://res.cloudinary.com/acceptify/image/upload/v1733812836/components/acceptifylogo_black.png"
                 className="bg-transparent h-full w-auto object-contain"
                 alt="acceptify_logo"
                 loading="lazy"
@@ -117,14 +117,14 @@ const Header = () => {
               href="/"
               className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  dark:flex hidden items-center">
               <img
-                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
+                src="https://res.cloudinary.com/acceptify/image/upload/v1733812935/components/acceptifylogo_white.png"
                 className="bg-transparent h-full w-auto object-contain"
                 alt="acceptify_logo"
                 loading="lazy"
               />
             </a>
 
-            {/* https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png */}
+            {/* https://res.cloudinary.com/acceptify/image/upload/v1733812836/components/acceptifylogo_black.png */}
             {/* Menu Section */}
             <div className="hidden lg:flex  justify-between w-full">
               <div className="flex flex-row items-center justify-between ">
@@ -189,7 +189,7 @@ const Header = () => {
                         href="/"
                         className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  block dark:hidden items-center">
                         <img
-                          src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
+                          src="https://res.cloudinary.com/acceptify/image/upload/v1733812836/components/acceptifylogo_black.png"
                           className="bg-transparent h-full w-auto object-contain"
                           alt="acceptify_logo"
                           loading="lazy"
@@ -199,7 +199,7 @@ const Header = () => {
                         href="/"
                         className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[132px] xl:h-[36px]  dark:flex hidden items-center ">
                         <img
-                          src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
+                          src="https://res.cloudinary.com/acceptify/image/upload/v1733812935/components/acceptifylogo_white.png"
                           className="bg-transparent h-full w-auto object-contain"
                           alt="acceptify_logo"
                           loading="lazy"

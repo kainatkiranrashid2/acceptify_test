@@ -6,7 +6,7 @@ const Header = () => {
   const [videoError, setVideoError] = useState(false);
 
   const [videoSrc, setVideoSrc] = useState(
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1736446544/components/industries_page/hero_section.webm"
+    "https://res.cloudinary.com/acceptify/video/upload/v1736446544/components/industries_page/hero_section.webm"
   );
 
   const handleLoadedData = () => {

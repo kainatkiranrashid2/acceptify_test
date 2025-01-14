@@ -10,11 +10,11 @@ const AcceptWristbands = () => {
   const [videoError, setVideoError] = useState(false);
 
   const hevcVideo =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov";
+    "https://res.cloudinary.com/acceptify/video/upload/v1734686423/components/accept_wristband/accept_wristband.mov";
   const webMVideo =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1735637404/components/accept_wristband/accept_wristband_webm.webm";
+    "https://res.cloudinary.com/acceptify/video/upload/v1735637404/components/accept_wristband/accept_wristband_webm.webm";
   const hevcMobile =
-    "https://res.cloudinary.com/dq5guzzge/video/upload/v1735630616/components/accept_wristband/mobile_version/accept_wristband.mov";
+    "https://res.cloudinary.com/acceptify/video/upload/v1735630616/components/accept_wristband/mobile_version/accept_wristband.mov";
 
   const handleVideoLoaded = () => {
     console.log("Video loaded successfully:");
@@ -31,8 +31,8 @@ const AcceptWristbands = () => {
     ">
       <div
         className="absolute inset-0 bg-repeat z-0 
-        bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1733922601/components/dots_grid.png)]
-        dark:bg-[url(https://res.cloudinary.com/dq5guzzge/image/upload/v1734072935/components/grid_dark_bg.png)]"
+        bg-[url(https://res.cloudinary.com/acceptify/image/upload/v1733922601/components/dots_grid.png)]
+        dark:bg-[url(https://res.cloudinary.com/acceptify/image/upload/v1734072935/components/grid_dark_bg.png)]"
         style={{
           objectFit: "fill",
           // backgroundSize: "100% 100%", // Adjust size as needed

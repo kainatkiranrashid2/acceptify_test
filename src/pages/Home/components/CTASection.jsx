@@ -10,8 +10,8 @@ const CTASection = () => {
 
   useEffect(() => {
     const src = supportsHEVCAlpha()
-      ? "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686819/components/cta_section/call_to_action.mov"
-      : "https://res.cloudinary.com/dq5guzzge/video/upload/v1734686901/components/cta_section/call_to_action_mov.webm";
+      ? "https://res.cloudinary.com/acceptify/video/upload/v1734686819/components/cta_section/call_to_action.mov"
+      : "https://res.cloudinary.com/acceptify/video/upload/v1734686901/components/cta_section/call_to_action_mov.webm";
 
     setVideoSrc(src);
 

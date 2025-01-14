@@ -87,12 +87,12 @@ const Header = () => {
             <div className="hidden lg:flex  flex-col gap-8 xl:gap-4 xl:flex-row justify-between mt-12">
               <div className="gap-2  border-l py-0 pl-5 border-[#6137FC]/50  pr-2 flex flex-col w-full xl:w-[182px]">
                 <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425662/components/contact_us/address_light.svg"
+                  src="https://res.cloudinary.com/acceptify/image/upload/v1736425662/components/contact_us/address_light.svg"
                   alt=""
                   className="dark:hidden h-6 w-6"
                 />
                 <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425854/components/contact_us/address_dark.svg"
+                  src="https://res.cloudinary.com/acceptify/image/upload/v1736425854/components/contact_us/address_dark.svg"
                   alt=""
                   className="hidden dark:block h-6 w-6"
                 />
@@ -105,12 +105,12 @@ const Header = () => {
               </div>
               <div className="gap-2  border-l py-0 border-[#6137FC]/50  pl-5  pr-2 flex flex-col w-full xl:w-[202px]">
                 <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425662/components/contact_us/mail_light.svg"
+                  src="https://res.cloudinary.com/acceptify/image/upload/v1736425662/components/contact_us/mail_light.svg"
                   className="h-6 w-6  dark:hidden "
                   alt="dark:hidden  "
                 />
                 <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425854/components/contact_us/email_dark.svg"
+                  src="https://res.cloudinary.com/acceptify/image/upload/v1736425854/components/contact_us/email_dark.svg"
                   alt=""
                   className="hidden dark:block  h-6 w-6"
                 />
@@ -128,12 +128,12 @@ const Header = () => {
               </div>
               <div className="gap-2 border-l pl-5 py-0 border-[#6137FC]/50  pr-2 flex flex-col w-full xl:w-[150px]">
                 <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425662/components/contact_us/phone_light.svg"
+                  src="https://res.cloudinary.com/acceptify/image/upload/v1736425662/components/contact_us/phone_light.svg"
                   alt=""
                   className="dark:hidden h-6 w-6"
                 />
                 <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425855/components/contact_us/phone_dark.svg"
+                  src="https://res.cloudinary.com/acceptify/image/upload/v1736425855/components/contact_us/phone_dark.svg"
                   alt=""
                   className="hidden dark:block h-6 w-6"
                 />
@@ -268,12 +268,12 @@ const Header = () => {
               {/* <FaMapMarkedAlt size={24} className="dark:text-white" />
                */}
               <img
-                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425662/components/contact_us/address_light.svg"
+                src="https://res.cloudinary.com/acceptify/image/upload/v1736425662/components/contact_us/address_light.svg"
                 alt=""
                 className="dark:hidden h-6 w-6"
               />
               <img
-                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425854/components/contact_us/address_dark.svg"
+                src="https://res.cloudinary.com/acceptify/image/upload/v1736425854/components/contact_us/address_dark.svg"
                 alt=""
                 className="hidden dark:block h-6 w-6"
               />
@@ -288,12 +288,12 @@ const Header = () => {
             <div className="gap-2 sm:w-[180px]  border-l h-full py-0 border-[#6137FC]/50  pl-5  pr-2 flex flex-col w-full ">
               {/* <HiOutlineMail size={32} className="dark:text-white" /> */}
               <img
-                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425662/components/contact_us/mail_light.svg"
+                src="https://res.cloudinary.com/acceptify/image/upload/v1736425662/components/contact_us/mail_light.svg"
                 className="h-6 w-6  dark:hidden "
                 alt="dark:hidden  "
               />
               <img
-                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425854/components/contact_us/email_dark.svg"
+                src="https://res.cloudinary.com/acceptify/image/upload/v1736425854/components/contact_us/email_dark.svg"
                 alt=""
                 className="hidden dark:block  h-6 w-6"
               />
@@ -310,12 +310,12 @@ const Header = () => {
             <div className="gap-2 sm:w-[150px] border-l h-full pl-5 py-0 border-[#6137FC]/50  pr-2 flex flex-col w-full xl:w-[150px]">
               {/* <FiPhone size={24} className="dark:text-white" /> */}
               <img
-                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425662/components/contact_us/phone_light.svg"
+                src="https://res.cloudinary.com/acceptify/image/upload/v1736425662/components/contact_us/phone_light.svg"
                 alt=""
                 className="dark:hidden h-6 w-6"
               />
               <img
-                src="https://res.cloudinary.com/dq5guzzge/image/upload/v1736425855/components/contact_us/phone_dark.svg"
+                src="https://res.cloudinary.com/acceptify/image/upload/v1736425855/components/contact_us/phone_dark.svg"
                 alt=""
                 className="hidden dark:block h-6 w-6"
               />

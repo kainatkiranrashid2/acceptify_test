@@ -42,7 +42,7 @@ const Footer = () => {
                     href="/"
                     className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[131px] xl:h-[36px]  flex dark:hidden items-center">
                     <img
-                      src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
+                      src="https://res.cloudinary.com/acceptify/image/upload/v1733812836/components/acceptifylogo_black.png"
                       className="bg-transparent h-full w-auto object-contain"
                       alt="acceptify_logo"
                       loading="lazy"
@@ -53,7 +53,7 @@ const Footer = () => {
                     href="/"
                     className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[131px] xl:h-[36px]  dark:flex hidden items-center">
                     <img
-                      src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
+                      src="https://res.cloudinary.com/acceptify/image/upload/v1733812935/components/acceptifylogo_white.png"
                       className="bg-transparent h-full w-auto object-contain"
                       alt="acceptify_logo"
                       loading="lazy"
@@ -192,7 +192,7 @@ const Footer = () => {
                 href="/"
                 className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[131px] xl:h-[36px]  flex dark:hidden items-center">
                 <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
+                  src="https://res.cloudinary.com/acceptify/image/upload/v1733812836/components/acceptifylogo_black.png"
                   className="bg-transparent h-full w-auto object-contain"
                   alt="acceptify_logo"
                   loading="lazy"
@@ -203,7 +203,7 @@ const Footer = () => {
                 href="/"
                 className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[131px] xl:h-[36px]  dark:flex hidden items-center">
                 <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
+                  src="https://res.cloudinary.com/acceptify/image/upload/v1733812935/components/acceptifylogo_white.png"
                   className="bg-transparent h-full w-auto object-contain"
                   alt="acceptify_logo"
                   loading="lazy"
@@ -339,7 +339,7 @@ const Footer = () => {
                 href="/"
                 className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[131px] xl:h-[36px]  flex dark:hidden items-center">
                 <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812836/components/acceptifylogo_black.png"
+                  src="https://res.cloudinary.com/acceptify/image/upload/v1733812836/components/acceptifylogo_black.png"
                   className="bg-transparent h-full w-auto object-contain"
                   alt="acceptify_logo"
                   loading="lazy"
@@ -350,7 +350,7 @@ const Footer = () => {
                 href="/"
                 className="w-[83px] h-[24px] sm:w-[93px] sm:h-[26px] xl:w-[131px] xl:h-[36px]  dark:flex hidden items-center">
                 <img
-                  src="https://res.cloudinary.com/dq5guzzge/image/upload/v1733812935/components/acceptifylogo_white.png"
+                  src="https://res.cloudinary.com/acceptify/image/upload/v1733812935/components/acceptifylogo_white.png"
                   className="bg-transparent h-full w-auto object-contain"
                   alt="acceptify_logo"
                   loading="lazy"
