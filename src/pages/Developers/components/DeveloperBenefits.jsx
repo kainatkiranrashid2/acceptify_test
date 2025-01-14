@@ -67,7 +67,7 @@ const DeveloperBenefits = () => {
     }));
   };
   const handleClickGithub = () => {
-    Navigate('/contactus')
+    Navigate('/contact-us')
   }
   return (
     <section className="dark:bg-[#070713] relative overflow-hidden ">

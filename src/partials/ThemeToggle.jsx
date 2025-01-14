@@ -11,7 +11,7 @@ const ThemeToggle = () => {
   const location = useLocation();
 
   // Add all paths that should have black text
-  const blackTextPaths = ["/contactus"];
+  const blackTextPaths = ["/contact-us"];
   const shouldUseBlackText = blackTextPaths.includes(location.pathname);
 
   useEffect(() => {

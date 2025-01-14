@@ -21,7 +21,7 @@ const NavbarMenu = [
   {
     id: 3,
     title: "Solutions",
-    path: "/contactus",
+    path: "/contact-us",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const NavbarMenu = [
   {
     id: 5,
     title: "Processors",
-    path: "/contactus",
+    path: "/contact-us",
   },
 ];
 
@@ -42,7 +42,7 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const blackTextPaths = ["/contactus"];
+  const blackTextPaths = ["/contact-us"];
 
   const shouldUseBlackText = blackTextPaths.includes(location.pathname);
 
@@ -93,7 +93,7 @@ const Header = () => {
   };
   const handleClick = () => {
     setIsMobileMenuOpen(false);
-    navigate("contactus");
+    navigate("contactus"); 
   };
 
   return (
