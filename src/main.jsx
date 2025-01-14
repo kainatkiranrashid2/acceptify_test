@@ -44,7 +44,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route index element={<Home />} />
             <Route path="devices" element={<Devices />} />
             <Route path="developers" element={<Developers />} />
-            <Route path="contactus" element={<ContactUs />} />
+            <Route path="contact-us" element={<ContactUs />} />
             <Route path="industries" element={<Industries />} />
           </Route>
           {/* These routes do not have the header and footer template  */}
