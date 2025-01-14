@@ -45,11 +45,13 @@ const CloudinaryResponsiveVideo = forwardRef(
       let finalTransformation = "";
       if (!url.includes("hevc")) {
         finalTransformation = isMobile
-          ? "c_limit,w_420,vc_vp9,q_auto:best,br_2m/"
-          : "c_limit,w_960,vc_vp9,q_auto:best,br_4m/";
+          ? "c_limit,w_420,vc_vp9,q_auto/"
+          : "c_limit,w_960,vc_vp9,q_auto/";
       }
 
-      return `${baseUrl}${finalTransformation}${videoPath}?v=${Date.now()}`;
+     return `${baseUrl}${finalTransformation}${videoPath}`;
+
+      
     }, []);
 
     // Memoize video class names
@@ -88,7 +90,11 @@ const CloudinaryResponsiveVideo = forwardRef(
     }, [videoSrc, onLoadedData]);
 
     const handleError = useCallback((e) => {
-      console.error("Video error:", e);
+      console.error("Video error details:", {
+        error: e.currentTarget.error,
+        networkState: e.currentTarget.networkState,
+        readyState: e.currentTarget.readyState
+      });
       setHasError(true);
       setErrorDetails(e.currentTarget.error?.message || "Unknown error");
       setIsLoading(false);
